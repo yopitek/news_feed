@@ -22,9 +22,10 @@ OUTPUT_DIR = Path(__file__).parent.parent / 'output'
 
 def get_smtp_config_from_env() -> SMTPConfig:
     """Load SMTP configuration from environment variables."""
-    host = os.environ.get('SMTP_HOST', '')
+    # Support both naming conventions
+    host = os.environ.get('SMTP_HOST') or os.environ.get('SMTP_SERVER', '')
     port = int(os.environ.get('SMTP_PORT', 465))
-    user = os.environ.get('SMTP_USER', '')
+    user = os.environ.get('SMTP_USER') or os.environ.get('SMTP_USERNAME', '')
     password = os.environ.get('SMTP_PASSWORD', '')
     
     return SMTPConfig(

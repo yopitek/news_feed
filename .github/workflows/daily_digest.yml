@@ -70,9 +70,9 @@ jobs:
       - name: Send email digest
         if: ${{ steps.generate.outputs.digest_generated == 'true' && inputs.skip_email != 'true' }}
         env:
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
           EMAIL_SUBJECT_PREFIX: '[News Digest]'
@@ -105,9 +105,9 @@ jobs:
       - name: Notify on failure
         if: failure()
         env:
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_USERNAME: ${{ secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run: |
