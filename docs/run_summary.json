@@ -1,0 +1,46 @@
+{
+  "run_date": "2025-12-27",
+  "start_time": "2025-12-27T23:52:31.108115+08:00",
+  "end_time": "2025-12-28T00:08:01.381348+08:00",
+  "duration_seconds": 930.27,
+  "feeds_fetched": 788,
+  "articles_normalized": 788,
+  "articles_deduplicated": 696,
+  "articles_selected": 169,
+  "summaries_generated": 169,
+  "items_per_category": 8,
+  "categories": {
+    "zh_news": [
+      "頭條新聞",
+      "產經",
+      "股市",
+      "全球國際新聞",
+      "社會",
+      "生活",
+      "娛樂",
+      "運動",
+      "房市"
+    ],
+    "en_news": [
+      "Startup",
+      "Tech News",
+      "BBC Top Stories",
+      "BBC World",
+      "BBC Business",
+      "BBC Education",
+      "BBC Technology",
+      "BBC Health",
+      "BBC Science & Environment"
+    ],
+    "ja_news": [
+      "頭條",
+      "國際",
+      "政治",
+      "運動",
+      "商業",
+      "文化",
+      "娛樂"
+    ]
+  },
+  "status": "success"
+}
