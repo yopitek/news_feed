@@ -31,7 +31,9 @@ jobs:
     timeout-minutes: 30
     
     permissions:
-      contents: write  # For uploading artifacts to repo
+      contents: write
+      pages: write
+      id-token: write
     
     steps:
       # ============================================
@@ -82,6 +84,27 @@ jobs:
           result = send_digest_email()
           exit(0 if result else 1)
           "
+      
+      # ============================================
+      # Deploy to GitHub Pages
+      # ============================================
+      - name: Prepare GitHub Pages
+        if: ${{ steps.generate.outputs.digest_generated == 'true' }}
+        run: |
+          mkdir -p docs
+          cp output/web_digest.html docs/index.html
+          cp output/articles_data.json docs/articles_data.json 2>/dev/null || true
+          cp output/run_summary.json docs/run_summary.json 2>/dev/null || true
+          echo "GitHub Pages files prepared"
+      
+      - name: Deploy to GitHub Pages
+        if: ${{ steps.generate.outputs.digest_generated == 'true' }}
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add docs/
+          git commit -m "Update news digest - $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+          git push
       
       # ============================================
       # Upload Artifacts
