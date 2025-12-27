@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 如是說日報 - 多語言新聞摘要</title>
+    <meta name="description" content="每日精選中文、英文、日文新聞摘要，由 AI 智能整理">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f4ff',
+                            100: '#e0e9ff',
+                            500: '#5e6ad2',
+                            600: '#4c5fd5',
+                            700: '#3d4eac',
+                        },
+                        dark: {
+                            bg: '#0a0a0a',
+                            surface: '#111111',
+                            border: '#1f1f1f',
+                            text: '#e4e4e7',
+                            muted: '#71717a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans TC', 'Noto Sans JP', 'system-ui', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out forwards',
+                        'slide-up': 'slideUp 0.5s ease-out forwards',
+                        'slide-in': 'slideIn 0.3s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideIn: {
+                            '0%': { opacity: '0', transform: 'translateX(-10px)' },
+                            '100%': { opacity: '1', transform: 'translateX(0)' },
+                        },
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        * { 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+        }
+        
+        body { 
+            font-family: 'Inter', 'Noto Sans TC', 'Noto Sans JP', sans-serif; 
+        }
+        
+        /* Smooth transitions */
+        .smooth-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        /* Hover effects */
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -10px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(94, 106, 210, 0.3);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(94, 106, 210, 0.5); }
+        
+        /* Content styling */
+        .content-area h2 {
+            color: #5e6ad2;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid rgba(94, 106, 210, 0.2);
+        }
+        
+        .dark .content-area h2 { 
+            color: #818cf8; 
+            border-bottom-color: rgba(129, 140, 248, 0.2); 
+        }
+        
+        .content-area p { 
+            margin-bottom: 1rem; 
+            line-height: 1.8; 
+        }
+        
+        .content-area a {
+            color: #5e6ad2;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(94, 106, 210, 0.3);
+            transition: all 0.2s;
+        }
+        
+        .content-area a:hover { 
+            color: #4c5fd5; 
+            border-bottom-color: #4c5fd5; 
+        }
+        
+        .dark .content-area a { 
+            color: #818cf8; 
+            border-bottom-color: rgba(129, 140, 248, 0.3); 
+        }
+        
+        .dark .content-area a:hover { 
+            color: #a5b4fc; 
+            border-bottom-color: #a5b4fc; 
+        }
+        
+        /* Tab styling */
+        .tab-button {
+            position: relative;
+            padding: 0.75rem 1.5rem;
+            font-weight: 500;
+            color: #71717a;
+            transition: all 0.2s;
+        }
+        
+        .tab-button:hover {
+            color: #3f3f46;
+        }
+        
+        .dark .tab-button {
+            color: #71717a;
+        }
+        
+        .dark .tab-button:hover {
+            color: #e4e4e7;
+        }
+        
+        .tab-button.active {
+            color: #5e6ad2;
+        }
+        
+        .dark .tab-button.active {
+            color: #818cf8;
+        }
+        
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #5e6ad2, #818cf8);
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fade-in 0.3s ease-out;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Animation delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        
+        /* Selection color */
+        ::selection {
+            background-color: rgba(94, 106, 210, 0.2);
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 dark:bg-dark-bg text-gray-900 dark:text-dark-text min-h-screen transition-colors duration-300">
+    
+    <!-- Top gradient bar -->
+    <div class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 z-50"></div>
+    
+    <!-- Navigation -->
+    <nav class="sticky top-1 z-40 backdrop-blur-md bg-white/80 dark:bg-dark-surface/80 border-b border-gray-200 dark:border-dark-border">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-globe text-white text-sm"></i>
+                    </div>
+                    <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                        AI 如是說日報
+                    </h1>
+                </div>
+                
+                <button id="theme-toggle" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-border smooth-transition">
+                    <i class="fas fa-moon dark:hidden text-gray-600"></i>
+                    <i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-12 animate-fade-in opacity-0">
+            <div class="inline-block px-4 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-medium mb-4">
+                <i class="far fa-calendar-alt mr-2"></i>{{ date }}
+            </div>
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-400">
+                每日精選全球新聞摘要
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-dark-muted max-w-3xl mx-auto leading-relaxed">
+                每天早上為您送上最新的新聞快報
+            </p>
+        </header>
+        
+        <!-- Language Tabs -->
+        <div class="mb-8 animate-slide-up opacity-0 delay-100">
+            <div class="bg-white dark:bg-dark-surface rounded-xl shadow-sm dark:shadow-2xl border border-gray-200 dark:border-dark-border overflow-hidden">
+                <div class="flex border-b border-gray-200 dark:border-dark-border">
+                    <button class="tab-button active flex-1" data-tab="chinese">
+                        <i class="fas fa-flag mr-2"></i>中文
+                    </button>
+                    <button class="tab-button flex-1" data-tab="english">
+                        <i class="fas fa-flag mr-2"></i>English
+                    </button>
+                    <button class="tab-button flex-1" data-tab="japanese">
+                        <i class="fas fa-flag mr-2"></i>日本語
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chinese Content -->
+        <div id="chinese-content" class="tab-content active">
+            <article class="bg-white dark:bg-dark-surface rounded-2xl shadow-lg dark:shadow-2xl border border-gray-200 dark:border-dark-border p-8 md:p-12 animate-slide-up opacity-0 delay-200 hover-lift smooth-transition">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-bold mb-3 text-gray-900 dark:text-dark-text">{{ chinese_title }}</h3>
+                    <p class="text-lg text-gray-600 dark:text-dark-muted">{{ chinese_description }}</p>
+                </div>
+                <div class="content-area prose prose-lg dark:prose-invert max-w-none">
+                    {{ chinese_content | safe }}
+                </div>
+            </article>
+        </div>
+        
+        <!-- English Content -->
+        <div id="english-content" class="tab-content">
+            <article class="bg-white dark:bg-dark-surface rounded-2xl shadow-lg dark:shadow-2xl border border-gray-200 dark:border-dark-border p-8 md:p-12 hover-lift smooth-transition" style="opacity: 1;">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-bold mb-3 text-gray-900 dark:text-dark-text">{{ english_title }}</h3>
+                    <p class="text-lg text-gray-600 dark:text-dark-muted">{{ english_description }}</p>
+                </div>
+                <div class="content-area prose prose-lg dark:prose-invert max-w-none">
+                    {{ english_content | safe }}
+                </div>
+            </article>
+        </div>
+        
+        <!-- Japanese Content -->
+        <div id="japanese-content" class="tab-content">
+            <article class="bg-white dark:bg-dark-surface rounded-2xl shadow-lg dark:shadow-2xl border border-gray-200 dark:border-dark-border p-8 md:p-12 hover-lift smooth-transition" style="opacity: 1;">
+                <div class="mb-6">
+                    <h3 class="text-3xl font-bold mb-3 text-gray-900 dark:text-dark-text">{{ japanese_title }}</h3>
+                    <p class="text-lg text-gray-600 dark:text-dark-muted">{{ japanese_description }}</p>
+                </div>
+                <div class="content-area prose prose-lg dark:prose-invert max-w-none">
+                    {{ japanese_content | safe }}
+                </div>
+            </article>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="text-center mt-12 pb-8 animate-fade-in opacity-0 delay-400">
+            <div class="flex items-center justify-center space-x-2 text-sm text-gray-500 dark:text-dark-muted">
+                <i class="fas fa-robot"></i>
+                <span>Generated by Google Gemini AI</span>
+                <span>•</span>
+                <span>{{ date }}</span>
+            </div>
+            <p class="mt-2 text-xs text-gray-400 dark:text-gray-600">
+                此內容由 AI 自動生成，僅供參考
+            </p>
+        </footer>
+        
+    </main>
+    
+    <!-- Scripts -->
+    <script>
+        // Dark mode logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // Initialize theme
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+        
+        // Toggle theme
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.theme = html.classList.contains('dark') ? 'dark' : 'light';
+            themeToggle.style.transform = 'rotate(360deg)';
+            setTimeout(() => { themeToggle.style.transform = 'rotate(0deg)'; }, 300);
+        });
+        
+        // Tab switching logic
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabName = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(`${tabName}-content`).classList.add('active');
+                
+                // Save preference
+                localStorage.setItem('preferredLanguage', tabName);
+            });
+        });
+        
+        // Restore last selected tab
+        const preferredLanguage = localStorage.getItem('preferredLanguage');
+        if (preferredLanguage) {
+            const preferredButton = document.querySelector(`[data-tab="${preferredLanguage}"]`);
+            if (preferredButton) {
+                preferredButton.click();
+            }
+        }
+        
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        
+        document.querySelectorAll('.animate-fade-in, .animate-slide-up').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>

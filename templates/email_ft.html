@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Multilingual News Digest</title>
+  <style>
+    /* Email-safe, FT-inspired styling: conservative CSS only */
+    body { margin:0; padding:0; background:#f3efe6; }
+    table { border-collapse:collapse; }
+    img { border:0; outline:none; text-decoration:none; }
+    a { color:#1a1a1a; text-decoration:underline; }
+
+    .container { width:100%; background:#f3efe6; padding:24px 0; }
+    .card { width:680px; max-width:680px; background:#fffdf7; border:1px solid #e6e1d6; }
+    .pad { padding:20px 24px; }
+
+    .masthead { border-bottom:2px solid #1a1a1a; }
+    .title { font-family: Georgia, "Times New Roman", serif; font-size:24px; line-height:30px; margin:0; color:#1a1a1a; }
+    .subtitle { font-family: Arial, Helvetica, sans-serif; font-size:12px; line-height:18px; margin:6px 0 0 0; color:#555; }
+
+    .nav { margin-top:14px; }
+    .nav a { font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#1a1a1a; text-decoration:none; border:1px solid #1a1a1a; padding:6px 10px; margin-right:6px; display:inline-block; }
+    .nav a:hover { text-decoration:underline; }
+
+    .section { padding-top:18px; }
+    .section h2 { font-family: Georgia, "Times New Roman", serif; font-size:18px; margin:0 0 10px 0; color:#1a1a1a; }
+    .rule { height:1px; background:#e6e1d6; margin:10px 0 14px 0; }
+
+    .item { padding:10px 0; border-bottom:1px dotted #d9d2c4; }
+    .item:last-child { border-bottom:0; }
+    .item-title { font-family: Georgia, "Times New Roman", serif; font-size:15px; margin:0 0 4px 0; }
+    .meta { font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#666; margin:0 0 6px 0; }
+    .summary { font-family: Arial, Helvetica, sans-serif; font-size:13px; line-height:19px; color:#222; margin:0; }
+
+    .footer { border-top:1px solid #e6e1d6; margin-top:18px; padding-top:14px; }
+    .footer p { font-family: Arial, Helvetica, sans-serif; font-size:11px; color:#666; margin:0; }
+    .small { font-size:10px; color:#777; }
+  </style>
+</head>
+<body>
+  <table class="container" role="presentation" width="100%">
+    <tr>
+      <td align="center">
+        <table class="card" role="presentation" width="680">
+          <tr>
+            <td class="pad masthead">
+              <p class="title">Daily Multilingual News Digest</p>
+              <p class="subtitle">{{DATE_TAIPEI}} · RSS-first · FT-inspired layout</p>
+
+              <!-- Anchor navigation (email-safe “tabs”) -->
+              <div class="nav">
+                <a href="#tab-zh-news">中文新聞</a>
+                <a href="#tab-zh-industry">中文產業新聞</a>
+                <a href="#tab-en">English</a>
+                <a href="#tab-ja">日本語</a>
+              </div>
+            </td>
+          </tr>
+
+          <!-- 中文新聞 -->
+          <tr>
+            <td class="pad section" id="tab-zh-news">
+              <h2>中文新聞</h2>
+              <div class="rule"></div>
+              {{ZH_NEWS_SECTIONS}}
+            </td>
+          </tr>
+
+          <!-- 中文產業新聞 -->
+          <tr>
+            <td class="pad section" id="tab-zh-industry">
+              <h2>中文產業新聞</h2>
+              <div class="rule"></div>
+              {{ZH_INDUSTRY_SECTIONS}}
+            </td>
+          </tr>
+
+          <!-- English -->
+          <tr>
+            <td class="pad section" id="tab-en">
+              <h2>English</h2>
+              <div class="rule"></div>
+              {{EN_SECTIONS}}
+            </td>
+          </tr>
+
+          <!-- 日本語 -->
+          <tr>
+            <td class="pad section" id="tab-ja">
+              <h2>日本語</h2>
+              <div class="rule"></div>
+              {{JA_SECTIONS}}
+            </td>
+          </tr>
+
+          <tr>
+            <td class="pad footer">
+              <p>Generated automatically at 08:00 (Asia/Taipei). Links open the original articles.</p>
+              <p class="small">If a feed fails, the system degrades gracefully and continues.</p>
+            </td>
+          </tr>
+        </table>
+
+        <!-- plain spacer -->
+        <table role="presentation" width="680">
+          <tr><td style="height:18px;"></td></tr>
+        </table>
+
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

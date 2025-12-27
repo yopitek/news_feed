@@ -1,0 +1,300 @@
+# Chinese Article Classification Rules
+# Only applies to zh_news and zh_industry tabs
+#
+# Valid target categories:
+#   頭條新聞, 產經, 股市, 全球國際新聞, 社會, 生活, 娛樂, 運動, 房市
+
+# ============================================
+# RSS Category to Target Category Mapping
+# ============================================
+rss_to_target_mapping:
+  # CNA feed categories
+  政治: 頭條新聞
+  國際: 全球國際新聞
+  兩岸: 全球國際新聞
+  科技: 產經
+  生活: 生活
+  生活健康: 生活
+  社會: 社會
+  地方: 社會
+  文化: 生活
+  運動: 運動
+  娛樂: 娛樂
+  
+  # Direct mappings
+  產經: 產經
+  股市: 股市
+  房市: 房市
+  頭條: 頭條新聞
+  頭條新聞: 頭條新聞
+  全球國際新聞: 全球國際新聞
+
+# ============================================
+# Keyword-Based Classification Rules
+# Priority: lower number = higher priority (checked first)
+# ============================================
+keyword_rules:
+  股市:
+    keywords:
+      - 股票
+      - 股市
+      - 股價
+      - 上市
+      - 上櫃
+      - 台股
+      - 美股
+      - 港股
+      - 陸股
+      - 期貨
+      - 選擇權
+      - 指數
+      - 成交量
+      - 漲停
+      - 跌停
+      - 融資
+      - 融券
+      - 外資
+      - 投信
+      - 自營商
+      - 法人
+      - 買超
+      - 賣超
+      - 證交所
+      - 櫃買中心
+      - IPO
+      - 除權息
+      - 殖利率
+      - 本益比
+      - EPS
+      - 財報
+      - 大盤
+    priority: 1
+
+  房市:
+    keywords:
+      - 房市
+      - 房價
+      - 房貸
+      - 買房
+      - 賣房
+      - 租房
+      - 租金
+      - 房屋
+      - 住宅
+      - 豪宅
+      - 預售屋
+      - 中古屋
+      - 建案
+      - 建商
+      - 土地
+      - 地價
+      - 容積率
+      - 建蔽率
+      - 都更
+      - 危老
+      - 社會住宅
+      - 青年安心
+      - 房仲
+      - 房產
+      - 不動產
+    priority: 1
+
+  產經:
+    keywords:
+      - 景氣
+      - GDP
+      - 經濟
+      - 物價
+      - 通膨
+      - 利率
+      - 央行
+      - 匯率
+      - 貿易
+      - 出口
+      - 進口
+      - 製造業
+      - 服務業
+      - 產業
+      - 企業
+      - 科技業
+      - 半導體
+      - 晶片
+      - 台積電
+      - 鴻海
+      - 電子業
+      - 營收
+      - 獲利
+      - 供應鏈
+      - 投資
+    priority: 2
+
+  全球國際新聞:
+    keywords:
+      - 美國
+      - 日本
+      - 韓國
+      - 中國
+      - 歐洲
+      - 俄羅斯
+      - 烏克蘭
+      - 中東
+      - 以色列
+      - 聯合國
+      - 北約
+      - WHO
+      - WTO
+      - G7
+      - G20
+      - 白宮
+      - 國務院
+      - 外交
+      - 峰會
+      - 制裁
+      - 戰爭
+      - 衝突
+      - 拜登
+      - 川普
+      - 習近平
+    priority: 2
+
+  運動:
+    keywords:
+      - 棒球
+      - 籃球
+      - 足球
+      - 網球
+      - 高爾夫
+      - 羽球
+      - 桌球
+      - 游泳
+      - 田徑
+      - 奧運
+      - 亞運
+      - 世錦賽
+      - 中職
+      - CPBL
+      - NBA
+      - MLB
+      - 英超
+      - 歐冠
+      - 世界盃
+      - 大谷翔平
+      - 球員
+      - 教練
+      - 比賽
+      - 冠軍
+      - 世足
+    priority: 2
+
+  娛樂:
+    keywords:
+      - 明星
+      - 藝人
+      - 偶像
+      - 演員
+      - 歌手
+      - 電影
+      - 電視
+      - 戲劇
+      - 綜藝
+      - 演唱會
+      - 金曲獎
+      - 金馬獎
+      - 金鐘獎
+      - Netflix
+      - 串流
+      - MV
+      - 專輯
+      - 拍攝
+      - 緋聞
+      - 結婚
+      - 離婚
+      - 偶像劇
+    priority: 2
+
+  社會:
+    keywords:
+      - 警方
+      - 警察
+      - 檢察
+      - 法院
+      - 法官
+      - 判刑
+      - 起訴
+      - 逮捕
+      - 犯罪
+      - 詐騙
+      - 毒品
+      - 車禍
+      - 火災
+      - 意外
+      - 死亡
+      - 受傷
+      - 失蹤
+      - 抗議
+      - 陳情
+      - 刑事
+    priority: 3
+
+  生活:
+    keywords:
+      - 健康
+      - 醫療
+      - 疫苗
+      - 疫情
+      - 流感
+      - 醫院
+      - 醫師
+      - 藥物
+      - 飲食
+      - 美食
+      - 旅遊
+      - 觀光
+      - 天氣
+      - 氣象
+      - 颱風
+      - 地震
+      - 環保
+      - 交通
+      - 捷運
+      - 高鐵
+      - 台鐵
+      - 消費
+    priority: 3
+
+  頭條新聞:
+    keywords:
+      - 總統
+      - 行政院
+      - 立法院
+      - 院長
+      - 部長
+      - 政府
+      - 政策
+      - 選舉
+      - 民調
+      - 立委
+      - 議員
+      - 縣市長
+      - 賴清德
+      - 蔡英文
+    priority: 4
+
+# ============================================
+# Source-Based Default Categories
+# Fallback when no keyword matches
+# ============================================
+source_defaults:
+  "rsscna/politics": 頭條新聞
+  "rsscna/intworld": 全球國際新聞
+  "rsscna/mainland": 全球國際新聞
+  "rsscna/technology": 產經
+  "rsscna/lifehealth": 生活
+  "rsscna/social": 社會
+  "rsscna/local": 社會
+  "rsscna/culture": 生活
+  "rsscna/sport": 運動
+  "rsscna/stars": 娛樂
+
+# Final fallback if nothing matches
+default_category: 頭條新聞

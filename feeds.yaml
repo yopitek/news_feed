@@ -1,0 +1,74 @@
+tabs:
+  zh_news:
+    name: 中文新聞
+    item_limit_per_category: 5
+    sources:
+      - category: 國際
+        url: https://feeds.feedburner.com/rsscna/intworld
+      - category: 社會
+        url: https://feeds.feedburner.com/rsscna/social
+      - category: 生活
+        url: https://feeds.feedburner.com/rsscna/lifehealth
+      - category: 運動
+        url: https://feeds.feedburner.com/rsscna/sport
+      - category: 娛樂
+        url: https://feeds.feedburner.com/rsscna/stars
+      - category: 文化
+        url: https://feeds.feedburner.com/rsscna/culture
+      - category: 地方
+        url: https://feeds.feedburner.com/rsscna/local
+
+  zh_industry:
+    name: 中文產業新聞
+    item_limit_per_category: 5
+    sources:
+      - category: 科技
+        url: https://feeds.feedburner.com/rsscna/technology
+      - category: 產經
+        url: https://feeds.feedburner.com/rsscna/finance
+      - category: 政治
+        url: https://feeds.feedburner.com/rsscna/politics
+      - category: 兩岸
+        url: https://feeds.feedburner.com/rsscna/mainland
+
+  en_news:
+    name: English News
+    item_limit_per_category: 5
+    sources:
+      - category: Startup
+        url: http://news.ycombinator.com/rss
+      - category: Startup
+        url: https://techcrunch.com/startups/feed/
+      - category: Tech
+        url: https://techcrunch.com/feed/
+      - category: World
+        url: http://feeds.bbci.co.uk/news/world/rss.xml
+      - category: Business
+        url: http://feeds.bbci.co.uk/news/business/rss.xml
+      - category: Technology
+        url: http://feeds.bbci.co.uk/news/technology/rss.xml
+      - category: Global
+        url: https://feedx.net/rss/ap.xml
+
+  ja_news:
+    name: 日本語ニュース
+    item_limit_per_category: 5
+    sources:
+      - category: 主要
+        url: https://www.asahi.com/rss/asahi/newsheadlines.rdf
+      - category: 国内
+        url: https://www.asahi.com/rss/asahi/national.rdf
+      - category: 国際
+        url: https://www.asahi.com/rss/asahi/international.rdf
+      - category: 経済
+        url: https://www.asahi.com/rss/asahi/business.rdf
+      - category: 政治
+        url: https://www.asahi.com/rss/asahi/politics.rdf
+      - category: 文化
+        url: https://www.asahi.com/rss/asahi/culture.rdf
+      - category: スポーツ
+        url: https://www.asahi.com/rss/asahi/sports.rdf
+      - category: Yahoo_トピックス_総合
+        url: https://news.yahoo.co.jp/rss/topics/top-picks.xml
+      - category: Yahoo_トピックス_IT
+        url: https://news.yahoo.co.jp/rss/topics/it.xml

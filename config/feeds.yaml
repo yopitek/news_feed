@@ -1,0 +1,241 @@
+# RSS Feeds Configuration
+# Daily Multilingual News Digest System
+# 
+# 3 Tabs with Category-based grouping:
+# - 中文新聞: 9 categories
+# - English: Startup (8) + Tech News (8) + BBC (7 subcategories × 6 each)
+# - 日本語: 7 categories
+
+tabs:
+  # ============================================
+  # 中文新聞 - 9 Categories
+  # ============================================
+  zh_news:
+    name: 中文新聞
+    language: zh
+    items_per_category: 8
+    categories:
+      - 頭條新聞
+      - 產經
+      - 股市
+      - 全球國際新聞
+      - 社會
+      - 生活
+      - 娛樂
+      - 運動
+      - 房市
+    sources:
+      # 政治 -> 頭條新聞
+      - category: 政治
+        url: https://feeds.feedburner.com/rsscna/politics
+        source_name: 中央社
+      # 國際 -> 全球國際新聞
+      - category: 國際
+        url: https://feeds.feedburner.com/rsscna/intworld
+        source_name: 中央社
+      # 兩岸 -> 全球國際新聞
+      - category: 兩岸
+        url: https://feeds.feedburner.com/rsscna/mainland
+        source_name: 中央社
+      # 科技 -> 產經
+      - category: 科技
+        url: https://feeds.feedburner.com/rsscna/technology
+        source_name: 中央社
+      # 生活 -> 生活
+      - category: 生活
+        url: https://feeds.feedburner.com/rsscna/lifehealth
+        source_name: 中央社
+      # 社會 -> 社會
+      - category: 社會
+        url: https://feeds.feedburner.com/rsscna/social
+        source_name: 中央社
+      # 地方 -> 社會
+      - category: 地方
+        url: https://feeds.feedburner.com/rsscna/local
+        source_name: 中央社
+      # 文化 -> 生活
+      - category: 文化
+        url: https://feeds.feedburner.com/rsscna/culture
+        source_name: 中央社
+      # 運動 -> 運動
+      - category: 運動
+        url: https://feeds.feedburner.com/rsscna/sport
+        source_name: 中央社
+      # 娛樂 -> 娛樂
+      - category: 娛樂
+        url: https://feeds.feedburner.com/rsscna/stars
+        source_name: 中央社
+
+  # ============================================
+  # English News - Startup + Tech News + BBC (with subcategories)
+  # ============================================
+  en_news:
+    name: English News
+    language: en
+    categories:
+      # Main categories
+      - Startup
+      - Tech News
+      # BBC subcategories
+      - BBC Top Stories
+      - BBC World
+      - BBC Business
+      - BBC Education
+      - BBC Technology
+      - BBC Health
+      - BBC Science & Environment
+    sources:
+      # ========== Startup ==========
+      - category: Startup
+        url: http://news.ycombinator.com/rss
+        source_name: Hacker News
+      - category: Startup
+        url: http://blog.samaltman.com/posts.atom
+        source_name: Sam Altman Blog
+      - category: Startup
+        url: http://andrewchen.co/feed/
+        source_name: Andrew Chen
+      - category: Startup
+        url: https://techcrunch.com/startups/feed/
+        source_name: TechCrunch Startups
+      
+      # ========== Tech News ==========
+      - category: Tech News
+        url: http://www.fastcodesign.com/rss.xml
+        source_name: Fast Company Design
+      - category: Tech News
+        url: http://www.forbes.com/entrepreneurs/index.xml
+        source_name: Forbes Entrepreneurs
+      - category: Tech News
+        url: http://feeds.slashgear.com/slashgear
+        source_name: SlashGear
+      - category: Tech News
+        url: http://www.theverge.com/rss/full.xml
+        source_name: The Verge
+      - category: Tech News
+        url: https://feeds2.feedburner.com/PennOlson
+        source_name: Penn Olson
+      - category: Tech News
+        url: https://techcrunch.com/feed/
+        source_name: TechCrunch
+      - category: Tech News
+        url: https://news.ycombinator.com/rss
+        source_name: Hacker News
+      
+      # ========== BBC News (7 subcategories) ==========
+      # BBC Top Stories
+      - category: BBC Top Stories
+        url: http://feeds.bbci.co.uk/news/rss.xml
+        source_name: BBC News
+      # BBC World
+      - category: BBC World
+        url: http://feeds.bbci.co.uk/news/world/rss.xml
+        source_name: BBC World
+      # BBC Business
+      - category: BBC Business
+        url: http://feeds.bbci.co.uk/news/business/rss.xml
+        source_name: BBC Business
+      # BBC Education
+      - category: BBC Education
+        url: http://feeds.bbci.co.uk/news/education/rss.xml
+        source_name: BBC Education
+      # BBC Technology
+      - category: BBC Technology
+        url: http://feeds.bbci.co.uk/news/technology/rss.xml
+        source_name: BBC Technology
+      # BBC Health
+      - category: BBC Health
+        url: http://feeds.bbci.co.uk/news/health/rss.xml
+        source_name: BBC Health
+      # BBC Science & Environment
+      - category: BBC Science & Environment
+        url: http://feeds.bbci.co.uk/news/science_and_environment/rss.xml
+        source_name: BBC Science
+
+  # ============================================
+  # 日本語ニュース - 7 Categories
+  # ============================================
+  ja_news:
+    name: 日本語ニュース
+    language: ja
+    items_per_category: 8
+    categories:
+      - 頭條
+      - 國際
+      - 政治
+      - 運動
+      - 商業
+      - 文化
+      - 娛樂
+    sources:
+      # 頭條 (Headlines)
+      - category: 頭條
+        url: https://www.asahi.com/rss/asahi/newsheadlines.rdf
+        source_name: 朝日新聞
+      - category: 頭條
+        url: https://news.yahoo.co.jp/rss/topics/top-picks.xml
+        source_name: Yahoo! Japan
+      - category: 頭條
+        url: https://www.asahi.com/rss/asahi/national.rdf
+        source_name: 朝日新聞
+      - category: 頭條
+        url: https://news.yahoo.co.jp/rss/topics/domestic.xml
+        source_name: Yahoo! Japan
+      
+      # 國際 (International)
+      - category: 國際
+        url: https://www.asahi.com/rss/asahi/international.rdf
+        source_name: 朝日新聞
+      - category: 國際
+        url: https://news.yahoo.co.jp/rss/topics/world.xml
+        source_name: Yahoo! Japan
+      
+      # 政治 (Politics)
+      - category: 政治
+        url: https://www.asahi.com/rss/asahi/politics.rdf
+        source_name: 朝日新聞
+      
+      # 運動 (Sports)
+      - category: 運動
+        url: https://www.asahi.com/rss/asahi/sports.rdf
+        source_name: 朝日新聞
+      - category: 運動
+        url: https://news.yahoo.co.jp/rss/topics/sports.xml
+        source_name: Yahoo! Japan
+      
+      # 商業 (Business)
+      - category: 商業
+        url: https://www.asahi.com/rss/asahi/business.rdf
+        source_name: 朝日新聞
+      - category: 商業
+        url: https://news.yahoo.co.jp/rss/topics/business.xml
+        source_name: Yahoo! Japan
+      - category: 商業
+        url: https://news.yahoo.co.jp/rss/topics/it.xml
+        source_name: Yahoo! Japan
+      - category: 商業
+        url: https://news.yahoo.co.jp/rss/topics/science.xml
+        source_name: Yahoo! Japan
+      
+      # 文化 (Culture)
+      - category: 文化
+        url: https://www.asahi.com/rss/asahi/culture.rdf
+        source_name: 朝日新聞
+      - category: 文化
+        url: https://news.yahoo.co.jp/rss/topics/local.xml
+        source_name: Yahoo! Japan
+      
+      # 娛樂 (Entertainment)
+      - category: 娛樂
+        url: https://news.yahoo.co.jp/rss/topics/entertainment.xml
+        source_name: Yahoo! Japan
+
+# Global settings
+settings:
+  max_items_per_feed: 30
+  fetch_timeout: 15
+  fetch_retries: 2
+  user_agent: "NewsDigest/1.0 (RSS Reader)"
+  summary_length_zh: 200
+  summary_length_en: 200
+  summary_length_ja: 200

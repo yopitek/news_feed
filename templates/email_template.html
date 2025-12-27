@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Daily News Digest | {{DATE_DISPLAY}}</title>
+
+    <style type="text/css">
+        body,
+        table,
+        td,
+        p,
+        a,
+        li {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+            border: 0;
+            outline: none;
+            text-decoration: none;
+        }
+
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            background-color: #f3efe6;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        .wrapper {
+            width: 100%;
+            background-color: #f3efe6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background-color: #fffdf7;
+            border: 1px solid #e6e1d6;
+        }
+
+        .masthead-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 26px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin: 0;
+            padding: 0;
+        }
+
+        .masthead-subtitle {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            color: #666666;
+            margin: 8px 0 0 0;
+        }
+
+        .nav-link {
+            display: inline-block;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            color: #1a1a1a;
+            text-decoration: none;
+            border: 1px solid #1a1a1a;
+            padding: 10px 16px;
+            margin: 0 6px 6px 0;
+        }
+
+        .nav-link:hover {
+            background-color: #f3efe6;
+        }
+
+        .section-header {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin: 0 0 12px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #1a1a1a;
+        }
+
+        .section-divider {
+            height: 1px;
+            background-color: #e6e1d6;
+            margin: 12px 0;
+        }
+
+        .footer {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #666666;
+        }
+
+        .footer-small {
+            font-size: 11px;
+            color: #999999;
+        }
+
+        .back-to-top {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            color: #0f5499;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <table class="wrapper" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td align="center" style="padding: 24px 10px;">
+
+                <table class="container card" role="presentation" width="680" cellpadding="0" cellspacing="0"
+                    border="0">
+
+                    <tr>
+                        <td style="padding: 24px 28px; border-bottom: 3px solid #1a1a1a;">
+                            <p class="masthead-title">Daily News Digest</p>
+                            <p class="masthead-subtitle">{{DATE_DISPLAY}} · RSS-first · Multilingual</p>
+
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="margin-top: 16px;">
+                                <tr>
+                                    <td>
+                                        <a href="#sec-zh-news" class="nav-link">中文新聞</a>
+                                        <a href="#sec-en-news" class="nav-link">English</a>
+                                        <a href="#sec-ja-news" class="nav-link">日本語</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td id="sec-zh-news" style="padding: 24px 28px;">
+                            <h2 class="section-header">中文新聞</h2>
+
+                            {{ZH_NEWS_ITEMS}}
+
+                            <p style="margin-top: 16px;">
+                                <a href="#sec-zh-news" class="back-to-top">↑ 回到頂部</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="section-divider"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td id="sec-en-news" style="padding: 24px 28px;">
+                            <h2 class="section-header">English News</h2>
+
+                            {{EN_NEWS_ITEMS}}
+
+                            <p style="margin-top: 16px;">
+                                <a href="#sec-zh-news" class="back-to-top">↑ Back to top</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="section-divider"></div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td id="sec-ja-news" style="padding: 24px 28px;">
+                            <h2 class="section-header">日本語ニュース</h2>
+
+                            {{JA_NEWS_ITEMS}}
+
+                            <p style="margin-top: 16px;">
+                                <a href="#sec-zh-news" class="back-to-top">↑ トップに戻る</a>
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="padding: 20px 28px; border-top: 1px solid #e6e1d6; background-color: #faf8f2;">
+                            <p class="footer">Generated automatically at 08:00 (Asia/Taipei). All links open original
+                                articles.</p>
+                            <p class="footer-small" style="margin-top: 4px;">RSS-first pipeline powered by DeepSeek AI.
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

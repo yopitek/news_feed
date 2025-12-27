@@ -1,0 +1,42 @@
+# Output files (regenerated on each run)
+output/*.html
+output/*.json
+output/*.jsonl
+!output/.gitkeep
+
+# Environment
+.env
+*.env
+venv/
+.venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Logs
+*.log
