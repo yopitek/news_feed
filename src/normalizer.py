@@ -191,7 +191,8 @@ def normalize_entry(
 
 def normalize_all(
     raw_feeds: dict[str, list[dict]], 
-    config: FeedsConfig
+    config: FeedsConfig,
+    hours_window: int = 24
 ) -> list[NormalizedArticle]:
     """
     Normalize all raw entries from all feeds.
@@ -199,11 +200,31 @@ def normalize_all(
     Args:
         raw_feeds: Dict of tab_id -> list of raw entries
         config: FeedsConfig for metadata
+        hours_window: Only include articles from the past N hours (default: 24)
     
     Returns:
         List of NormalizedArticle objects
     """
+    import pytz
+    from datetime import timedelta
+    
+    # Calculate cutoff time (e.g., yesterday 08:00 Taipei time)
+    taipei_tz = pytz.timezone('Asia/Taipei')
+    now_taipei = datetime.now(taipei_tz)
+    
+    # Set cutoff to 24 hours ago from 08:00 today
+    today_8am = now_taipei.replace(hour=8, minute=0, second=0, microsecond=0)
+    if now_taipei.hour < 8:
+        # If it's before 8 AM, use yesterday's 8 AM as the end point
+        today_8am = today_8am - timedelta(days=1)
+    
+    cutoff_time = today_8am - timedelta(hours=hours_window)
+    cutoff_utc = cutoff_time.astimezone(timezone.utc)
+    
+    logger.info(f"Date filter: Only articles after {cutoff_time.strftime('%Y-%m-%d %H:%M')} (Taipei)")
+    
     articles = []
+    filtered_count = 0
     
     for tab_id, entries in raw_feeds.items():
         tab_config = config.tabs.get(tab_id)
@@ -226,7 +247,12 @@ def normalize_all(
             )
             
             if article:
-                articles.append(article)
+                # Filter by date - only include articles within the time window
+                if article.published >= cutoff_utc:
+                    articles.append(article)
+                else:
+                    filtered_count += 1
     
-    logger.info(f"Normalized {len(articles)} articles")
+    logger.info(f"Normalized {len(articles)} articles (filtered out {filtered_count} old articles)")
     return articles
+
