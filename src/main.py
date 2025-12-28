@@ -100,9 +100,28 @@ def main():
         
         # Step 7: Generate summaries (200 chars)
         logger.info("Generating summaries (200 chars/words)...")
-        api_key = os.environ.get('DEEPSEEK_API_KEY')
-        if not api_key:
-            raise ValueError("DEEPSEEK_API_KEY environment variable not set")
+        
+        # Priority: ZEABUR > GOOGLE (Gemini) > SILICONFLOW > DEEPSEEK > Fallback
+        zeabur_key = os.environ.get('ZEABUR_API_KEY')
+        google_key = os.environ.get('GOOGLE_API_KEY')
+        siliconflow_key = os.environ.get('SILICONFLOW_API_KEY')
+        deepseek_key = os.environ.get('DEEPSEEK_API_KEY')
+        
+        if zeabur_key:
+            logger.info("Using Zeabur AI Hub (GPT-4o-mini)")
+            api_key = zeabur_key
+        elif google_key:
+            logger.info("Using Google Gemini API (free tier)")
+            api_key = google_key
+        elif siliconflow_key:
+            logger.info("Using SiliconFlow API (free DeepSeek model)")
+            api_key = siliconflow_key
+        elif deepseek_key:
+            logger.info("Using DeepSeek API")
+            api_key = deepseek_key
+        else:
+            logger.warning("No API key found - using RSS descriptions as fallback")
+            api_key = None
         
         summarized = summarize_by_category(selected, api_key)
         summary_count = sum(
