@@ -1,8 +1,8 @@
 {
   "run_date": "2026-01-08",
-  "start_time": "2026-01-08T22:47:57.315517+08:00",
-  "end_time": "2026-01-08T22:49:59.580988+08:00",
-  "duration_seconds": 122.27,
+  "start_time": "2026-01-08T22:53:12.935211+08:00",
+  "end_time": "2026-01-08T22:54:47.350880+08:00",
+  "duration_seconds": 94.42,
   "feeds_fetched": 783,
   "articles_normalized": 509,
   "articles_deduplicated": 417,
