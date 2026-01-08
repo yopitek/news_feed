@@ -59,7 +59,10 @@ jobs:
       - name: Run digest pipeline
         id: generate
         env:
-          # API Priority: ZEABUR (GPT-4o-mini) > GOOGLE (Gemini) > SILICONFLOW > DEEPSEEK
+          # API Priority: NVIDIA (NIM) > ZEABUR (GPT-4o-mini) > GOOGLE (Gemini) > SILICONFLOW > DEEPSEEK
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          NVIDIA_BASE_URL: https://integrate.api.nvidia.com/v1/chat/completions
+          NVIDIA_MODEL: minimaxai/minimax-m2.1
           ZEABUR_API_KEY: ${{ secrets.ZEABUR_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}

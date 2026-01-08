@@ -3,7 +3,7 @@ name: 🔄 Sync to Personal Blog
 on:
   # 在 update-news workflow 完成後自動執行
   workflow_run:
-    workflows: ["📰 Daily News Update"]
+    workflows: ["Daily Multilingual News Digest"]
     types:
       - completed
   

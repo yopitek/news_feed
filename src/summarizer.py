@@ -1,13 +1,14 @@
 """
-Summarizer module - supports Zeabur, DeepSeek, SiliconFlow, and Google Gemini APIs.
+Summarizer module - supports NVIDIA NIM, Zeabur, DeepSeek, SiliconFlow, and Google Gemini APIs.
 Updated for 200 character/word summaries.
 
 Priority:
-1. ZEABUR_API_KEY (Zeabur AI Hub - GPT-4o-mini, fast and reliable)
-2. GOOGLE_API_KEY (Gemini - free tier)
-3. SILICONFLOW_API_KEY (SiliconFlow - free DeepSeek model)
-4. DEEPSEEK_API_KEY (DeepSeek direct API)
-5. Fallback to RSS description (no API)
+1. NVIDIA_API_KEY (NVIDIA NIM - Fast, free, multilingual - RECOMMENDED)
+2. ZEABUR_API_KEY (Zeabur AI Hub - GPT-4o-mini, fast and reliable)
+3. GOOGLE_API_KEY (Gemini - free tier)
+4. SILICONFLOW_API_KEY (SiliconFlow - free DeepSeek model)
+5. DEEPSEEK_API_KEY (DeepSeek direct API)
+6. Fallback to RSS description (no API)
 """
 import os
 import time
@@ -19,6 +20,13 @@ import requests
 from .models import NormalizedArticle, ArticleWithSummary
 
 logger = logging.getLogger(__name__)
+
+# Configuration - NVIDIA NIM (recommended, fast, free, multilingual)
+NVIDIA_API_BASE = "https://integrate.api.nvidia.com/v1/chat/completions"
+NVIDIA_MODEL = "minimaxai/minimax-m2.1"  # Fast responses, great for news
+# Alternative models:
+# - "deepseek-ai/deepseek-r1" (better reasoning, slower)
+# - "z-ai/glm4.7" (complex reasoning)
 
 # Configuration - Zeabur AI Hub (recommended, fast and reliable)
 ZEABUR_API_BASE = "https://hnd1.aihub.zeabur.ai/v1/chat/completions"
@@ -527,6 +535,28 @@ class DeepSeekSummarizer(BaseSummarizer):
         logger.info(f"Using DeepSeek API with model: {DEEPSEEK_MODEL}")
 
 
+class NVIDIASummarizer(BaseSummarizer):
+    """NVIDIA NIM API summarizer (fast, free, multilingual - RECOMMENDED)."""
+    
+    def __init__(self, api_key: str, model: str = None):
+        # Allow custom model override
+        selected_model = model or os.environ.get('NVIDIA_MODEL') or NVIDIA_MODEL
+        
+        # Get base URL and ensure it ends with /chat/completions  
+        base_url = os.environ.get('NVIDIA_BASE_URL', NVIDIA_API_BASE)
+        if not base_url.endswith('/chat/completions'):
+            if base_url.endswith('/v1'):
+                base_url = base_url + '/chat/completions'
+            elif not base_url.endswith('/'):
+                base_url = base_url + '/v1/chat/completions'
+            else:
+                base_url = base_url + 'v1/chat/completions'
+        
+        super().__init__(api_key, base_url, selected_model)
+        logger.info(f"✨ Using NVIDIA NIM API with model: {selected_model}")
+        logger.info(f"   Base URL: {base_url}")
+
+
 class ZeaburSummarizer(BaseSummarizer):
     """Zeabur AI Hub summarizer (GPT-4o-mini, fast and reliable)."""
     
@@ -561,18 +591,22 @@ def get_summarizer():
     Get appropriate summarizer based on available API keys.
     
     Priority:
-    1. ZEABUR_API_KEY (Zeabur AI Hub - GPT-4o-mini, fast)
-    2. GOOGLE_API_KEY (Gemini)
-    3. SILICONFLOW_API_KEY
-    4. DEEPSEEK_API_KEY
-    5. Fallback (no API)
+    1. NVIDIA_API_KEY (NVIDIA NIM - fast, free, multilingual)
+    2. ZEABUR_API_KEY (Zeabur AI Hub - GPT-4o-mini, fast)
+    3. GOOGLE_API_KEY (Gemini)
+    4. SILICONFLOW_API_KEY
+    5. DEEPSEEK_API_KEY
+    6. Fallback (no API)
     """
+    nvidia_key = os.environ.get('NVIDIA_API_KEY')
     zeabur_key = os.environ.get('ZEABUR_API_KEY')
     google_key = os.environ.get('GOOGLE_API_KEY')
     siliconflow_key = os.environ.get('SILICONFLOW_API_KEY')
     deepseek_key = os.environ.get('DEEPSEEK_API_KEY')
     
-    if zeabur_key:
+    if nvidia_key:
+        return NVIDIASummarizer(nvidia_key)
+    elif zeabur_key:
         return ZeaburSummarizer(zeabur_key)
     elif google_key:
         return GeminiSummarizer(google_key)
@@ -601,7 +635,10 @@ def summarize_by_category(
     # Get summarizer based on available keys
     if api_key:
         # Detect API type by key format
-        if api_key.startswith('sk-') and len(api_key) < 30:
+        if api_key.startswith('nvapi-'):
+            # NVIDIA NIM keys start with nvapi-
+            summarizer = NVIDIASummarizer(api_key)
+        elif api_key.startswith('sk-') and len(api_key) < 30:
             # Zeabur keys are short sk- format
             summarizer = ZeaburSummarizer(api_key)
         elif api_key.startswith('AIzaSy'):
