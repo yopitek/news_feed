@@ -1,0 +1,92 @@
+name: 🔄 Sync to Personal Blog
+
+on:
+  # 在 update-news workflow 完成後自動執行
+  workflow_run:
+    workflows: ["📰 Daily News Update"]
+    types:
+      - completed
+  
+  # 也可以手動觸發
+  workflow_dispatch:
+
+jobs:
+  sync-to-blog:
+    runs-on: ubuntu-latest
+    # 只在 update-news workflow 成功時執行
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    
+    steps:
+      - name: 📥 Checkout news_feed repo
+        uses: actions/checkout@v4
+        with:
+          path: news_feed
+      
+      - name: 📥 Checkout personal_blogv1 repo
+        uses: actions/checkout@v4
+        with:
+          repository: yopitek/personal_blogv1
+          token: ${{ secrets.PERSONAL_BLOG_TOKEN }}
+          path: personal_blogv1
+      
+      - name: 📂 Create news_feed directory if not exists
+        run: |
+          mkdir -p personal_blogv1/static/news_feed
+      
+      - name: 🔄 Sync files to personal blog
+        run: |
+          # 複製主要的 HTML 文件
+          if [ -f "news_feed/index.html" ]; then
+            cp news_feed/index.html personal_blogv1/static/news_feed/
+            echo "✅ Copied index.html"
+          fi
+          
+          # 如果有 docs 目錄，也複製
+          if [ -d "news_feed/docs" ]; then
+            cp -r news_feed/docs/* personal_blogv1/static/news_feed/
+            echo "✅ Copied docs directory"
+          fi
+          
+          # 如果有 output 目錄，也複製（可選）
+          if [ -d "news_feed/output" ]; then
+            mkdir -p personal_blogv1/static/news_feed/output
+            cp -r news_feed/output/* personal_blogv1/static/news_feed/output/
+            echo "✅ Copied output directory"
+          fi
+          
+          # 顯示複製的文件
+          echo "📋 Files in static/news_feed:"
+          ls -lh personal_blogv1/static/news_feed/
+      
+      - name: 🚀 Commit and push to personal_blogv1
+        run: |
+          cd personal_blogv1
+          
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          
+          # 添加所有更改的文件
+          git add static/news_feed/
+          
+          # 檢查是否有更改
+          if git diff --staged --quiet; then
+            echo "ℹ️ No changes to commit"
+          else
+            COMMIT_DATE=$(date +%Y-%m-%d)
+            git commit -m "🔄 Auto-sync news_feed - $COMMIT_DATE"
+            
+            git push
+            echo "✅ Changes pushed to personal_blogv1"
+          fi
+      
+      - name: 📊 Summary
+        run: |
+          echo "======================================================================"
+          echo "🎉 News feed synced successfully!"
+          echo "======================================================================"
+          echo ""
+          echo "📅 Date: $(date +%Y-%m-%d\ %H:%M:%S)"
+          echo "🌐 News Feed URL: https://yopitek.github.io/news_feed/"
+          echo "🌐 Blog URL: https://zennote.app/news_feed/"
+          echo ""
+          echo "✅ Sync workflow completed"
