@@ -47,12 +47,17 @@ jobs:
             echo "✅ Copied docs directory"
           fi
           
-          # 如果有 output 目錄，也複製（可選）
-          if [ -d "news_feed/output" ]; then
-            mkdir -p personal_blogv1/static/news_feed/output
-            cp -r news_feed/output/* personal_blogv1/static/news_feed/output/
-            echo "✅ Copied output directory"
-          fi
+       # 如果 output 目錄有可見檔案才複製（避免空目錄錯誤）
+if [ -d "news_feed/output" ]; then
+  VISIBLE_FILES=$(find news_feed/output -maxdepth 1 -type f ! -name ".*" | head -1)
+  if [ -n "$VISIBLE_FILES" ]; then
+    mkdir -p personal_blogv1/static/news_feed/output
+    cp -r news_feed/output/* personal_blogv1/static/news_feed/output/ 2>/dev/null || true
+    echo "✅ Copied output directory"
+  else
+    echo "ℹ️ Output directory is empty or only contains hidden files, skipping"
+  fi
+fi
           
           # 顯示複製的文件
           echo "📋 Files in static/news_feed:"
