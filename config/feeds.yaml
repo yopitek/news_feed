@@ -1,11 +1,3 @@
-# RSS Feeds Configuration
-# Daily Multilingual News Digest System
-# 
-# 3 Tabs with Category-based grouping:
-# - 中文新聞: 9 categories
-# - English: Startup (8) + Tech News (8) + BBC (7 subcategories × 6 each)
-# - 日本語: 7 categories
-
 tabs:
   # ============================================
   # 中文新聞 - 9 Categories
@@ -36,6 +28,10 @@ tabs:
       # 兩岸 -> 全球國際新聞
       - category: 兩岸
         url: https://feeds.feedburner.com/rsscna/mainland
+        source_name: 中央社
+      # 產經 -> 產經 (新增)
+      - category: 產經
+        url: https://feeds.feedburner.com/rsscna/finance
         source_name: 中央社
       # 科技 -> 產經
       - category: 科技
@@ -72,6 +68,7 @@ tabs:
   en_news:
     name: English News
     language: en
+    items_per_category: 8
     categories:
       # Main categories
       - Startup
@@ -98,7 +95,7 @@ tabs:
       - category: Startup
         url: https://techcrunch.com/startups/feed/
         source_name: TechCrunch Startups
-      
+
       # ========== Tech News ==========
       - category: Tech News
         url: http://www.fastcodesign.com/rss.xml
@@ -121,7 +118,7 @@ tabs:
       - category: Tech News
         url: https://news.ycombinator.com/rss
         source_name: Hacker News
-      
+
       # ========== BBC News (7 subcategories) ==========
       # BBC Top Stories
       - category: BBC Top Stories
@@ -181,7 +178,7 @@ tabs:
       - category: 頭條
         url: https://news.yahoo.co.jp/rss/topics/domestic.xml
         source_name: Yahoo! Japan
-      
+
       # 國際 (International)
       - category: 國際
         url: https://www.asahi.com/rss/asahi/international.rdf
@@ -189,12 +186,12 @@ tabs:
       - category: 國際
         url: https://news.yahoo.co.jp/rss/topics/world.xml
         source_name: Yahoo! Japan
-      
+
       # 政治 (Politics)
       - category: 政治
         url: https://www.asahi.com/rss/asahi/politics.rdf
         source_name: 朝日新聞
-      
+
       # 運動 (Sports)
       - category: 運動
         url: https://www.asahi.com/rss/asahi/sports.rdf
@@ -202,7 +199,7 @@ tabs:
       - category: 運動
         url: https://news.yahoo.co.jp/rss/topics/sports.xml
         source_name: Yahoo! Japan
-      
+
       # 商業 (Business)
       - category: 商業
         url: https://www.asahi.com/rss/asahi/business.rdf
@@ -216,7 +213,7 @@ tabs:
       - category: 商業
         url: https://news.yahoo.co.jp/rss/topics/science.xml
         source_name: Yahoo! Japan
-      
+
       # 文化 (Culture)
       - category: 文化
         url: https://www.asahi.com/rss/asahi/culture.rdf
@@ -224,7 +221,7 @@ tabs:
       - category: 文化
         url: https://news.yahoo.co.jp/rss/topics/local.xml
         source_name: Yahoo! Japan
-      
+
       # 娛樂 (Entertainment)
       - category: 娛樂
         url: https://news.yahoo.co.jp/rss/topics/entertainment.xml
