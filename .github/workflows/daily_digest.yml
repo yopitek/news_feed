@@ -77,6 +77,7 @@ jobs:
       # Send Email
       # ============================================
       - name: Send email digest
+        id: send_email
         if: ${{ steps.generate.outputs.digest_generated == 'true' && inputs.skip_email != 'true' }}
         continue-on-error: true
         env:
@@ -92,6 +93,11 @@ jobs:
           result = send_digest_email()
           exit(0 if result else 1)
           "
+      
+      - name: Warn on email delivery failure
+        if: ${{ steps.send_email.outcome == 'failure' }}
+        run: |
+          echo "::warning::Email delivery failed. Check SMTP credentials (SMTP_SERVER, SMTP_USERNAME, SMTP_PASSWORD secrets). The digest was generated and deployed to GitHub Pages, but no email was sent."
       
       # ============================================
       # Deploy to GitHub Pages
