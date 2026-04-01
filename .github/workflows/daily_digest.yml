@@ -78,6 +78,7 @@ jobs:
       # ============================================
       - name: Send email digest
         if: ${{ steps.generate.outputs.digest_generated == 'true' && inputs.skip_email != 'true' }}
+        continue-on-error: true
         env:
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
