@@ -11,12 +11,12 @@ on:
       skip_email:
         description: 'Skip sending email (for testing)'
         required: false
-        default: 'false'
+        default: false
         type: boolean
       debug_mode:
         description: 'Enable debug logging'
         required: false
-        default: 'false'
+        default: false
         type: boolean
 
 # Prevent concurrent runs
@@ -78,6 +78,7 @@ jobs:
       # ============================================
       - name: Send email digest
         if: ${{ steps.generate.outputs.digest_generated == 'true' && inputs.skip_email != 'true' }}
+        continue-on-error: true
         env:
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -96,7 +97,7 @@ jobs:
       # Deploy to GitHub Pages
       # ============================================
       - name: Prepare GitHub Pages
-        if: ${{ steps.generate.outputs.digest_generated == 'true' }}
+        if: ${{ always() && steps.generate.outputs.digest_generated == 'true' }}
         run: |
           mkdir -p docs
           cp output/web_digest.html docs/index.html
@@ -105,7 +106,7 @@ jobs:
           echo "GitHub Pages files prepared"
       
       - name: Deploy to GitHub Pages
-        if: ${{ steps.generate.outputs.digest_generated == 'true' }}
+        if: ${{ always() && steps.generate.outputs.digest_generated == 'true' }}
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
