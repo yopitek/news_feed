@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>每週 AI 精選 | {{DATE_DISPLAY}}</title>
+  <style type="text/css">
+    body { margin: 0; padding: 0; background-color: #f3efe6;
+           font-family: Georgia, "Times New Roman", serif; }
+    .wrapper { width: 100%; background-color: #f3efe6; }
+    .container { width: 100%; max-width: 680px; margin: 0 auto;
+                 background-color: #fffdf7; border: 1px solid #e6e1d6; }
+    .masthead { padding: 24px 28px; border-bottom: 3px solid #1a1a1a; }
+    .masthead-title { font-size: 24px; font-weight: bold; color: #1a1a1a; margin: 0; }
+    .masthead-subtitle { font-family: Arial, sans-serif; font-size: 13px;
+                         color: #666; margin: 6px 0 0 0; }
+    .week-badge { display: inline-block; font-family: Arial, sans-serif;
+                  font-size: 11px; color: #fff; background-color: #0f5499;
+                  padding: 3px 8px; margin-left: 8px; vertical-align: middle; }
+    .section-header { font-size: 17px; font-weight: bold; color: #1a1a1a;
+                      margin: 0 0 12px 0; padding-bottom: 8px;
+                      border-bottom: 2px solid #1a1a1a; }
+    .section-body { padding: 20px 28px; }
+    .item-block { padding: 14px 0; border-bottom: 1px solid #e6e1d6; }
+    .item-block:last-child { border-bottom: none; }
+    .item-title { font-size: 15px; font-weight: bold; color: #1a1a1a;
+                  text-decoration: none; }
+    .item-title:hover { text-decoration: underline; }
+    .item-handle { font-family: Arial, sans-serif; font-size: 12px;
+                   color: #0f5499; margin: 4px 0; }
+    .item-bullets { font-family: Arial, sans-serif; font-size: 13px;
+                    color: #333; margin: 6px 0; padding-left: 18px; }
+    .item-bullets li { margin-bottom: 3px; }
+    .item-why { font-family: Arial, sans-serif; font-size: 13px;
+                color: #555; font-style: italic; margin: 6px 0 0 0; }
+    .divider { height: 1px; background-color: #e6e1d6; }
+    .footer { padding: 16px 28px; font-family: Arial, sans-serif;
+              font-size: 11px; color: #999;
+              border-top: 1px solid #e6e1d6; background-color: #faf8f2; }
+  </style>
+</head>
+<body>
+  <table class="wrapper" role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+    <tr><td align="center" style="padding: 24px 10px;">
+      <table class="container" role="presentation" width="680" cellpadding="0" cellspacing="0" border="0">
+
+        <!-- Masthead -->
+        <tr><td class="masthead">
+          <p class="masthead-title">
+            每週 AI 精選
+            <span class="week-badge">Week {{WEEK_NUM}}</span>
+          </p>
+          <p class="masthead-subtitle">{{DATE_DISPLAY}} · 65 位 AI 從業者精華摘要</p>
+        </td></tr>
+
+        <!-- Items by type -->
+        {{WEEKLY_ITEMS}}
+
+        <!-- Footer -->
+        <tr><td class="footer">
+          每週一 08:00 自動生成 · 資料來源：Twitter/X via Tavily Search · DeepSeek AI 摘要
+        </td></tr>
+
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

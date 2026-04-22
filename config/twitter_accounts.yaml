@@ -1,0 +1,87 @@
+# config/twitter_accounts.yaml
+# 65 AI practitioner Twitter/X accounts for weekly digest
+# priority: 1 = search first; 2 = always include; 3 = include if space
+# Source: Obsidian/HQ/10_resources/twitter_resource.md
+
+keywords: "tool OR workflow OR method OR tutorial OR prompt OR tip OR guide OR framework"
+
+accounts:
+  # Priority 1 — search first
+  - { handle: "zarazhangrui", priority: 1, type: "personal" }
+  - { handle: "danshipper",    priority: 1, type: "personal" }
+  - { handle: "swyx",          priority: 1, type: "personal" }
+  - { handle: "karpathy",      priority: 1, type: "personal" }
+  - { handle: "rauchg",        priority: 1, type: "personal" }
+  - { handle: "amasad",        priority: 1, type: "personal" }
+
+  # Priority 2 — institutional
+  - { handle: "OpenAI",        priority: 2, type: "institutional" }
+  - { handle: "AnthropicAI",   priority: 2, type: "institutional" }
+  - { handle: "GoogleDeepMind",priority: 2, type: "institutional" }
+  - { handle: "nvidia",        priority: 2, type: "institutional" }
+  - { handle: "NVIDIAAI",      priority: 2, type: "institutional" }
+  - { handle: "MetaAI",        priority: 2, type: "institutional" }
+  - { handle: "deepseek_ai",   priority: 2, type: "institutional" }
+  - { handle: "Alibaba_Qwen",  priority: 2, type: "institutional" }
+  - { handle: "midjourney",    priority: 2, type: "institutional" }
+  - { handle: "Kimi_Moonshot", priority: 2, type: "institutional" }
+  - { handle: "MiniMax_AI",    priority: 2, type: "institutional" }
+  - { handle: "DeepMind",      priority: 2, type: "institutional" }
+
+  # Priority 2 — senior personal
+  - { handle: "sama",          priority: 2, type: "personal" }
+  - { handle: "elonmusk",      priority: 2, type: "personal" }
+  - { handle: "ylecun",        priority: 2, type: "personal" }
+  - { handle: "demishassabis",  priority: 2, type: "personal" }
+  - { handle: "DarioAmodei",   priority: 2, type: "personal" }
+  - { handle: "ilyasut",       priority: 2, type: "personal" }
+  - { handle: "AndrewYNg",     priority: 2, type: "personal" }
+  - { handle: "jeffdean",      priority: 2, type: "personal" }
+  - { handle: "drfeifei",      priority: 2, type: "personal" }
+  - { handle: "Thom_Wolf",     priority: 2, type: "personal" }
+  - { handle: "kevinweil",     priority: 2, type: "personal" }
+
+  # Priority 3 — community / practitioners
+  - { handle: "zuck",          priority: 3, type: "personal" }
+  - { handle: "geoffreyhinton",priority: 3, type: "personal" }
+  - { handle: "erikbryn",      priority: 3, type: "personal" }
+  - { handle: "alliekmiller",  priority: 3, type: "personal" }
+  - { handle: "tunguz",        priority: 3, type: "personal" }
+  - { handle: "Ronald_vanLoon",priority: 3, type: "personal" }
+  - { handle: "DeepLearn007",  priority: 3, type: "personal" }
+  - { handle: "nigewillson",   priority: 3, type: "personal" }
+  - { handle: "petitegeek",    priority: 3, type: "personal" }
+  - { handle: "YuHelenYu",     priority: 3, type: "personal" }
+  - { handle: "TamaraMcCleary",priority: 3, type: "personal" }
+  - { handle: "joshwoodward",  priority: 3, type: "personal" }
+  - { handle: "petergyang",    priority: 3, type: "personal" }
+  - { handle: "alexalbert__",  priority: 3, type: "personal" }
+  - { handle: "levie",         priority: 3, type: "personal" }
+  - { handle: "ryolu_",        priority: 3, type: "personal" }
+  - { handle: "mattturck",     priority: 3, type: "personal" }
+  - { handle: "nikunj",        priority: 3, type: "personal" }
+  - { handle: "gdielaz",       priority: 3, type: "personal" }
+  - { handle: "gdb",           priority: 3, type: "personal" }
+  - { handle: "theanuch",      priority: 3, type: "personal" }
+  - { handle: "kuchas",        priority: 3, type: "personal" }
+  - { handle: "swyx",          priority: 3, type: "personal" }
+  - { handle: "Bytedancen",    priority: 3, type: "institutional" }
+  - { handle: "wheresyoured",  priority: 3, type: "personal" }
+  - { handle: "mattshumer",    priority: 3, type: "personal" }
+  - { handle: "fchollet",      priority: 3, type: "personal" }
+  - { handle: "emollick",      priority: 3, type: "personal" }
+  - { handle: "jeremyphoward", priority: 3, type: "personal" }
+  - { handle: "hwchase17",     priority: 3, type: "personal" }
+  - { handle: "aiwithvibes",   priority: 3, type: "personal" }
+  - { handle: "bentossell",    priority: 3, type: "personal" }
+  - { handle: "heyBarsee",     priority: 3, type: "personal" }
+  - { handle: "rohanpaul_ai",  priority: 3, type: "personal" }
+  - { handle: "adityaagPriority", priority: 3, type: "personal" }
+
+exclude_keywords:
+  - "infrastructure"
+  - "academic paper"
+  - "funding"
+  - "raises"
+  - "benchmark"
+  - "SOTA"

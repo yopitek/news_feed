@@ -1,0 +1,35 @@
+# config/tech_blogs.yaml
+# 18 curated tech blogs — RSS excerpts only, no AI summarization
+tech_blogs:
+  name: Tech Blogs
+  language: en
+  item_limit: 5
+
+  sources:
+    # AI / ML
+    - { category: "Tech Blogs", url: "https://simonwillison.net/atom/everything/", source_name: "Simon Willison" }
+    - { category: "Tech Blogs", url: "https://garymarcus.substack.com/feed", source_name: "Gary Marcus" }
+    - { category: "Tech Blogs", url: "https://www.dwarkeshpatel.com/feed", source_name: "Dwarkesh Patel" }
+    - { category: "Tech Blogs", url: "https://minimaxir.com/rss.xml", source_name: "Max Woolf" }
+    - { category: "Tech Blogs", url: "https://geohot.github.io/blog/feed.xml", source_name: "George Hotz" }
+    - { category: "Tech Blogs", url: "https://gwern.substack.com/feed", source_name: "Gwern Branwen" }
+
+    # Software Engineering
+    - { category: "Tech Blogs", url: "https://matklad.github.io/feed.xml", source_name: "matklad" }
+    - { category: "Tech Blogs", url: "https://eli.thegreenplace.net/feeds/all.atom.xml", source_name: "Eli Bendersky" }
+    - { category: "Tech Blogs", url: "https://fabiensanglard.net/rss.xml", source_name: "Fabien Sanglard" }
+    - { category: "Tech Blogs", url: "https://blog.miguelgrinberg.com/feed", source_name: "Miguel Grinberg" }
+
+    # Security
+    - { category: "Tech Blogs", url: "https://krebsonsecurity.com/feed/", source_name: "Krebs on Security" }
+    - { category: "Tech Blogs", url: "https://www.troyhunt.com/rss/", source_name: "Troy Hunt" }
+
+    # Startups / Product
+    - { category: "Tech Blogs", url: "https://aaronsw.com/2002/feeds/pgessays.rss", source_name: "Paul Graham" }
+    - { category: "Tech Blogs", url: "https://steveblank.com/feed/", source_name: "Steve Blank" }
+    - { category: "Tech Blogs", url: "https://www.wheresyoured.at/rss", source_name: "Ed Zitron" }
+    - { category: "Tech Blogs", url: "https://keygen.sh/blog/feed.xml", source_name: "Keygen" }
+
+    # Commentary
+    - { category: "Tech Blogs", url: "https://daringfireball.net/feeds/main", source_name: "Daring Fireball" }
+    - { category: "Tech Blogs", url: "https://pluralistic.net/feed/", source_name: "Cory Doctorow" }
