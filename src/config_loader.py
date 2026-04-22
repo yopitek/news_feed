@@ -10,24 +10,42 @@ from .models import FeedsConfig, TabConfig, FeedSource
 
 def load_tech_blogs_config(path: Union[str, Path] = "config/tech_blogs.yaml") -> dict:
     """
-    Load tech blogs configuration (RSS feeds without AI summarization).
+    Load tech blogs configuration and return as dict of TabConfig objects.
     
     Args:
         path: Path to tech_blogs.yaml file
     
     Returns:
-        Dictionary with tech blog feed configurations
+        Dictionary with tab_id -> TabConfig object
     """
+    from .models import FeedsConfig, TabConfig
+    
     path = Path(path)
     
     if not path.exists():
-        # Return empty config if file doesn't exist yet
         return {'tabs': {}, 'settings': {}}
     
     with open(path, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
     
-    return data or {'tabs': {}, 'settings': {}}
+    tabs = {}
+    for tab_id, tab_data in data.items():
+        sources = []
+        for source_data in tab_data.get('sources', []):
+            sources.append({
+                'category': source_data.get('category', ''),
+                'url': source_data.get('url', ''),
+                'source_name': source_data.get('source_name')
+            })
+        
+        tabs[tab_id] = TabConfig(
+            name=tab_data.get('name', tab_id),
+            language=tab_data.get('language', 'en'),
+            item_limit=tab_data.get('item_limit', 5),
+            sources=sources
+        )
+    
+    return {'tabs': tabs, 'settings': {}}
 
 
 def load_feeds_config(path: Union[str, Path] = "config/feeds.yaml") -> FeedsConfig:

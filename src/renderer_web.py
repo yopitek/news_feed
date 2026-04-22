@@ -117,8 +117,8 @@ def render_web(
         weekdays = ['一', '二', '三', '四', '五', '六', '日']
         date_str = now.strftime("%Y年%m月%d日 星期") + weekdays[now.weekday()]
     
-    # Render each tab's content (grouped by category)
-zh_content = render_tab_content(articles.get('zh_news', {}), 'zh_news')
+# Render each tab's content (grouped by category)
+    zh_content = render_tab_content(articles.get('zh_news', {}), 'zh_news')
     en_content = render_tab_content(articles.get('en_news', {}), 'en_news')
     ja_content = render_tab_content(articles.get('ja_news', {}), 'ja_news')
     tech_blogs_content = render_tab_content(articles.get('tech_blogs', {}), 'tech_blogs')

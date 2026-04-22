@@ -60,8 +60,8 @@ def main():
         tech_blogs_config_path = CONFIG_DIR / 'tech_blogs.yaml'
         if tech_blogs_config_path.exists():
             from src.config_loader import load_tech_blogs_config
-            tech_blogs_cfg = load_tech_blogs_config(tech_blogs_config_path)
-            feeds_config.tabs['tech_blogs'] = tech_blogs_cfg.tabs['tech_blogs']
+            tech_blogs_result = load_tech_blogs_config(tech_blogs_config_path)
+            feeds_config.tabs['tech_blogs'] = tech_blogs_result['tabs'].get('tech_blogs')
             logger.info("Loaded tech_blogs config (18 sources)")
         
         classification_rules = load_classification_rules(CONFIG_DIR / 'classification_rules.yaml')
