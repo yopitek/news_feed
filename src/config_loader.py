@@ -8,6 +8,28 @@ from typing import Union
 from .models import FeedsConfig, TabConfig, FeedSource
 
 
+def load_tech_blogs_config(path: Union[str, Path] = "config/tech_blogs.yaml") -> dict:
+    """
+    Load tech blogs configuration (RSS feeds without AI summarization).
+    
+    Args:
+        path: Path to tech_blogs.yaml file
+    
+    Returns:
+        Dictionary with tech blog feed configurations
+    """
+    path = Path(path)
+    
+    if not path.exists():
+        # Return empty config if file doesn't exist yet
+        return {'tabs': {}, 'settings': {}}
+    
+    with open(path, 'r', encoding='utf-8') as f:
+        data = yaml.safe_load(f)
+    
+    return data or {'tabs': {}, 'settings': {}}
+
+
 def load_feeds_config(path: Union[str, Path] = "config/feeds.yaml") -> FeedsConfig:
     """
     Load and validate RSS feed configuration.

@@ -118,14 +118,15 @@ def render_web(
         date_str = now.strftime("%Y年%m月%d日 星期") + weekdays[now.weekday()]
     
     # Render each tab's content (grouped by category)
-    zh_content = render_tab_content(articles.get('zh_news', {}), 'zh_news')
+zh_content = render_tab_content(articles.get('zh_news', {}), 'zh_news')
     en_content = render_tab_content(articles.get('en_news', {}), 'en_news')
     ja_content = render_tab_content(articles.get('ja_news', {}), 'ja_news')
+    tech_blogs_content = render_tab_content(articles.get('tech_blogs', {}), 'tech_blogs')
     
-    # Substitute placeholders
     html = template.replace('{{DATE_DISPLAY}}', date_str)
     html = html.replace('{{ZH_NEWS_ITEMS}}', zh_content)
     html = html.replace('{{EN_NEWS_ITEMS}}', en_content)
     html = html.replace('{{JA_NEWS_ITEMS}}', ja_content)
+    html = html.replace('{{TECH_BLOGS_ITEMS}}', tech_blogs_content)
     
     return html

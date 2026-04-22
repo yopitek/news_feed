@@ -620,7 +620,8 @@ def get_summarizer():
 
 def summarize_by_category(
     articles: dict[str, dict[str, list[NormalizedArticle]]], 
-    api_key: str = None
+    api_key: str = None,
+    skip_ai_tabs: list[str] = None
 ) -> dict[str, dict[str, list[ArticleWithSummary]]]:
     """
     Summarize articles organized by tab and category.
@@ -628,10 +629,12 @@ def summarize_by_category(
     Args:
         articles: Nested dict: tab -> category -> articles
         api_key: Optional explicit API key (overrides env vars)
+        skip_ai_tabs: Tabs to skip AI summarization (use RSS description directly)
     
     Returns:
         Same structure with ArticleWithSummary objects
     """
+    skip_ai_tabs = skip_ai_tabs or []
     # Get summarizer based on available keys
     if api_key:
         # Detect API type by key format
@@ -656,9 +659,15 @@ def summarize_by_category(
     for tab, categories in articles.items():
         result[tab] = {}
         for category, cat_articles in categories.items():
+            # Use RSS description directly for skip_ai_tabs (tech_blogs)
+            use_direct = tab in skip_ai_tabs
+            
             summarized = []
             for article in cat_articles:
-                summary = summarizer.summarize(article)
+                if use_direct:
+                    summary = article.description or article.title
+                else:
+                    summary = summarizer.summarize(article)
                 
                 summarized.append(ArticleWithSummary(
                     title=article.title,

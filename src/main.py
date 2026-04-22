@@ -55,6 +55,15 @@ def main():
         # Step 1: Load configuration
         logger.info("Loading configuration...")
         feeds_config = load_feeds_config(CONFIG_DIR / 'feeds.yaml')
+        
+        # Load tech_blogs config and merge into feeds_config
+        tech_blogs_config_path = CONFIG_DIR / 'tech_blogs.yaml'
+        if tech_blogs_config_path.exists():
+            from src.config_loader import load_tech_blogs_config
+            tech_blogs_cfg = load_tech_blogs_config(tech_blogs_config_path)
+            feeds_config.tabs['tech_blogs'] = tech_blogs_cfg.tabs['tech_blogs']
+            logger.info("Loaded tech_blogs config (18 sources)")
+        
         classification_rules = load_classification_rules(CONFIG_DIR / 'classification_rules.yaml')
         
         all_sources = feeds_config.get_all_sources()
@@ -123,7 +132,7 @@ def main():
             logger.warning("No API key found - using RSS descriptions as fallback")
             api_key = None
         
-        summarized = summarize_by_category(selected, api_key)
+        summarized = summarize_by_category(selected, api_key, skip_ai_tabs=['tech_blogs'])
         summary_count = sum(
             len(arts)
             for cats in summarized.values()

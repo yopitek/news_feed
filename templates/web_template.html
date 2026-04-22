@@ -268,6 +268,7 @@
                 <button class="tab-btn active" role="tab" aria-selected="true" data-tab="zh-news">中文新聞</button>
                 <button class="tab-btn" role="tab" aria-selected="false" data-tab="en-news">English News</button>
                 <button class="tab-btn" role="tab" aria-selected="false" data-tab="ja-news">日本語ニュース</button>
+                <button class="tab-btn" role="tab" aria-selected="false" data-tab="tech-blogs">Tech Blogs</button>
             </nav>
 
             <section class="tab-content active" id="zh-news" role="tabpanel">
@@ -283,6 +284,11 @@
             <section class="tab-content" id="ja-news" role="tabpanel">
                 <h2 class="section-header">日本語ニュース</h2>
                 {{JA_NEWS_ITEMS}}
+            </section>
+
+            <section class="tab-content" id="tech-blogs" role="tabpanel">
+                <h2 class="section-header">Tech Blogs</h2>
+                {{TECH_BLOGS_ITEMS}}
             </section>
 
             <footer class="footer">

@@ -22,7 +22,8 @@ TAB_CATEGORIES = {
         'BBC Top Stories', 'BBC World', 'BBC Business', 'BBC Education',
         'BBC Technology', 'BBC Health', 'BBC Science & Environment'
     ],
-    'ja_news': ['頭條', '國際', '政治', '運動', '商業', '文化', '娛樂']
+    'ja_news': ['頭條', '國際', '政治', '運動', '商業', '文化', '娛樂'],
+    'tech_blogs': ['Tech Blogs'],  # NEW - 5th tab
 }
 
 # Items per category (different for BBC)
@@ -39,7 +40,8 @@ ITEMS_PER_CATEGORY = {
         'BBC Health': 6,
         'BBC Science & Environment': 6
     },
-    'ja_news': 8
+    'ja_news': 8,
+    'tech_blogs': 5,
 }
 
 
@@ -74,11 +76,13 @@ def map_to_display_category(article: NormalizedArticle) -> str:
         return legacy_mapping.get(rss_cat, 'Tech News')
     
     elif tab == 'ja_news':
-        # Japanese: directly use rss_category from feeds.yaml
         if rss_cat in TAB_CATEGORIES['ja_news']:
             return rss_cat
         else:
-            return '頭條'  # fallback
+            return '頭條'
+    
+    elif tab == 'tech_blogs':
+        return 'Tech Blogs'
     
     return rss_cat
 

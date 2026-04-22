@@ -157,12 +157,12 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
                 user_agent=user_agent
             )
             
-            # Add metadata to each entry
             for entry in entries:
                 entry['_tab'] = tab_id
                 entry['_language'] = tab_config.language
                 entry['_category'] = source.get('category', '')
                 entry['_source_name'] = source.get('source_name', '')
+                entry['_source_type'] = 'tech_blog' if tab_id == 'tech_blogs' else 'news'
             
             tab_entries.extend(entries)
         
