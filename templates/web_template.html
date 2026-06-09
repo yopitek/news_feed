@@ -7,6 +7,14 @@
     <meta name="description" content="Daily Multilingual News Digest - 中文、English、日本語">
     <title>每日電子新聞報 | {{DATE_DISPLAY}}</title>
 
+    <meta property="og:title" content="每日電子新聞報 | {{DATE_DISPLAY}}">
+    <meta property="og:description" content="每日精選中文、英文、日文新聞摘要，AI 自動生成。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zennote.app/news_feed/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="每日電子新聞報 | {{DATE_DISPLAY}}">
+    <meta name="twitter:description" content="每日精選中文、英文、日文新聞摘要。">
+
     <style>
         *,
         *::before,
@@ -253,6 +261,36 @@
                 font-size: 0.85rem;
             }
         }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background-color: #990f3d;
+            transform: translateY(-2px);
+        }
+
+        .back-to-top.visible {
+            display: flex;
+        }
     </style>
 </head>
 
@@ -265,30 +303,39 @@
             </header>
 
             <nav class="tab-nav" role="tablist">
-                <button class="tab-btn active" role="tab" aria-selected="true" data-tab="zh-news">中文新聞</button>
-                <button class="tab-btn" role="tab" aria-selected="false" data-tab="en-news">English News</button>
-                <button class="tab-btn" role="tab" aria-selected="false" data-tab="ja-news">日本語ニュース</button>
-                <button class="tab-btn" role="tab" aria-selected="false" data-tab="tech-blogs">Tech Blogs</button>
+                <button id="tab-zh-news" class="tab-btn active" role="tab" aria-selected="true" aria-controls="zh-news" data-tab="zh-news">中文新聞</button>
+                <button id="tab-en-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="en-news" data-tab="en-news">English News</button>
+                <button id="tab-ja-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="ja-news" data-tab="ja-news">日本語ニュース</button>
+                <button id="tab-tech-blogs" class="tab-btn" role="tab" aria-selected="false" aria-controls="tech-blogs" data-tab="tech-blogs">Tech Blogs</button>
             </nav>
 
-            <section class="tab-content active" id="zh-news" role="tabpanel">
+            <section class="tab-content active" id="zh-news" role="tabpanel" aria-labelledby="tab-zh-news">
                 <h2 class="section-header">中文新聞</h2>
                 {{ZH_NEWS_ITEMS}}
             </section>
 
-            <section class="tab-content" id="en-news" role="tabpanel">
+            <template id="en-news-template">
                 <h2 class="section-header">English News</h2>
                 {{EN_NEWS_ITEMS}}
+            </template>
+            <section class="tab-content" id="en-news" role="tabpanel" aria-labelledby="tab-en-news">
+                <!-- Content loaded lazily -->
             </section>
 
-            <section class="tab-content" id="ja-news" role="tabpanel">
+            <template id="ja-news-template">
                 <h2 class="section-header">日本語ニュース</h2>
                 {{JA_NEWS_ITEMS}}
+            </template>
+            <section class="tab-content" id="ja-news" role="tabpanel" aria-labelledby="tab-ja-news">
+                <!-- Content loaded lazily -->
             </section>
 
-            <section class="tab-content" id="tech-blogs" role="tabpanel">
+            <template id="tech-blogs-template">
                 <h2 class="section-header">Tech Blogs</h2>
                 {{TECH_BLOGS_ITEMS}}
+            </template>
+            <section class="tab-content" id="tech-blogs" role="tabpanel" aria-labelledby="tab-tech-blogs">
+                <!-- Content loaded lazily -->
             </section>
 
             <footer class="footer">
@@ -299,27 +346,100 @@
         </div>
     </div>
 
+    <button class="back-to-top" id="back-to-top" title="回到頂端" aria-label="回到頂端">↑</button>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const tabButtons = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
+            const tabNav = document.querySelector('.tab-nav');
+            const loadedTabs = new Set(['zh-news']);
+
+            function loadTabContent(tabId) {
+                if (loadedTabs.has(tabId)) return;
+                var template = document.getElementById(tabId + '-template');
+                var panel = document.getElementById(tabId);
+                if (template && panel) {
+                    var content = template.content.cloneNode(true);
+                    panel.innerHTML = '';
+                    panel.appendChild(content);
+                    loadedTabs.add(tabId);
+                }
+            }
+
+            function activateTab(targetTab) {
+                tabButtons.forEach(function (btn) {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                    btn.setAttribute('tabindex', '-1');
+                });
+
+                tabContents.forEach(function (content) {
+                    content.classList.remove('active');
+                });
+
+                loadTabContent(targetTab);
+
+                var activeBtn = document.querySelector('[data-tab="' + targetTab + '"]');
+                if (activeBtn) {
+                    activeBtn.classList.add('active');
+                    activeBtn.setAttribute('aria-selected', 'true');
+                    activeBtn.setAttribute('tabindex', '0');
+                    activeBtn.focus();
+                }
+
+                var panel = document.getElementById(targetTab);
+                if (panel) {
+                    panel.classList.add('active');
+                }
+            }
 
             tabButtons.forEach(function (button) {
                 button.addEventListener('click', function () {
-                    const targetTab = this.getAttribute('data-tab');
-
-                    tabButtons.forEach(function (btn) {
-                        btn.classList.remove('active');
-                        btn.setAttribute('aria-selected', 'false');
-                    });
-                    this.classList.add('active');
-                    this.setAttribute('aria-selected', 'true');
-
-                    tabContents.forEach(function (content) {
-                        content.classList.remove('active');
-                    });
-                    document.getElementById(targetTab).classList.add('active');
+                    activateTab(this.getAttribute('data-tab'));
                 });
+            });
+
+            tabNav.addEventListener('keydown', function (e) {
+                var current = document.activeElement;
+                if (!current || !current.classList.contains('tab-btn')) return;
+
+                var buttons = Array.from(tabButtons);
+                var idx = buttons.indexOf(current);
+
+                switch (e.key) {
+                    case 'ArrowRight':
+                        e.preventDefault();
+                        idx = (idx + 1) % buttons.length;
+                        activateTab(buttons[idx].getAttribute('data-tab'));
+                        break;
+                    case 'ArrowLeft':
+                        e.preventDefault();
+                        idx = (idx - 1 + buttons.length) % buttons.length;
+                        activateTab(buttons[idx].getAttribute('data-tab'));
+                        break;
+                    case 'Home':
+                        e.preventDefault();
+                        activateTab(buttons[0].getAttribute('data-tab'));
+                        break;
+                    case 'End':
+                        e.preventDefault();
+                        activateTab(buttons[buttons.length - 1].getAttribute('data-tab'));
+                        break;
+                }
+            });
+
+            var backToTop = document.getElementById('back-to-top');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            backToTop.addEventListener('click', function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
     </script>

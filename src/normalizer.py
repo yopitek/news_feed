@@ -19,7 +19,8 @@ logger = logging.getLogger(__name__)
 # Tracking parameters to remove from URLs
 TRACKING_PARAMS = {
     'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content',
-    'fbclid', 'gclid', 'ref', 'source', 'mc_cid', 'mc_eid', 'ocid'
+    'fbclid', 'gclid', 'ref', 'source', 'mc_cid', 'mc_eid', 'ocid',
+    'view_token'
 }
 
 
