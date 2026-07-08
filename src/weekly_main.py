@@ -1,6 +1,6 @@
 """
 Weekly AI digest pipeline - fetches from Twitter/X accounts via Tavily,
-structures with DeepSeek, renders HTML and sends email.
+structures with NVIDIA NIM or another OpenAI-compatible provider, renders HTML and sends email.
 """
 import logging
 import os
@@ -38,9 +38,9 @@ def filter_results(results: list[TweetResult], exclude_keywords: list[str] | Non
     return filtered[:15]  # Max 15 items
 
 
-def structurize_tweet(tweet: TweetResult, api_key: str) -> WeeklyItem:
+def structurize_tweet(tweet: TweetResult, api_key: str, api_base: str, model: str) -> WeeklyItem:
     """
-    Call DeepSeek to generate structured WeeklyItem from TweetResult.
+    Call an OpenAI-compatible provider to generate structured WeeklyItem from TweetResult.
     Uses the summarizer pattern for structured output.
     """
     from .summarizer import BaseSummarizer
@@ -63,7 +63,7 @@ def structurize_tweet(tweet: TweetResult, api_key: str) -> WeeklyItem:
 輸出JSON："""
             return system, user
     
-    summarizer = WeeklySummarizer(api_key, "https://api.deepseek.com/v1/chat/completions", "deepseek-chat")
+    summarizer = WeeklySummarizer(api_key, api_base, model)
     system, user = summarizer.get_weekly_prompt(tweet)
     
     try:
@@ -107,6 +107,9 @@ def run_weekly_pipeline():
     
     # Get API keys
     tavily_key = os.environ.get("TAVILY_API_KEY")
+    nvidia_key = os.environ.get("NVIDIA_API_KEY")
+    nvidia_base_url = os.environ.get("NVIDIA_BASE_URL", "https://integrate.api.nvidia.com/v1/chat/completions")
+    nvidia_model = os.environ.get("NVIDIA_MODEL", "minimaxai/minimax-m2.1")
     deepseek_key = os.environ.get("DEEPSEEK_API_KEY")
     
     if not tavily_key:
@@ -126,12 +129,33 @@ def run_weekly_pipeline():
         logger.warning("Not enough results, skipping email")
         return
     
-    # Structurize with DeepSeek
+    # Structurize with NVIDIA first; DeepSeek remains a last-resort fallback.
     items = []
-    if deepseek_key:
-        logger.info("Structurizing with DeepSeek...")
+    provider = None
+    if nvidia_key:
+        provider = {
+            "name": "NVIDIA NIM",
+            "api_key": nvidia_key,
+            "api_base": nvidia_base_url,
+            "model": nvidia_model,
+        }
+    elif deepseek_key:
+        provider = {
+            "name": "DeepSeek",
+            "api_key": deepseek_key,
+            "api_base": "https://api.deepseek.com/v1/chat/completions",
+            "model": "deepseek-chat",
+        }
+
+    if provider:
+        logger.info(f"Structurizing with {provider['name']}...")
         for tweet in filtered:
-            item = structurize_tweet(tweet, deepseek_key)
+            item = structurize_tweet(
+                tweet,
+                provider["api_key"],
+                provider["api_base"],
+                provider["model"],
+            )
             items.append(item)
     else:
         # Fallback to basic items

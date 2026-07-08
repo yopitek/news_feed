@@ -6,7 +6,7 @@ A fully automated daily news digest system that aggregates RSS feeds from Chines
 
 - **4-Tab Multilingual Interface**: 中文新聞, 中文產業新聞, English News, 日本語ニュース
 - **RSS-First Architecture**: No web scraping, 100% RSS/Atom feeds
-- **AI Summarization**: DeepSeek API for Chinese summaries (~150 chars)
+- **AI Summarization**: NVIDIA NIM first, with Zeabur/Gemini/SiliconFlow/DeepSeek fallback
 - **FT-Inspired Design**: Clean, editorial, professional layout
 - **Dual Output**: Web (JS tabs) + Email (anchor-based navigation)
 - **Automatic Scheduling**: Daily at 08:00 Asia/Taipei via GitHub Actions
@@ -29,7 +29,7 @@ RssNews2/
 ### Prerequisites
 
 - Python 3.11+
-- DeepSeek API key
+- NVIDIA API key from https://build.nvidia.com
 - SMTP credentials (for email delivery)
 
 ### Local Development
@@ -47,7 +47,7 @@ source venv/bin/activate  # or `venv\Scripts\activate` on Windows
 pip install -r requirements.txt
 
 # 4. Set environment variables
-export DEEPSEEK_API_KEY="your-api-key"
+export NVIDIA_API_KEY="nvapi-your-api-key"
 export DEBUG_MODE="true"
 
 # 5. Run pipeline
@@ -65,7 +65,7 @@ open output/web_digest.html
 
 | Secret             | Description                     |
 |--------------------|---------------------------------|
-| `DEEPSEEK_API_KEY` | DeepSeek API key                |
+| `NVIDIA_API_KEY` | NVIDIA NIM API key              |
 | `SMTP_HOST`        | SMTP server (e.g., smtp.gmail.com) |
 | `SMTP_PORT`        | SMTP port (465 for SSL)         |
 | `SMTP_USER`        | Sender email address            |
@@ -120,7 +120,7 @@ Detailed implementation docs in `docs/`:
 2. **STEP2_FILE_STRUCTURE.md** - Repository structure
 3. **STEP3_RSS_NORMALIZATION.md** - RSS parsing & deduplication
 4. **STEP4_CLASSIFICATION.md** - Chinese category rules
-5. **STEP5_DEEPSEEK_PROMPTS.md** - AI summarization prompts
+5. **STEP5_DEEPSEEK_PROMPTS.md** - AI summarization prompts and provider fallback notes
 6. **STEP6_HTML_TEMPLATES.md** - Web & email templates
 7. **STEP7_GITHUB_ACTIONS.md** - Deployment guide
 

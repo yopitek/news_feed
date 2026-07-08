@@ -16,7 +16,7 @@ PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.config_loader import load_feeds_config, load_classification_rules
-from src.feed_fetcher import fetch_all_feeds
+from src.feed_fetcher import fetch_all_feeds, get_last_fetch_stats, summarize_source_health
 from src.normalizer import normalize_all
 from src.deduper import deduplicate
 from src.classifier import classify_articles
@@ -107,16 +107,23 @@ def main():
         run_logger.log('selected', {'total': total_selected, 'by_tab': selection_stats})
         logger.info(f"Selected {total_selected} articles across {len(selected)} tabs")
         
+        fetch_stats = get_last_fetch_stats()
+        source_health = summarize_source_health(fetch_stats, selected)
+
         # Step 7: Generate summaries (200 chars)
         logger.info("Generating summaries (200 chars/words)...")
         
-        # Priority: ZEABUR > GOOGLE (Gemini) > SILICONFLOW > DEEPSEEK > Fallback
+        # Priority: NVIDIA > ZEABUR > GOOGLE (Gemini) > SILICONFLOW > DEEPSEEK > Fallback
+        nvidia_key = os.environ.get('NVIDIA_API_KEY')
         zeabur_key = os.environ.get('ZEABUR_API_KEY')
         google_key = os.environ.get('GOOGLE_API_KEY')
         siliconflow_key = os.environ.get('SILICONFLOW_API_KEY')
         deepseek_key = os.environ.get('DEEPSEEK_API_KEY')
         
-        if zeabur_key:
+        if nvidia_key:
+            logger.info("Using NVIDIA NIM API")
+            api_key = nvidia_key
+        elif zeabur_key:
             logger.info("Using Zeabur AI Hub (GPT-4o-mini)")
             api_key = zeabur_key
         elif google_key:
@@ -145,7 +152,23 @@ def main():
         weekdays = ['一', '二', '三', '四', '五', '六', '日']
         date_str = start_time.strftime("%Y年%m月%d日 星期") + weekdays[start_time.weekday()]
         
-        web_html = render_web(summarized, date_str)
+        tech_sources = []
+        if feeds_config.tabs.get('tech_blogs'):
+            tech_sources = feeds_config.tabs['tech_blogs'].sources
+
+        render_stats = {
+            'generated_at': start_time.strftime('%Y-%m-%d %H:%M %Z'),
+            'feeds_count': len(all_sources),
+            'articles_selected': total_selected,
+        }
+
+        web_html = render_web(
+            summarized,
+            date_str,
+            tech_sources=tech_sources,
+            source_health=source_health,
+            run_stats=render_stats,
+        )
         email_html = render_email(summarized, date_str)
         
         # Step 9: Write output files
@@ -174,6 +197,11 @@ def main():
             json.dumps(articles_data, ensure_ascii=False, indent=2),
             encoding='utf-8'
         )
+
+        (OUTPUT_DIR / 'source_health.json').write_text(
+            json.dumps(source_health, ensure_ascii=False, indent=2),
+            encoding='utf-8'
+        )
         
         run_logger.log('output_written', {
             'web_html': 'output/web_digest.html',
@@ -198,8 +226,10 @@ def main():
             'categories': {
                 'zh_news': list(TAB_CATEGORIES['zh_news']),
                 'en_news': list(TAB_CATEGORIES['en_news']),
-                'ja_news': list(TAB_CATEGORIES['ja_news'])
+                'ja_news': list(TAB_CATEGORIES['ja_news']),
+                'tech_blogs': list(TAB_CATEGORIES['tech_blogs'])
             },
+            'source_health': source_health,
             'status': 'success'
         }
         

@@ -103,6 +103,7 @@ jobs:
           cp output/web_digest.html docs/index.html
           cp output/articles_data.json docs/articles_data.json 2>/dev/null || true
           cp output/run_summary.json docs/run_summary.json 2>/dev/null || true
+          cp output/source_health.json docs/source_health.json 2>/dev/null || true
           echo "GitHub Pages files prepared"
       
       - name: Deploy to GitHub Pages
@@ -128,6 +129,7 @@ jobs:
             output/run_log.jsonl
             output/run_summary.json
             output/articles_data.json
+            output/source_health.json
           retention-days: 30
       
       # ============================================

@@ -26,11 +26,17 @@ def format_date_short(dt: datetime) -> str:
 def escape_html(text: str) -> str:
     """Escape HTML special characters."""
     return (
-        text.replace('&', '&amp;')
+        (text or '')
+        .replace('&', '&amp;')
         .replace('<', '&lt;')
         .replace('>', '&gt;')
         .replace('"', '&quot;')
     )
+
+
+def escape_attr(text: str) -> str:
+    """Escape text for use in HTML attributes."""
+    return escape_html(text).replace("'", '&#x27;')
 
 
 def render_news_item(article: ArticleWithSummary) -> str:
@@ -40,9 +46,10 @@ def render_news_item(article: ArticleWithSummary) -> str:
     source = escape_html(article.source_name)
     summary = escape_html(article.summary)
     
-    return f'''<div class="news-item">
+    link = escape_attr(article.link)
+    return f'''<div class="news-item" data-link="{link}">
     <h4 class="news-item-title">
-        <a href="{article.link}" target="_blank" rel="noopener noreferrer">{title}</a>
+        <a href="{link}" target="_blank" rel="noopener noreferrer">{title}</a>
     </h4>
     <p class="news-item-meta">
         <span class="source">{source}</span>
@@ -93,9 +100,71 @@ def render_tab_content(categories_data: dict[str, list[ArticleWithSummary]], tab
     return '\n'.join(sections) if sections else '<p class="no-news">No news available.</p>'
 
 
+def render_source_panel(tech_sources: list[dict] | None, source_health: dict | None) -> str:
+    """Render Tech Blogs source list and fetch status."""
+    tech_sources = tech_sources or []
+    if not tech_sources:
+        return ''
+
+    source_items = []
+    for source in tech_sources:
+        name = escape_html(source.get('source_name') or source.get('url', 'Unknown'))
+        category = escape_html(source.get('group') or source.get('category', ''))
+        label = f'{name} · {category}' if category else name
+        source_items.append(f'<li>{label}</li>')
+
+    health = source_health or {}
+    total = health.get('total_sources', len(tech_sources))
+    ok = health.get('ok_sources')
+    empty = health.get('empty_sources')
+    failed = health.get('failed_sources')
+    selected = health.get('selected_articles')
+
+    status_bits = [f'{total} sources followed']
+    if ok is not None:
+        status_bits.append(f'{ok} returned articles')
+    if empty is not None:
+        status_bits.append(f'{empty} empty')
+    if failed is not None:
+        status_bits.append(f'{failed} failed')
+    if selected is not None:
+        status_bits.append(f'{selected} selected')
+
+    source_items_html = '\n        '.join(source_items)
+    source_status = escape_html(' · '.join(status_bits))
+    return f'''<div class="source-panel">
+    <h3 class="source-panel-title">Followed sources</h3>
+    <ul class="source-list">
+        {source_items_html}
+    </ul>
+    <p class="source-status">{source_status}</p>
+</div>'''
+
+
+def render_pipeline_status(run_stats: dict | None, source_health: dict | None) -> str:
+    """Render footer pipeline status text."""
+    run_stats = run_stats or {}
+    source_health = source_health or {}
+    generated_at = run_stats.get('generated_at', '08:00 Asia/Taipei')
+    selected = run_stats.get('articles_selected')
+    feed_count = run_stats.get('feeds_count')
+
+    bits = [f'Generated automatically at {generated_at}.']
+    if feed_count is not None:
+        bits.append(f'{feed_count} RSS/Atom sources checked.')
+    if selected is not None:
+        bits.append(f'{selected} articles selected.')
+    if source_health.get('failed_sources'):
+        bits.append(f"{source_health['failed_sources']} Tech Blogs sources failed or returned no usable feed.")
+    return ' '.join(bits)
+
+
 def render_web(
     articles: dict[str, dict[str, list[ArticleWithSummary]]],
-    date_str: Optional[str] = None
+    date_str: Optional[str] = None,
+    tech_sources: list[dict] | None = None,
+    source_health: dict | None = None,
+    run_stats: dict | None = None
 ) -> str:
     """
     Render web HTML with JavaScript tabs, grouped by category.
@@ -117,16 +186,20 @@ def render_web(
         weekdays = ['一', '二', '三', '四', '五', '六', '日']
         date_str = now.strftime("%Y年%m月%d日 星期") + weekdays[now.weekday()]
     
-# Render each tab's content (grouped by category)
+    # Render each tab's content (grouped by category)
     zh_content = render_tab_content(articles.get('zh_news', {}), 'zh_news')
     en_content = render_tab_content(articles.get('en_news', {}), 'en_news')
     ja_content = render_tab_content(articles.get('ja_news', {}), 'ja_news')
     tech_blogs_content = render_tab_content(articles.get('tech_blogs', {}), 'tech_blogs')
+    tech_sources_content = render_source_panel(tech_sources, source_health)
+    pipeline_status = render_pipeline_status(run_stats, source_health)
     
     html = template.replace('{{DATE_DISPLAY}}', date_str)
     html = html.replace('{{ZH_NEWS_ITEMS}}', zh_content)
     html = html.replace('{{EN_NEWS_ITEMS}}', en_content)
     html = html.replace('{{JA_NEWS_ITEMS}}', ja_content)
     html = html.replace('{{TECH_BLOGS_ITEMS}}', tech_blogs_content)
+    html = html.replace('{{TECH_BLOGS_SOURCES}}', tech_sources_content)
+    html = html.replace('{{PIPELINE_STATUS}}', escape_html(pipeline_status))
     
     return html

@@ -18,6 +18,30 @@ DEFAULT_TIMEOUT = 10
 DEFAULT_RETRIES = 2
 DEFAULT_MAX_ITEMS = 20
 DEFAULT_USER_AGENT = "NewsDigest/1.0 (RSS Reader)"
+LAST_FETCH_STATS: list[dict] = []
+
+
+def get_last_fetch_stats() -> list[dict]:
+    """Return per-source stats from the latest fetch_all_feeds run."""
+    return list(LAST_FETCH_STATS)
+
+
+def summarize_source_health(stats: list[dict], selected: dict | None = None) -> dict:
+    """Build a compact source health summary for output and rendering."""
+    selected = selected or {}
+    tech_stats = [row for row in stats if row.get('tab') == 'tech_blogs']
+    ok_sources = sum(1 for row in tech_stats if row.get('status') == 'ok')
+    empty_sources = sum(1 for row in tech_stats if row.get('status') == 'empty')
+    failed_sources = sum(1 for row in tech_stats if row.get('status') != 'ok')
+    selected_articles = sum(len(items) for items in selected.get('tech_blogs', {}).values()) if selected else None
+    return {
+        'total_sources': len(tech_stats),
+        'ok_sources': ok_sources,
+        'empty_sources': empty_sources,
+        'failed_sources': failed_sources,
+        'selected_articles': selected_articles,
+        'sources': tech_stats,
+    }
 
 
 def fetch_feed(
@@ -139,6 +163,7 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
     user_agent = settings.get('user_agent', DEFAULT_USER_AGENT)
     
     results = {}
+    LAST_FETCH_STATS.clear()
     
     for tab_id, tab_config in config.tabs.items():
         tab_entries = []
@@ -157,6 +182,19 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
                 user_agent=user_agent
             )
             
+            fetched_count = len(entries)
+            status = 'ok' if fetched_count else 'empty'
+            LAST_FETCH_STATS.append({
+                'tab': tab_id,
+                'language': tab_config.language,
+                'category': source.get('category', ''),
+                'source_name': source.get('source_name', '') or _get_domain(url),
+                'group': source.get('group', ''),
+                'url': url,
+                'status': status,
+                'fetched_count': fetched_count,
+            })
+
             for entry in entries:
                 entry['_tab'] = tab_id
                 entry['_language'] = tab_config.language

@@ -28,6 +28,9 @@ jobs:
       - name: Run weekly pipeline
         env:
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+          NVIDIA_BASE_URL: https://integrate.api.nvidia.com/v1/chat/completions
+          NVIDIA_MODEL: minimaxai/minimax-m2.1
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           SMTP_HOST: ${{ secrets.SMTP_HOST }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}

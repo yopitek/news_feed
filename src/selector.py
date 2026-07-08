@@ -41,8 +41,10 @@ ITEMS_PER_CATEGORY = {
         'BBC Science & Environment': 6
     },
     'ja_news': 8,
-    'tech_blogs': 5,
+    'tech_blogs': 10,
 }
+
+TECH_BLOGS_PER_SOURCE_CAP = 2
 
 
 def get_items_per_category(tab: str, category: str) -> int:
@@ -132,8 +134,18 @@ def select_by_category(
             )
             # Get items count for this category
             n = get_items_per_category(tab_id, category)
-            # Take top N
-            selected = sorted_articles[:n]
+            if tab_id == 'tech_blogs':
+                selected = []
+                per_source_counts = defaultdict(int)
+                for article in sorted_articles:
+                    if per_source_counts[article.source_name] >= TECH_BLOGS_PER_SOURCE_CAP:
+                        continue
+                    selected.append(article)
+                    per_source_counts[article.source_name] += 1
+                    if len(selected) >= n:
+                        break
+            else:
+                selected = sorted_articles[:n]
             
             if selected:
                 tab_result[category] = selected
@@ -166,3 +178,13 @@ def flatten_to_list(
                 flat_list.extend(categories[category])
         result[tab_id] = flat_list
     return result
+
+
+def select_top_n(
+    articles: list[NormalizedArticle],
+    n: int = 5
+) -> dict[str, list[NormalizedArticle]]:
+    """Backward-compatible flat selector used by the legacy test runner."""
+    categorized = select_by_category(articles, items_per_category=n)
+    flat = flatten_to_list(categorized)
+    return {tab: items[:n] for tab, items in flat.items()}

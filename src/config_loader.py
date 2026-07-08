@@ -32,11 +32,14 @@ def load_tech_blogs_config(path: Union[str, Path] = "config/tech_blogs.yaml") ->
     for tab_id, tab_data in data.items():
         sources = []
         for source_data in tab_data.get('sources', []):
-            sources.append({
+            source = {
                 'category': source_data.get('category', ''),
                 'url': source_data.get('url', ''),
                 'source_name': source_data.get('source_name')
-            })
+            }
+            if source_data.get('group'):
+                source['group'] = source_data.get('group')
+            sources.append(source)
         
         tabs[tab_id] = TabConfig(
             name=tab_data.get('name', tab_id),

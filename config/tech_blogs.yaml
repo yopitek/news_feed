@@ -7,29 +7,29 @@ tech_blogs:
 
   sources:
     # AI / ML
-    - { category: "Tech Blogs", url: "https://simonwillison.net/atom/everything/", source_name: "Simon Willison" }
-    - { category: "Tech Blogs", url: "https://garymarcus.substack.com/feed", source_name: "Gary Marcus" }
-    - { category: "Tech Blogs", url: "https://www.dwarkeshpatel.com/feed", source_name: "Dwarkesh Patel" }
-    - { category: "Tech Blogs", url: "https://minimaxir.com/rss.xml", source_name: "Max Woolf" }
-    - { category: "Tech Blogs", url: "https://geohot.github.io/blog/feed.xml", source_name: "George Hotz" }
-    - { category: "Tech Blogs", url: "https://gwern.substack.com/feed", source_name: "Gwern Branwen" }
+    - { category: "Tech Blogs", url: "https://simonwillison.net/atom/everything/", source_name: "Simon Willison", group: "AI / ML" }
+    - { category: "Tech Blogs", url: "https://garymarcus.substack.com/feed", source_name: "Gary Marcus", group: "AI / ML" }
+    - { category: "Tech Blogs", url: "https://www.dwarkeshpatel.com/feed", source_name: "Dwarkesh Patel", group: "AI / ML" }
+    - { category: "Tech Blogs", url: "https://minimaxir.com/rss.xml", source_name: "Max Woolf", group: "AI / ML" }
+    - { category: "Tech Blogs", url: "https://geohot.github.io/blog/feed.xml", source_name: "George Hotz", group: "AI / ML" }
+    - { category: "Tech Blogs", url: "https://gwern.substack.com/feed", source_name: "Gwern Branwen", group: "AI / ML" }
 
     # Software Engineering
-    - { category: "Tech Blogs", url: "https://matklad.github.io/feed.xml", source_name: "matklad" }
-    - { category: "Tech Blogs", url: "https://eli.thegreenplace.net/feeds/all.atom.xml", source_name: "Eli Bendersky" }
-    - { category: "Tech Blogs", url: "https://fabiensanglard.net/rss.xml", source_name: "Fabien Sanglard" }
-    - { category: "Tech Blogs", url: "https://blog.miguelgrinberg.com/feed", source_name: "Miguel Grinberg" }
+    - { category: "Tech Blogs", url: "https://matklad.github.io/feed.xml", source_name: "matklad", group: "Software Engineering" }
+    - { category: "Tech Blogs", url: "https://eli.thegreenplace.net/feeds/all.atom.xml", source_name: "Eli Bendersky", group: "Software Engineering" }
+    - { category: "Tech Blogs", url: "https://fabiensanglard.net/rss.xml", source_name: "Fabien Sanglard", group: "Software Engineering" }
+    - { category: "Tech Blogs", url: "https://blog.miguelgrinberg.com/feed", source_name: "Miguel Grinberg", group: "Software Engineering" }
 
     # Security
-    - { category: "Tech Blogs", url: "https://krebsonsecurity.com/feed/", source_name: "Krebs on Security" }
-    - { category: "Tech Blogs", url: "https://www.troyhunt.com/rss/", source_name: "Troy Hunt" }
+    - { category: "Tech Blogs", url: "https://krebsonsecurity.com/feed/", source_name: "Krebs on Security", group: "Security" }
+    - { category: "Tech Blogs", url: "https://www.troyhunt.com/rss/", source_name: "Troy Hunt", group: "Security" }
 
     # Startups / Product
-    - { category: "Tech Blogs", url: "https://aaronsw.com/2002/feeds/pgessays.rss", source_name: "Paul Graham" }
-    - { category: "Tech Blogs", url: "https://steveblank.com/feed/", source_name: "Steve Blank" }
-    - { category: "Tech Blogs", url: "https://www.wheresyoured.at/rss", source_name: "Ed Zitron" }
-    - { category: "Tech Blogs", url: "https://keygen.sh/blog/feed.xml", source_name: "Keygen" }
+    - { category: "Tech Blogs", url: "https://aaronsw.com/2002/feeds/pgessays.rss", source_name: "Paul Graham", group: "Startups / Product" }
+    - { category: "Tech Blogs", url: "https://steveblank.com/feed/", source_name: "Steve Blank", group: "Startups / Product" }
+    - { category: "Tech Blogs", url: "https://www.wheresyoured.at/rss", source_name: "Ed Zitron", group: "Startups / Product" }
+    - { category: "Tech Blogs", url: "https://keygen.sh/blog/feed.xml", source_name: "Keygen", group: "Startups / Product" }
 
     # Commentary
-    - { category: "Tech Blogs", url: "https://daringfireball.net/feeds/main", source_name: "Daring Fireball" }
-    - { category: "Tech Blogs", url: "https://pluralistic.net/feed/", source_name: "Cory Doctorow" }
+    - { category: "Tech Blogs", url: "https://daringfireball.net/feeds/main", source_name: "Daring Fireball", group: "Commentary" }
+    - { category: "Tech Blogs", url: "https://pluralistic.net/feed/", source_name: "Cory Doctorow", group: "Commentary" }

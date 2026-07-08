@@ -48,6 +48,16 @@
             text-decoration: underline;
         }
 
+        a:visited {
+            color: #6f5f70;
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #b58a00;
+            outline-offset: 3px;
+        }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -84,6 +94,11 @@
             border-bottom: 1px solid #e6e1d6;
             background-color: #fffdf7;
             overflow-x: auto;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 0 rgba(26, 26, 26, 0.08);
+            scrollbar-width: thin;
         }
 
         .tab-btn {
@@ -139,12 +154,13 @@
 
         .category-header {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: 600;
-            color: #ffffff;
-            background-color: #990f3d;
-            padding: 10px 16px;
-            margin: 20px 0 12px 0;
+            color: #1a1a1a;
+            background-color: transparent;
+            border-left: 4px solid #8b1e3f;
+            padding: 4px 0 4px 12px;
+            margin: 24px 0 14px 0;
         }
 
         .category-section:first-child .category-header {
@@ -157,8 +173,17 @@
 
         /* News Item Styles */
         .news-item {
-            padding: 14px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 0 -10px;
+            padding: 16px 10px;
             border-bottom: 1px dotted #d9d2c4;
+            transition: background-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .news-item:hover {
+            background-color: #faf8f2;
+            transform: translateX(2px);
         }
 
         .news-item:last-child {
@@ -167,10 +192,10 @@
 
         .news-item-title {
             font-family: Georgia, "Times New Roman", serif;
-            font-size: 1.05rem;
+            font-size: 1.12rem;
             font-weight: 600;
             line-height: 1.4;
-            margin: 0 0 6px 0;
+            margin: 0 0 8px 0;
         }
 
         .news-item-title a {
@@ -184,7 +209,10 @@
         .news-item-meta {
             font-size: 0.8rem;
             color: #666666;
-            margin-bottom: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px 10px;
+            margin-bottom: 10px;
         }
 
         .news-item-meta .source {
@@ -192,7 +220,6 @@
         }
 
         .news-item-meta .date {
-            margin-left: 10px;
             color: #999999;
         }
 
@@ -200,6 +227,45 @@
             font-size: 0.9rem;
             color: #333333;
             line-height: 1.65;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+        }
+
+        .source-panel {
+            margin: 0 0 22px 0;
+            padding: 14px 0 16px 0;
+            border-bottom: 1px solid #e6e1d6;
+        }
+
+        .source-panel-title {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .source-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .source-list li {
+            border: 1px solid #e0d7c8;
+            border-radius: 999px;
+            color: #4d463d;
+            font-size: 0.78rem;
+            line-height: 1.2;
+            padding: 5px 9px;
+        }
+
+        .source-status {
+            color: #7a6f62;
+            font-size: 0.78rem;
+            margin-top: 10px;
         }
 
         .no-news {
@@ -244,21 +310,26 @@
                 font-size: 0.85rem;
             }
 
+            .tab-nav {
+                mask-image: linear-gradient(90deg, transparent 0, #000 18px, #000 calc(100% - 18px), transparent 100%);
+            }
+
             .tab-content {
                 padding: 14px 12px;
             }
 
             .category-header {
                 font-size: 1rem;
-                padding: 8px 12px;
+                padding: 3px 0 3px 10px;
             }
 
             .news-item-title {
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
 
             .news-item-summary {
                 font-size: 0.85rem;
+                -webkit-line-clamp: 5;
             }
         }
 
@@ -332,6 +403,7 @@
 
             <template id="tech-blogs-template">
                 <h2 class="section-header">Tech Blogs</h2>
+                {{TECH_BLOGS_SOURCES}}
                 {{TECH_BLOGS_ITEMS}}
             </template>
             <section class="tab-content" id="tech-blogs" role="tabpanel" aria-labelledby="tab-tech-blogs">
@@ -339,9 +411,8 @@
             </section>
 
             <footer class="footer">
-                <p>Generated automatically at 08:00 (Asia/Taipei). All links open original articles.</p>
-                <p class="small">RSS-first pipeline powered by DeepSeek AI. 8 articles per category, 200-char summaries.
-                </p>
+                <p>{{PIPELINE_STATUS}}</p>
+                <p class="small">RSS-first pipeline powered by AI summarization. All links open original articles.</p>
             </footer>
         </div>
     </div>
@@ -367,7 +438,8 @@
                 }
             }
 
-            function activateTab(targetTab) {
+            function activateTab(targetTab, options) {
+                options = options || {};
                 tabButtons.forEach(function (btn) {
                     btn.classList.remove('active');
                     btn.setAttribute('aria-selected', 'false');
@@ -392,12 +464,30 @@
                 if (panel) {
                     panel.classList.add('active');
                 }
+
+                if (window.location.hash.replace('#', '') !== targetTab) {
+                    history.replaceState(null, '', '#' + targetTab);
+                }
+
+                if (options.scroll !== false) {
+                    var cardTop = document.querySelector('.card').getBoundingClientRect().top + window.scrollY;
+                    window.scrollTo({ top: Math.max(0, cardTop), behavior: 'smooth' });
+                }
             }
 
             tabButtons.forEach(function (button) {
                 button.addEventListener('click', function () {
                     activateTab(this.getAttribute('data-tab'));
                 });
+            });
+
+            document.addEventListener('click', function (e) {
+                var item = e.target.closest('.news-item');
+                if (!item || e.target.closest('a')) return;
+                var link = item.getAttribute('data-link');
+                if (link) {
+                    window.open(link, '_blank', 'noopener,noreferrer');
+                }
             });
 
             tabNav.addEventListener('keydown', function (e) {
@@ -411,23 +501,30 @@
                     case 'ArrowRight':
                         e.preventDefault();
                         idx = (idx + 1) % buttons.length;
-                        activateTab(buttons[idx].getAttribute('data-tab'));
+                        activateTab(buttons[idx].getAttribute('data-tab'), { scroll: false });
                         break;
                     case 'ArrowLeft':
                         e.preventDefault();
                         idx = (idx - 1 + buttons.length) % buttons.length;
-                        activateTab(buttons[idx].getAttribute('data-tab'));
+                        activateTab(buttons[idx].getAttribute('data-tab'), { scroll: false });
                         break;
                     case 'Home':
                         e.preventDefault();
-                        activateTab(buttons[0].getAttribute('data-tab'));
+                        activateTab(buttons[0].getAttribute('data-tab'), { scroll: false });
                         break;
                     case 'End':
                         e.preventDefault();
-                        activateTab(buttons[buttons.length - 1].getAttribute('data-tab'));
+                        activateTab(buttons[buttons.length - 1].getAttribute('data-tab'), { scroll: false });
                         break;
                 }
             });
+
+            var initialTab = window.location.hash.replace('#', '');
+            if (initialTab && document.querySelector('[data-tab="' + initialTab + '"]')) {
+                activateTab(initialTab, { scroll: false });
+            } else {
+                history.replaceState(null, '', '#zh-news');
+            }
 
             var backToTop = document.getElementById('back-to-top');
             window.addEventListener('scroll', function () {

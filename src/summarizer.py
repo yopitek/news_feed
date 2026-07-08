@@ -65,6 +65,7 @@ class BaseSummarizer:
         self.api_key = api_key
         self.api_base = api_base
         self.model = model
+        self.disabled = False
         self.headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
@@ -72,6 +73,9 @@ class BaseSummarizer:
     
     def _call_api(self, system_prompt: str, user_prompt: str) -> Optional[str]:
         """Call API with retry logic."""
+        if self.disabled:
+            return None
+
         payload = {
             "model": self.model,
             "messages": [
@@ -101,6 +105,14 @@ class BaseSummarizer:
                     time.sleep(backoff)
                     continue
                 
+                elif response.status_code in (401, 402, 403):
+                    logger.error(
+                        f"API error {response.status_code}: disabling {self.model}; "
+                        f"using RSS fallback for remaining articles. {response.text[:200]}"
+                    )
+                    self.disabled = True
+                    return None
+
                 else:
                     logger.error(f"API error {response.status_code}: {response.text[:200]}")
                     if attempt < MAX_RETRIES - 1:
