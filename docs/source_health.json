@@ -1,0 +1,189 @@
+{
+  "total_sources": 18,
+  "ok_sources": 14,
+  "empty_sources": 4,
+  "failed_sources": 4,
+  "selected_articles": 6,
+  "sources": [
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Simon Willison",
+      "group": "AI / ML",
+      "url": "https://simonwillison.net/atom/everything/",
+      "status": "ok",
+      "fetched_count": 30
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Gary Marcus",
+      "group": "AI / ML",
+      "url": "https://garymarcus.substack.com/feed",
+      "status": "empty",
+      "fetched_count": 0
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Dwarkesh Patel",
+      "group": "AI / ML",
+      "url": "https://www.dwarkeshpatel.com/feed",
+      "status": "ok",
+      "fetched_count": 20
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Max Woolf",
+      "group": "AI / ML",
+      "url": "https://minimaxir.com/rss.xml",
+      "status": "empty",
+      "fetched_count": 0
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "George Hotz",
+      "group": "AI / ML",
+      "url": "https://geohot.github.io/blog/feed.xml",
+      "status": "ok",
+      "fetched_count": 10
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Gwern Branwen",
+      "group": "AI / ML",
+      "url": "https://gwern.substack.com/feed",
+      "status": "empty",
+      "fetched_count": 0
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "matklad",
+      "group": "Software Engineering",
+      "url": "https://matklad.github.io/feed.xml",
+      "status": "ok",
+      "fetched_count": 10
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Eli Bendersky",
+      "group": "Software Engineering",
+      "url": "https://eli.thegreenplace.net/feeds/all.atom.xml",
+      "status": "ok",
+      "fetched_count": 5
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Fabien Sanglard",
+      "group": "Software Engineering",
+      "url": "https://fabiensanglard.net/rss.xml",
+      "status": "ok",
+      "fetched_count": 30
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Miguel Grinberg",
+      "group": "Software Engineering",
+      "url": "https://blog.miguelgrinberg.com/feed",
+      "status": "ok",
+      "fetched_count": 10
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Krebs on Security",
+      "group": "Security",
+      "url": "https://krebsonsecurity.com/feed/",
+      "status": "ok",
+      "fetched_count": 10
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Troy Hunt",
+      "group": "Security",
+      "url": "https://www.troyhunt.com/rss/",
+      "status": "ok",
+      "fetched_count": 15
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Paul Graham",
+      "group": "Startups / Product",
+      "url": "https://aaronsw.com/2002/feeds/pgessays.rss",
+      "status": "empty",
+      "fetched_count": 0
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Steve Blank",
+      "group": "Startups / Product",
+      "url": "https://steveblank.com/feed/",
+      "status": "ok",
+      "fetched_count": 20
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Ed Zitron",
+      "group": "Startups / Product",
+      "url": "https://www.wheresyoured.at/rss",
+      "status": "ok",
+      "fetched_count": 15
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Keygen",
+      "group": "Startups / Product",
+      "url": "https://keygen.sh/blog/feed.xml",
+      "status": "ok",
+      "fetched_count": 30
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Daring Fireball",
+      "group": "Commentary",
+      "url": "https://daringfireball.net/feeds/main",
+      "status": "ok",
+      "fetched_count": 30
+    },
+    {
+      "tab": "tech_blogs",
+      "language": "en",
+      "category": "Tech Blogs",
+      "source_name": "Cory Doctorow",
+      "group": "Commentary",
+      "url": "https://pluralistic.net/feed/",
+      "status": "ok",
+      "fetched_count": 30
+    }
+  ]
+}
