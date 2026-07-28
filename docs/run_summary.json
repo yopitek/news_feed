@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-07-27",
-  "start_time": "2026-07-27T10:03:27.067637+08:00",
-  "end_time": "2026-07-27T10:15:32.154315+08:00",
-  "duration_seconds": 725.09,
-  "feeds_fetched": 1027,
-  "articles_normalized": 295,
-  "articles_deduplicated": 222,
-  "articles_selected": 116,
-  "summaries_generated": 116,
+  "run_date": "2026-07-28",
+  "start_time": "2026-07-28T09:45:20.957226+08:00",
+  "end_time": "2026-07-28T10:01:22.148310+08:00",
+  "duration_seconds": 961.19,
+  "feeds_fetched": 1018,
+  "articles_normalized": 420,
+  "articles_deduplicated": 324,
+  "articles_selected": 143,
+  "summaries_generated": 143,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -47,10 +47,10 @@
   },
   "source_health": {
     "total_sources": 18,
-    "ok_sources": 14,
-    "empty_sources": 4,
-    "failed_sources": 4,
-    "selected_articles": 2,
+    "ok_sources": 13,
+    "empty_sources": 5,
+    "failed_sources": 5,
+    "selected_articles": 5,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -139,8 +139,8 @@
         "source_name": "Fabien Sanglard",
         "group": "Software Engineering",
         "url": "https://fabiensanglard.net/rss.xml",
-        "status": "ok",
-        "fetched_count": 30
+        "status": "empty",
+        "fetched_count": 0
       },
       {
         "tab": "tech_blogs",
