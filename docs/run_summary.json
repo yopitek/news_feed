@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-08-07",
-  "start_time": "2026-08-07T10:10:04.821498+08:00",
-  "end_time": "2026-08-07T10:24:42.680889+08:00",
-  "duration_seconds": 877.86,
-  "feeds_fetched": 1069,
-  "articles_normalized": 457,
-  "articles_deduplicated": 350,
-  "articles_selected": 144,
-  "summaries_generated": 144,
+  "run_date": "2026-08-08",
+  "start_time": "2026-08-08T08:57:41.785906+08:00",
+  "end_time": "2026-08-08T09:11:35.769000+08:00",
+  "duration_seconds": 833.98,
+  "feeds_fetched": 1067,
+  "articles_normalized": 419,
+  "articles_deduplicated": 330,
+  "articles_selected": 137,
+  "summaries_generated": 137,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
