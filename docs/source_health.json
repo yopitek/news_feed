@@ -1,9 +1,9 @@
 {
   "total_sources": 18,
-  "ok_sources": 14,
-  "empty_sources": 4,
-  "failed_sources": 4,
-  "selected_articles": 7,
+  "ok_sources": 13,
+  "empty_sources": 5,
+  "failed_sources": 5,
+  "selected_articles": 4,
   "sources": [
     {
       "tab": "tech_blogs",
@@ -92,8 +92,8 @@
       "source_name": "Fabien Sanglard",
       "group": "Software Engineering",
       "url": "https://fabiensanglard.net/rss.xml",
-      "status": "ok",
-      "fetched_count": 30
+      "status": "empty",
+      "fetched_count": 0
     },
     {
       "tab": "tech_blogs",
