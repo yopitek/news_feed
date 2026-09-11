@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-09-10",
-  "start_time": "2026-09-10T10:14:09.110840+08:00",
-  "end_time": "2026-09-10T10:28:39.863938+08:00",
-  "duration_seconds": 870.75,
-  "feeds_fetched": 1069,
-  "articles_normalized": 407,
-  "articles_deduplicated": 315,
-  "articles_selected": 136,
-  "summaries_generated": 136,
+  "run_date": "2026-09-11",
+  "start_time": "2026-09-11T10:10:24.835363+08:00",
+  "end_time": "2026-09-11T10:25:14.802893+08:00",
+  "duration_seconds": 889.97,
+  "feeds_fetched": 1071,
+  "articles_normalized": 429,
+  "articles_deduplicated": 340,
+  "articles_selected": 141,
+  "summaries_generated": 141,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -50,7 +50,7 @@
     "ok_sources": 14,
     "empty_sources": 4,
     "failed_sources": 4,
-    "selected_articles": 3,
+    "selected_articles": 4,
     "sources": [
       {
         "tab": "tech_blogs",
