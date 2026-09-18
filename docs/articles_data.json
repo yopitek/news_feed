@@ -1,1084 +1,991 @@
 {
   "zh_news": {
-    "頭條新聞": [
-      {
-        "title": "司法獨立評比降低 綠：政府要檢討國會應面對",
-        "link": "https://www.cna.com.tw/news/aipl/202609160379.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T06:59:29+00:00",
-        "summary": "（中央社記者林敬殷台北16日電）根據「2026全球民主現況」報告，台灣的司法獨立降至「中段班」。民進黨立法院黨團幹事長莊瑞雄今天表示，政府該檢討的不能迴避，國會該負責的也應面對，不是把責任推來推去，各..."
-      },
-      {
-        "title": "歐洲議會通過決議肯定台灣韌性 外交部：持續貢獻全球",
-        "link": "https://www.cna.com.tw/news/aipl/202609160377.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T06:34:22+00:00",
-        "summary": "（中央社記者楊堯茹台北16日電）外交部今天表示，歐洲議會通過決議案肯定台灣的防衛韌性及資訊操弄的因應經驗。外交部長林佳龍對此表示歡迎，台灣將持續與理念相近夥伴深化交流合作，為印太及全球的和平、安全與繁..."
-      },
-      {
-        "title": "政院：關鍵原物料稅負減徵措施 延至116年3月底",
-        "link": "https://www.cna.com.tw/news/aipl/202609160349.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T04:57:18+00:00",
-        "summary": "（中央社記者賴于榛台北16日電）行政院副院長鄭麗君今天主持穩定物價小組會議時，拍板將關鍵原物料稅負減徵措施延長6個月至明年3月底，持續從源頭減輕業者營運成本；另也指示提前啟動明年第一季進口油氣採購及調..."
-      },
-      {
-        "title": "台灣能源企業設點立陶宛 拓展歐洲供應鏈布局",
-        "link": "https://www.cna.com.tw/news/aipl/202609160345.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T04:43:09+00:00",
-        "summary": "（中央社記者游堯茹維爾紐斯16日專電）台灣能源業者合谷新能源在立陶宛設立子公司，作為進軍歐洲市場據點。子公司將以立陶宛為物流樞紐，銷售台灣製鋰電池產品，並布局電動車與儲能等產業，成為台灣與立陶宛在供應..."
-      },
-      {
-        "title": "印尼培訓技術人才赴海外 台灣成重要就業市場",
-        "link": "https://www.cna.com.tw/news/aipl/202609160335.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T03:50:47+00:00",
-        "summary": "（中央社記者羅薇佳雅加達16日專電）台灣近年逐步擴大引進外國人力，印尼移工保護部官員法瑞德（Farid Ma'ruf）今天接受中央社採訪表示，印尼政府正在培養具備專業技能的年輕人才，盼為包括台灣在內的..."
-      },
-      {
-        "title": "台灣開放旅宿業外國技術人力 印尼看好赴台機會",
-        "link": "https://www.cna.com.tw/news/aipl/202609160327.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T03:26:30+00:00",
-        "summary": "（中央社記者羅薇佳雅加達16日專電）台灣今年開放旅宿業引進外國技術人力，印尼移工保護部官員法瑞德（Farid Ma'ruf）今天告訴中央社，印尼看好台灣新政策帶來的工作機會，認為台灣的人力需求可與印尼..."
-      },
-      {
-        "title": "劉建國提治理願景 蘇治芬擔任競總總督導",
-        "link": "https://www.cna.com.tw/news/aipl/202609160303.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T02:20:38+00:00",
-        "summary": "（中央社記者姜宜菁雲林縣16日電）民進黨行動中常會今天移師雲林，縣長參選人劉建國發表治理願景，黨主席賴清德宣布擔任劉建國競總主委，同時公布，蘇治芬擔任競總總督導，蘇說，賴總統的一席話感動她，所以責無旁..."
-      },
-      {
-        "title": "陸軍演練M1A2T戰車上板 驗證重型裝備載運能量",
-        "link": "https://www.cna.com.tw/news/aipl/202609160266.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T01:27:19+00:00",
-        "summary": "（中央社記者游凱翔台北16日電）陸軍向美採購108輛M1A2T戰車已全數抵台，並首度在今年漢光42號實兵驗證。軍聞社今天報導，陸軍三支部運輸兵群日前協同584旅實施M1A2T上板作業，操作M1070A..."
-      }
-    ],
     "產經": [
       {
-        "title": "台股開盤漲87.21點",
-        "link": "https://www.cna.com.tw/news/afe/202609170029.aspx",
+        "title": "聯準會升息展現抗通膨決心 亞股多收高",
+        "link": "https://www.cna.com.tw/news/afe/202609170255.aspx",
         "source": "中央社",
-        "published": "2026-09-16T17:04:50+00:00",
-        "summary": "（中央社台北17日電）台北股市今天開盤漲87.21點，加權股價指數為45936.11點，成交金額新台幣76.04億元。1150917"
+        "published": "2026-09-17T01:37:58+00:00",
+        "summary": "（中央社香港17日綜合外電報導）美國聯邦準備理事會（Fed）時隔3年首度調升基準利率，Fed主席華許（Kevin Warsh）展現鷹派立場，加深官員將持續升息抗通膨的市場預期，亞股今天多收紅。"
       },
       {
-        "title": "新台幣開盤貶2.2分 為31.91元",
-        "link": "https://www.cna.com.tw/news/afe/202609170028.aspx",
+        "title": "Google Cloud籲企業重建資料架構 因應AI代理需求",
+        "link": "https://www.cna.com.tw/news/ait/202609170251.aspx",
         "source": "中央社",
-        "published": "2026-09-16T17:04:48+00:00",
-        "summary": "（中央社台北17日電）台北外匯市場新台幣兌美元匯率今天以31.91元開盤，貶2.2分。"
+        "published": "2026-09-17T01:33:50+00:00",
+        "summary": "（中央社記者吳家豪台北17日電）生成式人工智慧（AI）邁入代理式時代，Google Cloud資料庫客戶工程總監柯尼格利歐（Anna Coniglio）今天表示，將AI代理強行植入傳統資料平台，就像在..."
       },
       {
-        "title": "聯準會升息美股收黑 法人：台股留意美債殖利率",
-        "link": "https://www.cna.com.tw/news/afe/202609170024.aspx",
+        "title": "自然人第2戶購屋貸款最高可貸7成 18日起上路",
+        "link": "https://www.cna.com.tw/news/afe/202609170249.aspx",
         "source": "中央社",
-        "published": "2026-09-16T16:24:39+00:00",
-        "summary": "（中央社記者何秀玲台北17日電）美國聯邦準備理事會（Fed）如市場預期升息1碼，並釋出後續可能再升息訊號，美股指數多收黑；不過半導體股相對抗跌，台積電美ADR走揚0.96%，台指期夜盤上漲322點。法..."
+        "published": "2026-09-17T01:29:46+00:00",
+        "summary": "（中央社記者潘姿羽台北17日電）央行今天舉行第3季理監事會，決議利率維持不變，但2方向鬆綁選擇性信用管制措施，一是自然人第2戶購屋貸款最高成數上限調升為7成，二是鬆綁購地貸款須於一定期間內動工興建的規..."
       },
       {
-        "title": "中東供應中斷緩解 國際油價回落",
-        "link": "https://www.cna.com.tw/news/afe/202609170014.aspx",
+        "title": "聯準會升息新加坡銀行資本受矚 分析指體質穩風險可控",
+        "link": "https://www.cna.com.tw/news/aopl/202609170247.aspx",
         "source": "中央社",
-        "published": "2026-09-16T12:58:12+00:00",
-        "summary": "（中央社紐約16日綜合外電報導）有跡象顯示，中東近期部分供應中斷問題開始緩解，加上交易員在歷經近日急漲後調整倉位，國際油價今天回落。"
+        "published": "2026-09-17T01:26:41+00:00",
+        "summary": "（中央社記者吳昇鴻新加坡17日專電）美國聯準會（Fed）宣布升息1碼、牽動金融市場。新加坡分析師今天告訴中央社，新加坡銀行資本相對穩健，在利率波動之際，未實現證券損失在可控範圍；持續偏高的殖利率對財務..."
       },
       {
-        "title": "聯準會3年多以來首度升息 美股收低道瓊跌逾600點",
-        "link": "https://www.cna.com.tw/news/afe/202609170013.aspx",
+        "title": "央行決議利率連10凍 自然人第2戶房貸成數上限放寬至7成",
+        "link": "https://www.cna.com.tw/news/afe/202609170242.aspx",
         "source": "中央社",
-        "published": "2026-09-16T12:47:10+00:00",
-        "summary": "（中央社紐約16日綜合外電報導）美國與以色列對伊朗的戰爭導致原油價格飆升，加劇頑固高通膨，美國聯邦準備理事會（Fed）為抗通膨，3年多以來首度升息，美股3大指數今天收低。"
+        "published": "2026-09-17T01:09:30+00:00",
+        "summary": "（中央社記者潘姿羽台北17日電）中央銀行今天舉行第3季理監事會決議利率維持不變、「連10凍」；央行並鬆綁房市管制措施，調整自然人第2戶購屋貸款最高成數上限，由6成調升為7成，同時購地貸款也有所鬆綁。"
       },
       {
-        "title": "聯準會升息1碼 2023年以來首度調升利率",
-        "link": "https://www.cna.com.tw/news/aopl/202609170006.aspx",
+        "title": "菲律賓台灣形象展登場 黃志芳：台企加速布局智慧產業",
+        "link": "https://www.cna.com.tw/news/afe/202609170219.aspx",
         "source": "中央社",
-        "published": "2026-09-16T10:07:52+00:00",
-        "summary": "（中央社華盛頓16日綜合外電報導）在中東戰事推升國際油價、美國通膨仍未見緩和之際，美國聯邦準備理事會（Fed）今天召開利率決策會議，宣布升息1碼（0.25個百分點），為2023年以來首度調升利率。"
+        "published": "2026-09-17T00:45:42+00:00",
+        "summary": "（中央社記者林行健馬尼拉17日專電）2026年菲律賓台灣形象展今天在馬尼拉揭幕，人工智慧（AI）、智慧製造、智慧醫療、綠色能源及農業科技等台灣產品與技術集中亮相。外貿協會董事長黃志芳預計可促成逾1億美..."
       },
       {
-        "title": "市場靜待聯準會利率決策 歐股收高油價跌",
-        "link": "https://www.cna.com.tw/news/afe/202609170003.aspx",
+        "title": "算力電力雙引擎 宏致估明年AI營收再倍增",
+        "link": "https://www.cna.com.tw/news/afe/202609170215.aspx",
         "source": "中央社",
-        "published": "2026-09-16T08:21:44+00:00",
-        "summary": "（中央社倫敦16日綜合外電報導）市場靜待美國聯邦準備理事會（Fed）公布利率決策，歐洲股市今天收高，國際油價下跌。"
+        "published": "2026-09-17T00:41:33+00:00",
+        "summary": "（中央社記者曾仁凱台北17日電）連接器廠宏致預估，今年AI相關產品營收較去年呈2倍成長，另外宏致切入美國固態氧化物燃料電池大廠Bloom Energy（簡稱BE）供應鏈，提供電力系統管理與電力傳輸等線..."
       },
       {
-        "title": "美媒：蘋果計劃推出AI伺服器 考慮採輝達NVLink技術",
-        "link": "https://www.cna.com.tw/news/ait/202609160380.aspx",
+        "title": "中資擬收購英美資源鎳礦業務 歐盟警告恐影響競爭",
+        "link": "https://www.cna.com.tw/news/aopl/202609170212.aspx",
         "source": "中央社",
-        "published": "2026-09-16T07:36:32+00:00",
-        "summary": "（中央社舊金山16日綜合外電報導）美國媒體The Information報導，蘋果公司計劃推出人工智慧（AI）推論伺服器來重返伺服器市場，並考慮採輝達的NVLink Fusion技術來串聯當中搭載的自..."
+        "published": "2026-09-17T00:33:27+00:00",
+        "summary": "（中央社布魯塞爾16日綜合外電報導）歐洲聯盟（EU）今天警告，礦業巨擘英美資源集團（Anglo American）擬將旗下鎳礦業務出售給中資控制的五礦資源集團，恐影響市場競爭。"
       }
     ],
     "全球國際新聞": [
       {
-        "title": "聯準會升息市場不埋單 華許鷹派言論引發美股挫",
-        "link": "https://www.cna.com.tw/news/aopl/202609170040.aspx",
+        "title": "譴責打壓香港自由民主 歐洲議會促歐盟制裁李家超",
+        "link": "https://www.cna.com.tw/news/aopl/202609180015.aspx",
         "source": "中央社",
-        "published": "2026-09-16T18:17:15+00:00",
-        "summary": "（中央社華盛頓16日綜合外電報導）美國聯邦準備理事會主席華許（Kevin Warsh）明確表示，通膨問題依然存在。華爾街則開始揣測，聯準會究竟會採取多大力度來應對通膨。"
+        "published": "2026-09-17T15:30:45+00:00",
+        "summary": "（中央社記者吳柏緯布魯塞爾17日專電）歐洲議會今天做出決議，譴責香港當局用國安法與國安條例破壞香港的媒體、言論與集會自由，相關的法律應立即廢止。同時敦促歐盟制裁香港特首李家超與打壓香港自由的官員。"
       },
       {
-        "title": "美眾院通過法案 要求資料中心自付更多電力成本",
-        "link": "https://www.cna.com.tw/news/aopl/202609170038.aspx",
+        "title": "俄羅斯國會選舉18日登場 普丁陣營幾乎篤定勝選",
+        "link": "https://www.cna.com.tw/news/aopl/202609180014.aspx",
         "source": "中央社",
-        "published": "2026-09-16T17:53:10+00:00",
-        "summary": "（中央社華盛頓16日綜合外電報導）美國聯邦眾議院今天通過一項法案，要求耗電量龐大的資料中心自行承擔更多電力成本。隨著推動全美AI熱潮延燒，這些耗電怪獸逐漸成為11月期中選舉的重要議題。"
+        "published": "2026-09-17T14:55:40+00:00",
+        "summary": "（中央社莫斯科17日綜合外電報導）俄羅斯國會選舉18日登場，投票為期三天，這是2022年入侵烏克蘭後首次進行國會改選。在反對派遭壓制、批評戰爭聲音受限下，普丁所屬政黨幾乎篤定勝選。外界關注選舉結果能否..."
       },
       {
-        "title": "川習會將登場 北京學者：美中關係未來數年會保持穩定",
-        "link": "https://www.cna.com.tw/news/acn/202609170036.aspx",
+        "title": "法蘭克福機場爆瘧疾病例 員工及附近居民8人感染3死",
+        "link": "https://www.cna.com.tw/news/aopl/202609180013.aspx",
         "source": "中央社",
-        "published": "2026-09-16T17:50:06+00:00",
-        "summary": "（中央社台北17日電）中國國家主席習近平預計24日訪問華府並與美國總統川普舉行會談，有學者呼籲美中為雙邊關係注入更多建設性；北京學者達巍則認為，兩國關係不像3年前那般悲觀，未來數年會保持穩定。"
+        "published": "2026-09-17T13:47:37+00:00",
+        "summary": "（中央社法蘭克福17日綜合外電報導）德國衛生官員今天表示，法蘭克福（Frankfurt）又出現一起瘧疾死亡及另一起感染個案，兩人均住在機場附近，成為近期與法蘭克福機場相關的最新瘧疾案例。"
       },
       {
-        "title": "路透：美官員密會青年運動 對方稱無意攻擊美船",
-        "link": "https://www.cna.com.tw/news/aopl/202609170033.aspx",
+        "title": "英王警告錯用AI恐有存亡危機 黃仁勳籲業界負責樂觀",
+        "link": "https://www.cna.com.tw/news/afe/202609180009.aspx",
         "source": "中央社",
-        "published": "2026-09-16T17:26:59+00:00",
-        "summary": "（中央社利雅德16日綜合外電報導）5名知情人士透露，美國官員上週末在阿曼與葉門青年運動代表會面。在此前幾天，這支獲伊朗支持的民兵組織發動大規模攻勢，奪下紅海沿岸一處戰略要道，擊潰沙烏地阿拉伯支持的部隊..."
+        "published": "2026-09-17T12:07:26+00:00",
+        "summary": "（中央社卡姆諾克17日綜合外電報導）英國國王查爾斯三世今天在一場人工智慧（AI）峰會示警，他指出一旦錯用AI恐有存亡危機，應建立掌控機制以免為時已晚。企業領袖黃仁勳則籲業界以「負責的樂觀態度」打造AI..."
       },
       {
-        "title": "葉門局勢升溫 青年運動稱沙國過去24小時發動40次空襲",
-        "link": "https://www.cna.com.tw/news/aopl/202609170032.aspx",
+        "title": "川普：在波蘭設常駐美軍基地有進展",
+        "link": "https://www.cna.com.tw/news/aopl/202609180008.aspx",
         "source": "中央社",
-        "published": "2026-09-16T17:23:56+00:00",
-        "summary": "（中央社利雅德16日綜合外電報導）葉門叛軍「青年運動」（Houthis）今天表示，沙烏地阿拉伯過去24小時對葉門發動40次空襲；與此同時，沙國支持的葉門政府軍正持續在沙國邊境附近與青年運動交戰。"
+        "published": "2026-09-17T11:35:24+00:00",
+        "summary": "（中央社華盛頓17日綜合外電報導）美國總統川普（Donald Trump）今天表示，在波蘭設立美國陸軍基地一事正在取得進展，並歸功於波蘭總統納夫羅茨基（Karol Nawrocki）的「大膽領導」。"
       },
       {
-        "title": "歐盟盼加拿大成為準會員 川普批可笑、揚言加徵關稅",
-        "link": "https://www.cna.com.tw/news/aopl/202609170027.aspx",
+        "title": "歐盟執委10月赴北京會中國商務部長 拚化解貿易緊張",
+        "link": "https://www.cna.com.tw/news/aopl/202609180007.aspx",
         "source": "中央社",
-        "published": "2026-09-16T16:47:45+00:00",
-        "summary": "（中央社記者侯姿瑩華盛頓16日專電）近期加拿大與美國的貿易戰升溫，促使加拿大在戰略上加速轉向其他貿易夥伴，歐盟期盼加國成為首位「準會員」。美國總統川普今天表示，這很可笑，並說若這是敵對行為，將對歐洲加..."
+        "published": "2026-09-17T11:25:21+00:00",
+        "summary": "（中央社布魯塞爾17日綜合外電報導）歐盟發言人表示，歐盟主管貿易事務的執行委員塞夫柯維奇將於10月8日至9日在北京與中國商務部長王文濤舉行關鍵會談。目前雙方正進入化解緊張的最後磋商階段。"
       },
       {
-        "title": "美國聯準會升息1碼符合市場預期 五大重點一次看",
-        "link": "https://www.cna.com.tw/news/aopl/202609170023.aspx",
+        "title": "官員：習近平下週訪美 川普將罕見親自接機",
+        "link": "https://www.cna.com.tw/news/aopl/202609180005.aspx",
         "source": "中央社",
-        "published": "2026-09-16T16:20:37+00:00",
-        "summary": "（中央社華盛頓16日綜合外電報導）美國聯邦準備理事會（Fed）今天宣布升息一碼，符合市場普遍預期，但會後聲明與主席華許（Kevin Warsh）的談話，仍釋放出偏向強硬的訊號。在通膨風險備受關注之際，..."
+        "published": "2026-09-17T09:46:16+00:00",
+        "summary": "（中央社華盛頓17日綜合外電報導）一名美國官員今天向法新社證實，中國國家主席習近平下週抵達美國展開國是訪問時，美國總統川普將親自前往接機，給予習近平罕見禮遇。"
       },
       {
-        "title": "聯準會升息惹怒川普 痛批理事會「抱持敵意」",
-        "link": "https://www.cna.com.tw/news/aopl/202609170022.aspx",
+        "title": "路透：中國受沙烏地所託 私下請伊朗約束葉門叛軍",
+        "link": "https://www.cna.com.tw/news/aopl/202609170362.aspx",
         "source": "中央社",
-        "published": "2026-09-16T16:16:34+00:00",
-        "summary": "（中央社華盛頓16日綜合外電報導）美國總統川普今天指控對他「抱持敵意」的聯準會利率決策委員出於政治因素，強迫他親自挑選的聯準會主席華許（Kevin Warsh）升息。"
+        "published": "2026-09-17T07:22:58+00:00",
+        "summary": "（中央社杜拜17日綜合外電報導）路透社引述3名伊朗消息人士報導，德黑蘭支持的葉門叛軍「青年運動」過去1週在紅海一帶突襲擴大控制範圍後，中國受沙烏地阿拉伯所託，私下請求伊朗協助約束其行動。"
       }
     ],
     "社會": [
       {
-        "title": "涉投資和牛綠能吸金逾6億元 北檢聲押2主嫌",
-        "link": "https://www.cna.com.tw/news/asoc/202609170030.aspx",
+        "title": "佛州議會領袖團訪海委會 雙方交流中國灰帶行動",
+        "link": "https://www.cna.com.tw/news/aloc/202609170300.aspx",
         "source": "中央社",
-        "published": "2026-09-16T17:05:52+00:00",
-        "summary": "（中央社記者劉世怡台北17日電）涂姓、林姓男子涉嫌以投資藝術品、海外房地產、和牛養殖及綠能等名目，宣稱年化報酬率最高62%，違法吸金逾新台幣6億元。北檢昨天搜索約談，今天凌晨聲押禁見2人。"
+        "published": "2026-09-17T02:47:37+00:00",
+        "summary": "（中央社記者張已亷高雄17日電）美國佛羅里達州議會領袖訪問團今天拜會海委會，由海委會副主委宋承恩接見並交流中國灰色地帶行動、海域安全等議題，海委會也分享台灣於海洋安全與環境保護方面的治理經驗。"
       },
       {
-        "title": "台北林森南路美食巷弄火警 2樓民宅起火初查無傷",
-        "link": "https://www.cna.com.tw/news/asoc/202609160375.aspx",
+        "title": "楊文科籲團結挺徐欣瑩 盼延續竹縣建設",
+        "link": "https://www.cna.com.tw/news/aloc/202609170284.aspx",
         "source": "中央社",
-        "published": "2026-09-16T06:29:18+00:00",
-        "summary": "（中央社記者劉建邦台北16日電）台北市警消今晚獲報台大醫院體育館旁的林森南路61巷弄內民宅發生火警，到場發現一處2樓建物起火並冒濃煙，拉水線搶救後火勢已撲滅，初查無人受困，起火原因待釐清。"
+        "published": "2026-09-17T02:21:02+00:00",
+        "summary": "（中央社記者郭宣彣新竹縣17日電）國民黨新竹縣黨部主委楊文科今天表示，2018年接任縣長時縣府債務約新台幣162.3億元，目前降至約61億元；他力挺國民黨新竹縣長參選人徐欣瑩，呼籲黨內團結支持，盼延續..."
       },
       {
-        "title": "民進黨創黨元老林豐喜為藍營站台 遭中市黨部通過除名",
-        "link": "https://www.cna.com.tw/news/aloc/202609160374.aspx",
+        "title": "台酒竹南製瓶廠停產 立委邀財政部會勘促土地活化",
+        "link": "https://www.cna.com.tw/news/aloc/202609170283.aspx",
         "source": "中央社",
-        "published": "2026-09-16T06:28:16+00:00",
-        "summary": "（中央社記者郝雪卿台中16日電）民主進步黨創黨元老林豐喜日前為國民黨台中市長參選人江啟臣站台，今晚遭民進黨台中市黨部執委會通過除名；另違紀參選市議員的林鈺梅也遭除名，都將送中央黨部確認。"
+        "published": "2026-09-17T02:20:00+00:00",
+        "summary": "（中央社記者管瑞平苗栗縣17日電）台灣菸酒公司竹南製瓶廠停產後，廠區多數空間閒置，地方爭取將廠區約6公頃土地活化，立委陳超明今天邀財政部、縣府會勘，盼中央、地方與國營事業合作為地方發展注入活水。"
       },
       {
-        "title": "張俊傑棄保潛逃 海巡署：全力封鎖海上管道出境",
-        "link": "https://www.cna.com.tw/news/asoc/202609160365.aspx",
+        "title": "南國設計沙龍登場 周春米、聶永真談城市品牌實踐美學",
+        "link": "https://www.cna.com.tw/news/aloc/202609170280.aspx",
         "source": "中央社",
-        "published": "2026-09-16T05:47:56+00:00",
-        "summary": "（中央社記者劉建邦台北16日電）立委高金素梅助理張俊傑棄保潛逃，刑事局發布重要緊急查緝專案並提供高額檢舉獎金。海巡署今天表示，已發「防制出境（海）專刊」通報，全力封鎖其經由海上管道潛逃出境。"
+        "published": "2026-09-17T02:17:54+00:00",
+        "summary": "（中央社記者黃郁菁屏東縣17日電）2026南國設計沙龍今天在屏東總圖登場，首場由屏東縣長周春米與知名設計師聶永真對談，暢談城市品牌實踐美學。接著還有10名講者每週四、五輪番登場至10月30日。"
       },
       {
-        "title": "警政署警務正涉持有毒品 北檢諭令10萬元交保",
-        "link": "https://www.cna.com.tw/news/asoc/202609160363.aspx",
+        "title": "台電關懷弱勢愛不斷電 730份中秋禮盒挺庇護工場",
+        "link": "https://www.cna.com.tw/news/aloc/202609170279.aspx",
         "source": "中央社",
-        "published": "2026-09-16T05:39:52+00:00",
-        "summary": "（中央社記者林長順、劉建邦台北16日電）警政署楊姓警務正涉持有毒品，北檢今天指揮警方搜索楊男住處，並約談到案，訊後依毒品罪諭令10萬元交保。警政署表示，將依法免職，並追究相關人員考核監督不周責任。"
+        "published": "2026-09-17T02:11:52+00:00",
+        "summary": "（中央社記者黃旭昇新北17日電）台電北南、北西、北北3區處攜手電力工會，響應新北市愛心大平台，向愛不囉嗦及慈育2家庇護工場認購730份中秋禮盒，其中562份捐贈新北市14處兒少社區照顧服務據點弱勢家庭..."
       },
       {
-        "title": "司法獨立評比降低 法務部：憲法法庭停擺所致",
-        "link": "https://www.cna.com.tw/news/asoc/202609160359.aspx",
+        "title": "九合一選舉 連江縣檢警調總動員清查幽靈人口",
+        "link": "https://www.cna.com.tw/news/aloc/202609170275.aspx",
         "source": "中央社",
-        "published": "2026-09-16T05:16:41+00:00",
-        "summary": "（中央社記者林長順台北16日電）根據「2026全球民主現況」報告，台灣的司法獨立降至「中段班」。法務部今天表示，重要原因為憲法法庭停擺，但報告中「法治」績效評比為全球第19名，屬於高績效的「前段班」民..."
+        "published": "2026-09-17T02:07:43+00:00",
+        "summary": "（中央社記者潘欣彤連江縣17日電）九合一選舉連江縣查察賄選，幽靈人口為重點勤務，檢警調近期針對縣內一址多戶、一戶多人或毀屋設籍等，逐步釐清是否實際居住等事實，並鎖定涉嫌虛偽遷徙戶籍高風險對象。"
       },
       {
-        "title": "新北聯醫前主任涉貪遭判刑 拖2年未入監遭緝捕歸案",
-        "link": "https://www.cna.com.tw/news/asoc/202609160357.aspx",
+        "title": "李驥獲聘東海大學創意總監 將AI融入音樂教學",
+        "link": "https://www.cna.com.tw/news/aloc/202609170269.aspx",
         "source": "中央社",
-        "published": "2026-09-16T05:08:37+00:00",
-        "summary": "（中央社記者曹亞沿新北16日電）新北聯醫前心臟內科主任陳世瑀涉在採購案貪污收賄等，遭判6年定讞，但多次聲請暫緩執行，拖延2年未入監。新北檢近日傳喚、拘提無果發布通緝，今天由北市信義分局緝獲歸案。"
+        "published": "2026-09-17T02:02:30+00:00",
+        "summary": "（中央社記者趙麗妍台中17日電）音樂人李驥與林志炫以「優客李林」出道，李驥日前獲東海大學邀請擔任產業推廣暨終身學習處創意總監，日前他將AI與創意帶入偏鄉教育現場，未來將AI帶進音樂創作與教學。"
       },
       {
-        "title": "嘉義弒父人倫悲劇 涉案兒清理現場涉滅證羈押獲准",
-        "link": "https://www.cna.com.tw/news/asoc/202609160339.aspx",
+        "title": "救援奈及利亞「巫童」 丹麥籍羅文獲頒生命獎章",
+        "link": "https://www.cna.com.tw/news/aloc/202609170265.aspx",
         "source": "中央社",
-        "published": "2026-09-16T04:24:56+00:00",
-        "summary": "（中央社記者黃國芳嘉義市16日電）嘉義縣黃男昨天涉嫌趁父親在客廳沙發午休持刀殺害，黃男到案辯稱犯案過程忘記了，嘉檢今天複訊後聲押，嘉院考量黃男曾清理命案現場及攜帶凶器離開，於晚上裁定羈押禁見。"
+        "published": "2026-09-17T01:57:22+00:00",
+        "summary": "（中央社記者王朝鈺基隆17日電）周大觀文教基金會今天在基隆女中頒發「全球熱愛生命獎章」，丹麥籍慈善工作者羅文（Anja Loven）獲獎說，得知奈及利亞許多兒童遭指控為「巫童」，甚至遭殺害，決定冒險投..."
       }
     ],
     "生活": [
       {
-        "title": "吳德榮：颱風杜鵑對日本威脅減輕 17、18日台灣水氣減少",
-        "link": "https://www.cna.com.tw/news/ahel/202609170025.aspx",
+        "title": "卡薩爾斯四重奏迎來成軍30年 帶來舒伯特「死與少女」",
+        "link": "https://www.cna.com.tw/news/acul/202609170332.aspx",
         "source": "中央社",
-        "published": "2026-09-16T16:27:41+00:00",
-        "summary": "（中央社記者張雄風台北17日電）氣象專家吳德榮表示，颱風杜鵑預計20日在日本南方海面開始向東北方大迴轉，預測颱風中心未觸及日本、對日威脅減輕。今明兩天台灣水氣減少，白天高溫略升、夜微涼。"
+        "published": "2026-09-17T04:49:49+00:00",
+        "summary": "（中央社記者趙靜瑜台北17日電）卡薩爾斯四重奏（Cuarteto Casals）迎來成軍30週年，台灣成為重要一站。該團成立的初衷之一就是為了能夠演奏舒伯特「死與少女」，這次也將帶來這首重量級曲目，展..."
       },
       {
-        "title": "猛健樂日本售價便宜一半 韓國旅客瘋搶「壽司健樂」",
-        "link": "https://www.cna.com.tw/news/aopl/202609160369.aspx",
+        "title": "皮亞佐拉五重奏獲拉丁葛萊美獎提名 10月首度訪台",
+        "link": "https://www.cna.com.tw/news/acul/202609170327.aspx",
         "source": "中央社",
-        "published": "2026-09-16T06:03:05+00:00",
-        "summary": "（中央社記者戴雅真東京16日專電）用於減重的糖尿病治療藥物「猛健樂」因在日本售價據稱不到韓國一半，加上日圓貶值，許多韓國民眾認為「就算加上旅費還是划算」，而大批赴日購買，又被稱「壽司健樂」。"
+        "published": "2026-09-17T04:28:38+00:00",
+        "summary": "（中央社記者趙靜瑜台北17日電）皮亞佐拉五重奏（Quinteto Astor Piazzolla）以最新專輯「華麗的探戈」獲第27屆拉丁葛萊美獎（Latin Grammy Awards）提名「最佳探戈..."
       },
       {
-        "title": "颱風杜鵑生成往日本南方海面移動 對台灣無直接影響",
-        "link": "https://www.cna.com.tw/news/ahel/202609160367.aspx",
+        "title": "立陶宛戲院辦侯孝賢回顧展 邀民眾探索台灣社會變遷",
+        "link": "https://www.cna.com.tw/news/acul/202609170298.aspx",
         "source": "中央社",
-        "published": "2026-09-16T05:54:01+00:00",
-        "summary": "（中央社記者張雄風台北16日電）氣象署今晚發布颱風生成訊息，原位於關島東北東方海面上的熱帶性低氣壓，晚間8時發展為輕度颱風，編號第24號杜鵑，未來將朝北轉西北往日本南方海面移動，對台灣無直接影響。"
+        "published": "2026-09-17T02:45:33+00:00",
+        "summary": "（中央社記者游堯茹維爾紐斯17日專電）位於立陶宛首都維爾紐斯、歷史悠久的Skalvija電影院10日至23日舉辦台灣導演侯孝賢電影回顧展，精選10部作品，從早期到成熟時期，呈現其創作風格與台灣社會變遷..."
       },
       {
-        "title": "曾參與楊麗花歌仔戲演出 資深藝師王秋冠辭世",
-        "link": "https://www.cna.com.tw/news/acul/202609160358.aspx",
+        "title": "展現排灣族傳統織布傳承 「織之有序」屏東原民館開展",
+        "link": "https://www.cna.com.tw/news/acul/202609170228.aspx",
         "source": "中央社",
-        "published": "2026-09-16T05:13:39+00:00",
-        "summary": "（中央社記者邱祖胤台北16日電）歌仔戲資深藝師、曾演出楊麗花歌仔戲的王秋冠昨天辭世，享壽75歲，戲迷聞訊表達不捨。"
+        "published": "2026-09-17T01:05:01+00:00",
+        "summary": "（中央社記者黃郁菁屏東縣17日電）屏東原民館推出新展覽「織之有序」，透過不同世代織品、傳統工具及習藝歷程，呈現排灣族傳統織布從前人、藝師到藝生傳承脈絡，展期從9月15日至10月26日。"
       },
       {
-        "title": "人權電影獎入圍名單揭曉 9/19揭曉大獎得主",
-        "link": "https://www.cna.com.tw/news/acul/202609160348.aspx",
+        "title": "中研院揭海洋酸化危機 烏賊掠食力降影響生態系",
+        "link": "https://www.cna.com.tw/news/ahel/202609170214.aspx",
         "source": "中央社",
-        "published": "2026-09-16T04:57:15+00:00",
-        "summary": "（中央社記者王寶兒台北16日電）2026人權電影獎11部入圍名單今天公布，包含「傳奇女伶高菊花」、「我的爸爸是死刑犯」等，預計19日將揭曉人權電影大獎得主，未來也將透過播映讓更多人欣賞作品。"
+        "published": "2026-09-17T00:35:31+00:00",
+        "summary": "（中央社記者吳欣紜台北17日電）海洋吸收大量二氧化碳恐加劇全球海洋酸化，中研院近日研究揭露，長期暴露於酸化海水中的萊氏擬烏賊大腦恐因此縮小、掠食行為顯著下降，可能間接影響海洋生態系。"
       },
       {
-        "title": "人口對策新措施 勞動部將宣告婚假8天增為14天",
-        "link": "https://www.cna.com.tw/news/ahel/202609160341.aspx",
+        "title": "光復節連假台鐵加開108列次 9/23起開放訂票",
+        "link": "https://www.cna.com.tw/news/ahel/202609170206.aspx",
         "source": "中央社",
-        "published": "2026-09-16T04:27:00+00:00",
-        "summary": "（中央社記者吳欣紜台北16日電）政府5月宣布台灣人口對策新戰略18項措施，包含婚假加碼，民眾日前透過公共政策網路參與平台提案籲能儘速通過，勞動部明天將預告修正請假規則，讓加碼婚假能提高婚育意願。"
+        "published": "2026-09-17T00:16:14+00:00",
+        "summary": "（中央社記者黃巧雯台北17日電）今年光復節連假有3天，台鐵公司今天宣布，10月23日起至10月27日全線加開各級列車共108列次，將在9月23日凌晨0時起開放訂票。"
       },
       {
-        "title": "防依托咪酯氾濫 食藥署增列2項管制藥物原料藥",
-        "link": "https://www.cna.com.tw/news/ahel/202609160321.aspx",
+        "title": "台灣新浪潮電影捷克展映 大師經典重現本土時代故事",
+        "link": "https://www.cna.com.tw/news/acul/202609170200.aspx",
         "source": "中央社",
-        "published": "2026-09-16T03:10:17+00:00",
-        "summary": "（中央社記者沈佩瑤台北16日電）俗稱「喪屍煙彈」依托咪酯氾濫嚴峻，食藥署公告增列2項可合成依托咪酯藥物，為四級管制藥物原料藥，15日起生效，即起留存藥品機構需申請登記證，並詳實登載使用情形。"
-      },
-      {
-        "title": "華航貨運表現優異 第4季目標單月維持80億元",
-        "link": "https://www.cna.com.tw/news/ahel/202609160316.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T02:59:06+00:00",
-        "summary": "（中央社記者余曉涵阿姆斯特丹16日電）華航總經理陳漢銘今天說，以總市場來說，華航今年貨運表現優異，在未來有限的機隊數前提下，將精進擺放市場需求，第4季目標單月維持在新台幣80億元。"
+        "published": "2026-09-17T00:06:01+00:00",
+        "summary": "（中央社記者劉郁葶布拉格17日專電）「台灣新浪潮電影」專題影展今天在捷克布拉格登場，精選侯孝賢、楊德昌、蔡明亮等台灣電影大師作品，以及當代獲獎紀錄片「神人之家」。捷克國家電影資料館表示，創作者打破禁忌..."
       }
     ],
     "娛樂": [
       {
-        "title": "經典台語片登布達佩斯大銀幕 重現1960年代黃金歲月",
-        "link": "https://www.cna.com.tw/news/amov/202609160340.aspx",
+        "title": "告五人小巨蛋2場秒殺宣布加唱 唱片公司喊大巨蛋見",
+        "link": "https://www.cna.com.tw/news/amov/202609170208.aspx",
         "source": "中央社",
-        "published": "2026-09-16T04:25:58+00:00",
-        "summary": "（中央社記者劉郁葶布拉格16日專電）「2026布達佩斯經典電影馬拉松」影展選映3部由國家電影及視聽文化中心數位修復的台語經典電影，涵蓋武俠、歌唱與喜劇等多元類型，帶領觀眾重返1960年代台灣電影的黃金..."
+        "published": "2026-09-17T00:24:18+00:00",
+        "summary": "（中央社記者王心妤台北17日電）告五人將於11月初在台北小巨蛋舉辦「在這裡@century」演唱會，2場演唱會秒殺後，今天宣布加唱6日。唱片公司也宣布，「加場完售，我們大巨蛋見。」"
       },
       {
-        "title": "「自然捲」奇哥罹漸凍症 老東家發起活動邀歌迷支持",
-        "link": "https://www.cna.com.tw/news/amov/202609160337.aspx",
+        "title": "田馥甄雙人團隊赴北歐製新輯 操辦大小事直呼難得體驗",
+        "link": "https://www.cna.com.tw/news/amov/202609170198.aspx",
         "source": "中央社",
-        "published": "2026-09-16T04:20:52+00:00",
-        "summary": "（中央社記者王心妤台北16日電）「自然捲」樂團前主唱奇哥日前分享罹患「漸凍症」（肌萎縮性脊髓側索硬化症，ALS）的心情，老東家「風和日麗唱片行」發起活動推出周邊，盼望歌迷將關懷化為實際支持的行動。"
-      },
-      {
-        "title": "大嘻哈時代3導師曝選人標準 熊仔要找立體的人",
-        "link": "https://www.cna.com.tw/news/amov/202609160308.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T02:25:48+00:00",
-        "summary": "（中央社記者王心妤台北16日電）「大嘻哈時代3」今天舉辦開錄記者會，前2季導師陳星翰、熊仔、LEO王和蔡詩芸將聯手找出好聲音。蔡詩芸認為選手個人風格很重要；熊仔則喜歡選手唱出個人故事。"
-      },
-      {
-        "title": "楊大正挑戰虛擬攝影棚拍戲 讚放大創意是福音",
-        "link": "https://www.cna.com.tw/news/amov/202609160280.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T01:43:49+00:00",
-        "summary": "（中央社記者王心妤台北16日電）高雄電影節今天公布「未來影像」、「AI無界限」片單，前者邀滅火器樂團主唱楊大正擔任大來賓，並在虛擬攝影棚拍攝，他表示，虛擬攝影棚操作複雜，但能放大創意，是一大福音。"
-      },
-      {
-        "title": "金馬影展開閉幕片揭曉 福士蒼汰、邱士縉將來台",
-        "link": "https://www.cna.com.tw/news/amov/202609160262.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T01:18:10+00:00",
-        "summary": "（中央社記者王心妤台北16日電）金馬影展今天公布開幕片為台馬合製電影「告別的年代」，閉幕片則是「花臉貓：修羅道」，主演的香港男團MIRROR成員邱士縉跟日本演員福士蒼汰也將出席，並跟觀眾相見歡。"
+        "published": "2026-09-17T00:04:57+00:00",
+        "summary": "（中央社記者王心妤台北17日）歌后田馥甄今天宣布推出新專輯「要去什麼地方」，她透露此次飛往北歐法羅群島取景，其實只有雙人團隊拍攝，她一手包辦訂機票等小事，連化妝也得靠自己，是難得的體驗。"
       }
     ],
     "運動": [
       {
-        "title": "台灣亞運代表團名古屋訓練據點遭塗鴉 愛知警方調查",
-        "link": "https://www.cna.com.tw/news/aspt/202609170037.aspx",
+        "title": "德保拉開刀歸隊日難估測 平野惠一期待有人頂上戰力",
+        "link": "https://www.cna.com.tw/news/aspt/202609170261.aspx",
         "source": "中央社",
-        "published": "2026-09-16T17:51:08+00:00",
-        "summary": "（中央社記者戴雅真東京17日專電）愛知名古屋亞運開幕在即，台灣隊在名古屋市的訓練據點，傳出代表團相關布條遭人塗鴉。日本警方目前已以涉嫌毀損器物方向展開調查。"
+        "published": "2026-09-17T01:49:13+00:00",
+        "summary": "（中央社記者蘇志畬台北17日電）中華職棒中信兄弟隊主力投手德保拉近期開刀治療臀部粉瘤，對於是否趕得上在例行賽歸隊，總教練平野惠一坦言還無法評估，但期待有人跳出來。"
       },
       {
-        "title": "愛知名古屋亞運首梯大團出發 運動部：做選手最好後盾",
-        "link": "https://www.cna.com.tw/news/aspt/202609170026.aspx",
+        "title": "台灣女足1比0擊敗泰國 歸化好手田中麻帆踢進致勝球",
+        "link": "https://www.cna.com.tw/news/aspt/202609170252.aspx",
         "source": "中央社",
-        "published": "2026-09-16T16:42:43+00:00",
-        "summary": "（中央社記者吳睿騏桃園機場17日電）第20屆愛知名古屋亞運將於19日開幕，台灣代表團8支隊伍今天搭機赴日，其餘代表隊依賽程及備戰規劃陸續抵達，運動部勉勵選手發揮實力，會做好後勤支援，成為選手的後盾。"
-      },
-      {
-        "title": "林岱安相隔437天開轟 走過低潮哽咽感謝太太",
-        "link": "https://www.cna.com.tw/news/aspt/202609160378.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T06:48:25+00:00",
-        "summary": "（中央社記者蘇志畬台北16日電）相隔437天，中華職棒富邦悍將隊捕手林岱安再次敲出全壘打，今晚用2支長打加上引導功力幫助球隊終止連敗，林岱安賽後感謝太太時有些哽咽，也希望悍將能打進季後賽。"
-      },
-      {
-        "title": "林岱安敲轉隊首轟 悍將完封龍隊終止4連敗",
-        "link": "https://www.cna.com.tw/news/aspt/202609160372.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T06:25:12+00:00",
-        "summary": "（中央社記者蘇志畬台北16日電）中華職棒富邦悍將隊捕手林岱安今天轟出轉隊後首支全壘打，也幫助先發投手瑪帝斯繳出6局無失分表現，引導投手群締造完封，悍將最終以6比0擊敗味全龍隊，終止4連敗。"
-      },
-      {
-        "title": "亞運男籃台灣首節僅得9分不敵日本 8強止步",
-        "link": "https://www.cna.com.tw/news/aspt/202609160346.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T04:43:11+00:00",
-        "summary": "（中央社記者黎建忠台北16日電）亞運男子籃球今天進行8強淘汰賽，台灣男籃首節進攻當機僅9分進帳種下敗因，儘管陳盈駿在嚴密看管下仍強攻全隊最高的20分，但終場台灣仍以78比85不敵地主日本，無緣連3屆4..."
-      },
-      {
-        "title": "台灣女排強攻狂轟 亞運預賽直落3輕取吉爾吉斯",
-        "link": "https://www.cna.com.tw/news/aspt/202609160330.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T03:43:36+00:00",
-        "summary": "（中央社記者黎建忠台北16日電）名古屋亞運女子排球今天進行預賽首日賽事，台灣女排對上實力有段差距的吉爾吉斯，輕鬆以25比14、25比15、25比9直落3過關，順利收下開門紅。"
-      },
-      {
-        "title": "登峰造極青年籃球賽 韓國女籃名將李亨淑相隔10年教練身分來台",
-        "link": "https://www.cna.com.tw/news/aspt/202609160320.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T03:05:14+00:00",
-        "summary": "（中央社記者黎建忠台北16日電）2026登峰造極青年籃球邀請賽今天進行第2天賽事，曾為台灣籃壇奉獻23年的韓國名將李亨淑，相隔10年再度來台，也幫助濟源一中在女子組以83比68大勝永仁高中，保住4強希..."
-      },
-      {
-        "title": "劉俊緯開始隨隊練習 骨裂處不痛報喜訊",
-        "link": "https://www.cna.com.tw/news/aspt/202609160307.aspx",
-        "source": "中央社",
-        "published": "2026-09-16T02:23:46+00:00",
-        "summary": "（中央社記者蘇志畬台北16日電）中華職棒味全龍隊內野手劉俊緯8月20日因觸身球導致左手肘骨裂，今天已經開始隨隊練習，18日到二軍出賽若無大礙就可重返一軍，劉俊緯說：「已經都不痛了。」"
+        "published": "2026-09-17T01:33:52+00:00",
+        "summary": "（中央社台北17日電）名古屋亞運台灣女足今天靠著日籍歸化好手田中麻帆在第77分鐘，踢進披上台灣隊戰袍後的第一顆進球，幫助台灣女足以1比0擊敗強敵泰國，一隻腳已跨進8強門內。"
       }
     ]
   },
   "en_news": {
     "Startup": [
       {
-        "title": "DeepSeek-v4.1 Flash: Pushing the Limits of KV Cache Compression",
-        "link": "https://zartbot.github.io/blog/model_arch/dsv41flash_arch/en.html",
+        "title": "Telstra outage: The night a network decided the year was 2006",
+        "link": "https://www.netnod.se/blog/telstra-outage-night-network-decided-year-was-2006",
         "source": "Hacker News",
-        "published": "2026-09-16T17:39:47+00:00",
+        "published": "2026-09-17T17:05:03+00:00",
         "summary": "Comments"
       },
       {
-        "title": "OpenAI Discloses Six New Incidents of ‘Concerning’ A.I. Behavior",
-        "link": "https://www.nytimes.com/2026/09/16/technology/openai-model-safety-guardrails.html",
+        "title": "Goose: 1.16x faster than C++ and 1.12x than safe Rust, while memory safe",
+        "link": "https://github.com/aardappel/goose/tree/master",
         "source": "Hacker News",
-        "published": "2026-09-16T17:02:13+00:00",
+        "published": "2026-09-17T17:04:54+00:00",
         "summary": "Comments"
       },
       {
-        "title": "The Return of Sail Power: Cargo Ships Are Turning Back to the Wind",
-        "link": "https://gcaptain.com/the-return-of-sail-power-cargo-ships-are-turning-back-to-the-wind",
+        "title": "Alibaba releases Qwen 3.8 Omni Flash",
+        "link": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
         "source": "Hacker News",
-        "published": "2026-09-16T16:28:33+00:00",
+        "published": "2026-09-17T15:05:48+00:00",
         "summary": "Comments"
       },
       {
-        "title": "OpenSpec – A lightweight and configurable AI spec framework",
-        "link": "https://openspec.dev/",
+        "title": "How Uber Protects Against Retry Storms",
+        "link": "https://www.uber.com/us/en/blog/protecting-against-retry-storms",
         "source": "Hacker News",
-        "published": "2026-09-16T15:06:39+00:00",
+        "published": "2026-09-17T13:14:32+00:00",
         "summary": "Comments"
       },
       {
-        "title": "Australia says it could follow Canada in forging deeper ties with EU",
-        "link": "https://www.independent.co.uk/news/world/australasia/canda-eu-membership-australia-us-trade-b3050227.html",
+        "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+        "link": "https://prismml.com/news/bonsai-2-27b",
         "source": "Hacker News",
-        "published": "2026-09-16T14:56:48+00:00",
+        "published": "2026-09-17T13:13:31+00:00",
         "summary": "Comments"
       },
       {
-        "title": "HarnessTax: How Much Does the Harness Matter for Coding Agents?",
-        "link": "https://harnesstax.github.io/",
+        "title": "The most important product decision is what you don't build",
+        "link": "https://liamnugent.me/posts/what-you-dont-build",
         "source": "Hacker News",
-        "published": "2026-09-16T14:10:13+00:00",
+        "published": "2026-09-17T12:52:36+00:00",
         "summary": "Comments"
       },
       {
-        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-        "link": "https://arxiv.org/abs/2609.16338",
+        "title": "Computer Reset, Dallas",
+        "link": "https://dfarq.homeip.net/computer-reset-dallas",
         "source": "Hacker News",
-        "published": "2026-09-16T12:59:24+00:00",
+        "published": "2026-09-17T12:50:03+00:00",
         "summary": "Comments"
       },
       {
-        "title": "Backups Aren't Simple",
-        "link": "https://filipovski.net/2026/09/16/backups-arent-simple.html",
+        "title": "Show HN: Snapdrop: Instantly share files between devices. No setup, no signup",
+        "link": "https://snapdrop.me/",
         "source": "Hacker News",
-        "published": "2026-09-16T12:27:16+00:00",
+        "published": "2026-09-17T12:48:04+00:00",
         "summary": "Comments"
       }
     ],
     "Tech News": [
       {
-        "title": "Snap tries to make the case again for its $2,200 smart glasses",
-        "link": "https://techcrunch.com/2026/09/16/snap-tries-to-make-the-case-again-for-its-2200-smart-glasses",
-        "source": "TechCrunch",
-        "published": "2026-09-16T16:58:49+00:00",
-        "summary": "Snap unveiled new features for its smart glasses this week."
-      },
-      {
-        "title": "Musk’s long-time backer is giving SpaceX stock to its investors",
-        "link": "https://techcrunch.com/2026/09/16/musks-long-time-backer-is-giving-spacex-stock-to-its-investors",
-        "source": "TechCrunch",
-        "published": "2026-09-16T15:50:07+00:00",
-        "summary": "Valor Equity Partners is handing out stock to its LPs instead of cash returns."
-      },
-      {
-        "title": "Al Gore says the real AI risk isn’t data centers — it’s what industry leaders are warning about",
-        "link": "https://techcrunch.com/2026/09/16/al-gore-has-a-surprisingly-calm-take-on-the-ai-data-center-backlash",
-        "source": "TechCrunch",
-        "published": "2026-09-16T15:43:09+00:00",
-        "summary": "In an interview with TechCrunch, Al Gore suggested he isn't losing sleep over AI data center emissio..."
-      },
-      {
-        "title": "Snap is launching a new Specs AI tool, and it’s coming to iOS and Mac",
-        "link": "https://www.theverge.com/tech/996078/snap-specs-intelligence-ai-agent-ios-mac",
+        "title": "Waymo says Singapore will be its next international robotaxi city",
+        "link": "https://www.theverge.com/transportation/997091/waymo-singapore-robotaxi-launch-2027",
         "source": "The Verge",
-        "published": "2026-09-16T15:40:00+00:00",
-        "summary": "Snap is introducing \"Specs Intelligence,\" a new AI assistant that can connect other digital accounts..."
+        "published": "2026-09-17T18:00:00+00:00",
+        "summary": "Waymo says it will launch a robotaxi service in Singapore in 2028, as the Alphabet-owned company con..."
       },
       {
-        "title": "I wore Snap’s $2,200 smart glasses",
-        "link": "https://www.theverge.com/tech/996422/snap-specs-hands-on-ar-glasses",
-        "source": "The Verge",
-        "published": "2026-09-16T15:40:00+00:00",
-        "summary": "My favorite part of wearing the Specs, Snap's new augmented reality glasses, was playing dominoes. S..."
-      },
-      {
-        "title": "US automakers could soon be forced to include AM radio for free",
-        "link": "https://techcrunch.com/2026/09/16/us-automakers-could-soon-be-forced-to-include-am-radio-for-free",
+        "title": "Khosla-backed Mazama Energy just raised $135M to drill deeper into super-hot-rock geothermal",
+        "link": "https://techcrunch.com/2026/09/17/khosla-backed-mazama-energy-just-raised-135m-to-drill-deeper-into-super-hot-rock-geothermal",
         "source": "TechCrunch",
-        "published": "2026-09-16T14:37:08+00:00",
-        "summary": "The House of Representatives, in rare bipartisan support, overwhelmingly approved legislation that w..."
+        "published": "2026-09-17T16:02:36+00:00",
+        "summary": "Geothermal startup Mazama is drilling three miles underground to tap superhot rock, with one well ca..."
       },
       {
-        "title": "Noise wants to help everyday people become paid content creators",
-        "link": "https://techcrunch.com/2026/09/16/noise-wants-to-help-everyday-people-become-paid-content-creators",
+        "title": "Crusoe raises $3.9B to build massive data centers and small modular ‘AI factories’",
+        "link": "https://techcrunch.com/2026/09/17/crusoe-raises-3-9b-to-build-massive-data-centers-and-small-modular-ai-factories",
         "source": "TechCrunch",
-        "published": "2026-09-16T13:35:00+00:00",
-        "summary": "Marketing platform Noise is on a mission to help anyone with a smart phone make money from their con..."
+        "published": "2026-09-17T15:25:52+00:00",
+        "summary": "The round values the data center giant at $30.9 billion."
       },
       {
-        "title": "Pulley, a Carta rival, is shutting down",
-        "link": "https://techcrunch.com/2026/09/16/pulley-a-carta-rival-is-shutting-down",
+        "title": "Google DeepMind launches institute to widen the AGI debate",
+        "link": "https://techcrunch.com/2026/09/17/google-deepmind-launches-institute-to-widen-the-agi-debate",
         "source": "TechCrunch",
-        "published": "2026-09-16T13:23:19+00:00",
-        "summary": "Cap table management platform Pulley, backed by General Catalyst, Stripe, and Founders Fund, announc..."
+        "published": "2026-09-17T15:21:17+00:00",
+        "summary": "The new institute aims to surface differing views between Google, Google DeepMind, and the broader g..."
+      },
+      {
+        "title": "Amazon-owned Zoox’s 100-robotaxi limit in Nevada is about to disappear",
+        "link": "https://techcrunch.com/2026/09/17/amazon-owned-zooxs-100-robotaxi-limit-in-nevada-is-about-to-disappear",
+        "source": "TechCrunch",
+        "published": "2026-09-17T15:08:24+00:00",
+        "summary": "An updated permit shows the 100-cap will expire later this month just as competition in Las Vegas he..."
+      },
+      {
+        "title": "PrismML hopes its tiny LLM will change how we all use AI",
+        "link": "https://techcrunch.com/2026/09/17/prismml-hopes-its-tiny-llm-could-change-how-we-all-use-ai",
+        "source": "TechCrunch",
+        "published": "2026-09-17T14:34:09+00:00",
+        "summary": "If AI lab PrismML isn't on your radar yet, it should be."
+      },
+      {
+        "title": "The FAA’s plan to fix air traffic? $875M worth of AI",
+        "link": "https://techcrunch.com/2026/09/17/the-faas-plan-to-fix-air-traffic-875-million-worth-of-ai",
+        "source": "TechCrunch",
+        "published": "2026-09-17T14:14:59+00:00",
+        "summary": "A new AI-based software program is being launched to help air traffic controllers better navigate th..."
+      },
+      {
+        "title": "The fix for rogue AI agents could be more AI",
+        "link": "https://techcrunch.com/2026/09/17/the-fix-for-rogue-ai-agents-could-be-more-ai",
+        "source": "TechCrunch",
+        "published": "2026-09-17T12:34:47+00:00",
+        "summary": "As companies hand off longer and more complex tasks to AI agents, they are running into an oversight..."
       }
     ],
     "BBC Top Stories": [
       {
-        "title": "UK prosecutors file for extradition of the Tate brothers from the US",
-        "link": "https://www.bbc.co.uk/news/articles/c6d79z7ez7r4o?at_medium=RSS&at_campaign=rss",
+        "title": "See tiny organisms on show in microscopic video competition",
+        "link": "https://www.bbc.co.uk/news/videos/cr209jz45vn4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-09-16T18:19:59+00:00",
-        "summary": "The brothers are facing a total of 59 charges in the UK, including rape. Both men deny any wrongdoin..."
+        "published": "2026-09-17T17:41:14+00:00",
+        "summary": "The winning video features tiny hair-like structures, called cilia, in the airways of a child with a..."
       },
       {
-        "title": "Lena Dunham announces birth of first baby via surrogacy",
-        "link": "https://www.bbc.co.uk/news/articles/cqx2zlxxzpg4o?at_medium=RSS&at_campaign=rss",
+        "title": "Why US plan to sell F-35 warplanes to Saudi Arabia is controversial",
+        "link": "https://www.bbc.co.uk/news/articles/c3x2zrn01pxko?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-09-16T16:55:10+00:00",
-        "summary": "The writer and actress announced the birth of her daughter in an op-ed published by Vogue on Wednesd..."
+        "published": "2026-09-17T17:31:43+00:00",
+        "summary": "Saudi Arabia has lobbied the US for years to buy F35s, the world's most advanced fighter jet."
       },
       {
-        "title": "US interest rates raised for first time in three years",
-        "link": "https://www.bbc.co.uk/news/articles/cw4gmlyvj422o?at_medium=RSS&at_campaign=rss",
+        "title": "Zara Larsson criticises White House for using her song in deportation video",
+        "link": "https://www.bbc.co.uk/news/articles/cqr7d3l0y2zpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-09-16T16:40:17+00:00",
-        "summary": "Rates were hiked in a unanimous decision despite fierce opposition from President Donald Trump, who ..."
+        "published": "2026-09-17T17:20:33+00:00",
+        "summary": "The White House removed Larsson's Midnight Sun from one of its reels after the artist called the cli..."
       },
       {
-        "title": "Why Trump's hand-picked Fed chair defied him by raising interest rates",
-        "link": "https://www.bbc.co.uk/news/videos/c54g7wg1l3d3o?at_medium=RSS&at_campaign=rss",
+        "title": "Charles 'sounded giddily elated' after Diana died, Earl Spencer claims",
+        "link": "https://www.bbc.co.uk/news/articles/cqkg083ve78ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-09-16T16:38:50+00:00",
-        "summary": "The .25% increase comes despite fierce opposition from the US president, who has called for rates to..."
+        "published": "2026-09-17T16:54:05+00:00",
+        "summary": "Buckingham Palace has strongly pushed back against claims in a new book by the late Princess of Wale..."
       },
       {
-        "title": "EU chief backs plan for Canada to become 'associate member'",
-        "link": "https://www.bbc.co.uk/news/articles/cjwyzrr9d3dko?at_medium=RSS&at_campaign=rss",
+        "title": "US fans with Ed Sheeran tickets are left 'torn' by Macklemore controversy",
+        "link": "https://www.bbc.co.uk/news/articles/c6rer05nqlx5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-09-16T16:32:05+00:00",
-        "summary": "Trump, who has frequently clashed with Canada's PM, threatens to cut trade with the European Union i..."
+        "published": "2026-09-17T16:38:03+00:00",
+        "summary": "With Sheeran's next gig this weekend, some ticket holders said they were in two minds about going."
       },
       {
-        "title": "Why caffeine makes some people buzz - and others barely notice",
-        "link": "https://www.bbc.co.uk/news/articles/c4gkd4zw564o?at_medium=RSS&at_campaign=rss",
+        "title": "Sunshine to return to parts of UK with warmer and drier weather on way",
+        "link": "https://www.bbc.co.uk/weather/articles/cwr50l32rr6yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-09-16T16:09:43+00:00",
-        "summary": "Scientists say it all depend on caffeine habits, lifestyle and one factor we have no control over: o..."
+        "published": "2026-09-17T16:34:10+00:00",
+        "summary": "High pressure over the UK next week will bring a break from the wet and windy weather so far this mo..."
       }
     ],
     "BBC World": [
       {
-        "title": "Watch: Leaked photos reveal extensive damage at US bases in Gulf",
-        "link": "https://www.bbc.co.uk/news/videos/c9dr7e1lr265o?at_medium=RSS&at_campaign=rss",
+        "title": "Canadians dream of Europe as Carney floats longshot plan for living and working in EU",
+        "link": "https://www.bbc.co.uk/news/articles/cx980qj57r89o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World",
-        "published": "2026-09-16T13:24:24+00:00",
-        "summary": "The photos, provided by active military personnel, show a severed radar jet, flattened trailers and ..."
+        "published": "2026-09-17T17:23:10+00:00",
+        "summary": "Torontonians are excited by the possibility of moving to the EU, even if it is unlikely anytime soon..."
       },
       {
-        "title": "US House votes to hold billionaire Epstein associate Leon Black in contempt",
-        "link": "https://www.bbc.co.uk/news/articles/c62l8g8qlr0ko?at_medium=RSS&at_campaign=rss",
+        "title": "US to allow Iran delegation to attend UN meetings in New York as war passes half-year mark",
+        "link": "https://www.bbc.co.uk/news/articles/c6n8m72r13ngo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World",
-        "published": "2026-09-16T11:59:57+00:00",
-        "summary": "Black - who had business ties to Epstein - declined to appear and provide documents related to the c..."
+        "published": "2026-09-17T13:41:19+00:00",
+        "summary": "The BBC understands Iranian President Masoud Pezeshkian and Foreign Minister Abbas Araghchi are amon..."
       },
       {
-        "title": "Trump chief of staff Susie Wiles announces she's cancer-free",
-        "link": "https://www.bbc.co.uk/news/articles/c6j9xrx80ekro?at_medium=RSS&at_campaign=rss",
+        "title": "Wife of US scholar jailed in China asks Trump to raise arrest at Xi meeting",
+        "link": "https://www.bbc.co.uk/news/articles/c9j3d2rr6g24o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World",
-        "published": "2026-09-16T11:12:48+00:00",
-        "summary": "The 69-year-old White House chief of staff is a powerful figure and particularly close to the US pre..."
+        "published": "2026-09-17T09:08:00+00:00",
+        "summary": "Sylvia Zin is among the family members of people imprisoned in China who are seeking Trump's help wh..."
       },
       {
-        "title": "Eight children among 21 killed after war-damaged Gaza building collapses, rescuers say",
-        "link": "https://www.bbc.co.uk/news/articles/cvp8d00j9gg5o?at_medium=RSS&at_campaign=rss",
+        "title": "Ninth woman's body found as South African police investigate string of deaths",
+        "link": "https://www.bbc.co.uk/news/articles/cqx2zgk8k8xvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World",
-        "published": "2026-09-16T09:16:47+00:00",
-        "summary": "Some 10 families had reportedly been living in the six-storey building in Gaza City that was hit by ..."
+        "published": "2026-09-17T05:44:07+00:00",
+        "summary": "South Africa police have cautioned against assuming that all the killings are linked but many women ..."
       },
       {
-        "title": "Michelin-starred Seoul restaurant fined for using ants as garnish",
-        "link": "https://www.bbc.co.uk/news/articles/c639m42y43v4o?at_medium=RSS&at_campaign=rss",
+        "title": "Klopp wants to 'reclaim' flag amid German elections",
+        "link": "https://www.bbc.co.uk/sport/football/articles/cmwyzk6xkrd0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World",
-        "published": "2026-09-16T07:48:50+00:00",
-        "summary": "The owner of the acclaimed establishment avoids jail but is made to pay 15 million won (£8,144; $10,..."
+        "published": "2026-09-17T05:02:40+00:00",
+        "summary": "New Germany coach Jurgen Klopp says his team can help ensure \"national pride is not entrusted to the..."
       },
       {
-        "title": "Charlie Kirk's family alleges 'stunning failures' by Utah officials led to his shooting",
-        "link": "https://www.bbc.co.uk/news/articles/cwzrz4xmknjgo?at_medium=RSS&at_campaign=rss",
+        "title": "Swedish PM Kristersson resigns after election loss",
+        "link": "https://www.bbc.co.uk/news/articles/cxr50l3d762po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World",
-        "published": "2026-09-16T07:33:19+00:00",
-        "summary": "The conservative activist was speaking to a crowd of thousands on the university campus when he was ..."
+        "published": "2026-09-17T04:41:05+00:00",
+        "summary": "Left-wing opposition parties led by Magdalena Andersson look set to form the next government."
       }
     ],
     "BBC Business": [
       {
-        "title": "Would you buy branded clothing from your favourite tech firm?",
-        "link": "https://www.bbc.co.uk/news/articles/cgqd9zkkvlyo?at_medium=RSS&at_campaign=rss",
+        "title": "Early Bowie music available to stream for first time",
+        "link": "https://www.bbc.co.uk/news/articles/cm4gj5z9xvnqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Business",
-        "published": "2026-09-16T15:18:47+00:00",
-        "summary": "Nvidia, OpenAI and Anthropic are all now selling their own limited edition fashion lines"
+        "published": "2026-09-17T15:01:03+00:00",
+        "summary": "Previously unheard material from the start of the artist's career has been released for the first ti..."
       },
       {
-        "title": "I sent 200 DMs to companies - it was awkward but I got a job",
+        "title": "The virtual worlds where robots are trained",
+        "link": "https://www.bbc.co.uk/news/articles/c79g0j3d4q9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Business",
+        "published": "2026-09-17T15:00:47+00:00",
+        "summary": "Training systems that allow robots to negotiate the real world are getting more sophisticated."
+      },
+      {
+        "title": "Barclays workers ask for more money to return to the office",
+        "link": "https://www.bbc.co.uk/news/articles/cqlym1n9kpyvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Business",
+        "published": "2026-09-17T06:20:27+00:00",
+        "summary": "Unite union, which represents 36,000 Barclays staff, calls for a one-off payment to offset increased..."
+      },
+      {
+        "title": "Interest rates held but Bank signals rise if energy prices stay high",
+        "link": "https://www.bbc.co.uk/news/articles/cm4gjrxez1q0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Business",
+        "published": "2026-09-17T06:05:38+00:00",
+        "summary": "Rates are held for the sixth time in a row but the Bank of England says high energy prices make a fu..."
+      },
+      {
+        "title": "I sent 200 LinkedIn messages and got a job: How to nail networking",
         "link": "https://www.bbc.co.uk/news/articles/c9vgyd02mdvno?at_medium=RSS&at_campaign=rss",
         "source": "BBC Business",
-        "published": "2026-09-16T15:15:53+00:00",
+        "published": "2026-09-17T02:37:43+00:00",
         "summary": "From coffee chats to LinkedIn messages, here's how to network your way to your next job."
-      },
-      {
-        "title": "Henry Zeffman: Andy Burnham and his chancellor have a battle on their hands as the Budget approaches",
-        "link": "https://www.bbc.co.uk/news/articles/cwp93jp4p7xpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Business",
-        "published": "2026-09-16T06:52:38+00:00",
-        "summary": "The Budget is only six weeks away and the economy is undoubtedly the biggest challenge facing the pr..."
-      },
-      {
-        "title": "Petrol and diesel price rises push UK inflation higher",
-        "link": "https://www.bbc.co.uk/news/articles/cv2dw7lw4rkpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Business",
-        "published": "2026-09-16T06:30:51+00:00",
-        "summary": "Summer holidays and disruption to global oil supplies by the Middle East conflict stoked price growt..."
-      },
-      {
-        "title": "Burnham rejects 'tax and spend socialist' comments",
-        "link": "https://www.bbc.co.uk/news/articles/cqr7dj1e34z9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Business",
-        "published": "2026-09-16T06:21:37+00:00",
-        "summary": "The prime minister insists he is prepared to take \"difficult decisions\" at next month's Budget."
-      },
-      {
-        "title": "We managed to get jobs after uni - here's how we're keeping them",
-        "link": "https://www.bbc.co.uk/news/articles/cm2qn163053o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Business",
-        "published": "2026-09-16T00:36:37+00:00",
-        "summary": "Four recent job starters share their tips on what helped them have a smooth transition and survive t..."
       }
     ],
-    "BBC Education": [
+    "BBC Technology": [
       {
-        "title": "Schools in England get extra £500m in bid to avoid teachers' pay strike",
-        "link": "https://www.bbc.co.uk/news/articles/c6lyqe9j1gy5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Education",
-        "published": "2026-09-16T10:35:43+00:00",
-        "summary": "The offer of extra money by the government reduces the prospect of strike action by the largest teac..."
+        "title": "King Charles warns of 'existential danger' of AI falling into wrong hands",
+        "link": "https://www.bbc.co.uk/news/articles/c65ymj7njvl7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Technology",
+        "published": "2026-09-17T06:33:12+00:00",
+        "summary": "The comments were made at a summit in Ayrshire with participants from AI giants including Nvidia, Op..."
+      },
+      {
+        "title": "Why are there concerns AI could threaten humanity, and how real are they?",
+        "link": "https://www.bbc.co.uk/news/articles/c790xvnzgnno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Technology",
+        "published": "2026-09-17T01:18:57+00:00",
+        "summary": "Existential fears about AI have once again reared their head - here's what you need to know."
       }
     ],
     "BBC Health": [
       {
-        "title": "Seated exercises help physical and mental health",
-        "link": "https://www.bbc.co.uk/news/articles/c639m4k9x7e3o?at_medium=RSS&at_campaign=rss",
+        "title": "Andy Burnham urged to set dementia waiting-time target",
+        "link": "https://www.bbc.co.uk/news/articles/c50m3glzppgpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Health",
-        "published": "2026-09-16T03:50:01+00:00",
-        "summary": "Laugh, Move & Groove, nominated for the Make a Difference Awards, holds sessions around Jersey."
+        "published": "2026-09-17T11:13:59+00:00",
+        "summary": "An 18‑week referral‑to‑treatment target has been backed by England's former national cancer director..."
       },
       {
-        "title": "Burnham thanks well-wishers following his father's death",
-        "link": "https://www.bbc.co.uk/news/articles/c8vgy53k49lgo?at_medium=RSS&at_campaign=rss",
+        "title": "New hope for breast cancer patients as life-extending drug now on NHS in England",
+        "link": "https://www.bbc.co.uk/news/articles/c60qx4v825glo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Health",
-        "published": "2026-09-16T03:21:21+00:00",
-        "summary": "All opposition leaders sent condolences to Burnham as he cancelled engagements earlier this week."
-      },
-      {
-        "title": "Alcohol consumption scorecard to help track intake",
-        "link": "https://www.bbc.co.uk/news/articles/c6evwnjzgk33o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC Health",
-        "published": "2026-09-16T00:57:09+00:00",
-        "summary": "The Health Improvement Commission says it is to help people get a clearer picture of their intake."
+        "published": "2026-09-17T05:32:00+00:00",
+        "summary": "Enhertu, which can give patients an extra seven months to live on average, has been prescribed in Sc..."
       }
     ],
     "BBC Science & Environment": [
       {
-        "title": "Wildlife trust wants marina silt disposed offshore",
-        "link": "https://www.bbc.co.uk/news/articles/cmde0xp9rj8lo?at_medium=RSS&at_campaign=rss",
+        "title": "BBC Inside Science",
+        "link": "https://www.bbc.co.uk/sounds/play/w3ct9785?at_medium=RSS&at_campaign=rss",
         "source": "BBC Science",
-        "published": "2026-09-16T05:27:53+00:00",
-        "summary": "Brighton Marina wants to restart dredging next year but still needs a site to dispose of the silt."
+        "published": "2026-09-17T12:00:00+00:00",
+        "summary": "Might the UK and US joining their AI forces help solve nuclear fusion?"
       },
       {
-        "title": "Endangered water voles introduced to reserve",
-        "link": "https://www.bbc.co.uk/news/articles/cmd68wz8wp29o?at_medium=RSS&at_campaign=rss",
+        "title": "Repeat offender fined for searching for gold in protected river",
+        "link": "https://www.bbc.co.uk/news/articles/c620lz12d1l7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Science",
-        "published": "2026-09-16T04:12:04+00:00",
-        "summary": "Efforts are being made to reintroduce the locally-extinct species back to the River Wey in Surrey."
+        "published": "2026-09-17T08:14:40+00:00",
+        "summary": "Brian Wright, 68, from Henley-upon-Thames, was caught gold panning on a protected river in north Wal..."
       },
       {
-        "title": "White-tailed eagle chicks fledge for fourth year",
-        "link": "https://www.bbc.co.uk/news/articles/cm9dwvngy808o?at_medium=RSS&at_campaign=rss",
+        "title": "Nepal to use new flood study to claim millions from UN climate disaster fund",
+        "link": "https://www.bbc.co.uk/news/articles/cmlyrzve5pwzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC Science",
-        "published": "2026-09-16T02:23:24+00:00",
-        "summary": "The Forestry England and the Roy Dennis Wildlife Foundation reintroduction project began in 2019."
+        "published": "2026-09-17T02:31:35+00:00",
+        "summary": "A new study says climate change was a likely factor in the massive flood on the Nepal-Tibet border l..."
+      },
+      {
+        "title": "The farmer who turned to singing after bovine TB silenced his fields",
+        "link": "https://www.bbc.co.uk/news/articles/c58jd32wgwk4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Science",
+        "published": "2026-09-17T02:01:43+00:00",
+        "summary": "Dairy farmer Mervyn Kelso struggled with the sadness of the empty fields when he lost his entire her..."
       }
     ]
   },
   "ja_news": {
     "頭條": [
       {
-        "title": "スケボー青木勇貴斗選手 書類送検",
-        "link": "https://news.yahoo.co.jp/pickup/6595563",
+        "title": "3億円宝くじが未換金 11月3日時効",
+        "link": "https://news.yahoo.co.jp/pickup/6595673",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T18:24:01+00:00",
-        "summary": "スケボー青木勇貴斗選手 書類送検"
+        "published": "2026-09-17T18:00:47+00:00",
+        "summary": "3億円宝くじが未換金 11月3日時効"
       },
       {
-        "title": "簗和生氏を農水相に起用方針 赤沢氏と城内氏続投、古川氏は初入閣へ",
-        "link": "http://www.asahi.com/articles/ASV9J3HSRV9JUTFK017M.html",
+        "title": "大阪駅前に現れた突起物 SNSでの賛否踏まえ、市がフェンス設置へ",
+        "link": "http://www.asahi.com/articles/ASV9K46D6V9KOXIE04GM.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T18:23:37+00:00",
-        "summary": "簗和生氏を農水相に起用方針 赤沢氏と城内氏続投、古川氏は初入閣へ"
+        "published": "2026-09-17T18:00:00+00:00",
+        "summary": "大阪駅前に現れた突起物 SNSでの賛否踏まえ、市がフェンス設置へ"
       },
       {
-        "title": "簗和生氏を農水相に起用へ 裏金関与では初入閣 1746万円不記載",
-        "link": "http://www.asahi.com/articles/ASV9K0PC0V9KUTFK013M.html",
+        "title": "新米が古米より安い「逆転現象」はなぜ起きたのか カギはJAルート",
+        "link": "http://www.asahi.com/articles/ASV9K3FWLV9KULFA00NM.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T18:21:04+00:00",
-        "summary": "簗和生氏を農水相に起用へ 裏金関与では初入閣 1746万円不記載"
+        "published": "2026-09-17T18:00:00+00:00",
+        "summary": "新米が古米より安い「逆転現象」はなぜ起きたのか カギはJAルート"
       },
       {
-        "title": "「屋根が腐っている」不要補修工事で詐欺の疑い 神奈川県警5人逮捕",
-        "link": "http://www.asahi.com/articles/ASV9K0H4FV9KULOB01JM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T18:19:41+00:00",
-        "summary": "「屋根が腐っている」不要補修工事で詐欺の疑い 神奈川県警5人逮捕"
-      },
-      {
-        "title": "台風接近 気圧低下による頭痛注意",
-        "link": "https://news.yahoo.co.jp/pickup/6595561",
+        "title": "米中接近を懸念 試される高市外交",
+        "link": "https://news.yahoo.co.jp/pickup/6595672",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T18:01:38+00:00",
-        "summary": "台風接近 気圧低下による頭痛注意"
+        "published": "2026-09-17T17:37:57+00:00",
+        "summary": "米中接近を懸念 試される高市外交"
       },
       {
-        "title": "在韓米軍巡る米韓の駆け引き、日本を巻き込んだ米軍再編の可能性も",
-        "link": "http://www.asahi.com/articles/ASV991FPRV99UHBI00VM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T18:00:00+00:00",
-        "summary": "在韓米軍巡る米韓の駆け引き、日本を巻き込んだ米軍再編の可能性も"
+        "title": "連休は気圧乱高下 めまいなど注意",
+        "link": "https://news.yahoo.co.jp/pickup/6595670",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T17:26:13+00:00",
+        "summary": "連休は気圧乱高下 めまいなど注意"
       },
       {
-        "title": "「朝鮮国連軍司令官のポスト、在日米軍司令官に移す可能性」韓国識者",
-        "link": "http://www.asahi.com/articles/ASV991G93V99UHBI00SM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T18:00:00+00:00",
-        "summary": "「朝鮮国連軍司令官のポスト、在日米軍司令官に移す可能性」韓国識者"
+        "title": "生活道路で死亡ひき逃げ疑い 逮捕",
+        "link": "https://news.yahoo.co.jp/pickup/6595669",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T17:08:59+00:00",
+        "summary": "生活道路で死亡ひき逃げ疑い 逮捕"
       },
       {
-        "title": "マジック1のドジャース、自力での地区V決められず 大谷翔平は不在",
-        "link": "http://www.asahi.com/articles/ASV9J1RYRV9JUTQP02CM.html",
+        "title": "ドジャースの監督がつけた「注文」 日替わり打線で勝利と休養を両立",
+        "link": "http://www.asahi.com/articles/ASV9L01L8V9LUTQP003M.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T17:53:46+00:00",
-        "summary": "マジック1のドジャース、自力での地区V決められず 大谷翔平は不在"
+        "published": "2026-09-17T16:58:07+00:00",
+        "summary": "ドジャースの監督がつけた「注文」 日替わり打線で勝利と休養を両立"
+      },
+      {
+        "title": "家庭科教員が技術科指導 中学実態",
+        "link": "https://news.yahoo.co.jp/pickup/6595666",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T16:52:41+00:00",
+        "summary": "家庭科教員が技術科指導 中学実態"
       }
     ],
     "國際": [
       {
-        "title": "FRB利上げ決定、トランプ氏は批判 ウォーシュ議長の前途は多難?",
-        "link": "https://www.asahi.com/articles/ASV9K04XJV9KUHBI001M.html",
+        "title": "中国の若者失業率が最悪水準に 高学歴化も受け皿不足、AIも要因",
+        "link": "https://www.asahi.com/articles/ASV9K4TBRV9KUHBI01FM.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T17:35:13+00:00",
-        "summary": "FRB利上げ決定、トランプ氏は批判 ウォーシュ議長の前途は多難?"
+        "published": "2026-09-17T17:00:00+00:00",
+        "summary": "中国の若者失業率が最悪水準に 高学歴化も受け皿不足、AIも要因"
       },
       {
-        "title": "FRBが3年2カ月ぶりに利上げ決定 0.25%幅 インフレに対処",
-        "link": "https://www.asahi.com/articles/ASV9J42NDV9JUHBI01PM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T16:52:46+00:00",
-        "summary": "FRBが3年2カ月ぶりに利上げ決定 0.25%幅 インフレに対処"
-      },
-      {
-        "title": "ガザで損壊建物が倒壊 20人超死亡",
-        "link": "https://news.yahoo.co.jp/pickup/6595549",
+        "title": "ヘンリー王子 帰国後初の公の場",
+        "link": "https://news.yahoo.co.jp/pickup/6595667",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T15:48:30+00:00",
-        "summary": "ガザで損壊建物が倒壊 20人超死亡"
+        "published": "2026-09-17T16:54:19+00:00",
+        "summary": "ヘンリー王子 帰国後初の公の場"
       },
       {
-        "title": "トランプ氏 FRBに迅速利下げ要求",
-        "link": "https://news.yahoo.co.jp/pickup/6595545",
+        "title": "米大統領 習氏訪米で異例の厚遇へ",
+        "link": "https://news.yahoo.co.jp/pickup/6595658",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T15:36:45+00:00",
-        "summary": "トランプ氏 FRBに迅速利下げ要求"
+        "published": "2026-09-17T15:36:24+00:00",
+        "summary": "米大統領 習氏訪米で異例の厚遇へ"
       },
       {
-        "title": "酒離れ進む韓国 日本酒ブームの訳",
-        "link": "https://news.yahoo.co.jp/pickup/6595540",
+        "title": "チャールズ英国王「手遅れになる前に」 AI企業トップらに語る使命",
+        "link": "https://www.asahi.com/articles/ASV9K76ZTV9KBQBQ1LNM.html",
+        "source": "朝日新聞",
+        "published": "2026-09-17T14:28:08+00:00",
+        "summary": "チャールズ英国王「手遅れになる前に」 AI企業トップらに語る使命"
+      },
+      {
+        "title": "スウェーデン政権交代へ 首相辞意",
+        "link": "https://news.yahoo.co.jp/pickup/6595636",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T14:24:17+00:00",
-        "summary": "酒離れ進む韓国 日本酒ブームの訳"
+        "published": "2026-09-17T05:42:30+00:00",
+        "summary": "スウェーデン政権交代へ 首相辞意"
       },
       {
-        "title": "FRBはなぜ利上げしたのか 日本への影響は 今後のポイントを解説",
-        "link": "https://www.asahi.com/articles/ASV9J462XV9JUHBI01VM.html",
+        "title": "カーニー氏、カナダのEU準加盟へ意欲 トランプ氏リスクで両者接近",
+        "link": "https://www.asahi.com/articles/ASV9K3QJZV9KUHBI02LM.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T14:01:05+00:00",
-        "summary": "FRBはなぜ利上げしたのか 日本への影響は 今後のポイントを解説"
+        "published": "2026-09-17T03:45:00+00:00",
+        "summary": "カーニー氏、カナダのEU準加盟へ意欲 トランプ氏リスクで両者接近"
       },
       {
-        "title": "トランプ氏長男の豪華結婚式 プーチン氏に近いロシア富豪が資金提供",
-        "link": "https://www.asahi.com/articles/ASV9J36T0V9JUHBI01BM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T13:30:00+00:00",
-        "summary": "トランプ氏長男の豪華結婚式 プーチン氏に近いロシア富豪が資金提供"
+        "title": "キューバの紙幣最高額 半年で4倍",
+        "link": "https://news.yahoo.co.jp/pickup/6595626",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T03:27:46+00:00",
+        "summary": "キューバの紙幣最高額 半年で4倍"
       },
       {
-        "title": "米国防総省、弾薬消費で「戦略的備蓄不足」 イラン攻撃で初の報告書",
-        "link": "https://www.asahi.com/articles/ASV9J3PTSV9JUHBI019M.html",
+        "title": "熊本地震うけ台湾市民が15億円寄付 「まさかの時の友こそ真の友」",
+        "link": "https://www.asahi.com/articles/ASV9K36HGV9KUHBI010M.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T13:30:00+00:00",
-        "summary": "米国防総省、弾薬消費で「戦略的備蓄不足」 イラン攻撃で初の報告書"
+        "published": "2026-09-17T03:00:00+00:00",
+        "summary": "熊本地震うけ台湾市民が15億円寄付 「まさかの時の友こそ真の友」"
       }
     ],
     "政治": [
       {
-        "title": "「ポスト高市」留任目立つ人事の意味 ベテラン議員が語る首相の思惑",
-        "link": "https://www.asahi.com/articles/ASV9J44MNV9JUTFK00XM.html",
+        "title": "裏金問題、希望の党…高市首相が新たに入閣させた議員たちとは",
+        "link": "https://www.asahi.com/articles/ASV9K3DJ5V9KUTFK02CM.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T04:50:25+00:00",
-        "summary": "「ポスト高市」留任目立つ人事の意味 ベテラン議員が語る首相の思惑"
+        "published": "2026-09-17T03:45:00+00:00",
+        "summary": "裏金問題、希望の党…高市首相が新たに入閣させた議員たちとは"
       },
       {
-        "title": "奈良県の山下知事、再選めざし立候補を表明 自民党は独自候補を模索",
-        "link": "https://www.asahi.com/articles/ASV9J35SSV9JPOMB00PM.html",
+        "title": "裏金処分議員が初入閣へ 「筋は通る」と語る政治学者が求める改革",
+        "link": "https://www.asahi.com/articles/ASV9K2PD0V9KUTIL01WM.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T03:00:00+00:00",
-        "summary": "奈良県の山下知事、再選めざし立候補を表明 自民党は独自候補を模索"
+        "published": "2026-09-17T03:38:38+00:00",
+        "summary": "裏金処分議員が初入閣へ 「筋は通る」と語る政治学者が求める改革"
       },
       {
-        "title": "｢大阪市のまま副首都に｣都構想めぐり公明・自民市議らが市長と論戦",
-        "link": "https://www.asahi.com/articles/ASV9J3FG2V9JOXIE002M.html",
+        "title": "安保3文書改定の有識者会議 政府横断的な取り組みや防衛費を議論",
+        "link": "https://www.asahi.com/articles/ASV9K3JL5V9KUTFK02TM.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T02:40:07+00:00",
-        "summary": "｢大阪市のまま副首都に｣都構想めぐり公明・自民市議らが市長と論戦"
+        "published": "2026-09-17T03:28:34+00:00",
+        "summary": "安保3文書改定の有識者会議 政府横断的な取り組みや防衛費を議論"
       },
       {
-        "title": "クビアカの痕跡多く見つけたら最大1万円ギフト券 兵庫県が通報促す",
-        "link": "https://www.asahi.com/articles/ASV9J31HFV9JPIHB011M.html",
+        "title": "裏金関与の議員、閣僚に初めて起用 高市首相「真摯に説明尽くした」",
+        "link": "https://www.asahi.com/articles/ASV9J3HSRV9JUTFK017M.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T02:30:00+00:00",
-        "summary": "クビアカの痕跡多く見つけたら最大1万円ギフト券 兵庫県が通報促す"
+        "published": "2026-09-17T02:53:04+00:00",
+        "summary": "裏金関与の議員、閣僚に初めて起用 高市首相「真摯に説明尽くした」"
       },
       {
-        "title": "中道・小川代表「第2章の幕開け」 48人離党、立憲系は新党結成へ",
-        "link": "https://www.asahi.com/articles/ASV9J2TZ0V9JUTFK00TM.html",
+        "title": "「ポスト高市」なぜ林氏だけ閣外に？首相が「冷や飯食い」にした理由",
+        "link": "https://www.asahi.com/articles/ASV9K2RLFV9KULFA014M.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T00:59:05+00:00",
-        "summary": "中道・小川代表「第2章の幕開け」 48人離党、立憲系は新党結成へ"
+        "published": "2026-09-17T02:34:43+00:00",
+        "summary": "「ポスト高市」なぜ林氏だけ閣外に？首相が「冷や飯食い」にした理由"
       },
       {
-        "title": "初の女性首相誕生、それでもジェンダーギャップ指数が改善しないわけ",
-        "link": "https://www.asahi.com/articles/ASV9J25H6V9JUTFK00BM.html",
+        "title": "留任閣僚どんな人？ 片山氏、小泉氏…高市首相の「ちゃん付け」は",
+        "link": "https://www.asahi.com/articles/ASV9K32S2V9KUTFK026M.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T00:00:00+00:00",
-        "summary": "初の女性首相誕生、それでもジェンダーギャップ指数が改善しないわけ"
+        "published": "2026-09-17T02:15:00+00:00",
+        "summary": "留任閣僚どんな人？ 片山氏、小泉氏…高市首相の「ちゃん付け」は"
+      },
+      {
+        "title": "「魂を込めた」「希望通り」 首相アンケートの効果、新閣僚が語る",
+        "link": "https://www.asahi.com/articles/ASV9K2QYGV9KUTFK01RM.html",
+        "source": "朝日新聞",
+        "published": "2026-09-17T01:00:00+00:00",
+        "summary": "「魂を込めた」「希望通り」 首相アンケートの効果、新閣僚が語る"
+      },
+      {
+        "title": "新党「民主改革の会」を結成、略称は「民主」 中道離党の立憲系議員",
+        "link": "https://www.asahi.com/articles/ASV9K2V5KV9KUTFK027M.html",
+        "source": "朝日新聞",
+        "published": "2026-09-17T00:59:23+00:00",
+        "summary": "新党「民主改革の会」を結成、略称は「民主」 中道離党の立憲系議員"
       }
     ],
     "運動": [
       {
-        "title": "ド軍敗れる 地区優勝決定はお預け",
-        "link": "https://news.yahoo.co.jp/pickup/6595566",
+        "title": "中日・大島洋平40歳 現役続行へ",
+        "link": "https://news.yahoo.co.jp/pickup/6595665",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T18:30:06+00:00",
-        "summary": "ド軍敗れる 地区優勝決定はお預け"
+        "published": "2026-09-17T16:36:26+00:00",
+        "summary": "中日・大島洋平40歳 現役続行へ"
       },
       {
-        "title": "朗希 プレイオフ限定で守護神か",
-        "link": "https://news.yahoo.co.jp/pickup/6595558",
+        "title": "ウルフ氏死去 西武が「哀悼の意」",
+        "link": "https://news.yahoo.co.jp/pickup/6595650",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T17:00:30+00:00",
-        "summary": "朗希 プレイオフ限定で守護神か"
+        "published": "2026-09-17T14:37:50+00:00",
+        "summary": "ウルフ氏死去 西武が「哀悼の意」"
       },
       {
-        "title": "リヨン中村敬斗 初先発で初ゴール",
-        "link": "https://news.yahoo.co.jp/pickup/6595538",
+        "title": "ドジャース 地区5連覇を達成",
+        "link": "https://news.yahoo.co.jp/pickup/6595642",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T14:16:09+00:00",
-        "summary": "リヨン中村敬斗 初先発で初ゴール"
+        "published": "2026-09-17T13:21:42+00:00",
+        "summary": "ドジャース 地区5連覇を達成"
       },
       {
-        "title": "日ハム 新庄監督に来季続投要請へ",
-        "link": "https://news.yahoo.co.jp/pickup/6595536",
-        "source": "Yahoo! Japan",
-        "published": "2026-09-16T13:40:30+00:00",
-        "summary": "日ハム 新庄監督に来季続投要請へ"
+        "title": "ドジャースが大勝で祝杯 地区5連覇、不振のタッカーを支えた言葉",
+        "link": "https://www.asahi.com/articles/ASV9K663HV9KUTQP02SM.html",
+        "source": "朝日新聞",
+        "published": "2026-09-17T11:41:04+00:00",
+        "summary": "ドジャースが大勝で祝杯 地区5連覇、不振のタッカーを支えた言葉"
       },
       {
-        "title": "阪神7連敗でも減る「M」の仕組み",
-        "link": "https://news.yahoo.co.jp/pickup/6595502",
+        "title": "SB王会長 進化を実感した3連覇",
+        "link": "https://news.yahoo.co.jp/pickup/6595633",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T03:46:47+00:00",
-        "summary": "阪神7連敗でも減る「M」の仕組み"
+        "published": "2026-09-17T05:01:38+00:00",
+        "summary": "SB王会長 進化を実感した3連覇"
       },
       {
-        "title": "三木谷氏 来季も吉井監督続投方針",
-        "link": "https://news.yahoo.co.jp/pickup/6595513",
+        "title": "3連覇ソフトバンクはタイトル経験者でも競争 常勝軍団の「宿命」は",
+        "link": "https://www.asahi.com/articles/ASV9K45M1V9KPTQP00JM.html",
+        "source": "朝日新聞",
+        "published": "2026-09-17T04:54:03+00:00",
+        "summary": "3連覇ソフトバンクはタイトル経験者でも競争 常勝軍団の「宿命」は"
+      },
+      {
+        "title": "ソフトバンクがリーグ3連覇",
+        "link": "https://news.yahoo.co.jp/pickup/6595630",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T02:58:14+00:00",
-        "summary": "三木谷氏 来季も吉井監督続投方針"
+        "published": "2026-09-17T04:20:26+00:00",
+        "summary": "ソフトバンクがリーグ3連覇"
+      },
+      {
+        "title": "ソフトバンクが9連勝で一気にリーグ優勝 福岡移転後初の3連覇達成",
+        "link": "https://www.asahi.com/articles/ASV9K1DXYV9KUTQP00SM.html",
+        "source": "朝日新聞",
+        "published": "2026-09-17T04:15:10+00:00",
+        "summary": "ソフトバンクが9連勝で一気にリーグ優勝 福岡移転後初の3連覇達成"
       }
     ],
     "商業": [
       {
-        "title": "男性の「隠れ冷え性」 対策は",
-        "link": "https://news.yahoo.co.jp/pickup/6595565",
+        "title": "ポプラ社 インドに現地法人設立へ",
+        "link": "https://news.yahoo.co.jp/pickup/6595664",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T18:30:09+00:00",
-        "summary": "男性の「隠れ冷え性」 対策は"
+        "published": "2026-09-17T16:27:41+00:00",
+        "summary": "ポプラ社 インドに現地法人設立へ"
       },
       {
-        "title": "30周年の東京ゲームショウ開幕 海外からの出展最多53カ国・地域",
-        "link": "https://www.asahi.com/articles/ASV9J1THWV9JULFA01BM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T17:31:43+00:00",
-        "summary": "30周年の東京ゲームショウ開幕 海外からの出展最多53カ国・地域"
-      },
-      {
-        "title": "「AI著作物」巡り裁判 識者が警鐘",
-        "link": "https://news.yahoo.co.jp/pickup/6595548",
+        "title": "早産の子 母を支えたドナーミルク",
+        "link": "https://news.yahoo.co.jp/pickup/6595662",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T15:52:32+00:00",
-        "summary": "「AI著作物」巡り裁判 識者が警鐘"
+        "published": "2026-09-17T16:16:30+00:00",
+        "summary": "早産の子 母を支えたドナーミルク"
       },
       {
-        "title": "ティラノサウルスの体温36度 研究",
-        "link": "https://news.yahoo.co.jp/pickup/6595547",
+        "title": "広島の路面電車 一部最高50km/hに",
+        "link": "https://news.yahoo.co.jp/pickup/6595661",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T15:45:57+00:00",
-        "summary": "ティラノサウルスの体温36度 研究"
+        "published": "2026-09-17T15:48:58+00:00",
+        "summary": "広島の路面電車 一部最高50km/hに"
       },
       {
-        "title": "戦後最長の景気拡大か 実感乏しく",
-        "link": "https://news.yahoo.co.jp/pickup/6595539",
+        "title": "カビが一斉に繁殖 雨続く秋に注意",
+        "link": "https://news.yahoo.co.jp/pickup/6595648",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T14:19:58+00:00",
-        "summary": "戦後最長の景気拡大か 実感乏しく"
+        "published": "2026-09-17T14:25:10+00:00",
+        "summary": "カビが一斉に繁殖 雨続く秋に注意"
       },
       {
-        "title": "子どものSNS制限 EUが新法提案へ",
-        "link": "https://news.yahoo.co.jp/pickup/6595537",
+        "title": "日産 新型スカイライン12月発表へ",
+        "link": "https://news.yahoo.co.jp/pickup/6595646",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T13:55:43+00:00",
-        "summary": "子どものSNS制限 EUが新法提案へ"
+        "published": "2026-09-17T13:59:43+00:00",
+        "summary": "日産 新型スカイライン12月発表へ"
       },
       {
-        "title": "ゲームはなぜ世界をつかんだのか ファミ通元編集長が語る成長史",
-        "link": "https://www.asahi.com/articles/ASV9J2DDVV9JPLFA00NM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T13:10:00+00:00",
-        "summary": "ゲームはなぜ世界をつかんだのか ファミ通元編集長が語る成長史"
-      },
-      {
-        "title": "米FRB 3年2カ月ぶり利上げ決定",
-        "link": "https://news.yahoo.co.jp/pickup/6595533",
+        "title": "九州新幹線 52日ぶり全線運転",
+        "link": "https://news.yahoo.co.jp/pickup/6595645",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T13:08:22+00:00",
-        "summary": "米FRB 3年2カ月ぶり利上げ決定"
+        "published": "2026-09-17T13:48:34+00:00",
+        "summary": "九州新幹線 52日ぶり全線運転"
+      },
+      {
+        "title": "ツタンカーメン墓 奥に別の王墓か",
+        "link": "https://news.yahoo.co.jp/pickup/6595631",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T04:42:14+00:00",
+        "summary": "ツタンカーメン墓 奥に別の王墓か"
+      },
+      {
+        "title": "SBI 「因縁」超えライブドア買収",
+        "link": "https://news.yahoo.co.jp/pickup/6595625",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T03:26:35+00:00",
+        "summary": "SBI 「因縁」超えライブドア買収"
       }
     ],
     "文化": [
       {
-        "title": "【速報中】芝野挑戦者、逆襲の総攻撃 一力名人は我慢の展開",
+        "title": "目を疑った 練馬区にキツネの姿",
+        "link": "https://news.yahoo.co.jp/pickup/6595652",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T14:47:49+00:00",
+        "summary": "目を疑った 練馬区にキツネの姿"
+      },
+      {
+        "title": "「声は私そのもの」 AI時代、「まる子のおばあちゃん」声優の願い",
+        "link": "https://www.asahi.com/articles/ASV9J1Q0DV9JUPQJ00PM.html",
+        "source": "朝日新聞",
+        "published": "2026-09-17T14:30:00+00:00",
+        "summary": "「声は私そのもの」 AI時代、「まる子のおばあちゃん」声優の願い"
+      },
+      {
+        "title": "東京都 ポイ捨て禁止条例を検討",
+        "link": "https://news.yahoo.co.jp/pickup/6595644",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T13:37:39+00:00",
+        "summary": "東京都 ポイ捨て禁止条例を検討"
+      },
+      {
+        "title": "かいけつゾロリ、インドに進出 ポプラ社が現地法人「文化育つ余地」",
+        "link": "https://www.asahi.com/articles/ASV9K32BQV9KUCVL02JM.html",
+        "source": "朝日新聞",
+        "published": "2026-09-17T12:00:00+00:00",
+        "summary": "かいけつゾロリ、インドに進出 ポプラ社が現地法人「文化育つ余地」"
+      },
+      {
+        "title": "中国企業に営業秘密流出疑い 逮捕",
+        "link": "https://news.yahoo.co.jp/pickup/6595640",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T06:51:52+00:00",
+        "summary": "中国企業に営業秘密流出疑い 逮捕"
+      },
+      {
+        "title": "遺失物の高級腕時計 警察が誤売却",
+        "link": "https://news.yahoo.co.jp/pickup/6595638",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T05:50:27+00:00",
+        "summary": "遺失物の高級腕時計 警察が誤売却"
+      },
+      {
+        "title": "【詳報】芝野虎丸挑戦者が連勝 一力遼名人と2勝2敗のタイに",
         "link": "https://www.asahi.com/articles/ASV9J56HYV9JUCVL04RM.html",
         "source": "朝日新聞",
-        "published": "2026-09-16T18:02:29+00:00",
-        "summary": "【速報中】芝野挑戦者、逆襲の総攻撃 一力名人は我慢の展開"
+        "published": "2026-09-17T03:56:08+00:00",
+        "summary": "【詳報】芝野虎丸挑戦者が連勝 一力遼名人と2勝2敗のタイに"
       },
       {
-        "title": "糸魚川で「瑠璃の宝石」とコラボの特別展 話題のラピスラズリも",
-        "link": "https://www.asahi.com/articles/ASV9J3W0QV9JUOHB001M.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T15:00:00+00:00",
-        "summary": "糸魚川で「瑠璃の宝石」とコラボの特別展 話題のラピスラズリも"
-      },
-      {
-        "title": "「マイノリティー側にいたい」 藤原ヒロシの「非一般教養」架空大学",
-        "link": "https://www.asahi.com/articles/ASV9J10VBV9JUCVL04FM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T13:00:00+00:00",
-        "summary": "「マイノリティー側にいたい」 藤原ヒロシの「非一般教養」架空大学"
-      },
-      {
-        "title": "「豊臣兄弟！」描写に2市「遺憾」 NHK会長「真摯に受け止める」",
-        "link": "https://www.asahi.com/articles/ASV9J30SYV9JUCVL02MM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T02:15:00+00:00",
-        "summary": "「豊臣兄弟！」描写に2市「遺憾」 NHK会長「真摯に受け止める」"
-      },
-      {
-        "title": "辺野古転覆 運航団体が謝罪声明",
-        "link": "https://news.yahoo.co.jp/pickup/6595510",
+        "title": "店で従業員刺され死亡 元夫を逮捕",
+        "link": "https://news.yahoo.co.jp/pickup/6595627",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T01:33:17+00:00",
-        "summary": "辺野古転覆 運航団体が謝罪声明"
-      },
-      {
-        "title": "10年前に性的暴行疑い 容疑者逮捕",
-        "link": "https://news.yahoo.co.jp/pickup/6595509",
-        "source": "Yahoo! Japan",
-        "published": "2026-09-16T01:25:26+00:00",
-        "summary": "10年前に性的暴行疑い 容疑者逮捕"
-      },
-      {
-        "title": "【詳報】一力名人の大捕物から一転 逆襲に出た芝野挑戦者が封じる",
-        "link": "https://www.asahi.com/articles/ASV9H25ZPV9HUCVL00KM.html",
-        "source": "朝日新聞",
-        "published": "2026-09-16T01:09:53+00:00",
-        "summary": "【詳報】一力名人の大捕物から一転 逆襲に出た芝野挑戦者が封じる"
-      },
-      {
-        "title": "幼稚園が閉園を突然発表 困惑の声",
-        "link": "https://news.yahoo.co.jp/pickup/6595504",
-        "source": "Yahoo! Japan",
-        "published": "2026-09-16T00:21:10+00:00",
-        "summary": "幼稚園が閉園を突然発表 困惑の声"
+        "published": "2026-09-17T03:30:19+00:00",
+        "summary": "店で従業員刺され死亡 元夫を逮捕"
       }
     ],
     "娛樂": [
       {
-        "title": "相武紗季 子育ては理解を心がけ",
-        "link": "https://news.yahoo.co.jp/pickup/6595544",
+        "title": "上戸彩 ソフトバンク3連覇を祝福",
+        "link": "https://news.yahoo.co.jp/pickup/6595655",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T15:17:07+00:00",
-        "summary": "相武紗季 子育ては理解を心がけ"
+        "published": "2026-09-17T15:01:52+00:00",
+        "summary": "上戸彩 ソフトバンク3連覇を祝福"
       },
       {
-        "title": "ロッキン 開催判断毎日13時に案内",
-        "link": "https://news.yahoo.co.jp/pickup/6595524",
+        "title": "神木隆之介&菅田将暉 auCMコラボ",
+        "link": "https://news.yahoo.co.jp/pickup/6595649",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T04:42:59+00:00",
-        "summary": "ロッキン 開催判断毎日13時に案内"
+        "published": "2026-09-17T14:30:16+00:00",
+        "summary": "神木隆之介&菅田将暉 auCMコラボ"
       },
       {
-        "title": "福澤克雄氏 助監督骨折させていた",
-        "link": "https://news.yahoo.co.jp/pickup/6595516",
+        "title": "イチロー氏&長澤まさみ JRA新CM",
+        "link": "https://news.yahoo.co.jp/pickup/6595643",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T03:13:04+00:00",
-        "summary": "福澤克雄氏 助監督骨折させていた"
+        "published": "2026-09-17T13:26:30+00:00",
+        "summary": "イチロー氏&長澤まさみ JRA新CM"
       },
       {
-        "title": "榮倉奈々 100人超に衣服差し入れ",
-        "link": "https://news.yahoo.co.jp/pickup/6595507",
+        "title": "NHK大河の描写に2市異議 史実は",
+        "link": "https://news.yahoo.co.jp/pickup/6595629",
         "source": "Yahoo! Japan",
-        "published": "2026-09-16T01:03:07+00:00",
-        "summary": "榮倉奈々 100人超に衣服差し入れ"
+        "published": "2026-09-17T04:28:04+00:00",
+        "summary": "NHK大河の描写に2市異議 史実は"
+      },
+      {
+        "title": "トンツカタン森本 改名を発表",
+        "link": "https://news.yahoo.co.jp/pickup/6595628",
+        "source": "Yahoo! Japan",
+        "published": "2026-09-17T03:45:43+00:00",
+        "summary": "トンツカタン森本 改名を発表"
       }
     ]
   },
   "tech_blogs": {
     "Tech Blogs": [
       {
-        "title": "datasette 1.0a40",
-        "link": "https://simonwillison.net/2026/Sep/16/datasette",
-        "source": "Simon Willison",
-        "published": "2026-09-16T15:51:43+00:00",
-        "summary": "Release: datasette 1.0a40 Same security fix as 0.65.5, plus some neat new features and bug fixes: Pl..."
-      },
-      {
-        "title": "datasette 0.65.5",
-        "link": "https://simonwillison.net/2026/Sep/16/datasette-2",
-        "source": "Simon Willison",
-        "published": "2026-09-16T15:51:08+00:00",
-        "summary": "Release: datasette 0.65.5 Security fix for an issue where a trailing newline in a requested table na..."
-      },
-      {
-        "title": "Xcode 27.2 Is Out, but 27.1 Is Not, Which Means Developers Still Can’t Get Started on Duo-Adapted Apps",
-        "link": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_2-release-notes",
+        "title": "★ The iPhones 18 Pro",
+        "link": "https://daringfireball.net/2026/09/the_iphones_18_pro",
         "source": "Daring Fireball",
-        "published": "2026-09-16T14:40:41+00:00",
-        "summary": "A note flagged “Important” atop the Xcode 27.2 release notes: The iOS SDK and simulator support for ..."
+        "published": "2026-09-17T18:05:11+00:00",
+        "summary": "It’s the best version of the most successful product ever made. And yet by nature of *how* the iPhon..."
       },
       {
-        "title": "Is That a Duo in Ternus’s Pocket or Was He Just Happy That Apple TV Shows Won 28 Emmys?",
-        "link": "https://x.com/DEADLINE/status/2099645816361332775",
+        "title": "Be alert: targeted attacks on prominent Rustaceans",
+        "link": "https://simonwillison.net/2026/Sep/17/targeted-attacks-on-rustaceans",
+        "source": "Simon Willison",
+        "published": "2026-09-17T15:59:19+00:00",
+        "summary": "Be alert: targeted attacks on prominent Rustaceans Important warning from Adam Harvey and the crates..."
+      },
+      {
+        "title": "How To Write With An LLM",
+        "link": "https://simonwillison.net/2026/Sep/17/how-to-write-with-an-llm",
+        "source": "Simon Willison",
+        "published": "2026-09-17T15:37:27+00:00",
+        "summary": "How To Write With An LLM Thomas Ptacek on using LLMs as copyeditors, not as writing assistants: Rule..."
+      },
+      {
+        "title": "Noam Brown – Agent swarms, alignment, & recursive self-improvement",
+        "link": "https://www.dwarkesh.com/p/noam-brown",
+        "source": "Dwarkesh Patel",
+        "published": "2026-09-17T07:38:13+00:00",
+        "summary": "“We never want to be in a situation again where we underestimate the AI.”"
+      },
+      {
+        "title": "Why Do U.S. Models of the iPhone 18 Pro Max, and Only U.S. Models of the 18 Pro Max, Use Qualcomm Cellular Modems Instead of Apple’s Own Superior C2 Modem?",
+        "link": "https://www.macrumors.com/2026/09/12/iphone-18-pro-max-us-model-difference",
         "source": "Daring Fireball",
-        "published": "2026-09-16T14:21:30+00:00",
-        "summary": "Note the reaction from the Deadline reporter. ★"
-      },
-      {
-        "title": "Data Broker Radaris Loses Domains in Privacy Fight",
-        "link": "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight",
-        "source": "Krebs on Security",
-        "published": "2026-09-16T10:14:22+00:00",
-        "summary": "The consumer data broker Radaris.com has long had a reputation for ignoring requests to remove perso..."
+        "published": "2026-09-17T06:41:53+00:00",
+        "summary": "Joe Rossignol at MacRumors over the weekend: Apple now says the iPhone 18 Pro has a C2 modem worldwi..."
       }
     ]
   }
