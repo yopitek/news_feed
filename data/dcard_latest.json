@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "collected_at": "2026-10-03T21:59:58+08:00",
+  "collected_at": "2026-10-03T22:10:33+08:00",
   "collector": "tools/collect_dcard.py (bsk + Brave)",
   "requested_boards": [
     "tech_job",
@@ -46,11 +46,11 @@
       "age_text": "21 小時",
       "author": "國立陽明交通大學",
       "excerpt": "如題，你各位有工作的可以參考看看，我離開科技業在家的狀況有多麼可怕，這就是失業的下場，早上九點起床，沒人催著你去上班，沒人告訴你現在要做甚麼，打開teams再也看不到同仁們的訊息與主管的諄諄教誨，懷念",
-      "like": 156,
-      "comment": 118,
-      "share": 90,
+      "like": 166,
+      "comment": 122,
+      "share": 93,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -67,7 +67,7 @@
       "comment": 48,
       "share": 63,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -84,7 +84,7 @@
       "comment": 137,
       "share": 70,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -101,7 +101,7 @@
       "comment": 29,
       "share": 30,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -118,7 +118,7 @@
       "comment": 31,
       "share": 19,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -135,7 +135,7 @@
       "comment": 104,
       "share": 91,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -152,7 +152,7 @@
       "comment": 63,
       "share": 129,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -169,7 +169,7 @@
       "comment": 36,
       "share": 9,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -182,11 +182,11 @@
       "age_text": "1 天",
       "author": "國立清華大學",
       "excerpt": "嗨嗨 我是gg新人，今天外寄email給廠商的時候，恍神選了個external meeting，不是security c，信件內容是會議邀請而已，請問各位大大這樣是該開始準備下山打包回家了嗎？",
-      "like": 11,
+      "like": 12,
       "comment": 20,
       "share": 23,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -200,10 +200,10 @@
       "author": "國立陽明交通大學",
       "excerpt": "因為在板上受惠許多，希望自己小小的經歷可以回饋給大家！，📌背景：台科學交大產線碩，📌職位：廠務（FAC，31T），📌地點：竹科，📌面試時程：（以下皆含節假日），D-7  面試邀約，D+0  廠測（英文",
       "like": 30,
-      "comment": 76,
+      "comment": 78,
       "share": 106,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -213,14 +213,14 @@
       "link": "https://www.dcard.tw/f/tech_job/p/262243684",
       "published": "2026-10-03T05:08:48.546Z",
       "published_local": "2026/10/03 13:08",
-      "age_text": "8 小時",
+      "age_text": "9 小時",
       "author": "國立陽明交通大學 電子研究所",
       "excerpt": "看到同校的在發文，我也分享一篇畢業一年的啃老心得，本人88年次的，高中畢業後啃老兩年被家人逼去讀大學，研究所畢業後啃老至今，目前的身分就是無業仔，履歷投出去之後全部石沉大海，偶爾收到幾封感謝您的應徵，",
       "like": 40,
       "comment": 22,
       "share": 26,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -237,7 +237,7 @@
       "comment": 29,
       "share": 9,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -254,7 +254,7 @@
       "comment": 31,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -271,7 +271,7 @@
       "comment": 31,
       "share": 34,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -288,7 +288,7 @@
       "comment": 72,
       "share": 38,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -305,7 +305,7 @@
       "comment": 17,
       "share": 12,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -322,24 +322,7 @@
       "comment": 31,
       "share": 16,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
-    },
-    {
-      "board_slug": "tech_job",
-      "board_name": "科技業板",
-      "source_name": "Dcard 科技業板",
-      "title": "台積面上心得分享",
-      "link": "https://www.dcard.tw/f/tech_job/p/262240598",
-      "published": "2026-10-02T11:30:28.926Z",
-      "published_local": "2026/10/02 19:30",
-      "age_text": "1 天",
-      "author": "國立中正大學",
-      "excerpt": "頭上這間學碩，畢業那年都沒有收到面試，就先去別家蹲，今年過年前後面聯電（製程）、台積（設備），當時兩家都沒上，但應該年前面台積表現不錯，所以後續有收到2個面試，然後就上了 （歡呼，如果畢業後一直進不了",
-      "like": 15,
-      "comment": 8,
-      "share": 21,
-      "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -356,24 +339,41 @@
       "comment": 13,
       "share": 19,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "tech_job",
       "board_name": "科技業板",
       "source_name": "Dcard 科技業板",
-      "title": "外商設備商製程職涯請益",
-      "link": "https://www.dcard.tw/f/tech_job/p/262239890",
-      "published": "2026-10-02T08:42:52.595Z",
-      "published_local": "2026/10/02 16:42",
+      "title": "台積面上心得分享",
+      "link": "https://www.dcard.tw/f/tech_job/p/262240598",
+      "published": "2026-10-02T11:30:28.926Z",
+      "published_local": "2026/10/02 19:30",
       "age_text": "1 天",
-      "author": "淡江大學",
-      "excerpt": "各位好，想請教一下設備商 AE 的後續發展，因為最近真的是對未來有點迷茫所以來這請問前輩🙏，目前在外商設備商做 AE，工作內容主要是調參數、處理客戶問題跟做一些資料分析。做了一段時間後，開始有點擔心這",
-      "like": 11,
+      "author": "國立中正大學",
+      "excerpt": "頭上這間學碩，畢業那年都沒有收到面試，就先去別家蹲，今年過年前後面聯電（製程）、台積（設備），當時兩家都沒上，但應該年前面台積表現不錯，所以後續有收到2個面試，然後就上了 （歡呼，如果畢業後一直進不了",
+      "like": 15,
       "comment": 8,
-      "share": 16,
+      "share": 21,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:51+08:00"
+      "collected_at": "2026-10-03T22:10:27+08:00"
+    },
+    {
+      "board_slug": "tech_job",
+      "board_name": "科技業板",
+      "source_name": "Dcard 科技業板",
+      "title": "台積電新人運動服 換尺寸",
+      "link": "https://www.dcard.tw/f/tech_job/p/262243005",
+      "published": "2026-10-03T01:39:25.449Z",
+      "published_local": "2026/10/03 09:39",
+      "age_text": "12 小時",
+      "author": "B",
+      "excerpt": "這幾天陸續收到新人發的運動會短袖＋一包貓頭鷹袋子🦉（裡面有外套、長褲、帽子），結果拿到實品才發現……，我是不是對自己的身材有什麼誤會🙂‍↕️，全部都訂太大了，想問問台南廠區的女生，有沒有人需要換尺寸的，運動",
+      "like": 10,
+      "comment": 19,
+      "share": 4,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:10:27+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -390,7 +390,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -407,7 +407,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -424,7 +424,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -441,7 +441,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -458,7 +458,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -475,7 +475,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -492,7 +492,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -509,7 +509,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -526,7 +526,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -543,7 +543,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -560,7 +560,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -577,7 +577,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -594,7 +594,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -611,7 +611,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -628,7 +628,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -645,7 +645,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -662,7 +662,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -679,7 +679,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -696,7 +696,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -713,7 +713,7 @@
       "comment": 208,
       "share": 96,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -730,7 +730,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -747,7 +747,7 @@
       "comment": null,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -764,7 +764,7 @@
       "comment": 2,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -781,7 +781,7 @@
       "comment": null,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:54+08:00"
+      "collected_at": "2026-10-03T22:10:29+08:00"
     },
     {
       "board_slug": "3c",
@@ -798,7 +798,7 @@
       "comment": 22,
       "share": 7,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -815,7 +815,7 @@
       "comment": 9,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -832,7 +832,7 @@
       "comment": 8,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -849,7 +849,7 @@
       "comment": 18,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -866,7 +866,7 @@
       "comment": 9,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -883,7 +883,7 @@
       "comment": 6,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -900,7 +900,7 @@
       "comment": 8,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -914,10 +914,10 @@
       "author": "深夜修車工",
       "excerpt": "請問照片上這一款手機架要去哪裡購買？這是什麼品牌？",
       "like": null,
-      "comment": 1,
+      "comment": 2,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -930,11 +930,11 @@
       "age_text": "1 小時",
       "author": "國立彰化師範大學",
       "excerpt": "之前有po過一篇文，先感謝大家的建議，後來我選出兩款：V70 FE 5G 8G/256G，2.OPPO Reno16 F 8G/256G，品牌的部分我是以oppo、vivo優先，然後配8G/256G，",
-      "like": 1,
-      "comment": 2,
+      "like": 2,
+      "comment": 3,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -951,7 +951,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -968,7 +968,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -985,7 +985,7 @@
       "comment": 4,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -1002,7 +1002,7 @@
       "comment": 3,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -1019,7 +1019,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -1029,14 +1029,14 @@
       "link": "https://www.dcard.tw/f/3c/p/262243683",
       "published": "2026-10-03T05:08:47.817Z",
       "published_local": "2026/10/03 13:08",
-      "age_text": "8 小時",
+      "age_text": "9 小時",
       "author": "逢甲大學",
       "excerpt": "最近聽朋友建議去欣亞組電腦 預算大概45，000，但本人是第一次買桌機所以對於組電腦很沒概念🥲，看網站的選擇太多不知道選什麼😵‍💫，電腦大致上是用來打遊戲（steam那種或者槍戰遊戲）、跑程式、追劇那種，",
       "like": null,
       "comment": 15,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -1053,7 +1053,7 @@
       "comment": 1,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -1070,7 +1070,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -1087,7 +1087,7 @@
       "comment": 18,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -1104,7 +1104,7 @@
       "comment": null,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "3c",
@@ -1121,7 +1121,7 @@
       "comment": 24,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:56+08:00"
+      "collected_at": "2026-10-03T22:10:31+08:00"
     },
     {
       "board_slug": "money",
@@ -1138,7 +1138,7 @@
       "comment": 58,
       "share": 254,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1151,11 +1151,11 @@
       "age_text": "11 小時",
       "author": "國立臺灣大學",
       "excerpt": "我很會賺錢，三十歲基本月收二十，投資也不錯，現在總資產已經近三千，但我從小被教導要節儉，在偏鄉長大，店到店取貨要開車十分鐘，家裏有螳螂蝙蝠會闖進家那種，剛來台北工作以後才發現乾濕分離是什麼，到同事家還",
-      "like": 29,
+      "like": 30,
       "comment": 75,
-      "share": 37,
+      "share": 38,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1168,11 +1168,11 @@
       "age_text": "4 小時",
       "author": "東海大學",
       "excerpt": "我爸最近給了我200萬然後叫我以後不要跟哥哥弟弟爭市價5000萬的房地產 請問我現在還要努力嗎？200萬跟5000萬比起來像在打發乞丐一樣 請問各位你們會怎麼做？",
-      "like": 25,
-      "comment": 109,
-      "share": 16,
+      "like": 32,
+      "comment": 123,
+      "share": 24,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1189,7 +1189,7 @@
       "comment": 20,
       "share": 5,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1202,28 +1202,11 @@
       "age_text": "7 小時",
       "author": "W",
       "excerpt": "什麼時候開始都來得及，因為人生容錯率很大，隨時都能翻篇重新開始，先謝謝大家對我的文章踴躍的迴響，所以我決定有機會想到什麼主題就多分享，但當然以下一定也帶有我主觀的想法😆，1. 提升認知，我知道這個大家",
-      "like": 22,
+      "like": 23,
       "comment": 18,
-      "share": 19,
+      "share": 20,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:58+08:00"
-    },
-    {
-      "board_slug": "money",
-      "board_name": "理財板",
-      "source_name": "Dcard 理財板",
-      "title": "看著別人賺好賺滿，怎麽調適心情",
-      "link": "https://www.dcard.tw/f/money/p/262240036",
-      "published": "2026-10-02T09:15:45.947Z",
-      "published_local": "2026/10/02 17:15",
-      "age_text": "1 天",
-      "author": "國立成功大學",
-      "excerpt": "是這樣啦，小弟自從個股、融資、融券教訓過，就幾乎沒什麼買個股了（除了金融股），後來都只有大跌的時候買買正二，然後等到拉回就獲利了結，沒標的的時候就買買ETF （沒賣），就像這幾天好多人的個股、漲停、噴",
-      "like": 9,
-      "comment": 15,
-      "share": 5,
-      "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1240,7 +1223,24 @@
       "comment": 2,
       "share": 8,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
+    },
+    {
+      "board_slug": "money",
+      "board_name": "理財板",
+      "source_name": "Dcard 理財板",
+      "title": "看著別人賺好賺滿，怎麽調適心情",
+      "link": "https://www.dcard.tw/f/money/p/262240036",
+      "published": "2026-10-02T09:15:45.947Z",
+      "published_local": "2026/10/02 17:15",
+      "age_text": "1 天",
+      "author": "國立成功大學",
+      "excerpt": "是這樣啦，小弟自從個股、融資、融券教訓過，就幾乎沒什麼買個股了（除了金融股），後來都只有大跌的時候買買正二，然後等到拉回就獲利了結，沒標的的時候就買買ETF （沒賣），就像這幾天好多人的個股、漲停、噴",
+      "like": 9,
+      "comment": 15,
+      "share": 5,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1254,10 +1254,10 @@
       "author": "我是錚",
       "excerpt": "非農數據公佈後，美股歡騰😁",
       "like": 9,
-      "comment": 31,
+      "comment": 32,
       "share": 8,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1274,7 +1274,7 @@
       "comment": 9,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1291,7 +1291,7 @@
       "comment": null,
       "share": 9,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1308,7 +1308,7 @@
       "comment": 5,
       "share": 4,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1318,14 +1318,14 @@
       "link": "https://www.dcard.tw/f/money/p/262242723",
       "published": "2026-10-02T22:00:09.643Z",
       "published_local": "2026/10/03 06:00",
-      "age_text": "15 小時",
+      "age_text": "16 小時",
       "author": "家庭主婦",
       "excerpt": "2家的經驗，摩爾投顧我參加過，我是付費給何XX，有賺點錢但合作過程讓我不舒服，內容不方便說，總之合約到期我傷心退出。之後我觀看很多頻道才選定＜萬寶投顧鍾騏遠＞。我推薦他YT早安萬寶節目，建議先追蹤觀看",
       "like": 2,
       "comment": 1,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1342,7 +1342,7 @@
       "comment": 1,
       "share": 1,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1359,7 +1359,7 @@
       "comment": 2,
       "share": 2,
       "has_image": false,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1369,14 +1369,14 @@
       "link": "https://www.dcard.tw/f/money/p/262242665",
       "published": "2026-10-02T21:02:10.756Z",
       "published_local": "2026/10/03 05:02",
-      "age_text": "16 小時",
+      "age_text": "17 小時",
       "author": "買手",
       "excerpt": "我還有基金獲利沒貼，但需要開電腦，因為我躺在床上滑手機，吃飽太閒才上來貼，懶得開電腦再上傳，就醬",
       "like": 4,
       "comment": 10,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1393,7 +1393,7 @@
       "comment": 6,
       "share": 5,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1410,7 +1410,7 @@
       "comment": 3,
       "share": 7,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1427,7 +1427,7 @@
       "comment": 3,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1444,7 +1444,7 @@
       "comment": 6,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     },
     {
       "board_slug": "money",
@@ -1454,14 +1454,14 @@
       "link": "https://www.dcard.tw/f/money/p/262245676",
       "published": "2026-10-03T13:25:49.276Z",
       "published_local": "2026/10/03 21:25",
-      "age_text": "34 分鐘",
+      "age_text": "44 分鐘",
       "author": "租賃住宅管理師",
       "excerpt": null,
       "like": null,
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T21:59:58+08:00"
+      "collected_at": "2026-10-03T22:10:33+08:00"
     }
   ]
 }
