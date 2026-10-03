@@ -225,7 +225,18 @@ return `policy_blocked` instantly, without touching the network. `reset_live_sta
 clears it at the start of each run, since the next process may be on a different
 network (laptop vs CI runner).
 
-Measured effect on the full pipeline: **976s → 78s**.
+Measured on CI (run `37132384237`): the block is detected on board 1, boards 2–5 log
+`live fetch skipped (host previously blocked)`, and the whole PTT + Dcard phase
+finishes within one second of wall clock.
+
+⚠️ A first reading of these numbers credited the fix with taking the pipeline from
+976s to 78s. That was wrong — 78s was a *local* run with **no API key**, where every
+summary short-circuits to the RSS description. The honest CI comparison is
+976s → 943s: the PTT block cost ~33s, not minutes, because `fetch_retries: 2` makes
+the backoff `1 + 2 = 3s` per URL.
+
+Almost all of the remaining CI runtime is unrelated to PTT — see
+[the summarizer note](#7-pipeline-runtime-is-dominated-by-the-summarizer-not-ptt).
 
 ---
 
@@ -248,13 +259,49 @@ from a Taiwan IP, all 403 from CI.
 
 ---
 
-## 7. Verification performed
+## 7. Pipeline runtime is dominated by the summarizer, not PTT
 
-* `pytest tests/` → **62 passed** (26 new cases: push parsing, date inference, index
+Chasing the 976s CI runtime led here, not to the community tabs. Phase timings from
+run `37132384237`:
+
+| Phase | Wall clock | Share |
+|-------|-----------|-------|
+| RSS fetch (zh/en/ja + tech blogs) | ~45s | 5% |
+| PTT + Dcard (snapshot path) | ~1s | <1% |
+| **Summarizer, every call 404** | **~900s** | **95%** |
+| Render + write | <1s | — |
+
+438 `API error 404` lines, one pair per article, ~4s apart. `NVIDIA_MODEL` at the time
+was `minimaxai/minimax-m2.1` against
+`https://integrate.api.nvidia.com/v1/chat/completions` — a 404 means the model id or
+endpoint does not exist, which no amount of retrying will fix. `BaseSummarizer`
+already had a `disabled` flag, but only wired to **401/402/403**; 404 fell through to
+the generic retry loop and cost a full round-trip per article.
+
+Fix applied: `400` and `404` now join the permanent-error branch, which disables the
+provider on the **first** failure and lets every remaining article fall straight
+through to the RSS description. `GeminiSummarizer` is standalone rather than a
+`BaseSummarizer` subclass, so it got its own `disabled` flag and the same guard.
+429 and 5xx keep their retry budget — those genuinely can recover.
+
+Covered by `tests/test_summarizer_failures.py` (permanent errors disable immediately
+and issue exactly one request; transient errors still retry and do *not* disable).
+
+> ⚠️ This trades silence for speed: if the model id is ever wrong again, the run
+> finishes fast but every summary is an RSS excerpt, with only a single `ERROR` line
+> to say so. If that is too quiet, add a workflow step asserting
+> `run_summary.json → summarizer_disabled` is falsy.
+
+---
+
+## 8. Verification performed
+
+* `pytest tests/` → **74 passed** (38 new cases: push parsing, date inference, index
   parsing, engagement ranking, snapshot loading, PTT policy-block handling, snapshot
-  notice rendering).
+  notice rendering, summarizer failure handling).
 * Full pipeline, CI path simulated with `PTT_FORCE_SNAPSHOT=1`:
-  72 sources → 6 tabs, 222 articles, exit 0, 78s.
+  72 sources → 6 tabs, 222 articles, exit 0, 78s (no API key locally, so summaries
+  short-circuit — this number is **not** comparable to CI).
   PTT tab: 62 snapshot rows → 38 selected across 5 sections, all with 推 badges.
   Dcard tab: 85 snapshot rows → 32 selected across 4 sections.
 * Live path (this machine): `collect_ptt.py` → 62 rows from 5/5 boards.
@@ -262,5 +309,9 @@ from a Taiwan IP, all 403 from CI.
   third PTT `origin` (`ptt_snapshot`), and an `origin` missing from
   `format_metric_badge`'s list silently drops the 推文數. That bug was hit and is now
   covered by a parametrised test over all three origins.
+* Real CI run (`37132384237`) → success. PTT 403 detected on board 1, boards 2–5
+  skipped without touching the network, 65 rows served from the snapshot.
 * End-to-end scheduled job: `tools/daily_social_sync.sh` run under `env -i` (launchd's
-  minimal environment) → both collectors succeed, snapshots commit and push.
+  minimal environment) → both collectors succeed, snapshots commit and push. First
+  attempt hit `non-fast-forward` because the 08:00 digest also commits to `main`; the
+  script now rebases before pushing.

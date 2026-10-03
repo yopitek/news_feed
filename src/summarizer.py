@@ -105,7 +105,15 @@ class BaseSummarizer:
                     time.sleep(backoff)
                     continue
                 
-                elif response.status_code in (401, 402, 403):
+                elif response.status_code in (401, 402, 403, 404, 400):
+                    # Permanent, per-deployment errors — retrying the same request
+                    # cannot fix any of them:
+                    #   401/402/403  bad or exhausted credentials
+                    #   404/400      the endpoint or model id does not exist
+                    # Disable immediately and let every remaining article use the
+                    # RSS-description fallback. Without 404/400 in this list a
+                    # wrong model id costs a retry round-trip per article
+                    # (measured: 222 articles -> 900s of the 943s run).
                     logger.error(
                         f"API error {response.status_code}: disabling {self.model}; "
                         f"using RSS fallback for remaining articles. {response.text[:200]}"
@@ -326,7 +334,11 @@ class GeminiSummarizer:
     def __init__(self, api_key: str):
         self.api_key = api_key
         self.api_base = GEMINI_API_BASE
+        self.model = GEMINI_MODEL
         self.last_request_time = 0
+        # Set by _call_api on a permanent error (bad key / unknown model) so the
+        # remaining articles fall straight through to the RSS description.
+        self.disabled = False
         logger.info(f"Using Google Gemini API with model: {GEMINI_MODEL}")
     
     def _rate_limit(self):
@@ -338,6 +350,8 @@ class GeminiSummarizer:
     
     def _call_api(self, prompt: str) -> Optional[str]:
         """Call Gemini API with retry logic."""
+        if self.disabled:
+            return None
         self._rate_limit()
         
         url = f"{self.api_base}?key={self.api_key}"
@@ -380,7 +394,19 @@ class GeminiSummarizer:
                     logger.warning(f"Gemini rate limited, waiting {backoff * 2}s")
                     time.sleep(backoff * 2)
                     continue
-                
+
+                elif response.status_code in (400, 401, 402, 403, 404):
+                    # Permanent, per-deployment errors — a bad key or a model id
+                    # that does not exist. Retrying cannot fix either, so stop
+                    # burning a round-trip per article (see BaseSummarizer).
+                    logger.error(
+                        f"Gemini API error {response.status_code}: disabling "
+                        f"{self.model}; using RSS fallback for remaining articles. "
+                        f"{response.text[:200]}"
+                    )
+                    self.disabled = True
+                    return None
+
                 else:
                     logger.error(f"Gemini API error {response.status_code}: {response.text[:200]}")
                     if attempt < MAX_RETRIES - 1:

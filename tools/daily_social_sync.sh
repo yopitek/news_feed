@@ -32,6 +32,8 @@ export PATH="$HOME/.local/bin:$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bi
 # Clearing PYTHONPATH keeps the run hermetic and stops any inherited
 # sitecustomize/.pth shim from interfering.
 export PYTHONPATH=""
+# Fail fast instead of hanging on a credential prompt: nobody is watching this job.
+export GIT_TERMINAL_PROMPT=0
 
 if [ -x "$REPO_ROOT/.venv/bin/python3" ]; then
     PYTHON="$REPO_ROOT/.venv/bin/python3"
@@ -76,6 +78,17 @@ git add $SNAPSHOTS || { log "git add failed"; exit 1; }
 
 if ! git commit -m "chore: refresh social snapshots $(date '+%Y-%m-%d %H:%M')" >> "$LOG_FILE" 2>&1; then
     log "git commit failed"
+    exit 1
+fi
+
+# The 08:00 digest workflow also commits to main (docs/index.html and the
+# output JSON), so an unattended push from here regularly lands behind the
+# remote. Rebase first — the two jobs touch disjoint paths, so it is clean —
+# and only then push. Without this the job fails every day the digest has run
+# since the last snapshot, which is most days.
+if ! git pull --rebase --autostash origin main >> "$LOG_FILE" 2>&1; then
+    log "git pull --rebase failed; leaving the commit local and aborting the rebase"
+    git rebase --abort >> "$LOG_FILE" 2>&1 || true
     exit 1
 fi
 
