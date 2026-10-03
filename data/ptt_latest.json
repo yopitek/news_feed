@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "collected_at": "2026-10-03T23:10:15+08:00",
+  "collected_at": "2026-10-03T23:11:12+08:00",
   "collector": "tools/collect_ptt.py (direct HTTP)",
   "requested_boards": [
     "Gossiping",
@@ -53,7 +53,7 @@
       "push_label": "4",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -66,7 +66,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -79,7 +79,7 @@
       "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -92,7 +92,7 @@
       "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -105,7 +105,7 @@
       "push_label": "1",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -118,7 +118,7 @@
       "push_label": "3",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -131,7 +131,7 @@
       "push_label": "19",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -144,7 +144,7 @@
       "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -157,7 +157,7 @@
       "push_label": "6",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -170,7 +170,7 @@
       "push_label": "3",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -183,7 +183,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -196,7 +196,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -209,7 +209,7 @@
       "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -222,7 +222,7 @@
       "push_label": "13",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -235,7 +235,7 @@
       "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -248,7 +248,7 @@
       "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -261,7 +261,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -274,7 +274,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -287,7 +287,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Gossiping",
@@ -300,7 +300,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -313,7 +313,7 @@
       "push_label": "24",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -326,7 +326,7 @@
       "push_label": "57",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -339,7 +339,7 @@
       "push_label": "爆",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -352,7 +352,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -365,7 +365,7 @@
       "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -378,7 +378,7 @@
       "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -391,7 +391,7 @@
       "push_label": "爆",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -404,7 +404,7 @@
       "push_label": "20",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Stock",
@@ -413,11 +413,11 @@
       "link": "https://www.ptt.cc/bbs/Stock/M.1791037420.A.799.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "asahi98",
-      "push": 14,
-      "push_label": "14",
+      "push": 16,
+      "push_label": "16",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -430,7 +430,7 @@
       "push_label": "16",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -443,7 +443,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -456,7 +456,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -469,7 +469,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -482,7 +482,7 @@
       "push_label": "75",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -495,7 +495,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -508,7 +508,7 @@
       "push_label": "18",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -521,7 +521,7 @@
       "push_label": "11",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -534,7 +534,7 @@
       "push_label": "4",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -547,7 +547,7 @@
       "push_label": "15",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -560,7 +560,7 @@
       "push_label": "23",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -573,7 +573,7 @@
       "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -586,7 +586,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -599,7 +599,7 @@
       "push_label": "3",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Tech_Job",
@@ -612,7 +612,7 @@
       "push_label": "25",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -625,7 +625,7 @@
       "push_label": "13",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -638,7 +638,7 @@
       "push_label": "45",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -651,7 +651,7 @@
       "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -664,7 +664,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -677,7 +677,7 @@
       "push_label": "46",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -690,7 +690,7 @@
       "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -703,7 +703,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -716,7 +716,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -729,7 +729,7 @@
       "push_label": "21",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "Soft_Job",
@@ -742,7 +742,7 @@
       "push_label": "1",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -755,7 +755,7 @@
       "push_label": "9",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -768,7 +768,7 @@
       "push_label": "69",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -781,7 +781,7 @@
       "push_label": "18",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -794,7 +794,7 @@
       "push_label": "爆",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -807,7 +807,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -820,7 +820,7 @@
       "push_label": "17",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -833,7 +833,7 @@
       "push_label": "11",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -846,7 +846,7 @@
       "push_label": "4",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -859,7 +859,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -872,7 +872,7 @@
       "push_label": "4",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -885,7 +885,7 @@
       "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:10:15+08:00"
+      "collected_at": "2026-10-03T23:11:12+08:00"
     }
   ]
 }
