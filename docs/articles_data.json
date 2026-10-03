@@ -424,13 +424,6 @@
         "summary": "Comments"
       },
       {
-        "title": "Show HN: Local pretrained classifiers, GPU not needed",
-        "link": "https://github.com/nicobrenner/jeffy",
-        "source": "Hacker News",
-        "published": "2026-10-03T12:19:09+00:00",
-        "summary": "Comments"
-      },
-      {
         "title": "We want you to build the next Git platform on Cloudflare",
         "link": "https://blog.cloudflare.com/next-git-platform-on-cloudflare",
         "source": "Hacker News",
@@ -456,6 +449,13 @@
         "link": "https://www.da.vidbuchanan.co.uk/blog/hacking-time.html",
         "source": "Hacker News",
         "published": "2026-10-03T10:52:06+00:00",
+        "summary": "Comments"
+      },
+      {
+        "title": "Getting the most out of Opus 5.5 in Claude and Claude Code",
+        "link": "https://claude.dev/blog/getting-the-most-out-of-opus-5-5",
+        "source": "Hacker News",
+        "published": "2026-10-03T10:29:30+00:00",
         "summary": "Comments"
       }
     ],
@@ -519,6 +519,13 @@
     ],
     "BBC Top Stories": [
       {
+        "title": "Two going on four, five or six on good night for new Scotland era",
+        "link": "https://www.bbc.co.uk/sport/football/articles/cx7vp540g75mo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC News",
+        "published": "2026-10-03T14:22:18+00:00",
+        "summary": "Scotland scored twice in North Macedonia but the scoreline does not reflect their dominance in Skopj..."
+      },
+      {
         "title": "Bellingham unlocks new level and potential to be 'one of the greatest'",
         "link": "https://www.bbc.co.uk/sport/football/articles/cv5yn8znyx2ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
@@ -552,13 +559,6 @@
         "source": "BBC News",
         "published": "2026-10-03T11:43:48+00:00",
         "summary": "Former heavyweight champion Tyson Fury plans to ask US president Donald Trump to lead his ring walk ..."
-      },
-      {
-        "title": "Wakefield beat Warrington to win Super League",
-        "link": "https://www.bbc.co.uk/sport/rugby-league/articles/c39w4w7pzqv4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC News",
-        "published": "2026-10-03T11:02:55+00:00",
-        "summary": "Wakefield Trinity end a 58-year wait to be champions as they claim a deserved Grand Final success ov..."
       }
     ],
     "BBC World": [
@@ -724,6 +724,13 @@
   "ja_news": {
     "頭條": [
       {
+        "title": "大谷翔平が初打席で安打、ドジャースが5―1でリード 村上は決勝弾",
+        "link": "http://www.asahi.com/articles/ASVB35D51VB3UTQP01LM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T14:25:04+00:00",
+        "summary": "大谷翔平が初打席で安打、ドジャースが5―1でリード 村上は決勝弾"
+      },
+      {
         "title": "釣り中の9歳が海に転落 心肺停止",
         "link": "https://news.yahoo.co.jp/pickup/6597459",
         "source": "Yahoo! Japan",
@@ -736,13 +743,6 @@
         "source": "Yahoo! Japan",
         "published": "2026-10-03T14:17:21+00:00",
         "summary": "村上宗隆がPS1号 雄たけび確信弾"
-      },
-      {
-        "title": "大谷翔平が初打席で安打、ドジャースが5―1でリード 村上は決勝弾",
-        "link": "http://www.asahi.com/articles/ASVB35D51VB3UTQP01LM.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T14:09:59+00:00",
-        "summary": "大谷翔平が初打席で安打、ドジャースが5―1でリード 村上は決勝弾"
       },
       {
         "title": "高市内閣を出た林芳正氏 高まる注目は「戦わぬ政治家」を変えるのか",
@@ -956,6 +956,13 @@
     ],
     "商業": [
       {
+        "title": "夢を見せるだけじゃ嫌だった 「宇宙から農業変える」起業家の挑戦",
+        "link": "https://www.asahi.com/articles/ASVB10SKKVB1PLFA009M.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T14:30:00+00:00",
+        "summary": "夢を見せるだけじゃ嫌だった 「宇宙から農業変える」起業家の挑戦"
+      },
+      {
         "title": "MacのOSを修正へ AIリスク対策",
         "link": "https://news.yahoo.co.jp/pickup/6597441",
         "source": "Yahoo! Japan",
@@ -1003,13 +1010,6 @@
         "source": "Yahoo! Japan",
         "published": "2026-10-02T20:07:37+00:00",
         "summary": "「こどもNISA」注意点 専門家解説"
-      },
-      {
-        "title": "マンション販売「ワニの口」とは",
-        "link": "https://news.yahoo.co.jp/pickup/6597375",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-02T19:46:12+00:00",
-        "summary": "マンション販売「ワニの口」とは"
       }
     ],
     "文化": [
