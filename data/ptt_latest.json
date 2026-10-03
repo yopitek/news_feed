@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "collected_at": "2026-10-03T23:02:07+08:00",
+  "collected_at": "2026-10-03T23:10:15+08:00",
   "collector": "tools/collect_ptt.py (direct HTTP)",
   "requested_boards": [
     "Gossiping",
@@ -14,7 +14,7 @@
       "board": "Gossiping",
       "name": "八卦板",
       "status": "ok",
-      "count": 17
+      "count": 20
     },
     {
       "board": "Stock",
@@ -53,7 +53,7 @@
       "push_label": "4",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -66,7 +66,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -75,11 +75,11 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791037864.A.750.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "kuninaka",
-      "push": 4,
-      "push_label": "4",
+      "push": 5,
+      "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -88,11 +88,11 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791037879.A.88C.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "pauljet",
-      "push": 8,
-      "push_label": "8",
+      "push": 10,
+      "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -105,7 +105,7 @@
       "push_label": "1",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -118,7 +118,7 @@
       "push_label": "3",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -127,11 +127,11 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038038.A.D25.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "la1aco",
-      "push": 16,
-      "push_label": "16",
+      "push": 19,
+      "push_label": "19",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -144,7 +144,7 @@
       "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -153,11 +153,11 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038199.A.184.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "peterasd",
-      "push": 5,
-      "push_label": "5",
+      "push": 6,
+      "push_label": "6",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -170,7 +170,7 @@
       "push_label": "3",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -183,7 +183,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -196,7 +196,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -205,11 +205,11 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038578.A.1C7.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "a111111",
-      "push": 4,
-      "push_label": "4",
+      "push": 5,
+      "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -218,11 +218,11 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038737.A.4A1.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "kimura0701",
-      "push": 10,
-      "push_label": "10",
+      "push": 13,
+      "push_label": "13",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -231,11 +231,11 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038843.A.75B.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "hcid",
-      "push": 7,
-      "push_label": "7",
+      "push": 10,
+      "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -244,11 +244,11 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791039014.A.C92.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "au4g3wk4k",
-      "push": 2,
-      "push_label": "2",
+      "push": 5,
+      "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Gossiping",
@@ -257,11 +257,50 @@
       "link": "https://www.ptt.cc/bbs/Gossiping/M.1791039519.A.AA7.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "b122771",
+      "push": 2,
+      "push_label": "2",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-03T23:10:15+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "[問卦] 看到一個人肥到沒脖子第一個想到什麼？",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1791039797.A.4B0.html",
+      "published": "2026-10-03T12:00:00+08:00",
+      "author": "KlayT11",
       "push": 0,
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "[問卦] 牛排是真的太好吃還是跟香蕉一樣？",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1791039907.A.F0B.html",
+      "published": "2026-10-03T12:00:00+08:00",
+      "author": "parttime",
+      "push": 0,
+      "push_label": "0",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-03T23:10:15+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "[問卦] 發生什麼事！八卦居然沒有一篇上熱門",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1791040075.A.141.html",
+      "published": "2026-10-03T12:00:00+08:00",
+      "author": "notimenofree",
+      "push": 0,
+      "push_label": "0",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -274,7 +313,7 @@
       "push_label": "24",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -287,7 +326,7 @@
       "push_label": "57",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -300,7 +339,7 @@
       "push_label": "爆",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -313,7 +352,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -326,7 +365,7 @@
       "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -339,7 +378,7 @@
       "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -352,7 +391,7 @@
       "push_label": "爆",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -365,7 +404,7 @@
       "push_label": "20",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Stock",
@@ -374,11 +413,11 @@
       "link": "https://www.ptt.cc/bbs/Stock/M.1791037420.A.799.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "asahi98",
-      "push": 13,
-      "push_label": "13",
+      "push": 14,
+      "push_label": "14",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -391,7 +430,7 @@
       "push_label": "16",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -404,7 +443,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -417,7 +456,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -430,7 +469,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -443,7 +482,7 @@
       "push_label": "75",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -456,7 +495,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -469,7 +508,7 @@
       "push_label": "18",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -482,7 +521,7 @@
       "push_label": "11",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -495,7 +534,7 @@
       "push_label": "4",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -508,7 +547,7 @@
       "push_label": "15",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -521,7 +560,7 @@
       "push_label": "23",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -534,7 +573,7 @@
       "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -547,7 +586,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -560,7 +599,7 @@
       "push_label": "3",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Tech_Job",
@@ -573,7 +612,7 @@
       "push_label": "25",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -586,7 +625,7 @@
       "push_label": "13",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -599,7 +638,7 @@
       "push_label": "45",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -612,7 +651,7 @@
       "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -625,7 +664,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -638,7 +677,7 @@
       "push_label": "46",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -651,7 +690,7 @@
       "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -664,7 +703,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -677,7 +716,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -690,7 +729,7 @@
       "push_label": "21",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "Soft_Job",
@@ -703,7 +742,7 @@
       "push_label": "1",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -716,7 +755,7 @@
       "push_label": "9",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -729,7 +768,7 @@
       "push_label": "69",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -738,11 +777,11 @@
       "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1790943018.A.AEF.html",
       "published": "2026-10-02T12:00:00+08:00",
       "author": "c752",
-      "push": 17,
-      "push_label": "17",
+      "push": 18,
+      "push_label": "18",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -755,7 +794,7 @@
       "push_label": "爆",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -768,7 +807,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -781,7 +820,7 @@
       "push_label": "17",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -794,7 +833,7 @@
       "push_label": "11",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -807,7 +846,7 @@
       "push_label": "4",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -816,11 +855,11 @@
       "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791004261.A.F47.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "qq8538",
-      "push": 1,
-      "push_label": "1",
+      "push": 2,
+      "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -833,7 +872,7 @@
       "push_label": "4",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     },
     {
       "board": "PC_Shopping",
@@ -842,11 +881,11 @@
       "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791034621.A.9FB.html",
       "published": "2026-10-03T12:00:00+08:00",
       "author": "hucgly",
-      "push": 8,
-      "push_label": "8",
+      "push": 10,
+      "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-03T23:02:07+08:00"
+      "collected_at": "2026-10-03T23:10:15+08:00"
     }
   ]
 }
