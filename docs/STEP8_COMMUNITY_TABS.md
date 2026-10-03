@@ -292,6 +292,36 @@ and issue exactly one request; transient errors still retry and do *not* disable
 > to say so. If that is too quiet, add a workflow step asserting
 > `run_summary.json → summarizer_disabled` is falsy.
 
+### Choosing a model: measure, do not read the catalog
+
+Picking a replacement turned up two traps, both resolved only by actually calling
+candidates on 2026-10-04:
+
+**`/v1/models` is not a list of callable models.** These are listed and 404:
+
+`google/gemma-3-12b-it`, `mistralai/mistral-large-2-instruct`,
+`mistralai/mistral-7b-instruct-v0.3`, `01-ai/yi-large`,
+`nvidia/llama-3.1-nemotron-51b-instruct`, `deepseek-ai/deepseek-coder-6.7b-instruct`
+
+**"flash" does not mean non-reasoning.** Reasoning models answer in
+`reasoning_content` and leave `content: null`:
+
+| Model | Latency | Result |
+|-------|---------|--------|
+| `z-ai/glm-5.3-flash` | 66s | `content: null` (reasoning) |
+| `deepseek-ai/deepseek-v4.1-flash` | 17.5s | `content: null` (reasoning) |
+| `z-ai/glm-5.3` | >90s | timed out |
+| `google/gemma-4-31b-it` | >60s | timed out |
+| **`meta/llama-3.2-11b-vision-instruct`** | **6.4s** | **OK, proper Traditional Chinese** |
+
+Empty `content` used to raise `AttributeError` inside `content.strip()`, which the
+generic handler swallowed — one plausible-looking silent failure. It is now an
+explicit disabling error that names `reasoning_content` when present.
+
+Because summarization is one sequential call per article, per-call latency *is* the
+run duration: ~230 articles took ~13 min in run `37161132542`. The workflow timeout
+was raised 30 → 60 min to keep headroom. Parallelising the calls is the next lever.
+
 ---
 
 ## 8. Verification performed
