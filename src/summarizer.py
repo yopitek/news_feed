@@ -23,10 +23,21 @@ logger = logging.getLogger(__name__)
 
 # Configuration - NVIDIA NIM (recommended, fast, free, multilingual)
 NVIDIA_API_BASE = "https://integrate.api.nvidia.com/v1/chat/completions"
-NVIDIA_MODEL = "minimaxai/minimax-m2.1"  # Fast responses, great for news
-# Alternative models:
-# - "deepseek-ai/deepseek-r1" (better reasoning, slower)
-# - "z-ai/glm4.7" (complex reasoning)
+
+# Every id below was checked against NVIDIA's live catalog on 2026-10-04:
+#   GET https://integrate.api.nvidia.com/v1/models
+# Do not invent ids — an unknown model returns HTTP 404, and while a missing
+# model used to cost a retry per article, it now silently disables summarization
+# for the whole run.
+# Previously this was "minimaxai/minimax-m2.1", which is not in that catalog —
+# no MiniMax model is. That sole wrong id meant every summary on the site was
+# just the RSS description.
+NVIDIA_MODEL = "z-ai/glm-5.3-flash"  # strong zh-TW/JA/EN, built for high request volume
+# Alternative models, all present in the catalog:
+# - "z-ai/glm-5.3"                 (same family, higher quality, slower)
+# - "deepseek-ai/deepseek-v4.1-flash"  (fast, strong zh/en)
+# - "moonshotai/kimi-k2.6"         (long-context source articles)
+# - "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
 
 # Configuration - Zeabur AI Hub (recommended, fast and reliable)
 ZEABUR_API_BASE = "https://hnd1.aihub.zeabur.ai/v1/chat/completions"
