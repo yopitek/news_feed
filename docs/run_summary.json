@@ -1,8 +1,8 @@
 {
   "run_date": "2026-10-04",
-  "start_time": "2026-10-04T06:45:54.964728+08:00",
-  "end_time": "2026-10-04T06:46:40.828217+08:00",
-  "duration_seconds": 45.86,
+  "start_time": "2026-10-04T06:50:29.171778+08:00",
+  "end_time": "2026-10-04T06:51:10.086089+08:00",
+  "duration_seconds": 40.91,
   "feeds_fetched": 1210,
   "articles_normalized": 683,
   "articles_deduplicated": 578,
@@ -267,7 +267,7 @@
   },
   "dcard_snapshot": {
     "collected_at": "2026-10-03T23:11:29+08:00",
-    "age_hours": 7.6,
+    "age_hours": 7.7,
     "boards": [
       {
         "slug": "tech_job",
@@ -298,7 +298,7 @@
   },
   "ptt_snapshot": {
     "collected_at": "2026-10-03T23:11:12+08:00",
-    "age_hours": 7.6,
+    "age_hours": 7.7,
     "boards": [
       {
         "board": "Gossiping",
