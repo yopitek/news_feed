@@ -9,18 +9,36 @@ them coexist with the existing pipeline.
 
 | Source | Reachable from CI? | Recommended surface | Kept data |
 |--------|--------------------|---------------------|-----------|
-| PTT | ✅ yes | board index page (`/bbs/<Board>/index.html`) | title, link, 推文數, author, `M/D` |
-| PTT (fallback) | ✅ yes | official Atom (`/atom/<Board>.xml`) | title, link, ISO timestamp (no push count) |
+| PTT | ❌ **no — HTTP 403** (datacenter IP block) | local plain HTTP → committed JSON snapshot | title, link, 推文數, author, `M/D` |
+| PTT (from a TW IP) | ✅ yes | board index page (`/bbs/<Board>/index.html`) | title, link, 推文數, author, `M/D` |
+| PTT (fallback) | ❌ no — also 403 | official Atom (`/atom/<Board>.xml`) | title, link, ISO timestamp (no push count) |
 | Dcard | ❌ no — HTTP 403 + Cloudflare Turnstile | local Brave session → committed JSON snapshot | title, link, ISO timestamp, 愛心/留言/分享, school |
 
 Evidence gathered on 2026-10-03:
 
 * `https://www.ptt.cc/robots.txt` → **404** (no robots policy published); PTT publishes no AI-crawler directives.
-* `https://www.ptt.cc/bbs/Gossiping/index.html` → **200**, 13 rows parsed.
-* `https://www.ptt.cc/atom/Stock.xml` → **200**, valid Atom.
 * `https://www.dcard.tw/robots.txt` → only disallows `/emails/activate`; no AI policy.
 * `curl` / `urllib` (browser-like headers) / `curl_cffi(impersonate="chrome")` against `dcard.tw/f/*` → **403**, body is the Turnstile challenge page.
-* The same pages load fine in a real Brave session, so collection is delegated to the operator's machine.
+* The same Dcard pages load fine in a real Brave session, so collection is delegated to the operator's machine.
+
+### ⚠️ Correction: PTT is NOT reachable from CI
+
+Section 1 originally claimed PTT returned **200** from a "clean CI-like
+environment". That was measured from this machine and the inference was wrong.
+The first real GitHub Actions run (2026-10-03, run `37130414564`) settled it:
+
+| From | `ptt.cc/bbs/*/index.html` | `ptt.cc/atom/*.xml` |
+|------|---------------------------|---------------------|
+| This machine (Taiwan residential IP) | **200** | **200** |
+| GitHub Actions runner (Azure, US) | **403** | **403** |
+
+All five boards *and* all five Atom fallbacks returned 403, and `Tab 'ptt_hot': 0
+total entries` shipped an empty tab to the live site. PTT blocks datacenter IP
+ranges. The lesson is recorded here because the failure mode is invisible locally —
+only a real CI run exposes it.
+
+Consequence: PTT now uses the same snapshot architecture as Dcard, and the live
+path is a bonus for local runs rather than the primary source.
 
 ---
 
@@ -46,11 +64,25 @@ silently change behaviour.
 | `type` | Collector |
 |--------|-----------|
 | `rss` (default) | `feed_fetcher.fetch_feed` |
-| `ptt_list` | `ptt_fetcher.fetch_ptt_board` |
+| `ptt_list` | `ptt_fetcher.fetch_ptt_board`, falling back to `snapshot_loader.load_ptt_board` |
 | `dcard_snapshot` | `snapshot_loader.load_dcard_board` |
 
 Unknown types produce a `config_error` row in the health table instead of silently
 falling back to RSS.
+
+The `ptt_list` fallback chain is:
+
+```
+fetch_ptt_board (live)  ──ok / ok_atom_fallback──────────────────► rows
+      │
+      └─ policy_blocked (403/429) or empty ──► load_ptt_board (data/ptt_latest.json)
+                                                    │
+                                                    ├─ rows ──► status 'ok_snapshot'
+                                                    └─ none ──► status 'policy_blocked'
+```
+
+Statuses surfaced in the health table: `ok`, `ok_atom_fallback`, `ok_snapshot`,
+`policy_blocked`, `empty`, `snapshot_missing`, `config_error`.
 
 ---
 
@@ -121,19 +153,20 @@ Atom-fallback rows from jumping to the top of the PTT tab.
 
 ---
 
-## 5. The Dcard snapshot
+## 5. The snapshots
 
 ```
-tools/collect_dcard.py         (local: bsk + Brave)
-        │  writes
+tools/collect_dcard.py   (local: bsk + Brave)          ─┐
+tools/collect_ptt.py     (local: plain HTTP)           ─┴─ tools/daily_social_sync.sh
+        │  write                                          (LaunchAgent, 07:30 daily)
         ▼
-data/dcard_latest.json         (committed to the repo)
+data/dcard_latest.json   data/ptt_latest.json          (committed to the repo)
         │  read by
         ▼
 src/snapshot_loader.py  →  pipeline  →  docs/index.html
 ```
 
-Snapshot schema:
+Dcard snapshot schema:
 
 ```json
 {
@@ -147,20 +180,52 @@ Snapshot schema:
 }
 ```
 
+PTT snapshot schema:
+
+```json
+{
+  "schema_version": 1,
+  "collected_at": "2026-10-03T23:02:07+08:00",
+  "collector": "tools/collect_ptt.py (direct HTTP)",
+  "requested_boards": ["Gossiping", "Stock", "Tech_Job", "Soft_Job", "PC_Shopping"],
+  "boards": [{"board": "Stock", "name": "股票板", "status": "ok", "count": 9}],
+  "posts": [{"board": "Stock", "board_name": "股票板", "title": "...", "link": "...",
+             "published": "2026-10-03", "author": "waitrop",
+             "push": 100, "push_label": "爆", "date_precision": "day"}]
+}
+```
+
 Design decisions worth keeping:
 
-1. **One page load per board**, 2s settle, 1s between nav calls. No pagination, no
-   infinite scroll — we take the board's own front page.
-2. **Never blank the tab.** A run that collects zero posts refuses to overwrite an
+1. **One page load per board**, 2s settle for Dcard, 1s between live PTT boards. No
+   pagination, no infinite scroll — we take the board's own front page.
+2. **Never blank the tab.** A run that collects zero rows refuses to overwrite an
    existing non-empty snapshot and exits non-zero.
-3. **Metrics are read from SVG path signatures**, not button index. Dcard renders
-   a variable number of reaction-emoji buttons, which shifts positions; the heart
-   (`M7.999 14s6.666-3.917…`) and speech bubble (`M6.475 11.206v1.343…`) paths are
-   stable across cards.
-4. **The timestamp comes from `<time datetime="…">`**, an absolute ISO value — not
-   from the relative "19 小時" label that is also on the card.
+3. **Dcard metrics are read from SVG path signatures**, not button index. Dcard
+   renders a variable number of reaction-emoji buttons, which shifts positions; the
+   heart (`M7.999 14s6.666-3.917…`) and speech bubble (`M6.475 11.206v1.343…`) paths
+   are stable across cards.
+4. **Dcard's timestamp comes from `<time datetime="…">`**, an absolute ISO value —
+   not from the relative "19 小時" label that is also on the card.
 5. **The page always prints the snapshot time**, and flags it in red past 48h, so a
    stale snapshot is visible rather than silent.
+6. **`collect_ptt.py` reads its board list from `config/feeds.yaml`**, not a second
+   hard-coded list, so the snapshot cannot drift from what the pipeline expects.
+7. **PTT needs no browser.** It is a plain server-side fetch that only fails on
+   blocked IP ranges — running it through `bsk` + Brave would be slower for no gain.
+
+### Policy blocks are not retried
+
+A 403/429 from PTT raises `PttPolicyBlocked` instead of entering the retry loop.
+Retrying a refusal cannot succeed and costs ~7s of exponential backoff per board —
+with 5 boards × 2 surfaces that is roughly 45s of dead time per board, ~225s per run.
+
+A module-level breaker (`ptt_fetcher._LIVE_AVAILABLE`) then makes every later board
+return `policy_blocked` instantly, without touching the network. `reset_live_state()`
+clears it at the start of each run, since the next process may be on a different
+network (laptop vs CI runner).
+
+Measured effect on the full pipeline: **976s → 78s**.
 
 ---
 
@@ -178,14 +243,24 @@ Dcard — verified against `https://www.dcard.tw/forum/popular`:
 ⚠️ `soft_job` and `salary` are **not** Dcard boards — both return「找不到頁面」.
 They were tried first and rejected.
 
-PTT: `Gossiping`, `Stock`, `Tech_Job`, `Soft_Job`, `PC_Shopping` — all HTTP 200.
+PTT: `Gossiping`, `Stock`, `Tech_Job`, `Soft_Job`, `PC_Shopping` — all HTTP 200
+from a Taiwan IP, all 403 from CI.
 
 ---
 
 ## 7. Verification performed
 
-* `pytest tests/` → 45 passed (11 new cases: push parsing, date inference, index
-  parsing, engagement ranking, snapshot loading).
-* Full pipeline run: 72 sources → 6 tabs rendered, snapshot notice present,
-  `output/run_summary.json` carries `dcard_snapshot` and the new tab categories.
-* Snapshot collection: 84 posts from 4/4 boards.
+* `pytest tests/` → **62 passed** (26 new cases: push parsing, date inference, index
+  parsing, engagement ranking, snapshot loading, PTT policy-block handling, snapshot
+  notice rendering).
+* Full pipeline, CI path simulated with `PTT_FORCE_SNAPSHOT=1`:
+  72 sources → 6 tabs, 222 articles, exit 0, 78s.
+  PTT tab: 62 snapshot rows → 38 selected across 5 sections, all with 推 badges.
+  Dcard tab: 85 snapshot rows → 32 selected across 4 sections.
+* Live path (this machine): `collect_ptt.py` → 62 rows from 5/5 boards.
+* `pytest` regression guard on the badge whitelist — the snapshot path introduced a
+  third PTT `origin` (`ptt_snapshot`), and an `origin` missing from
+  `format_metric_badge`'s list silently drops the 推文數. That bug was hit and is now
+  covered by a parametrised test over all three origins.
+* End-to-end scheduled job: `tools/daily_social_sync.sh` run under `env -i` (launchd's
+  minimal environment) → both collectors succeed, snapshots commit and push.

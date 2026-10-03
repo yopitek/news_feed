@@ -18,7 +18,7 @@ A fully automated daily news digest system that aggregates RSS feeds from Chines
 RssNews2/
 ├── .github/workflows/     # GitHub Actions workflow
 ├── config/                # RSS feeds & classification rules
-├── data/                  # Committed snapshots (Dcard)
+├── data/                  # Committed snapshots (Dcard, PTT)
 ├── src/                   # Python source code
 ├── templates/             # HTML templates
 ├── tools/                 # Local collectors (run on your own machine)
@@ -53,7 +53,8 @@ pip install -r requirements.txt
 export NVIDIA_API_KEY="nvapi-your-api-key"
 export DEBUG_MODE="true"
 
-# 5. Refresh the Dcard snapshot (see "Community tabs" below)
+# 5. Refresh the community snapshots (see "Snapshots" below)
+python3 tools/collect_ptt.py
 python3 tools/collect_dcard.py
 
 # 6. Run pipeline
@@ -112,11 +113,20 @@ render without a 推 badge. `ptt.cc/robots.txt` returns 404 (no robots policy is
 published) and PTT publishes no AI-crawler directives; requests are rate-limited to
 one page per board with a delay between boards.
 
+> **⚠️ PTT blocks CI.** A GitHub Actions runner (Azure, US) gets HTTP 403 on every
+> board *and* every Atom fallback, which used to render an empty tab. A Taiwan
+> residential IP gets 200 on all of them. The pipeline therefore falls back to the
+> committed `data/ptt_latest.json` — see [Snapshots](#-snapshots-why-two-tabs-are-not-fetched-live).
+
 Two kinds of row are dropped before ranking: the pinned (置底) block after
 `<div class="r-list-sep">`, and `[公告]` titles. Both are moderator notices that
 would otherwise dominate a push-ranked list. Only `index.html` is fetched — measured
 on 2026-10-03, PTT pages ≥ 2 are a 熱門文章 archive rather than a chronological
 continuation (Stock page 2 spanned Aug–Sep, PC_Shopping's reached back to 2025-10).
+
+A 403/429 is **not retried** — retrying a refusal only adds ~7s of backoff per
+board. It raises `PttPolicyBlocked` and trips a module-level breaker so the
+remaining four boards skip the live attempt entirely.
 
 ### Dcard 熱門 (`dcard_hot`)
 Fed from a committed snapshot, ranked by 愛心數:
@@ -136,42 +146,69 @@ Community sources need more than `feedparser`, so `config/feeds.yaml` sources ca
 | `type` | Collector | Runs where |
 |--------|-----------|------------|
 | `rss` (default) | `src/feed_fetcher.fetch_feed` | anywhere |
-| `ptt_list` | `src/ptt_fetcher.fetch_ptt_board` | anywhere (incl. CI) |
+| `ptt_list` | `src/ptt_fetcher.fetch_ptt_board`, falling back to the snapshot | live only from a Taiwan IP |
 | `dcard_snapshot` | `src/snapshot_loader.load_dcard_board` | anywhere, reads a committed file |
 
-### Why Dcard needs a local collector
+## 📸 Snapshots: why two tabs are not fetched live
 
-Dcard sits behind Cloudflare. Server-side requests — `curl`, `urllib` with browser-like
-headers, and `curl_cffi` with a Chrome TLS fingerprint — all end at HTTP 403 with a
-Turnstile challenge, so the Actions runner cannot read Dcard. Dcard's `robots.txt`
-only disallows `/emails/activate` and the site publishes no AI-crawler policy, so
-reading the public board listings from a real browser is compliant.
+Neither community source can be read from GitHub Actions, for two unrelated reasons:
 
-The operator therefore collects on their own machine with Brave and commits a JSON
-snapshot that CI reads and renders:
+| Source | Blocker | Measured 2026-10-03 |
+|--------|---------|---------------------|
+| **Dcard** | Cloudflare | `curl`, `urllib` with browser-like headers, and `curl_cffi` with a Chrome TLS fingerprint all end at HTTP 403 + Turnstile |
+| **PTT** | Datacenter IP block | 403 on all 5 boards *and* all 5 Atom fallbacks from an Actions runner; 200 on all of them from this machine |
+
+Both `robots.txt` files permit it (Dcard's only disallows `/emails/activate`; PTT's
+returns 404) and neither site publishes an AI-crawler policy, so reading these public
+listings is compliant. We keep the collection rate low — one page load per board.
+
+### Collecting
 
 ```bash
-# Collect (requires the `bsk` CLI + a connected Brave browser)
+# PTT — plain HTTP, ~10s, no browser needed
+python3 tools/collect_ptt.py
+python3 tools/collect_ptt.py --dry-run               # inspect, write nothing
+python3 tools/collect_ptt.py --boards Stock,Tech_Job
+
+# Dcard — requires the `bsk` CLI + a connected Brave browser
 python3 tools/collect_dcard.py
-
-# Options
-python3 tools/collect_dcard.py --dry-run                  # inspect, write nothing
-python3 tools/collect_dcard.py --session <id>             # reuse an open session
-python3 tools/collect_dcard.py --boards tech_job,money    # subset
-python3 tools/collect_dcard.py --limit 30                 # posts per board
+python3 tools/collect_dcard.py --dry-run
+python3 tools/collect_dcard.py --session <id>        # reuse an open session
+python3 tools/collect_dcard.py --boards tech_job,money
+python3 tools/collect_dcard.py --limit 30            # posts per board
 ```
 
-The script refuses to overwrite a non-empty snapshot with an empty one, so a
-Cloudflare hiccup cannot silently blank the tab. The Dcard tab always shows the
-snapshot timestamp and flags data older than 48 hours.
+Written to `data/ptt_latest.json` and `data/dcard_latest.json`. Both collectors
+refuse to overwrite a non-empty snapshot with an empty one, so a transient failure
+cannot silently blank a tab. Both tabs show the snapshot timestamp and flag data
+older than 48 hours.
 
-**Daily schedule on macOS** (runs 30 minutes before the 08:00 digest):
+`collect_ptt.py` reads its board list from `config/feeds.yaml` (`ptt_hot.sources`)
+so the snapshot can never drift from what the pipeline expects.
+
+### Verifying the CI path from a machine that *can* reach PTT
 
 ```bash
-crontab -e
-# refresh the Dcard snapshot, then push so Actions picks it up
-30 7 * * * cd /path/to/news_feed && /usr/bin/python3 tools/collect_dcard.py && git add data/dcard_latest.json && git commit -m "chore: refresh Dcard snapshot" && git push
+PTT_FORCE_SNAPSHOT=1 python -m src.main    # start already-blocked; uses data/ptt_latest.json
 ```
+
+### Scheduling (macOS, LaunchAgent)
+
+Both collectors run 30 minutes before the 08:00 digest so CI renders a snapshot
+captured the same morning:
+
+```bash
+launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.benny.social-sync.plist
+launchctl print    gui/$(id -u)/com.benny.social-sync
+launchctl kickstart -k gui/$(id -u)/com.benny.social-sync   # run once now
+```
+
+Logs: `logs/social_sync.log` (authoritative), `logs/launchd.{out,err}.log`.
+The plist template lives at `tools/com.benny.social-sync.plist`.
+
+> Prefer a LaunchAgent over `cron`: launchd re-runs a job missed while the Mac was
+> asleep, and `cron` is subject to macOS TCC (a repo under `~/Documents` needs Full
+> Disk Access for `/usr/sbin/cron`).
 
 ### Ranking & time window
 

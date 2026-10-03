@@ -238,8 +238,19 @@ tabs:
   # Aug–Sep, Tech_Job Jan–Apr, PC_Shopping 2025-10. Pulling them in would inject
   # months-old posts into a push-ranked tab. (`src/ptt_fetcher` still supports
   # `pages:` for a source that wants it; default is 1.)
-  # Verified HTTP 200 from CI on 2026-10-03. ptt.cc/robots.txt returns 404
-  # (no robots policy published) and PTT publishes no AI-crawler directives.
+  #
+  # ⚠️ PTT BLOCKS CI. Measured 2026-10-03: a GitHub Actions runner (Azure, US)
+  # receives HTTP 403 on every board AND every Atom fallback, producing an empty
+  # tab; a Taiwan residential IP receives 200 on all of them. The pipeline
+  # therefore falls back to `data/ptt_latest.json`, refreshed on the operator's
+  # machine by `tools/collect_ptt.py` (plain HTTP — no browser needed) and
+  # published by `tools/daily_social_sync.sh`.
+  # A 403/429 raises PttPolicyBlocked, which is NOT retried and trips a breaker
+  # so the remaining boards skip the live attempt (~45s each in wasted backoff).
+  # To exercise the CI path from a machine that can reach PTT:
+  #   PTT_FORCE_SNAPSHOT=1 python -m src.main
+  # ptt.cc/robots.txt returns 404 (no robots policy published) and PTT publishes
+  # no AI-crawler directives.
   # ============================================
   ptt_hot:
     name: PTT 熱門

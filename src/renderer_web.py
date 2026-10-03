@@ -72,7 +72,7 @@ def format_metric_badge(article: ArticleWithSummary) -> str:
             parts.append(f"留言 {metrics['comment']}")
         if metrics.get('author'):
             parts.append(escape_html(str(metrics['author'])))
-    elif origin in ('ptt_list', 'ptt_atom'):
+    elif origin in ('ptt_list', 'ptt_atom', 'ptt_snapshot'):
         label = metrics.get('push_label')
         if label:
             parts.append(f"推 {escape_html(str(label))}")
@@ -204,20 +204,30 @@ def render_source_panel(
 </div>'''
 
 
-def render_snapshot_notice(snapshot_meta: dict | None, board_count: int = 0) -> str:
+def render_snapshot_notice(
+    snapshot_meta: dict | None,
+    board_count: int = 0,
+    label: str = 'Dcard',
+    collector: str = 'python3 tools/collect_dcard.py',
+    live_ok_text: str = '',
+) -> str:
     """
     Render the "data captured on <time>" banner for locally-collected tabs.
 
-    The Dcard tab is fed from a snapshot committed to the repo, not from a live
-    fetch, so readers must be told how old the data is.
+    Both the Dcard and PTT tabs are normally fed from a snapshot committed to the
+    repo rather than a live fetch, so readers must be told how old the data is.
+    `live_ok_text`, when given, replaces the banner entirely — used when PTT was
+    fetched live (the operator is on a Taiwan IP and the data really is fresh).
     """
     meta = snapshot_meta or {}
     collected_at = meta.get('collected_at')
     if not collected_at:
+        if live_ok_text:
+            return f'<p class="snapshot-notice snapshot-notice--fresh">{live_ok_text}</p>'
         return (
-            '<p class="snapshot-notice snapshot-notice--stale">'
-            '尚未取得 Dcard 快照資料，本頁目前無內容。'
-            f'請於本機執行 <code>python3 tools/collect_dcard.py</code> 後重新產生。'
+            f'<p class="snapshot-notice snapshot-notice--stale">'
+            f'尚未取得 {label} 快照資料，本頁目前無內容。'
+            f'請於本機執行 <code>{escape_html(collector)}</code> 後重新產生。'
             '</p>'
         )
 
@@ -239,7 +249,7 @@ def render_snapshot_notice(snapshot_meta: dict | None, board_count: int = 0) -> 
     return (
         f'<p class="snapshot-notice snapshot-notice--{freshness}">'
         f'{" · ".join(bits)}　'
-        '<span class="snapshot-hint">本區資料由本機瀏覽器收集後隨網站更新，非即時抓取。</span>'
+        '<span class="snapshot-hint">本區資料由本機收集後隨網站更新，非即時抓取。</span>'
         '</p>'
     )
 
@@ -270,7 +280,8 @@ def render_web(
     run_stats: dict | None = None,
     ptt_sources: list[dict] | None = None,
     dcard_sources: list[dict] | None = None,
-    snapshot_meta: dict | None = None
+    snapshot_meta: dict | None = None,
+    ptt_snapshot_meta: dict | None = None
 ) -> str:
     """
     Render web HTML with JavaScript tabs, grouped by category.
@@ -284,6 +295,8 @@ def render_web(
         ptt_sources: PTT board list for the PTT source panel
         dcard_sources: Dcard board list for the Dcard source panel
         snapshot_meta: Collection time / counts of the Dcard snapshot
+        ptt_snapshot_meta: Collection time / counts of the PTT snapshot (empty
+            when PTT was fetched live)
     
     Returns:
         Complete HTML string
@@ -313,7 +326,15 @@ def render_web(
     dcard_sources_content = render_source_panel(
         dcard_sources, None, title='Dcard 看板', status_text='依愛心數排序'
     )
-    dcard_notice = render_snapshot_notice(snapshot_meta, len(dcard_sources or []))
+    dcard_notice = render_snapshot_notice(
+        snapshot_meta, len(dcard_sources or []),
+        label='Dcard', collector='python3 tools/collect_dcard.py',
+    )
+    ptt_notice = render_snapshot_notice(
+        ptt_snapshot_meta, len(ptt_sources or []),
+        label='PTT', collector='python3 tools/collect_ptt.py',
+        live_ok_text='本區為即時抓取（本機執行，PTT 直連成功）。',
+    )
     pipeline_status = render_pipeline_status(run_stats, source_health)
     
     html = template.replace('{{DATE_DISPLAY}}', date_str)
@@ -324,6 +345,7 @@ def render_web(
     html = html.replace('{{TECH_BLOGS_SOURCES}}', tech_sources_content)
     html = html.replace('{{PTT_HOT_ITEMS}}', ptt_content)
     html = html.replace('{{PTT_HOT_SOURCES}}', ptt_sources_content)
+    html = html.replace('{{PTT_SNAPSHOT_NOTICE}}', ptt_notice)
     html = html.replace('{{DCARD_HOT_ITEMS}}', dcard_content)
     html = html.replace('{{DCARD_HOT_SOURCES}}', dcard_sources_content)
     html = html.replace('{{DCARD_SNAPSHOT_NOTICE}}', dcard_notice)

@@ -20,6 +20,7 @@ DEFAULT_MAX_ITEMS = 20
 DEFAULT_USER_AGENT = "NewsDigest/1.0 (RSS Reader)"
 LAST_FETCH_STATS: list[dict] = []
 LAST_SNAPSHOT_META: dict = {}
+LAST_PTT_SNAPSHOT_META: dict = {}
 
 
 def get_last_fetch_stats() -> list[dict]:
@@ -30,6 +31,16 @@ def get_last_fetch_stats() -> list[dict]:
 def get_last_snapshot_meta() -> dict:
     """Metadata of the Dcard snapshot used by the latest run (may be empty)."""
     return dict(LAST_SNAPSHOT_META)
+
+
+def get_last_ptt_snapshot_meta() -> dict:
+    """
+    Metadata of the PTT snapshot used by the latest run.
+
+    Empty when PTT was fetched live (i.e. we are running on a Taiwan IP), so the
+    renderer can show the "captured at ..." banner only when it is true.
+    """
+    return dict(LAST_PTT_SNAPSHOT_META)
 
 
 def summarize_source_health(stats: list[dict], selected: dict | None = None) -> dict:
@@ -65,12 +76,14 @@ def _fetch_non_rss(source: dict, timeout: int, retries: int, user_agent: str,
 
     if source_type == 'ptt_list':
         from .ptt_fetcher import fetch_ptt_board
+        from .snapshot_loader import load_ptt_board, load_ptt_snapshot, snapshot_meta
 
         board = source.get('board') or ''
         if not board:
             logger.error("ptt_list source %s has no `board`; skipping", source_name)
             return [], 'config_error'
-        return fetch_ptt_board(
+
+        entries, status = fetch_ptt_board(
             url=url,
             board=board,
             source_name=source_name,
@@ -81,6 +94,28 @@ def _fetch_non_rss(source: dict, timeout: int, retries: int, user_agent: str,
             max_items=max_items,
             pages=int(source.get('pages', 1) or 1),
         )
+        if status in ('ok', 'ok_atom_fallback'):
+            return entries, status
+
+        # Live PTT is unreachable from CI (403 on datacenter IPs). Fall back to
+        # the locally-collected snapshot rather than shipping an empty tab.
+        snapshot = load_ptt_snapshot()
+        board_name = source.get('board_name') or source.get('category') or board
+        fallback, snap_status = load_ptt_board(
+            board=board, board_name=board_name, source_name=source_name
+        )
+        if fallback:
+            if not LAST_PTT_SNAPSHOT_META:
+                LAST_PTT_SNAPSHOT_META.update(snapshot_meta(snapshot))
+                LAST_PTT_SNAPSHOT_META['live_status'] = status
+            logger.info(
+                "PTT %s: live fetch %s, served %d rows from snapshot",
+                source_name, status, len(fallback),
+            )
+            return fallback, 'ok_snapshot'
+
+        logger.warning("PTT %s: live %s and snapshot %s", source_name, status, snap_status)
+        return [], status
 
     if source_type == 'dcard_snapshot':
         from .snapshot_loader import load_dcard_board
@@ -219,6 +254,13 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
     results = {}
     LAST_FETCH_STATS.clear()
     LAST_SNAPSHOT_META.clear()
+    LAST_PTT_SNAPSHOT_META.clear()
+
+    # Fresh policy-block verdict per run: this process may be on a different
+    # network than the last one (laptop vs CI runner).
+    from .ptt_fetcher import reset_live_state
+
+    reset_live_state()
     
     for tab_id, tab_config in config.tabs.items():
         tab_entries = []
@@ -254,8 +296,9 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
                             'boards': snapshot.get('boards', []),
                             'total_posts': len(snapshot.get('posts', [])),
                         })
-                elif source_type == 'ptt_list' and entries:
-                    # PTT paginates politely: pause between boards.
+                elif source_type == 'ptt_list' and status == 'ok':
+                    # PTT paginates politely: pause between boards — but only
+                    # when we are actually talking to PTT (not on a snapshot).
                     from .ptt_fetcher import INTER_BOARD_DELAY
                     time.sleep(INTER_BOARD_DELAY)
 

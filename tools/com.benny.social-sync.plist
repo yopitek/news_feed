@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  Refreshes the Dcard and PTT snapshots for yopitek/news_feed every day at 07:30
+  local, 30 minutes before the 08:00 Asia/Taipei digest run on GitHub Actions.
+
+  Neither source can be read from CI:
+    Dcard  Cloudflare — 403 + Turnstile for every server-side request.
+    PTT    Blocks datacenter IPs — 403 on every board and every Atom fallback
+           from an Actions runner, 200 from this machine.
+  This machine collects both (Dcard via Brave/bsk, PTT over plain HTTP), commits
+  the snapshots, and the workflow renders them.
+
+  Manual run:   launchctl kickstart -k gui/$(id -u)/com.benny.social-sync
+  Logs:         ~/Project/news_feed/logs/social_sync.log   (script, authoritative)
+                ~/Project/news_feed/logs/launchd.out.log   (launchd stdout/stderr)
+-->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.benny.social-sync</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/goooolai/Project/news_feed/tools/daily_social_sync.sh</string>
+    </array>
+
+    <!-- 07:30 every day. If the Mac is asleep at that moment, launchd runs the
+         job once shortly after it wakes, so a missed slot is not lost. -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>7</integer>
+        <key>Minute</key>
+        <integer>30</integer>
+    </dict>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/goooolai/Project/news_feed</string>
+
+    <key>StandardOutPath</key>
+    <string>/Users/goooolai/Project/news_feed/logs/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/goooolai/Project/news_feed/logs/launchd.err.log</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+
+    <key>ProcessType</key>
+    <string>Background</string>
+
+    <!-- Do not restart on exit: this is a calendar job, not a daemon. -->
+    <key>KeepAlive</key>
+    <false/>
+</dict>
+</plist>

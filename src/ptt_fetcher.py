@@ -13,15 +13,28 @@ are reachable from CI without any browser:
    → reliable timestamps but no push count. Used only as a fallback when the
      index page cannot be parsed.
 
-Both were verified reachable (HTTP 200) from a clean CI-like environment on
-2026-10-03. `https://www.ptt.cc/robots.txt` returns 404 (no robots policy
-published), and PTT publishes no AI-crawler directives. Requests are rate-limited
-to one per board with a polite User-Agent and a short delay between boards.
+⚠️ BOTH surfaces are reachable only from a Taiwan residential IP.
+
+Measured 2026-10-03: from this machine both return HTTP 200; from a GitHub
+Actions runner (Azure, US) **every** request — all 5 boards and all 5 Atom
+fallbacks — returns **HTTP 403 Forbidden**. PTT blocks datacenter/overseas
+ranges, so CI cannot use this module at all. The pipeline therefore falls back to
+`data/ptt_latest.json`, a snapshot collected locally by `tools/collect_ptt.py`;
+see `src/snapshot_loader.load_ptt_board`.
+
+`_fetch` treats 403/429 as a policy block: it does not retry (retrying a block is
+pointless and rude) and it trips a module-level breaker so the remaining boards
+skip the live attempt entirely instead of burning ~45s each on backoff.
+
+`https://www.ptt.cc/robots.txt` returns 404 (no robots policy published), and PTT
+publishes no AI-crawler directives. Requests are rate-limited to one per board
+with a polite User-Agent and a short delay between boards.
 """
 from __future__ import annotations
 
 import html as html_lib
 import logging
+import os
 import re
 import time
 from datetime import datetime, timedelta, timezone
@@ -39,6 +52,37 @@ DEFAULT_USER_AGENT = "NewsDigest/1.0 (RSS Reader)"
 DEFAULT_TIMEOUT = 15
 DEFAULT_RETRIES = 2
 INTER_BOARD_DELAY = 1.0
+
+# HTTP statuses that mean "PTT is refusing this client", not "try again later".
+# Measured 2026-10-03: GitHub Actions runners get 403 on every PTT URL.
+POLICY_BLOCK_STATUSES = frozenset({401, 403, 429})
+
+# Module-level breaker. None = untested, True = live works, False = blocked.
+# Once a block is seen, every later board in the same run skips the live fetch
+# instead of repeating 6 failing requests and ~7s of backoff each time.
+_LIVE_AVAILABLE: Optional[bool] = None
+
+
+def reset_live_state() -> None:
+    """
+    Forget the cached policy-block verdict. Call at the start of a run.
+
+    Set PTT_FORCE_SNAPSHOT=1 to start already-blocked. Useful for verifying the
+    CI fallback path from a machine that *can* reach PTT.
+    """
+    global _LIVE_AVAILABLE
+    blocked = (os.environ.get("PTT_FORCE_SNAPSHOT") or "").strip().lower()
+    _LIVE_AVAILABLE = False if blocked in ("1", "true", "yes") else None
+
+
+def live_available() -> Optional[bool]:
+    """Last observed reachability of PTT from this host (None = not tested yet)."""
+    return _LIVE_AVAILABLE
+
+
+class PttPolicyBlocked(RuntimeError):
+    """PTT answered with 403/429 — this client (probably a datacenter IP) is blocked."""
+
 
 # `<div class="r-ent">` is the per-row container on PTT board index pages.
 _ROW_SPLIT = '<div class="r-ent">'
@@ -196,12 +240,29 @@ def parse_board_index(page_html: str, board: str) -> list[dict]:
 
 
 def _fetch(url: str, timeout: int, retries: int, user_agent: str) -> Optional[requests.Response]:
+    """
+    GET one PTT URL.
+
+    Raises PttPolicyBlocked on 401/403/429 — retrying a refusal cannot help and
+    just adds ~7s of backoff per board. Returns None on ordinary transport
+    failures after the retry budget is spent.
+    """
+    global _LIVE_AVAILABLE
     backoff = [1, 2, 4]
     for attempt in range(retries + 1):
         try:
             response = requests.get(url, headers={"User-Agent": user_agent}, timeout=timeout)
+            if response.status_code in POLICY_BLOCK_STATUSES:
+                _LIVE_AVAILABLE = False
+                raise PttPolicyBlocked(
+                    f"PTT returned HTTP {response.status_code} for {url} — "
+                    "this host is blocked; falling back to the local snapshot"
+                )
             response.raise_for_status()
+            _LIVE_AVAILABLE = True
             return response
+        except PttPolicyBlocked:
+            raise
         except requests.exceptions.RequestException as exc:
             logger.warning(
                 "PTT request failed for %s (attempt %d/%d): %s", url, attempt + 1, retries + 1, exc
@@ -279,16 +340,27 @@ def fetch_ptt_board(
 
     Returns:
         (entries, status) where status is one of:
-          'ok'            index page parsed
+          'ok'                index page parsed
           'ok_atom_fallback'  index page unusable, Atom succeeded
-          'empty'         both surfaces returned nothing
+          'policy_blocked'    PTT refused this host (403/429) — use the snapshot
+          'empty'             both surfaces returned nothing
     """
     label = source_name or board
+
+    # Breaker: an earlier board in this run already proved PTT refuses us.
+    if _LIVE_AVAILABLE is False:
+        logger.info("PTT %s: live fetch skipped (host previously blocked)", label)
+        return [], "policy_blocked"
+
     entries: list[dict] = []
     seen: set[str] = set()
 
     for page in range(1, max(1, pages) + 1):
-        response = _fetch(_page_url(url, page), timeout, retries, user_agent)
+        try:
+            response = _fetch(_page_url(url, page), timeout, retries, user_agent)
+        except PttPolicyBlocked as exc:
+            logger.warning("PTT %s: %s", label, exc)
+            return [], "policy_blocked"
         if response is None:
             break
         page_entries = parse_board_index(response.text, board)
@@ -313,7 +385,11 @@ def fetch_ptt_board(
 
     logger.warning("PTT index %s parsed 0 rows; trying Atom fallback", label)
     if fallback_url:
-        entries = _fetch_atom(fallback_url, board, label, timeout, retries, user_agent, max_items)
+        try:
+            entries = _fetch_atom(fallback_url, board, label, timeout, retries, user_agent, max_items)
+        except PttPolicyBlocked as exc:
+            logger.warning("PTT %s atom: %s", label, exc)
+            return [], "policy_blocked"
         if entries:
             return entries, "ok_atom_fallback"
 

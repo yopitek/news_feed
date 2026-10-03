@@ -1,8 +1,9 @@
-"""Tests for the community tabs: PTT board listings and the Dcard snapshot."""
+"""Tests for the community tabs: PTT board listings and the Dcard/PTT snapshots."""
 import json
 from datetime import datetime, timedelta, timezone
 
 import pytest
+import requests
 
 from src.models import NormalizedArticle
 from src.ptt_fetcher import infer_year, parse_board_index, parse_post_date, parse_push_count
@@ -232,3 +233,324 @@ def test_ptt_page_url_pagination():
     assert _page_url(index, 1) == index
     assert _page_url(index, 2) == "https://www.ptt.cc/bbs/Stock/index2.html"
     assert _page_url(index, 3) == "https://www.ptt.cc/bbs/Stock/index3.html"
+
+
+# ---------------------------------------------------------------------------
+# PTT policy-block handling
+#
+# Measured 2026-10-03: a GitHub Actions runner (Azure, US) gets HTTP 403 on
+# every PTT URL — all 5 boards and all 5 Atom fallbacks — while a Taiwan
+# residential IP gets 200 on all of them. CI therefore cannot read PTT live and
+# must fall back to data/ptt_latest.json.
+# ---------------------------------------------------------------------------
+
+
+@pytest.fixture(autouse=True)
+def _reset_ptt_breaker():
+    """Keep the live/blocked verdict from leaking between tests."""
+    from src.ptt_fetcher import reset_live_state
+
+    reset_live_state()
+    yield
+    reset_live_state()
+
+
+class _FakeResponse:
+    def __init__(self, status_code: int, text: str = ""):
+        self.status_code = status_code
+        self.text = text
+        self.content = text.encode("utf-8")
+
+    def raise_for_status(self):
+        if self.status_code >= 400:
+            raise requests.HTTPError(f"HTTP {self.status_code}")
+
+
+def test_ptt_403_raises_policy_blocked_without_retrying(monkeypatch):
+    """A refusal must not be retried — retrying a block just wastes ~7s."""
+    import src.ptt_fetcher as ptt
+
+    calls = []
+
+    def fake_get(url, headers=None, timeout=None):
+        calls.append(url)
+        return _FakeResponse(403)
+
+    monkeypatch.setattr(ptt.requests, "get", fake_get)
+
+    entries, status = ptt.fetch_ptt_board(
+        url="https://www.ptt.cc/bbs/Stock/index.html",
+        board="Stock",
+        fallback_url="https://www.ptt.cc/atom/Stock.xml",
+        retries=2,
+    )
+    assert status == "policy_blocked"
+    assert entries == []
+    # Exactly one request: no retries on the index page, no Atom fallback.
+    assert len(calls) == 1
+    assert ptt.live_available() is False
+
+
+def test_ptt_breaker_skips_network_for_later_boards(monkeypatch):
+    """Once blocked, later boards must not touch the network at all."""
+    import src.ptt_fetcher as ptt
+
+    calls = []
+
+    def fake_get(url, headers=None, timeout=None):
+        calls.append(url)
+        return _FakeResponse(403)
+
+    monkeypatch.setattr(ptt.requests, "get", fake_get)
+
+    _, first = ptt.fetch_ptt_board(url="https://www.ptt.cc/bbs/Stock/index.html", board="Stock")
+    assert first == "policy_blocked"
+    assert len(calls) == 1
+
+    _, second = ptt.fetch_ptt_board(url="https://www.ptt.cc/bbs/Tech_Job/index.html", board="Tech_Job")
+    assert second == "policy_blocked"
+    # Still one: the breaker prevented the second request entirely.
+    assert len(calls) == 1
+
+
+def test_ptt_429_is_also_treated_as_a_block(monkeypatch):
+    import src.ptt_fetcher as ptt
+
+    monkeypatch.setattr(ptt.requests, "get", lambda *a, **k: _FakeResponse(429))
+    _, status = ptt.fetch_ptt_board(url="https://www.ptt.cc/bbs/Stock/index.html", board="Stock")
+    assert status == "policy_blocked"
+
+
+def test_ptt_500_is_not_a_block_and_still_retries(monkeypatch):
+    """Only 401/403/429 are policy blocks; a 5xx is transient."""
+    import src.ptt_fetcher as ptt
+
+    calls = []
+    monkeypatch.setattr(ptt.time, "sleep", lambda _s: None)
+
+    def fake_get(url, headers=None, timeout=None):
+        calls.append(url)
+        return _FakeResponse(500)
+
+    monkeypatch.setattr(ptt.requests, "get", fake_get)
+
+    _, status = ptt.fetch_ptt_board(
+        url="https://www.ptt.cc/bbs/Stock/index.html", board="Stock", retries=2
+    )
+    assert status == "empty"
+    assert len(calls) == 3  # retries + 1
+    assert ptt.live_available() is None
+
+
+# ---------------------------------------------------------------------------
+# PTT snapshot
+# ---------------------------------------------------------------------------
+
+
+def _write_ptt_snapshot(path) -> None:
+    path.write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "collected_at": "2026-10-03T23:05:00+08:00",
+                "collector": "tools/collect_ptt.py (direct HTTP)",
+                "requested_boards": ["Stock", "Tech_Job"],
+                "boards": [{"board": "Stock", "name": "股票板", "status": "ok", "count": 2}],
+                "posts": [
+                    {
+                        "board": "Stock",
+                        "board_name": "股票板",
+                        "title": "[新聞] 台積電傳與馬斯克合作",
+                        "link": "https://www.ptt.cc/bbs/Stock/M.1791016608.A.717.html",
+                        "published": "2026-10-03",
+                        "author": "waitrop",
+                        "push": 100,
+                        "push_label": "爆",
+                        "date_precision": "day",
+                        "summary": "",
+                    },
+                    {
+                        "board": "Tech_Job",
+                        "board_name": "科技業板",
+                        "title": "其他看板的文章不該被選進股票板",
+                        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1.html",
+                        "push": 3,
+                        "push_label": "3",
+                    },
+                ],
+            },
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
+
+
+def test_ptt_snapshot_loader(tmp_path):
+    from src.snapshot_loader import load_ptt_board
+
+    path = tmp_path / "ptt_latest.json"
+    _write_ptt_snapshot(path)
+
+    entries, status = load_ptt_board("Stock", "股票板", snapshot_path=path)
+    assert status == "ok"
+    assert len(entries) == 1  # the Tech_Job row must not leak into Stock
+    assert entries[0]["title"] == "[新聞] 台積電傳與馬斯克合作"
+    assert entries[0]["_metrics"]["push"] == 100
+    assert entries[0]["_metrics"]["push_label"] == "爆"
+    assert entries[0]["_metrics"]["author"] == "waitrop"
+    assert entries[0]["_metrics"]["origin"] == "ptt_snapshot"
+    # PTT index rows only carry M/D; the renderer must not invent a time.
+    assert entries[0]["_metrics"]["date_precision"] == "day"
+
+    missing, status = load_ptt_board("Nope", "不存在板", snapshot_path=path)
+    assert status == "empty"
+    assert missing == []
+
+
+def test_ptt_snapshot_missing_file_is_reported(tmp_path):
+    from src.snapshot_loader import load_ptt_board
+
+    entries, status = load_ptt_board("Stock", "股票板", snapshot_path=tmp_path / "absent.json")
+    assert status == "snapshot_missing"
+    assert entries == []
+
+
+def test_snapshot_meta_shape(tmp_path):
+    from src.snapshot_loader import snapshot_meta
+
+    path = tmp_path / "ptt_latest.json"
+    _write_ptt_snapshot(path)
+    meta = snapshot_meta(json.loads(path.read_text(encoding="utf-8")))
+    assert meta["collected_at"] == "2026-10-03T23:05:00+08:00"
+    assert meta["total_posts"] == 2
+    assert isinstance(meta["age_hours"], float)
+
+    assert snapshot_meta(None) == {}
+
+
+def test_fetch_non_rss_falls_back_to_snapshot_when_blocked(tmp_path, monkeypatch):
+    """
+    The CI end-to-end behaviour: PTT 403s, so the source is served from the
+    snapshot and reports status 'ok_snapshot' rather than an empty tab.
+    """
+    import src.ptt_fetcher as ptt
+    import src.snapshot_loader as snap
+    from src.feed_fetcher import _fetch_non_rss
+
+    path = tmp_path / "ptt_latest.json"
+    _write_ptt_snapshot(path)
+    monkeypatch.setattr(snap, "DEFAULT_PTT_SNAPSHOT_PATH", path)
+    monkeypatch.setattr(ptt.requests, "get", lambda *a, **k: _FakeResponse(403))
+
+    entries, status = _fetch_non_rss(
+        {
+            "type": "ptt_list",
+            "board": "Stock",
+            "board_name": "股票板",
+            "url": "https://www.ptt.cc/bbs/Stock/index.html",
+            "fallback_url": "https://www.ptt.cc/atom/Stock.xml",
+            "source_name": "PTT 股票板",
+        },
+        timeout=5,
+        retries=0,
+        user_agent="test",
+        max_items=30,
+    )
+    assert status == "ok_snapshot"
+    assert len(entries) == 1
+    assert entries[0]["_metrics"]["origin"] == "ptt_snapshot"
+
+
+def test_fetch_non_rss_reports_policy_blocked_when_snapshot_is_absent(tmp_path, monkeypatch):
+    """No snapshot + blocked host must surface the real reason, not 'empty'."""
+    import src.ptt_fetcher as ptt
+    import src.snapshot_loader as snap
+    from src.feed_fetcher import _fetch_non_rss
+
+    monkeypatch.setattr(snap, "DEFAULT_PTT_SNAPSHOT_PATH", tmp_path / "absent.json")
+    monkeypatch.setattr(ptt.requests, "get", lambda *a, **k: _FakeResponse(403))
+
+    entries, status = _fetch_non_rss(
+        {
+            "type": "ptt_list",
+            "board": "Stock",
+            "url": "https://www.ptt.cc/bbs/Stock/index.html",
+            "source_name": "PTT 股票板",
+        },
+        timeout=5,
+        retries=0,
+        user_agent="test",
+        max_items=30,
+    )
+    assert entries == []
+    assert status == "policy_blocked"
+
+
+# ---------------------------------------------------------------------------
+# Rendering the snapshot notice
+# ---------------------------------------------------------------------------
+
+
+def test_snapshot_notice_labels_the_collector_tool():
+    from src.renderer_web import render_snapshot_notice
+
+    html = render_snapshot_notice(None, label="PTT", collector="python3 tools/collect_ptt.py")
+    assert "tools/collect_ptt.py" in html
+    assert "PTT" in html
+    assert "snapshot-notice--stale" in html
+
+    html = render_snapshot_notice(None, label="Dcard", collector="python3 tools/collect_dcard.py")
+    assert "tools/collect_dcard.py" in html
+
+
+def test_snapshot_notice_shows_capture_time_and_goes_stale():
+    from src.renderer_web import render_snapshot_notice
+
+    fresh = render_snapshot_notice(
+        {"collected_at": "2026-10-03T23:05:00+08:00", "age_hours": 0.4, "total_posts": 62}, 5
+    )
+    assert "2026-10-03 23:05" in fresh
+    assert "62 篇" in fresh
+    assert "5 個看板" in fresh
+    assert "snapshot-notice--fresh" in fresh
+
+    stale = render_snapshot_notice(
+        {"collected_at": "2026-09-01T00:00:00+08:00", "age_hours": 800}, 5
+    )
+    assert "snapshot-notice--stale" in stale
+
+
+def test_snapshot_notice_says_live_when_ptt_was_fetched_directly():
+    """On a Taiwan IP the PTT tab is genuinely live, so no staleness banner."""
+    from src.renderer_web import render_snapshot_notice
+
+    html = render_snapshot_notice(
+        {}, label="PTT", live_ok_text="本區為即時抓取（本機執行，PTT 直連成功）。"
+    )
+    assert "即時抓取" in html
+    assert "尚未取得" not in html
+
+
+@pytest.mark.parametrize("origin", ["ptt_list", "ptt_atom", "ptt_snapshot"])
+def test_metric_badge_renders_for_every_ptt_origin(origin):
+    """
+    Regression guard: the snapshot fallback introduces a third PTT origin, and
+    an origin missing from the badge whitelist silently drops the 推文數 — the
+    single most important signal on the PTT tab.
+    """
+    from src.models import ArticleWithSummary
+    from src.renderer_web import format_metric_badge
+
+    article = ArticleWithSummary(
+        title="t",
+        link="https://www.ptt.cc/bbs/Stock/M.1.html",
+        published=datetime.now(timezone.utc),
+        source_name="PTT 股票板",
+        summary="",
+        tab="ptt_hot",
+        metrics={"origin": origin, "push": 42, "push_label": "42", "author": "waitrop"},
+    )
+    badge = format_metric_badge(article)
+    assert "推 42" in badge
+    assert "waitrop" in badge
+

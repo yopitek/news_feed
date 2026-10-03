@@ -20,6 +20,7 @@ from src.feed_fetcher import (
     fetch_all_feeds,
     get_last_fetch_stats,
     get_last_snapshot_meta,
+    get_last_ptt_snapshot_meta,
     summarize_source_health,
 )
 from src.normalizer import normalize_all
@@ -172,6 +173,7 @@ def main():
             dcard_sources = feeds_config.tabs['dcard_hot'].sources
 
         snapshot_meta = get_last_snapshot_meta()
+        ptt_snapshot_meta = get_last_ptt_snapshot_meta()
 
         render_stats = {
             'generated_at': start_time.strftime('%Y-%m-%d %H:%M %Z'),
@@ -188,6 +190,7 @@ def main():
             ptt_sources=ptt_sources,
             dcard_sources=dcard_sources,
             snapshot_meta=snapshot_meta,
+            ptt_snapshot_meta=ptt_snapshot_meta,
         )
         email_html = render_email(summarized, date_str)
         
@@ -253,6 +256,7 @@ def main():
             },
             'source_health': source_health,
             'dcard_snapshot': snapshot_meta,
+            'ptt_snapshot': ptt_snapshot_meta,
             'status': 'success'
         }
         

@@ -56,22 +56,31 @@ jobs:
       # ============================================
       # Generate Digest
       # ============================================
-      - name: Report Dcard snapshot freshness
+      - name: Report snapshot freshness
         continue-on-error: true
         run: |
           python -c "
           import json, pathlib
-          from datetime import datetime, timezone
-          p = pathlib.Path('data/dcard_latest.json')
-          if not p.exists():
-              print('::warning::data/dcard_latest.json is missing; the Dcard tab will be empty.')
-          else:
+          from datetime import datetime
+
+          # Dcard is Cloudflare-protected and PTT 403s datacenter IPs, so neither
+          # can be fetched from this runner. Both tabs are served from snapshots
+          # collected on the operator's machine by tools/daily_social_sync.sh.
+          targets = [
+              ('data/dcard_latest.json', 'Dcard'),
+              ('data/ptt_latest.json',   'PTT'),
+          ]
+          for rel, label in targets:
+              p = pathlib.Path(rel)
+              if not p.exists():
+                  print(f'::warning::{rel} is missing; the {label} tab will be empty.')
+                  continue
               snap = json.loads(p.read_text(encoding='utf-8'))
               collected = datetime.fromisoformat(snap['collected_at'])
               age = (datetime.now(collected.tzinfo) - collected).total_seconds() / 3600
-              print(f'Dcard snapshot collected {snap[\"collected_at\"]} ({age:.1f}h ago), {len(snap[\"posts\"])} posts')
+              print(f'{label} snapshot collected {snap[\"collected_at\"]} ({age:.1f}h ago), {len(snap[\"posts\"])} posts')
               if age > 72:
-                  print(f'::warning::Dcard snapshot is {age:.1f}h old. Run tools/collect_dcard.py to refresh it.')
+                  print(f'::warning::{label} snapshot is {age:.1f}h old. Run tools/daily_social_sync.sh to refresh it.')
           "
 
       - name: Run digest pipeline
