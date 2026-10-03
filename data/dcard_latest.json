@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "collected_at": "2026-10-03T22:10:33+08:00",
+  "collected_at": "2026-10-03T22:29:45+08:00",
   "collector": "tools/collect_dcard.py (bsk + Brave)",
   "requested_boards": [
     "tech_job",
@@ -13,7 +13,7 @@
       "slug": "tech_job",
       "name": "科技業板",
       "status": "ok",
-      "count": 20
+      "count": 21
     },
     {
       "slug": "ai_builder",
@@ -46,11 +46,11 @@
       "age_text": "21 小時",
       "author": "國立陽明交通大學",
       "excerpt": "如題，你各位有工作的可以參考看看，我離開科技業在家的狀況有多麼可怕，這就是失業的下場，早上九點起床，沒人催著你去上班，沒人告訴你現在要做甚麼，打開teams再也看不到同仁們的訊息與主管的諄諄教誨，懷念",
-      "like": 166,
-      "comment": 122,
-      "share": 93,
+      "like": 172,
+      "comment": 125,
+      "share": 95,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -64,27 +64,10 @@
       "author": "國立臺灣大學 資訊工程學系",
       "excerpt": "如題，先聲明不是我。這是我聽朋友說，他朋友的學長他們公司隔壁部門發生的事。那個部門有一個蠻機掰的主管，又把以前他整新人的爛招拿來對付一個剛進來的應屆畢業生。結果那個新人把事情告訴了整個組的同事，也直接",
       "like": 137,
-      "comment": 48,
+      "comment": 50,
       "share": 63,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
-    },
-    {
-      "board_slug": "tech_job",
-      "board_name": "科技業板",
-      "source_name": "Dcard 科技業板",
-      "title": "聯發科什麼公司啊",
-      "link": "https://www.dcard.tw/f/tech_job/p/262238210",
-      "published": "2026-10-02T02:15:32.490Z",
-      "published_local": "2026/10/02 10:15",
-      "age_text": "1 天",
-      "author": "國立臺灣大學",
-      "excerpt": "AI token使用上限一下就達標了，這要我怎麼工作",
-      "like": 137,
-      "comment": 137,
-      "share": 70,
-      "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -97,11 +80,11 @@
       "age_text": "1 天",
       "author": "國立臺灣大學",
       "excerpt": null,
-      "like": 142,
-      "comment": 29,
+      "like": 143,
+      "comment": 31,
       "share": 30,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -118,7 +101,7 @@
       "comment": 31,
       "share": 19,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -133,9 +116,9 @@
       "excerpt": "最近看到 Synopsys 跟 OpenAI 合作，要把生成式 AI 導入 EDA / IC design flow。想問一下業界前輩怎麼看，這類工具未來會不會大量取代 IC 工程師？尤其是：DE /",
       "like": 52,
       "comment": 104,
-      "share": 91,
+      "share": 93,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -152,7 +135,7 @@
       "comment": 63,
       "share": 129,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -169,7 +152,7 @@
       "comment": 36,
       "share": 9,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -186,7 +169,7 @@
       "comment": 20,
       "share": 23,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -203,7 +186,7 @@
       "comment": 78,
       "share": 106,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -220,7 +203,7 @@
       "comment": 22,
       "share": 26,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -237,7 +220,7 @@
       "comment": 29,
       "share": 9,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -254,7 +237,7 @@
       "comment": 31,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -271,7 +254,24 @@
       "comment": 31,
       "share": 34,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
+    },
+    {
+      "board_slug": "tech_job",
+      "board_name": "科技業板",
+      "source_name": "Dcard 科技業板",
+      "title": "南亞科調薪",
+      "link": "https://www.dcard.tw/f/tech_job/p/262244438",
+      "published": "2026-10-03T08:26:57.285Z",
+      "published_local": "2026/10/03 16:26",
+      "age_text": "6 小時",
+      "author": "工程師",
+      "excerpt": "RT，最近幾天看到板上不少調薪文，真的有點不太理解，為什麼公司可以把這次調薪搞得像是一場大內宣，甚至當成值得驕傲的事情。先不說隔壁邦邦一季就100萬，隔壁某光也是補償100萬再加RSU；反觀我們公司，",
+      "like": 21,
+      "comment": 31,
+      "share": 16,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -288,7 +288,7 @@
       "comment": 72,
       "share": 38,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -305,24 +305,7 @@
       "comment": 17,
       "share": 12,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
-    },
-    {
-      "board_slug": "tech_job",
-      "board_name": "科技業板",
-      "source_name": "Dcard 科技業板",
-      "title": "南亞科調薪",
-      "link": "https://www.dcard.tw/f/tech_job/p/262244438",
-      "published": "2026-10-03T08:26:57.285Z",
-      "published_local": "2026/10/03 16:26",
-      "age_text": "5 小時",
-      "author": "工程師",
-      "excerpt": "RT，最近幾天看到板上不少調薪文，真的有點不太理解，為什麼公司可以把這次調薪搞得像是一場大內宣，甚至當成值得驕傲的事情。先不說隔壁邦邦一季就100萬，隔壁某光也是補償100萬再加RSU；反觀我們公司，",
-      "like": 20,
-      "comment": 31,
-      "share": 16,
-      "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -332,14 +315,14 @@
       "link": "https://www.dcard.tw/f/tech_job/p/262242168",
       "published": "2026-10-02T17:11:25.231Z",
       "published_local": "2026/10/03 01:11",
-      "age_text": "20 小時",
+      "age_text": "21 小時",
       "author": "H",
       "excerpt": "歡迎各位分享，算是留個紀念，也為未來的兄弟姐妹們當個參考，本人：AP7 PE，以下皆包含節假日，D-4 收到面邀，D+0 面試，D+1 面試回饋表，D+7 廠測邀請 （英文免測），D+8 線上適性測驗",
-      "like": 12,
+      "like": 13,
       "comment": 13,
       "share": 19,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -354,9 +337,9 @@
       "excerpt": "頭上這間學碩，畢業那年都沒有收到面試，就先去別家蹲，今年過年前後面聯電（製程）、台積（設備），當時兩家都沒上，但應該年前面台積表現不錯，所以後續有收到2個面試，然後就上了 （歡呼，如果畢業後一直進不了",
       "like": 15,
       "comment": 8,
-      "share": 21,
+      "share": 22,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "tech_job",
@@ -369,11 +352,45 @@
       "age_text": "12 小時",
       "author": "B",
       "excerpt": "這幾天陸續收到新人發的運動會短袖＋一包貓頭鷹袋子🦉（裡面有外套、長褲、帽子），結果拿到實品才發現……，我是不是對自己的身材有什麼誤會🙂‍↕️，全部都訂太大了，想問問台南廠區的女生，有沒有人需要換尺寸的，運動",
-      "like": 10,
-      "comment": 19,
+      "like": 11,
+      "comment": 20,
       "share": 4,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:27+08:00"
+      "collected_at": "2026-10-03T22:29:39+08:00"
+    },
+    {
+      "board_slug": "tech_job",
+      "board_name": "科技業板",
+      "source_name": "Dcard 科技業板",
+      "title": "旺宏分紅",
+      "link": "https://www.dcard.tw/f/tech_job/p/262245039",
+      "published": "2026-10-03T10:58:06.014Z",
+      "published_local": "2026/10/03 18:58",
+      "age_text": "3 小時",
+      "author": "研發工程師",
+      "excerpt": "看到這篇文章有感而發，也來分享一下旺宏的現況，目前營收屢創新高，今年調薪仍維持3-6%，季獎金的部分就是0.25個月，公司回覆是目前公司仍在虧損，而且公司分紅比例15%是業內最高的，雖然本來就預期fl",
+      "like": 16,
+      "comment": 5,
+      "share": 16,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:29:39+08:00"
+    },
+    {
+      "board_slug": "tech_job",
+      "board_name": "科技業板",
+      "source_name": "Dcard 科技業板",
+      "title": "南亞科調薪",
+      "link": "https://www.dcard.tw/f/tech_job/p/262244438",
+      "published": "2026-10-03T08:26:57.285Z",
+      "published_local": "2026/10/03 16:26",
+      "age_text": "6 小時",
+      "author": "工程師",
+      "excerpt": "RT，最近幾天看到板上不少調薪文，真的有點不太理解，為什麼公司可以把這次調薪搞得像是一場大內宣，甚至當成值得驕傲的事情。先不說隔壁邦邦一季就100萬，隔壁某光也是補償100萬再加RSU；反觀我們公司，",
+      "like": null,
+      "comment": null,
+      "share": null,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:29:39+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -390,7 +407,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -407,7 +424,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -424,7 +441,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -441,7 +458,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -458,7 +475,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -475,7 +492,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -492,7 +509,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -509,7 +526,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -526,7 +543,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -543,7 +560,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -560,7 +577,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -577,7 +594,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -594,7 +611,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -611,7 +628,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -628,7 +645,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -645,7 +662,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -662,7 +679,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -679,7 +696,7 @@
       "comment": null,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -696,7 +713,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -713,7 +730,7 @@
       "comment": 208,
       "share": 96,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -730,7 +747,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -747,7 +764,7 @@
       "comment": null,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -764,7 +781,7 @@
       "comment": 2,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "ai_builder",
@@ -781,7 +798,7 @@
       "comment": null,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:29+08:00"
+      "collected_at": "2026-10-03T22:29:41+08:00"
     },
     {
       "board_slug": "3c",
@@ -798,7 +815,7 @@
       "comment": 22,
       "share": 7,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -815,7 +832,7 @@
       "comment": 9,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -832,7 +849,7 @@
       "comment": 8,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -849,7 +866,41 @@
       "comment": 18,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
+    },
+    {
+      "board_slug": "3c",
+      "board_name": "3C 板",
+      "source_name": "Dcard 3C 板",
+      "title": "#請益 請益 挑選手機問題",
+      "link": "https://www.dcard.tw/f/3c/p/262245352",
+      "published": "2026-10-03T12:11:37.582Z",
+      "published_local": "2026/10/03 20:11",
+      "age_text": "2 小時",
+      "author": "國立彰化師範大學",
+      "excerpt": "之前有po過一篇文，先感謝大家的建議，後來我選出兩款：V70 FE 5G 8G/256G，2.OPPO Reno16 F 8G/256G，品牌的部分我是以oppo、vivo優先，然後配8G/256G，",
+      "like": 2,
+      "comment": 3,
+      "share": null,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:29:43+08:00"
+    },
+    {
+      "board_slug": "3c",
+      "board_name": "3C 板",
+      "source_name": "Dcard 3C 板",
+      "title": "#請益 #請益 挑選手機問題",
+      "link": "https://www.dcard.tw/f/3c/p/262238350",
+      "published": "2026-10-02T02:51:03.789Z",
+      "published_local": "2026/10/02 10:51",
+      "age_text": "1 天",
+      "author": "國立彰化師範大學",
+      "excerpt": "最近打算買vivo y31 5g（8/256），請問有人買過這隻嗎？覺得用起來怎麼樣，我平常就是看看社群媒體、文書這樣，還是有推薦其它手機也可以，謝謝。//補充：預算抓10000",
+      "like": null,
+      "comment": null,
+      "share": null,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -859,14 +910,14 @@
       "link": "https://www.dcard.tw/f/3c/p/262241920",
       "published": "2026-10-02T16:15:43.063Z",
       "published_local": "2026/10/03 00:15",
-      "age_text": "21 小時",
+      "age_text": "22 小時",
       "author": "店員",
       "excerpt": "傳輸線只有 CE／中國認證，沒有 BSMI，可以在台灣使用嗎？看到一些傳輸線標示有中國大陸的檢驗／認證標章及 CE 認證，但沒有看到臺灣經濟部標準檢驗局（BSMI）的相關檢驗合格標識。想請問：一、這類",
       "like": 2,
       "comment": 9,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -883,7 +934,7 @@
       "comment": 6,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -900,7 +951,7 @@
       "comment": 8,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -917,41 +968,7 @@
       "comment": 2,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
-    },
-    {
-      "board_slug": "3c",
-      "board_name": "3C 板",
-      "source_name": "Dcard 3C 板",
-      "title": "#請益 請益 挑選手機問題",
-      "link": "https://www.dcard.tw/f/3c/p/262245352",
-      "published": "2026-10-03T12:11:37.582Z",
-      "published_local": "2026/10/03 20:11",
-      "age_text": "1 小時",
-      "author": "國立彰化師範大學",
-      "excerpt": "之前有po過一篇文，先感謝大家的建議，後來我選出兩款：V70 FE 5G 8G/256G，2.OPPO Reno16 F 8G/256G，品牌的部分我是以oppo、vivo優先，然後配8G/256G，",
-      "like": 2,
-      "comment": 3,
-      "share": null,
-      "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
-    },
-    {
-      "board_slug": "3c",
-      "board_name": "3C 板",
-      "source_name": "Dcard 3C 板",
-      "title": "#請益 #請益 挑選手機問題",
-      "link": "https://www.dcard.tw/f/3c/p/262238350",
-      "published": "2026-10-02T02:51:03.789Z",
-      "published_local": "2026/10/02 10:51",
-      "age_text": "1 天",
-      "author": "國立彰化師範大學",
-      "excerpt": "最近打算買vivo y31 5g（8/256），請問有人買過這隻嗎？覺得用起來怎麼樣，我平常就是看看社群媒體、文書這樣，還是有推薦其它手機也可以，謝謝。//補充：預算抓10000",
-      "like": null,
-      "comment": null,
-      "share": null,
-      "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -968,7 +985,7 @@
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -985,7 +1002,7 @@
       "comment": 4,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -1002,7 +1019,7 @@
       "comment": 3,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -1012,14 +1029,14 @@
       "link": "https://www.dcard.tw/f/3c/p/262243927",
       "published": "2026-10-03T06:17:18.577Z",
       "published_local": "2026/10/03 14:17",
-      "age_text": "7 小時",
+      "age_text": "8 小時",
       "author": "國立清華大學",
       "excerpt": "不好意思打擾，但因為書寫問題已經困擾我好一陣子，都沒辦法解決才發上來請教大家，我買的是小米Pad7，然後我沒有買原廠的筆（預算問題），最近已經試過三款通用的電容筆，但都沒有辦法正常書寫，反而用選舉那種",
       "like": null,
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -1036,7 +1053,7 @@
       "comment": 15,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -1053,7 +1070,7 @@
       "comment": 1,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -1063,14 +1080,14 @@
       "link": "https://www.dcard.tw/f/3c/p/262243286",
       "published": "2026-10-03T03:10:49.021Z",
       "published_local": "2026/10/03 11:10",
-      "age_text": "10 小時",
+      "age_text": "11 小時",
       "author": "K",
       "excerpt": "保固還在，但查了資料都說塑膠環斷裂不能用保固維修，想問問大家都怎麼辦",
       "like": 1,
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -1087,7 +1104,7 @@
       "comment": 18,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -1104,7 +1121,7 @@
       "comment": null,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "3c",
@@ -1121,7 +1138,7 @@
       "comment": 24,
       "share": null,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:31+08:00"
+      "collected_at": "2026-10-03T22:29:43+08:00"
     },
     {
       "board_slug": "money",
@@ -1134,11 +1151,28 @@
       "age_text": "1 天",
       "author": "刺繡師",
       "excerpt": "5年多過去了，我傳產月收入不高，從本金90萬開始存股，目標月月領5000～10000～15000，到今天10/2 終於可達月月領2萬了，股息皆來自，高股息+市值型+金融股+台積電，我參考所有財經網紅跟",
-      "like": 178,
+      "like": 180,
       "comment": 58,
-      "share": 254,
+      "share": 257,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
+    },
+    {
+      "board_slug": "money",
+      "board_name": "理財板",
+      "source_name": "Dcard 理財板",
+      "title": "我爸給我200萬，叫我別再肖想5000萬房產",
+      "link": "https://www.dcard.tw/f/money/p/262244742",
+      "published": "2026-10-03T09:38:34.847Z",
+      "published_local": "2026/10/03 17:38",
+      "age_text": "4 小時",
+      "author": "東海大學",
+      "excerpt": "我爸最近給了我200萬然後叫我以後不要跟哥哥弟弟爭市價5000萬的房地產 請問我現在還要努力嗎？200萬跟5000萬比起來像在打發乞丐一樣 請問各位你們會怎麼做？",
+      "like": 34,
+      "comment": 131,
+      "share": 26,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1152,27 +1186,10 @@
       "author": "國立臺灣大學",
       "excerpt": "我很會賺錢，三十歲基本月收二十，投資也不錯，現在總資產已經近三千，但我從小被教導要節儉，在偏鄉長大，店到店取貨要開車十分鐘，家裏有螳螂蝙蝠會闖進家那種，剛來台北工作以後才發現乾濕分離是什麼，到同事家還",
       "like": 30,
-      "comment": 75,
+      "comment": 76,
       "share": 38,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
-    },
-    {
-      "board_slug": "money",
-      "board_name": "理財板",
-      "source_name": "Dcard 理財板",
-      "title": "我爸給我200萬，叫我別再肖想5000萬房產",
-      "link": "https://www.dcard.tw/f/money/p/262244742",
-      "published": "2026-10-03T09:38:34.847Z",
-      "published_local": "2026/10/03 17:38",
-      "age_text": "4 小時",
-      "author": "東海大學",
-      "excerpt": "我爸最近給了我200萬然後叫我以後不要跟哥哥弟弟爭市價5000萬的房地產 請問我現在還要努力嗎？200萬跟5000萬比起來像在打發乞丐一樣 請問各位你們會怎麼做？",
-      "like": 32,
-      "comment": 123,
-      "share": 24,
-      "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1189,7 +1206,7 @@
       "comment": 20,
       "share": 5,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1203,10 +1220,10 @@
       "author": "W",
       "excerpt": "什麼時候開始都來得及，因為人生容錯率很大，隨時都能翻篇重新開始，先謝謝大家對我的文章踴躍的迴響，所以我決定有機會想到什麼主題就多分享，但當然以下一定也帶有我主觀的想法😆，1. 提升認知，我知道這個大家",
       "like": 23,
-      "comment": 18,
-      "share": 20,
+      "comment": 19,
+      "share": 22,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1223,7 +1240,7 @@
       "comment": 2,
       "share": 8,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1240,24 +1257,7 @@
       "comment": 15,
       "share": 5,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
-    },
-    {
-      "board_slug": "money",
-      "board_name": "理財板",
-      "source_name": "Dcard 理財板",
-      "title": "都快五萬點了誰帳上還是虧？",
-      "link": "https://www.dcard.tw/f/money/p/262241522",
-      "published": "2026-10-02T14:57:42.171Z",
-      "published_local": "2026/10/02 22:57",
-      "age_text": "23 小時",
-      "author": "我是錚",
-      "excerpt": "非農數據公佈後，美股歡騰😁",
-      "like": 9,
-      "comment": 32,
-      "share": 8,
-      "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1274,7 +1274,24 @@
       "comment": 9,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
+    },
+    {
+      "board_slug": "money",
+      "board_name": "理財板",
+      "source_name": "Dcard 理財板",
+      "title": "都快五萬點了誰帳上還是虧？",
+      "link": "https://www.dcard.tw/f/money/p/262241522",
+      "published": "2026-10-02T14:57:42.171Z",
+      "published_local": "2026/10/02 22:57",
+      "age_text": "23 小時",
+      "author": "我是錚",
+      "excerpt": "非農數據公佈後，美股歡騰😁",
+      "like": 9,
+      "comment": 32,
+      "share": 8,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1291,7 +1308,7 @@
       "comment": null,
       "share": 9,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1308,7 +1325,7 @@
       "comment": 5,
       "share": 4,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1325,7 +1342,7 @@
       "comment": 1,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1342,7 +1359,7 @@
       "comment": 1,
       "share": 1,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1359,7 +1376,7 @@
       "comment": 2,
       "share": 2,
       "has_image": false,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1376,7 +1393,7 @@
       "comment": 10,
       "share": 2,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1393,24 +1410,7 @@
       "comment": 6,
       "share": 5,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
-    },
-    {
-      "board_slug": "money",
-      "board_name": "理財板",
-      "source_name": "Dcard 理財板",
-      "title": "自己推算退休進度的方法",
-      "link": "https://www.dcard.tw/f/money/p/262238179",
-      "published": "2026-10-02T02:07:44.632Z",
-      "published_local": "2026/10/02 10:07",
-      "age_text": "1 天",
-      "author": "K",
-      "excerpt": "分享一下我自己的做法，不是理論喔，是我目前在用的方式。採用每季重新計算這四項的數值來觀察退休指標，財務獨立比率：116.48%，代表被動收入已經能覆蓋生活支出還有多的。老實說看到這個數字的時候有點飄，",
-      "like": 2,
-      "comment": 3,
-      "share": 7,
-      "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1427,7 +1427,7 @@
       "comment": 3,
       "share": 1,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1444,7 +1444,7 @@
       "comment": 6,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
     },
     {
       "board_slug": "money",
@@ -1454,14 +1454,31 @@
       "link": "https://www.dcard.tw/f/money/p/262245676",
       "published": "2026-10-03T13:25:49.276Z",
       "published_local": "2026/10/03 21:25",
-      "age_text": "44 分鐘",
+      "age_text": "1 小時",
       "author": "租賃住宅管理師",
       "excerpt": null,
       "like": null,
       "comment": null,
       "share": null,
       "has_image": true,
-      "collected_at": "2026-10-03T22:10:33+08:00"
+      "collected_at": "2026-10-03T22:29:45+08:00"
+    },
+    {
+      "board_slug": "money",
+      "board_name": "理財板",
+      "source_name": "Dcard 理財板",
+      "title": "財務規劃請益",
+      "link": "https://www.dcard.tw/f/money/p/262245888",
+      "published": "2026-10-03T14:08:09.782Z",
+      "published_local": "2026/10/03 22:08",
+      "age_text": "21 分鐘",
+      "author": "臺灣警察專科學校 行政警察科",
+      "excerpt": "小弟整理一下財務分配：目前股票006208+0050大約共有430萬（成本約220萬）。郵局儲蓄險還在繳（每月5225元），到119年中才會繳完（繳完大概可領回50多萬），借貸情形如下：113年10月",
+      "like": null,
+      "comment": null,
+      "share": null,
+      "has_image": true,
+      "collected_at": "2026-10-03T22:29:45+08:00"
     }
   ]
 }
