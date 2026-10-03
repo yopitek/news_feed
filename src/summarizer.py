@@ -59,6 +59,10 @@ DEEPSEEK_MODEL = "deepseek-chat"
 API_TIMEOUT = 60
 MAX_RETRIES = 3
 RETRY_BACKOFF = [2, 4, 8]
+# Consecutive connection-level failures (DNS/ refused/ unreachable) before the
+# provider is treated as dead. A host that does not resolve will not resolve
+# again inside one run, and retrying per article just floods the log.
+MAX_CONSECUTIVE_FAILURES = 3
 
 # Rate limiting for Gemini free tier (15 requests/minute)
 GEMINI_RATE_LIMIT_DELAY = 4.5  # seconds between requests
@@ -77,6 +81,8 @@ class BaseSummarizer:
         self.api_base = api_base
         self.model = model
         self.disabled = False
+        # Consecutive connection-level failures, for the dead-host guard below.
+        self._consecutive_failures = 0
         self.headers = {
             "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json"
@@ -109,6 +115,7 @@ class BaseSummarizer:
                 
                 if response.status_code == 200:
                     data = response.json()
+                    self._consecutive_failures = 0
                     return data['choices'][0]['message']['content'].strip()
                 
                 elif response.status_code == 429:
@@ -145,6 +152,23 @@ class BaseSummarizer:
                     time.sleep(backoff)
                 continue
                 
+            except requests.exceptions.ConnectionError as exc:
+                # DNS failure / refused connection / unreachable host. Unlike a
+                # timeout this cannot recover mid-run, and retrying it per
+                # article floods the log: measured 2026-10-04, a dead Zeabur
+                # hostname produced one identical error line for each of 230
+                # articles. Give up after a short run of consecutive failures.
+                self._consecutive_failures += 1
+                logger.error(f"API connection failed: {exc}")
+                if self._consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                    logger.error(
+                        f"{self._consecutive_failures} consecutive connection "
+                        f"failures: disabling {self.model}; using RSS fallback "
+                        "for remaining articles."
+                    )
+                    self.disabled = True
+                return None
+
             except Exception as e:
                 logger.error(f"API call failed: {e}")
                 return None
@@ -347,9 +371,10 @@ class GeminiSummarizer:
         self.api_base = GEMINI_API_BASE
         self.model = GEMINI_MODEL
         self.last_request_time = 0
-        # Set by _call_api on a permanent error (bad key / unknown model) so the
-        # remaining articles fall straight through to the RSS description.
+        # Set by _call_api on a permanent error (bad key / unknown model / dead
+        # host) so the remaining articles fall straight through to RSS.
         self.disabled = False
+        self._consecutive_failures = 0
         logger.info(f"Using Google Gemini API with model: {GEMINI_MODEL}")
     
     def _rate_limit(self):
@@ -431,6 +456,18 @@ class GeminiSummarizer:
                     time.sleep(backoff)
                 continue
                 
+            except requests.exceptions.ConnectionError as exc:
+                self._consecutive_failures += 1
+                logger.error(f"Gemini API connection failed: {exc}")
+                if self._consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                    logger.error(
+                        f"{self._consecutive_failures} consecutive connection "
+                        f"failures: disabling {self.model}; using RSS fallback "
+                        "for remaining articles."
+                    )
+                    self.disabled = True
+                return None
+
             except Exception as e:
                 logger.error(f"Gemini API call failed: {e}")
                 return None

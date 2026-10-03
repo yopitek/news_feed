@@ -195,7 +195,54 @@ def test_get_summarizer_still_returns_the_top_priority(monkeypatch):
     assert isinstance(sm.get_summarizer(), sm.NVIDIASummarizer)
 
 
+def test_dead_host_disables_after_a_short_run_of_failures(summarizer):
+    """
+    A hostname that does not resolve will not resolve later in the same run.
+    Measured 2026-10-04: a dead Zeabur host produced one identical error line
+    for each of 230 articles.
+    """
+    calls = []
+
+    def fake_post(*args, **kwargs):
+        calls.append(1)
+        raise requests.exceptions.ConnectionError(
+            "HTTPSConnectionPool(host='hnd1.aihub.zeabur.ai', port=443): "
+            "Failed to resolve 'hnd1.aihub.zeabur.ai'"
+        )
+
+    with patch.object(requests, "post", fake_post):
+        for _ in range(10):
+            summarizer._call_api("sys", "user")
+
+    from src.summarizer import MAX_CONSECUTIVE_FAILURES
+
+    assert len(calls) == MAX_CONSECUTIVE_FAILURES
+    assert summarizer.disabled is True
+
+
+def test_a_single_connection_error_is_allowed_to_recover(summarizer):
+    """One blip must not permanently disable a working provider."""
+    responses = [
+        requests.exceptions.ConnectionError("connection reset"),
+        _Resp(200, json_body={"choices": [{"message": {"content": "ok"}}]}),
+    ]
+
+    def fake_post(*args, **kwargs):
+        r = responses.pop(0)
+        if isinstance(r, Exception):
+            raise r
+        return r
+
+    with patch.object(requests, "post", fake_post):
+        assert summarizer._call_api("sys", "user") is None
+        assert summarizer.disabled is False
+        assert summarizer._call_api("sys", "user") == "ok"
+
+    assert summarizer._consecutive_failures == 0
+
+
 def test_gemini_permanent_error_disables_provider():
+
     """GeminiSummarizer is standalone, so it needs its own guard."""
     from src.summarizer import GeminiSummarizer
 
