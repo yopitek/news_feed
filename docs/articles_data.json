@@ -724,6 +724,34 @@
   "ja_news": {
     "頭條": [
       {
+        "title": "那覇遺体 強殺疑いで米兵を逮捕",
+        "link": "https://news.yahoo.co.jp/pickup/6597462",
+        "source": "Yahoo! Japan",
+        "published": "2026-10-03T14:35:39+00:00",
+        "summary": "那覇遺体 強殺疑いで米兵を逮捕"
+      },
+      {
+        "title": "サザン関口氏会社5.8億円申告漏れ",
+        "link": "https://news.yahoo.co.jp/pickup/6597461",
+        "source": "Yahoo! Japan",
+        "published": "2026-10-03T14:35:32+00:00",
+        "summary": "サザン関口氏会社5.8億円申告漏れ"
+      },
+      {
+        "title": "トラブルが続出したアジア大会 原因は不慣れ?想定外? きょう閉幕",
+        "link": "http://www.asahi.com/articles/ASVB23PT6VB2OIPE00KM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T14:30:00+00:00",
+        "summary": "トラブルが続出したアジア大会 原因は不慣れ?想定外? きょう閉幕"
+      },
+      {
+        "title": "夢を見せるだけじゃ嫌だった 「宇宙から農業変える」起業家の挑戦",
+        "link": "http://www.asahi.com/articles/ASVB10SKKVB1PLFA009M.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T14:30:00+00:00",
+        "summary": "夢を見せるだけじゃ嫌だった 「宇宙から農業変える」起業家の挑戦"
+      },
+      {
         "title": "大谷翔平が初打席で安打、ドジャースが5―1でリード 村上は決勝弾",
         "link": "http://www.asahi.com/articles/ASVB35D51VB3UTQP01LM.html",
         "source": "朝日新聞",
@@ -750,34 +778,6 @@
         "source": "朝日新聞",
         "published": "2026-10-03T14:00:00+00:00",
         "summary": "高市内閣を出た林芳正氏 高まる注目は「戦わぬ政治家」を変えるのか"
-      },
-      {
-        "title": "青木GMが語る石川雅規 じりじり積み上げていく姿勢示してくれた",
-        "link": "http://www.asahi.com/articles/ASVB30F57VB3UTQP001M.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T13:00:00+00:00",
-        "summary": "青木GMが語る石川雅規 じりじり積み上げていく姿勢示してくれた"
-      },
-      {
-        "title": "投資の利益「自分だけ逃しているのでは」 若者を焦らす「FOMO」",
-        "link": "http://www.asahi.com/articles/ASVB22RGVVB2ULFA02YM.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T13:00:00+00:00",
-        "summary": "投資の利益「自分だけ逃しているのでは」 若者を焦らす「FOMO」"
-      },
-      {
-        "title": "サザン関口氏の会社、5億円超の申告漏れ 損金計上めぐり国税局指摘",
-        "link": "http://www.asahi.com/articles/ASVB33SLCVB3UTIL01NM.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T12:00:00+00:00",
-        "summary": "サザン関口氏の会社、5億円超の申告漏れ 損金計上めぐり国税局指摘"
-      },
-      {
-        "title": "AIで英語不要？ 中国で揺れる教育 大学は授業再編、SNSで論争",
-        "link": "http://www.asahi.com/articles/ASV9Y11LBV9YUPQJ002M.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T12:00:00+00:00",
-        "summary": "AIで英語不要？ 中国で揺れる教育 大学は授業再編、SNSで論争"
       }
     ],
     "國際": [
@@ -840,6 +840,13 @@
     ],
     "政治": [
       {
+        "title": "茨城県日立市の小川市長、3期目限りで引退へ 来春の選挙に出馬せず",
+        "link": "https://www.asahi.com/articles/ASVB27D8LVB2UJHB00JM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-02T14:11:34+00:00",
+        "summary": "茨城県日立市の小川市長、3期目限りで引退へ 来春の選挙に出馬せず"
+      },
+      {
         "title": "結集軸なき野党、消費減税の国会審議にどう臨む 政権は切り崩し狙う",
         "link": "https://www.asahi.com/articles/ASVB23VKYVB2UTFK00BM.html",
         "source": "朝日新聞",
@@ -887,13 +894,6 @@
         "source": "朝日新聞",
         "published": "2026-10-02T02:46:27+00:00",
         "summary": "簗農水相、予算カット発言おおむね認める 国交省への働きかけは否定"
-      },
-      {
-        "title": "「憲法に自衛隊明記を」 岡山県議会が意見書案を可決 3会派が反対",
-        "link": "https://www.asahi.com/articles/ASVB22GX1VB2PTIL00KM.html",
-        "source": "朝日新聞",
-        "published": "2026-10-02T02:00:00+00:00",
-        "summary": "「憲法に自衛隊明記を」 岡山県議会が意見書案を可決 3会派が反対"
       }
     ],
     "運動": [
@@ -910,6 +910,13 @@
         "source": "Yahoo! Japan",
         "published": "2026-10-03T06:06:21+00:00",
         "summary": "広島監督 試合後にファンへ謝罪"
+      },
+      {
+        "title": "韓国に4連覇許した日本 ロス五輪予選へ、大岩ジャパンの狙いと課題",
+        "link": "https://www.asahi.com/articles/ASVB34J5NVB3UTQP02NM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T06:02:58+00:00",
+        "summary": "韓国に4連覇許した日本 ロス五輪予選へ、大岩ジャパンの狙いと課題"
       },
       {
         "title": "誇れる188勝194敗 ヤクルト・石川、25年のプロ生活に終止符",
@@ -945,22 +952,22 @@
         "source": "朝日新聞",
         "published": "2026-10-03T04:32:19+00:00",
         "summary": "阪神が球団史上初のセ・リーグ連覇 広島に敗れるも、2位巨人も敗戦"
-      },
-      {
-        "title": "サッカー男子 韓国に敗れ銀メダル",
-        "link": "https://news.yahoo.co.jp/pickup/6597443",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T04:29:22+00:00",
-        "summary": "サッカー男子 韓国に敗れ銀メダル"
       }
     ],
     "商業": [
       {
-        "title": "夢を見せるだけじゃ嫌だった 「宇宙から農業変える」起業家の挑戦",
-        "link": "https://www.asahi.com/articles/ASVB10SKKVB1PLFA009M.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T14:30:00+00:00",
-        "summary": "夢を見せるだけじゃ嫌だった 「宇宙から農業変える」起業家の挑戦"
+        "title": "米国産ジャガイモ解禁 前倒し浮上",
+        "link": "https://news.yahoo.co.jp/pickup/6597453",
+        "source": "Yahoo! Japan",
+        "published": "2026-10-03T05:57:57+00:00",
+        "summary": "米国産ジャガイモ解禁 前倒し浮上"
+      },
+      {
+        "title": "米政府のAI 都合の悪い質問を拒否",
+        "link": "https://news.yahoo.co.jp/pickup/6597451",
+        "source": "Yahoo! Japan",
+        "published": "2026-10-03T05:35:42+00:00",
+        "summary": "米政府のAI 都合の悪い質問を拒否"
       },
       {
         "title": "MacのOSを修正へ AIリスク対策",
@@ -996,13 +1003,6 @@
         "source": "Yahoo! Japan",
         "published": "2026-10-03T01:00:18+00:00",
         "summary": "食品消費税1%に賛否 減税効果は"
-      },
-      {
-        "title": "和菓子店の倒産 過去最多ペース",
-        "link": "https://news.yahoo.co.jp/pickup/6597393",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-02T23:15:14+00:00",
-        "summary": "和菓子店の倒産 過去最多ペース"
       },
       {
         "title": "「こどもNISA」注意点 専門家解説",
@@ -1042,13 +1042,6 @@
         "summary": "引退発表した伊東四朗さん、ラジオ生出演後｢テニスでもやろうかな｣"
       },
       {
-        "title": "ダイビング客ら8人救助 意識あり",
-        "link": "https://news.yahoo.co.jp/pickup/6597418",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T00:52:44+00:00",
-        "summary": "ダイビング客ら8人救助 意識あり"
-      },
-      {
         "title": "都内タワマン23階から子転落 死亡",
         "link": "https://news.yahoo.co.jp/pickup/6597402",
         "source": "Yahoo! Japan",
@@ -1068,6 +1061,13 @@
         "source": "朝日新聞",
         "published": "2026-10-02T15:00:00+00:00",
         "summary": "ミセス大森元貴さんが語る音楽観 「ライラック」イントロが長い意味"
+      },
+      {
+        "title": "サッカー日本代表MFの久保建英さんと俳優の福原遥さんが結婚",
+        "link": "https://www.asahi.com/articles/ASVB2443VVB2UTQP025M.html",
+        "source": "朝日新聞",
+        "published": "2026-10-02T04:43:54+00:00",
+        "summary": "サッカー日本代表MFの久保建英さんと俳優の福原遥さんが結婚"
       }
     ],
     "娛樂": [
