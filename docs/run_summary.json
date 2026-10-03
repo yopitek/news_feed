@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-10-03",
-  "start_time": "2026-10-03T23:12:01.950905+08:00",
-  "end_time": "2026-10-03T23:27:45.622023+08:00",
-  "duration_seconds": 943.67,
-  "feeds_fetched": 1209,
-  "articles_normalized": 649,
-  "articles_deduplicated": 554,
-  "articles_selected": 222,
-  "summaries_generated": 222,
+  "run_date": "2026-10-04",
+  "start_time": "2026-10-04T06:25:43.122737+08:00",
+  "end_time": "2026-10-04T06:26:31.134161+08:00",
+  "duration_seconds": 48.01,
+  "feeds_fetched": 1208,
+  "articles_normalized": 676,
+  "articles_deduplicated": 573,
+  "articles_selected": 230,
+  "summaries_generated": 230,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -63,7 +63,7 @@
     "ok_sources": 14,
     "empty_sources": 4,
     "failed_sources": 4,
-    "selected_articles": 3,
+    "selected_articles": 6,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -267,7 +267,7 @@
   },
   "dcard_snapshot": {
     "collected_at": "2026-10-03T23:11:29+08:00",
-    "age_hours": 0.0,
+    "age_hours": 7.2,
     "boards": [
       {
         "slug": "tech_job",
@@ -298,7 +298,7 @@
   },
   "ptt_snapshot": {
     "collected_at": "2026-10-03T23:11:12+08:00",
-    "age_hours": 0.0,
+    "age_hours": 7.3,
     "boards": [
       {
         "board": "Gossiping",

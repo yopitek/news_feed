@@ -2,6 +2,27 @@
   "zh_news": {
     "頭條新聞": [
       {
+        "title": "柯文哲屏東輔選 喊民眾黨不能永遠只是網路政黨",
+        "link": "https://www.cna.com.tw/news/aipl/202610030202.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T06:28:48+00:00",
+        "summary": "（中央社記者黃郁菁屏東縣3日電）前民眾黨主席柯文哲今天赴屏東，為民眾黨屏東縣議員、鄉鎮市代參選人輔選。柯文哲表示，民眾黨不能永遠只是網路政黨，要在地方有民代，才能確保長久政治發展。"
+      },
+      {
+        "title": "黃世杰南區競總成立 總統：年輕有活力市長最適合桃園",
+        "link": "https://www.cna.com.tw/news/aipl/202610030201.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T06:21:45+00:00",
+        "summary": "（中央社記者葉臻桃園3日電）民進黨桃園市長參選人黃世杰今天成立南區競選總部。總統賴清德致詞表示，黃世杰有學經歷，心在桃園、對桃園未來有規劃藍圖，選年輕有活力的市長，跟桃園年輕城市的性質最合。"
+      },
+      {
+        "title": "大馬台商歡慶115年雙十國慶 盼讓世界看到台灣價值",
+        "link": "https://www.cna.com.tw/news/aipl/202610030198.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T05:55:39+00:00",
+        "summary": "（中央社記者黃自強吉隆坡3日專電）馬來西亞台灣商會聯合總會今晚在檳城舉行中華民國115年國慶晚宴，來自大馬各地台商齊聚，提前慶祝雙十國慶。主辦單位期盼國慶活動凝聚海外台商情誼，不僅延續在大馬扎根打拚的..."
+      },
+      {
         "title": "蕭副總統：蔡易餘是「小叮噹」 聰明能解決問題",
         "link": "https://www.cna.com.tw/news/aipl/202610030188.aspx",
         "source": "中央社",
@@ -35,30 +56,16 @@
         "source": "中央社",
         "published": "2026-10-03T02:26:17+00:00",
         "summary": "（中央社記者蔡智明雲林縣3日電）立法院長韓國瑜今天與國民黨雲林縣長參選人張嘉郡到斗六市3宮廟參拜；韓國瑜說，立院朝野協商這麼亂，他得拜「齊天大聖孫悟空」才鎮得住。"
-      },
-      {
-        "title": "黃國昌輔選民眾黨金門隊 籲年輕人投下關鍵一票",
-        "link": "https://www.cna.com.tw/news/aipl/202610030154.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T01:41:59+00:00",
-        "summary": "（中央社記者吳玟嶸金門3日電）台灣民眾黨主席黃國昌昨天抵金門拜訪國民黨金門縣長參選人陳玉珍，今天替民眾黨議員、鄉鎮代表參選人輔選。他說，很多金門年輕人在外打拼，盼大家出來為金門投下關鍵一票。"
-      },
-      {
-        "title": "蕭副總統：國家生存需要新住民及下一世代投入",
-        "link": "https://www.cna.com.tw/news/aipl/202610030153.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T01:39:57+00:00",
-        "summary": "（中央社記者張榮祥台南3日電）副總統蕭美琴今天表示，新住民每個寶貝是台灣和世界的連結，不論是未來全球性挑戰、國家生存及產業發展，都需要新住民團隊及下一世代的投入。"
-      },
-      {
-        "title": "川習二會落幕 學者：短暫各取所需非結構性休戰",
-        "link": "https://www.cna.com.tw/news/aipl/202610030129.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T00:52:02+00:00",
-        "summary": "（中央社記者賴于榛台北3日電）二次川習會落幕，學者認為，美國總統川普與中國國家主席習近平是短暫各取所需，藉以因應美國期中選舉以及中共20屆五中全會，並非產生結構性休戰；美方在事實清單建議美、中、俄軍備..."
       }
     ],
     "產經": [
+      {
+        "title": "OpenAI前工程師：AI業應效法核電廠採多重安全防護",
+        "link": "https://www.cna.com.tw/news/ait/202610040005.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T12:56:18+00:00",
+        "summary": "（中央社紐約3日綜合外電報導）又一名OpenAI前員工加入要求加強人工智慧（AI）安全的呼籲行列。該公司前工程師羅賓森撰文指出，AI產業應效法航空或核能產業，設置多重安全防護措施，以避免災難發生。"
+      },
       {
         "title": "今彩539第115240期 頭獎槓龜",
         "link": "https://www.cna.com.tw/news/ahel/202610030200.aspx",
@@ -107,29 +114,36 @@
         "source": "中央社",
         "published": "2026-10-02T23:40:23+00:00",
         "summary": "（中央社記者李宗憲曼谷3日專電）泰國航空公司（Thai Airways）近日因機場行李大量滯留引發爭議，泰航董事會2日決議，執行長柴伊・安西里即日起停止履行執行長職務，接受洪災期間危機管理及營運失誤調..."
-      },
-      {
-        "title": "台英簽署科學創新及技術協議 將推矽光子、半導體人才等3合作",
-        "link": "https://www.cna.com.tw/news/afe/202610030090.aspx",
-        "source": "中央社",
-        "published": "2026-10-02T21:51:35+00:00",
-        "summary": "（中央社記者呂晏慈台北3日電）國科會今天表示，台英科學創新暨技術合作協議（SITA）於2日正式簽署，雙方將推動衛星通訊合作、台英矽光子學術聯盟、半導體培力計畫等3項合作項目。"
       }
     ],
     "全球國際新聞": [
+      {
+        "title": "青年運動稱攻擊阿美石油設施 報復沙烏地空襲葉門",
+        "link": "https://www.cna.com.tw/news/aopl/202610040006.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T13:52:21+00:00",
+        "summary": "（中央社沙那3日綜合外電報導）葉門叛軍「青年運動」今天宣稱，攻擊沙烏地阿拉伯首都利雅德附近一座阿美石油公司設施，法新社記者在當地看到火焰和濃煙竄出。青年運動並指控，沙烏地對葉門首都沙那發動數十次空襲。"
+      },
+      {
+        "title": "西班牙租屋援助措施遭國會否決 數萬人上街抗議",
+        "link": "https://www.cna.com.tw/news/aopl/202610040004.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T11:06:14+00:00",
+        "summary": "（中央社馬德里3日綜合外電報導）西班牙國會議員否決政府提出的租屋援助措施後，今天有數以萬計民眾走上首都馬德里及其他城市的街頭抗議，要求提供負擔得起的住房。"
+      },
+      {
+        "title": "女囚死刑執行失敗 田納西州獄政首長請辭",
+        "link": "https://www.cna.com.tw/news/aopl/202610040002.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T09:44:08+00:00",
+        "summary": "（中央社華盛頓3日綜合外電報導）美國南部田納西州州長李比爾今天宣布，日前女囚派克的死刑執行失敗後，該州獄政首長斯特拉達已請辭，將於本月離職。"
+      },
       {
         "title": "奈及利亞中部發生重大車禍 造成20人喪命",
         "link": "https://www.cna.com.tw/news/aopl/202610030203.aspx",
         "source": "中央社",
         "published": "2026-10-03T06:39:50+00:00",
         "summary": "（中央社拉哥斯3日綜合外電報導）奈及利亞相關當局透過聲明表示，國內中部高原州（Plateau）一條公路發生多台車輛相撞事故，導致20人死亡。"
-      },
-      {
-        "title": "大馬台商歡慶115年雙十國慶 盼讓世界看到台灣價值",
-        "link": "https://www.cna.com.tw/news/aipl/202610030198.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T05:55:39+00:00",
-        "summary": "（中央社記者黃自強吉隆坡3日專電）馬來西亞台灣商會聯合總會今晚在檳城舉行中華民國115年國慶晚宴，來自大馬各地台商齊聚，提前慶祝雙十國慶。主辦單位期盼國慶活動凝聚海外台商情誼，不僅延續在大馬扎根打拚的..."
       },
       {
         "title": "俄羅斯揚言對基輔發動新一輪攻勢 促外國人撤離",
@@ -158,23 +172,30 @@
         "source": "中央社",
         "published": "2026-10-03T05:21:25+00:00",
         "summary": "（中央社台北3日電）中國日前啟用建於寮國一處機場的軍事支援和訓練中心，分析人士認為，這顯示中國正擴大海外軍事布局。"
-      },
-      {
-        "title": "北韓宣布試射中程飛彈 宣稱導入AI技術無法規避攻擊",
-        "link": "https://www.cna.com.tw/news/aopl/202610030187.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T04:50:12+00:00",
-        "summary": "（中央社首爾3日綜合外電報導）北韓今天表示，已經測試一枚結合人工智慧（AI）技術的中程戰略飛彈，能在低空改變飛行軌道，「沒有辦法避開這種攻擊」。南韓稍早通報，平壤發射一枚彈道飛彈。"
-      },
-      {
-        "title": "深圳APEC峰會11月登場 中國外交部：歡迎普丁出席",
-        "link": "https://www.cna.com.tw/news/acn/202610030185.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T04:39:08+00:00",
-        "summary": "（中央社記者呂佳蓉北京3日電）中國外交部今天晚間表示，中方歡迎俄羅斯總統普丁出席今年11月將在深圳舉行的APEC領導人非正式會議。"
       }
     ],
     "社會": [
+      {
+        "title": "宜蘭員山建材行大火 疑4人受困消防搶救",
+        "link": "https://www.cna.com.tw/news/asoc/202610040003.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T10:20:11+00:00",
+        "summary": "（中央社記者王朝鈺宜蘭4日電）宜蘭縣員山鄉溫泉路一間建材行，3日晚間10時許發生火警，現場火勢猛烈竄出大量濃煙，消防員到場時，屋主已自行逃生，屋主的母親則在2樓陽台獲救，截至今天凌晨疑仍有4人受困屋內..."
+      },
+      {
+        "title": "沈伯洋提反毒政見 蔣萬安稱勿拿美沙冬遮掩引網路熱議",
+        "link": "https://www.cna.com.tw/news/aloc/202610030206.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T07:54:00+00:00",
+        "summary": "（中央社記者葉蓁芸台北3日電）民進黨台北市長參選人沈伯洋被質疑曾將毒品與藥物劃等號。台北市長蔣萬安今天晚間發文說，危險來自模糊毒品與藥物的界線，並呼籲不要拿美沙冬計畫遮掩，文章一出在網路引發熱議。"
+      },
+      {
+        "title": "台中男子毒駕撞天橋波及3名大學生 檢方聲請羈押",
+        "link": "https://www.cna.com.tw/news/asoc/202610030205.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T07:40:57+00:00",
+        "summary": "（中央社記者趙麗妍台中3日電）21歲黃姓男子今天涉嫌施用毒品並駕車載吳姓友人行經台中市北區錦南街，車輛失控後撞上路旁設施、正在晨跑的3位大學生，3人送醫無礙，警方逮捕後送辦，檢方晚間聲請羈押。"
+      },
       {
         "title": "新北瑞芳6警餐聚涉違紀 分局長記過建請調非主管職",
         "link": "https://www.cna.com.tw/news/asoc/202610030184.aspx",
@@ -209,30 +230,16 @@
         "source": "中央社",
         "published": "2026-10-03T03:57:48+00:00",
         "summary": "（中央社記者葉蓁芸台北3日電）2026台北時裝週跨界時尚大秀今天登場，台北市長蔣萬安身穿台灣設計師作品走紅毯，他表示，盼世界看到台灣優秀軟實力，今年也邀請義大利設計師參與，未來將逐步加入國際元素。"
-      },
-      {
-        "title": "金馬澎首長座談會連江登場 達成醫療、交通等3共識",
-        "link": "https://www.cna.com.tw/news/aloc/202610030171.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T03:25:37+00:00",
-        "summary": "（中央社記者潘欣彤連江縣3日電）金馬澎首長座談會今天在南竿鄉舉行，會中達成公車免費範圍擴大至離島3縣市民眾；以及向中央爭取增加備用醫療後送直升機、離島機票補助擴大至全台民眾與國際旅客等共識。"
-      },
-      {
-        "title": "環境部國土綠蔭氣候調適計畫 防範未來40度高溫廣植樹",
-        "link": "https://www.cna.com.tw/news/aloc/202610030167.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T02:54:28+00:00",
-        "summary": "（中央社記者黃郁菁屏東縣3日電）環境部今天赴屏東說明國土綠蔭氣候調適計畫，環境部長彭啓明表示，未來恐出現攝氏40度以上高溫，廣植樹木可天然降溫，將盤點需要增加樹木地點，並廣納各界意見。"
-      },
-      {
-        "title": "基隆海洋老鷹嘉年華登場 50隊踩街「鷹媽媽」亮相",
-        "link": "https://www.cna.com.tw/news/aloc/202610030156.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T01:53:04+00:00",
-        "summary": "（中央社記者王朝鈺基隆3日電）基隆國際海洋老鷹嘉年華今天登場，由基隆市長謝國樑領軍，帶領來自國內外的50組團隊踩街遊行，各式色彩繽紛隊伍，與鷹媽媽「鷹ONE」等大型氣球穿梭街區，吸引民眾共襄盛舉。"
       }
     ],
     "生活": [
+      {
+        "title": "宜蘭山區豪雨特報 花蓮、新北及桃園山區防大雨",
+        "link": "https://www.cna.com.tw/news/ahel/202610030204.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T07:18:55+00:00",
+        "summary": "（中央社台北3日電）中央氣象署發布豪雨特報，對流雲系發展旺盛，易有短延時強降雨，今晚至明晨宜蘭縣山區有局部大雨或豪雨，宜蘭、花蓮地區及新北、桃園山區有局部大雨發生的機率。"
+      },
       {
         "title": "中研院兒童科普日 AI辨識病媒蚊、化學魔法一次玩",
         "link": "https://www.cna.com.tw/news/ahel/202610030172.aspx",
@@ -281,16 +288,16 @@
         "source": "中央社",
         "published": "2026-10-03T01:15:17+00:00",
         "summary": "（中央社記者沈佩瑤台北3日電）首波健康幣今天入帳了，只要是在10月1日正式上線那天，一口氣完成登入「健康幣專區」、填寫「生活型態評估量表」、接種「左流右新」的民眾，至少已領到1650幣，12月起可兌換..."
-      },
-      {
-        "title": "營養師分享外食飲控順序 先蛋白質蔬菜後碳水",
-        "link": "https://www.cna.com.tw/news/ahel/202610030125.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T00:39:53+00:00",
-        "summary": "（中央社記者趙麗妍台中3日電）外食族如何做好飲食控制。營養師表示，不是吃越少越好，建議調整進食順序，先食用蛋白質，再搭配蔬菜，最後才吃碳水，搭配運動以及作息正常，飲控減重效果才能持久。"
       }
     ],
     "娛樂": [
+      {
+        "title": "彭佳慧小巨蛋淚謝30年支持 自嘲出道不美歌迷有眼光",
+        "link": "https://www.cna.com.tw/news/amov/202610030199.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T05:56:41+00:00",
+        "summary": "（中央社記者王心妤台北3日電）歌手彭佳慧今晚在台北小巨蛋舉辦「數著時間的日子」演唱會，她唱完「相見恨晚」後感謝歌迷陪伴了30年，接著難掩情緒落淚，隨後又自嘲剛出道時長相不美，感謝粉絲沒以貌取人。"
+      },
       {
         "title": "FEniX全員合體開唱 大方抽10粉絲共吃慶功宴",
         "link": "https://www.cna.com.tw/news/amov/202610030151.aspx",
@@ -396,63 +403,91 @@
   "en_news": {
     "Startup": [
       {
-        "title": "Great Question (YC W21) Is Hiring Product Engineers in Canada (Remote)",
-        "link": "https://www.ycombinator.com/companies/great-question/jobs/agEqBYD-product-engineer-ai-full-stack",
+        "title": "Federal judge calls Flock 'indiscriminate mass surveillance'",
+        "link": "https://techcrunch.com/2026/10/03/federal-judge-calls-flock-indiscriminate-mass-surveillance",
         "source": "Hacker News",
-        "published": "2026-10-03T04:02:10+00:00",
+        "published": "2026-10-03T14:07:13+00:00",
         "summary": "Comments"
       },
       {
-        "title": "The Escalation of War in Ethiopia",
-        "link": "https://www.africanistperspective.com/p/on-the-escalation-of-war-in-ethiopia",
+        "title": "Reasons I didn't become an EMT, ranked",
+        "link": "https://ben.stolovitz.com/posts/reasons-not-emt-ranked",
         "source": "Hacker News",
-        "published": "2026-10-03T03:54:24+00:00",
+        "published": "2026-10-03T12:49:15+00:00",
         "summary": "Comments"
       },
       {
-        "title": "Show HN: Germany's new sovereign AI model Kolibri",
-        "link": "https://tej.as/blog/aleph-alpha-kolibri",
+        "title": "Surely you have ultra-wideband radios on your bins too?",
+        "link": "https://sjg.io/writing/binrange-have-you-actually-put-the-bins-out",
         "source": "Hacker News",
-        "published": "2026-10-03T02:43:51+00:00",
+        "published": "2026-10-03T12:27:44+00:00",
         "summary": "Comments"
       },
       {
-        "title": "GitHub's new dashboard experience now the default",
-        "link": "https://github.blog/changelog/2026-10-01-new-dashboard-experience-now-the-default",
+        "title": "Show HN: Local pretrained classifiers, GPU not needed",
+        "link": "https://github.com/nicobrenner/jeffy",
         "source": "Hacker News",
-        "published": "2026-10-03T01:59:01+00:00",
+        "published": "2026-10-03T12:19:09+00:00",
         "summary": "Comments"
       },
       {
-        "title": "Kolibri Has Landed: A Sovereign Open-Weight Model",
-        "link": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model",
+        "title": "We want you to build the next Git platform on Cloudflare",
+        "link": "https://blog.cloudflare.com/next-git-platform-on-cloudflare",
         "source": "Hacker News",
-        "published": "2026-10-03T01:36:04+00:00",
+        "published": "2026-10-03T11:33:16+00:00",
         "summary": "Comments"
       },
       {
-        "title": "Show HN: Offrun – manage every coding agent from one workspace",
-        "link": "https://offrun.dev/",
+        "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
+        "link": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
         "source": "Hacker News",
-        "published": "2026-10-03T00:40:17+00:00",
+        "published": "2026-10-03T11:14:48+00:00",
         "summary": "Comments"
       },
       {
-        "title": "An Update on Orion for Linux and Windows",
-        "link": "https://blog.kagi.com/update-orion-linux-windows",
+        "title": "RSS Feed Best Practices (2022)",
+        "link": "https://kevincox.ca/2022/05/06/rss-feed-best-practices",
         "source": "Hacker News",
-        "published": "2026-10-02T20:53:57+00:00",
+        "published": "2026-10-03T11:09:25+00:00",
         "summary": "Comments"
       },
       {
-        "title": "Extra Big Ass Intelligence",
-        "link": "https://www.extrabigassintelligence.com/",
+        "title": "How to hack time, with C2PA",
+        "link": "https://www.da.vidbuchanan.co.uk/blog/hacking-time.html",
         "source": "Hacker News",
-        "published": "2026-10-02T19:19:10+00:00",
+        "published": "2026-10-03T10:52:06+00:00",
         "summary": "Comments"
       }
     ],
     "Tech News": [
+      {
+        "title": "Amazon responds to data center backlash, says it no longer uses NDAs",
+        "link": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas",
+        "source": "TechCrunch",
+        "published": "2026-10-03T10:43:57+00:00",
+        "summary": "The CEO of Amazon Web Services tried to push back against widespread suspicion of data centers."
+      },
+      {
+        "title": "Capcom is preparing for a ‘future where we create games together with AI’",
+        "link": "https://www.theverge.com/games/1004418/capcom-ai-game-development",
+        "source": "The Verge",
+        "published": "2026-10-03T08:49:10+00:00",
+        "summary": "Capcom's Pragmata might be all about the horrors of AI, but in practice the studio doesn't seem so d..."
+      },
+      {
+        "title": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+        "link": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken",
+        "source": "TechCrunch",
+        "published": "2026-10-03T08:30:01+00:00",
+        "summary": "By his own admission, David Robinson is “something of a cliché”: an employee at a leading AI company..."
+      },
+      {
+        "title": "The best early October Prime Day deals happening now",
+        "link": "https://www.theverge.com/gadgets/999447/best-early-amazon-prime-day-big-deals-sale-october",
+        "source": "The Verge",
+        "published": "2026-10-03T08:22:40+00:00",
+        "summary": "It’s not even October yet and Amazon is already offering some Prime Big Deal Day discounts on its ow..."
+      },
       {
         "title": "Jack Dorsey’s Bitchat disappears from app stores in India after government order",
         "link": "https://techcrunch.com/2026/10/03/jack-dorseys-bitchat-disappears-from-app-stores-in-india-after-government-order",
@@ -480,81 +515,60 @@
         "source": "The Verge",
         "published": "2026-10-03T06:31:56+00:00",
         "summary": "David Robinson used to write the safety reports that accompanied every major model release at OpenAI..."
-      },
-      {
-        "title": "All the AI agents that can live in your text messages",
-        "link": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages",
-        "source": "TechCrunch",
-        "published": "2026-10-03T06:00:00+00:00",
-        "summary": "We created a list of the most notable AI agents that can live in your text messages, from general as..."
-      },
-      {
-        "title": "Spotify billionaire’s body scan startup has come to America",
-        "link": "https://techcrunch.com/2026/10/03/spotify-billionaires-body-scan-startup-has-come-to-america",
-        "source": "TechCrunch",
-        "published": "2026-10-03T06:00:00+00:00",
-        "summary": "Farooq Abbasi, an investor in Neko Health, talked to Equity about the hot health tech company and wh..."
-      },
-      {
-        "title": "3D movies are finally worth watching",
-        "link": "https://www.theverge.com/tech/1004131/3d-movies-are-finally-worth-watching-xreal-meta-glasses-vision-pro",
-        "source": "The Verge",
-        "published": "2026-10-03T04:00:00+00:00",
-        "summary": "Why am I suddenly buying up every 3D Blu-ray I can find after 3D became one of the biggest tech flop..."
-      },
-      {
-        "title": "Meta wants your next gadget to be Muse-infused",
-        "link": "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget",
-        "source": "TechCrunch",
-        "published": "2026-10-02T16:45:39+00:00",
-        "summary": "Meta wants Muse in your TV and your toaster, so it's giving the code away for free."
       }
     ],
     "BBC Top Stories": [
       {
-        "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
-        "link": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
+        "title": "Bellingham unlocks new level and potential to be 'one of the greatest'",
+        "link": "https://www.bbc.co.uk/sport/football/articles/cv5yn8znyx2ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-10-03T06:27:33+00:00",
-        "summary": "The man accused of trying to take over the Israel-bound jet is named as Hamam al-Hammami by several ..."
+        "published": "2026-10-03T13:07:59+00:00",
+        "summary": "Jude Bellingham's international future was being called into question a year ago, but now he is rega..."
       },
       {
-        "title": "Tories pledge to build 50,000 new prison places",
-        "link": "https://www.bbc.co.uk/news/articles/ck9qrqq53nj3o?at_medium=RSS&at_campaign=rss",
+        "title": "Tories pledge to scrap £100,000 childcare 'cliff edge'",
+        "link": "https://www.bbc.co.uk/news/articles/cmn06l362ypeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-10-03T06:17:52+00:00",
-        "summary": "The party says its proposals would stop prisoners being released early and cut crime."
+        "published": "2026-10-03T13:03:22+00:00",
+        "summary": "Party leader Kemi Badenoch tells the BBC that she wants to see \"people who work harder\" not getting ..."
       },
       {
-        "title": "Why has Brazil accused the US of election interference?",
-        "link": "https://www.bbc.co.uk/news/videos/c3eweld0nddeo?at_medium=RSS&at_campaign=rss",
+        "title": "Leicester hold off Newcastle for first Prem win",
+        "link": "https://www.bbc.co.uk/sport/rugby-union/articles/cmy9z7dxdvv0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-10-03T05:52:13+00:00",
-        "summary": "The Latin American country will vote for its next president, as Lula da Silva and Bolsonaro clash ov..."
+        "published": "2026-10-03T12:46:08+00:00",
+        "summary": "Leicester Tigers pick up their first win of the season with a tense and hard-fought victory at Newca..."
       },
       {
-        "title": "Protesters across Spain demand action over housing crisis",
-        "link": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
+        "title": "Man shot dead as families gather for memorial in London",
+        "link": "https://www.bbc.co.uk/news/articles/c3zxjl2pp49zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-10-03T05:34:11+00:00",
-        "summary": "More than 50 protests are taking place on Saturday after the government failed to get emergency legi..."
+        "published": "2026-10-03T12:42:05+00:00",
+        "summary": "The 40-year-old died at the scene in west London from a gunshot wound, the Met Police said."
       },
       {
-        "title": "Alison Hammond returns home from hospital after rushing off This Morning",
-        "link": "https://www.bbc.co.uk/news/articles/cr20w7j8jd21o?at_medium=RSS&at_campaign=rss",
+        "title": "Fury wants 'old pal' President Trump for Joshua ringwalk",
+        "link": "https://www.bbc.co.uk/sport/boxing/articles/cmg47yw937l6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-10-03T05:21:40+00:00",
-        "summary": "The This Morning presenter said she believes she experienced a panic attack on Friday's show."
+        "published": "2026-10-03T11:43:48+00:00",
+        "summary": "Former heavyweight champion Tyson Fury plans to ask US president Donald Trump to lead his ring walk ..."
       },
       {
-        "title": "Republic of Ireland news conference ends abruptly amid accusations",
-        "link": "https://www.bbc.co.uk/sport/football/articles/cm78p5x6xqq7o?at_medium=RSS&at_campaign=rss",
+        "title": "Wakefield beat Warrington to win Super League",
+        "link": "https://www.bbc.co.uk/sport/rugby-league/articles/c39w4w7pzqv4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC News",
-        "published": "2026-10-03T05:02:11+00:00",
-        "summary": "Republic of Ireland manager Heimir Hallgrimsson's pre-match news conference ends abruptly as accusat..."
+        "published": "2026-10-03T11:02:55+00:00",
+        "summary": "Wakefield Trinity end a 58-year wait to be champions as they claim a deserved Grand Final success ov..."
       }
     ],
     "BBC World": [
+      {
+        "title": "Medical plane with 6 on board missing off Massachusetts coast",
+        "link": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World",
+        "published": "2026-10-03T13:16:21+00:00",
+        "summary": "The aircraft lost communication with flight controllers after significantly dropping in altitude, ac..."
+      },
       {
         "title": "Kim wins Asian Games gold to secure military exemption",
         "link": "https://www.bbc.co.uk/sport/golf/articles/cmy0rn425k4xo?at_medium=RSS&at_campaign=rss",
@@ -567,7 +581,7 @@
         "link": "https://www.bbc.co.uk/sport/mixed-martial-arts/articles/ckq5x5de46ppo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World",
         "published": "2026-10-02T23:07:09+00:00",
-        "summary": "Wang Cong dismisses critics who say she she is not deserving of facing Natalia Silva for the flyweig..."
+        "summary": "Wang Cong dismisses critics who say she is not deserving of facing Natalia Silva for the flyweight w..."
       },
       {
         "title": "G7 to release millions of barrels of oil and diesel after Trump threat",
@@ -589,16 +603,16 @@
         "source": "BBC World",
         "published": "2026-10-02T15:37:13+00:00",
         "summary": "For the first time in three decades there has not been a single Atlantic hurricane in September, nor..."
-      },
-      {
-        "title": "Women given shorts at Oktoberfest to prevent upskirting",
-        "link": "https://www.bbc.co.uk/news/articles/cjwyzyqvx1zxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World",
-        "published": "2026-10-02T15:16:03+00:00",
-        "summary": "The step at the Munich festival comes after thousands of voyeuristic videos emerged on social media."
       }
     ],
     "BBC Business": [
+      {
+        "title": "Suppliers pile pressure on government over energy bills",
+        "link": "https://www.bbc.co.uk/news/articles/cq0ld88kzxw8o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Business",
+        "published": "2026-10-03T00:58:44+00:00",
+        "summary": "Immediate action is needed to help households struggling with bills this winter, says trade body Ene..."
+      },
       {
         "title": "UK diesel prices top £2 a litre for first time, RAC says",
         "link": "https://www.bbc.co.uk/news/articles/crn8e86y5n0zo?at_medium=RSS&at_campaign=rss",
@@ -664,6 +678,20 @@
     ],
     "BBC Science & Environment": [
       {
+        "title": "Astronomers get permission for mini-observatory",
+        "link": "https://www.bbc.co.uk/news/articles/ck5ynpzz4q28o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Science",
+        "published": "2026-10-03T11:05:35+00:00",
+        "summary": "The Shropshire Astronomical Society plans to install the dome at Rodington village hall."
+      },
+      {
+        "title": "I'm a wildlife cameraman but 'special' rare sightings can still take me by surprise",
+        "link": "https://www.bbc.co.uk/news/articles/c6q8jly114j8o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC Science",
+        "published": "2026-10-03T09:08:10+00:00",
+        "summary": "Wildlife cameraman Dan Abbot is caught off guard by a humpback whale, a rare sight in Welsh waters."
+      },
+      {
         "title": "Woodlands project records more trees than expected",
         "link": "https://www.bbc.co.uk/news/articles/cx1l6len3gj3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC Science",
@@ -696,60 +724,60 @@
   "ja_news": {
     "頭條": [
       {
-        "title": "阪神が巨人とのV争いを制し、球団初のセ・リーグ連覇 ファンも歓喜",
-        "link": "http://www.asahi.com/articles/ASVB34CJ4VB3OXIE006M.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T06:55:29+00:00",
-        "summary": "阪神が巨人とのV争いを制し、球団初のセ・リーグ連覇 ファンも歓喜"
-      },
-      {
-        "title": "韓国サッカー男子V 国旗揚がらず",
-        "link": "https://news.yahoo.co.jp/pickup/6597458",
+        "title": "釣り中の9歳が海に転落 心肺停止",
+        "link": "https://news.yahoo.co.jp/pickup/6597459",
         "source": "Yahoo! Japan",
-        "published": "2026-10-03T06:51:27+00:00",
-        "summary": "韓国サッカー男子V 国旗揚がらず"
+        "published": "2026-10-03T14:17:36+00:00",
+        "summary": "釣り中の9歳が海に転落 心肺停止"
       },
       {
-        "title": "阪神V2 監督が涙「苦しかった」",
-        "link": "https://news.yahoo.co.jp/pickup/6597455",
+        "title": "村上宗隆がPS1号 雄たけび確信弾",
+        "link": "https://news.yahoo.co.jp/pickup/6597460",
         "source": "Yahoo! Japan",
-        "published": "2026-10-03T06:18:10+00:00",
-        "summary": "阪神V2 監督が涙「苦しかった」"
+        "published": "2026-10-03T14:17:21+00:00",
+        "summary": "村上宗隆がPS1号 雄たけび確信弾"
       },
       {
-        "title": "韓国に4連覇許した日本 ロス五輪予選へ、大岩ジャパンの狙いと課題",
-        "link": "http://www.asahi.com/articles/ASVB34J5NVB3UTQP02NM.html",
+        "title": "大谷翔平が初打席で安打、ドジャースが5―1でリード 村上は決勝弾",
+        "link": "http://www.asahi.com/articles/ASVB35D51VB3UTQP01LM.html",
         "source": "朝日新聞",
-        "published": "2026-10-03T06:02:58+00:00",
-        "summary": "韓国に4連覇許した日本 ロス五輪予選へ、大岩ジャパンの狙いと課題"
+        "published": "2026-10-03T14:09:59+00:00",
+        "summary": "大谷翔平が初打席で安打、ドジャースが5―1でリード 村上は決勝弾"
       },
       {
-        "title": "だんじり横転、11人負傷し搬送 交差点曲がり切れなかったか 堺",
-        "link": "http://www.asahi.com/articles/ASVB34KB7VB3PTIL009M.html",
+        "title": "高市内閣を出た林芳正氏 高まる注目は「戦わぬ政治家」を変えるのか",
+        "link": "http://www.asahi.com/articles/ASVB133S8VB1UTFK011M.html",
         "source": "朝日新聞",
-        "published": "2026-10-03T06:02:31+00:00",
-        "summary": "だんじり横転、11人負傷し搬送 交差点曲がり切れなかったか 堺"
+        "published": "2026-10-03T14:00:00+00:00",
+        "summary": "高市内閣を出た林芳正氏 高まる注目は「戦わぬ政治家」を変えるのか"
       },
       {
-        "title": "誇れる188勝194敗 ヤクルト・石川、25年のプロ生活に終止符",
-        "link": "http://www.asahi.com/articles/ASVB34J6RVB3UTQP02PM.html",
+        "title": "青木GMが語る石川雅規 じりじり積み上げていく姿勢示してくれた",
+        "link": "http://www.asahi.com/articles/ASVB30F57VB3UTQP001M.html",
         "source": "朝日新聞",
-        "published": "2026-10-03T06:01:58+00:00",
-        "summary": "誇れる188勝194敗 ヤクルト・石川、25年のプロ生活に終止符"
+        "published": "2026-10-03T13:00:00+00:00",
+        "summary": "青木GMが語る石川雅規 じりじり積み上げていく姿勢示してくれた"
       },
       {
-        "title": "米国産ジャガイモ解禁 前倒し浮上",
-        "link": "https://news.yahoo.co.jp/pickup/6597453",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T05:57:57+00:00",
-        "summary": "米国産ジャガイモ解禁 前倒し浮上"
+        "title": "投資の利益「自分だけ逃しているのでは」 若者を焦らす「FOMO」",
+        "link": "http://www.asahi.com/articles/ASVB22RGVVB2ULFA02YM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T13:00:00+00:00",
+        "summary": "投資の利益「自分だけ逃しているのでは」 若者を焦らす「FOMO」"
       },
       {
-        "title": "米政府のAI 都合の悪い質問を拒否",
-        "link": "https://news.yahoo.co.jp/pickup/6597451",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T05:35:42+00:00",
-        "summary": "米政府のAI 都合の悪い質問を拒否"
+        "title": "サザン関口氏の会社、5億円超の申告漏れ 損金計上めぐり国税局指摘",
+        "link": "http://www.asahi.com/articles/ASVB33SLCVB3UTIL01NM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T12:00:00+00:00",
+        "summary": "サザン関口氏の会社、5億円超の申告漏れ 損金計上めぐり国税局指摘"
+      },
+      {
+        "title": "AIで英語不要？ 中国で揺れる教育 大学は授業再編、SNSで論争",
+        "link": "http://www.asahi.com/articles/ASV9Y11LBV9YUPQJ002M.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T12:00:00+00:00",
+        "summary": "AIで英語不要？ 中国で揺れる教育 大学は授業再編、SNSで論争"
       }
     ],
     "國際": [
@@ -812,6 +840,13 @@
     ],
     "政治": [
       {
+        "title": "結集軸なき野党、消費減税の国会審議にどう臨む 政権は切り崩し狙う",
+        "link": "https://www.asahi.com/articles/ASVB23VKYVB2UTFK00BM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-02T13:00:00+00:00",
+        "summary": "結集軸なき野党、消費減税の国会審議にどう臨む 政権は切り崩し狙う"
+      },
+      {
         "title": "政府が「副首都」の要件案を公表 北海道、愛知、大阪、福岡が該当",
         "link": "https://www.asahi.com/articles/ASVB23QVSVB2UTFK00NM.html",
         "source": "朝日新聞",
@@ -859,22 +894,43 @@
         "source": "朝日新聞",
         "published": "2026-10-02T02:00:00+00:00",
         "summary": "「憲法に自衛隊明記を」 岡山県議会が意見書案を可決 3会派が反対"
-      },
-      {
-        "title": "チームみらいの安野党首、米経済学者のグレン・ワイル氏と対談",
-        "link": "https://www.asahi.com/articles/ASVB2368MVB2UTFK012M.html",
-        "source": "朝日新聞",
-        "published": "2026-10-02T02:00:00+00:00",
-        "summary": "チームみらいの安野党首、米経済学者のグレン・ワイル氏と対談"
       }
     ],
     "運動": [
+      {
+        "title": "阪神V2 監督が涙「苦しかった」",
+        "link": "https://news.yahoo.co.jp/pickup/6597455",
+        "source": "Yahoo! Japan",
+        "published": "2026-10-03T06:18:10+00:00",
+        "summary": "阪神V2 監督が涙「苦しかった」"
+      },
       {
         "title": "広島監督 試合後にファンへ謝罪",
         "link": "https://news.yahoo.co.jp/pickup/6597456",
         "source": "Yahoo! Japan",
         "published": "2026-10-03T06:06:21+00:00",
         "summary": "広島監督 試合後にファンへ謝罪"
+      },
+      {
+        "title": "誇れる188勝194敗 ヤクルト・石川、25年のプロ生活に終止符",
+        "link": "https://www.asahi.com/articles/ASVB34J6RVB3UTQP02PM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T06:01:58+00:00",
+        "summary": "誇れる188勝194敗 ヤクルト・石川、25年のプロ生活に終止符"
+      },
+      {
+        "title": "阪神、初のセ・リーグ連覇 不安で始まったリリーフ陣の破壊と再生",
+        "link": "https://www.asahi.com/articles/ASVB23360VB2PTQP00KM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T05:10:00+00:00",
+        "summary": "阪神、初のセ・リーグ連覇 不安で始まったリリーフ陣の破壊と再生"
+      },
+      {
+        "title": "【まとめてわかる】阪神はなぜ球団史上初の連覇を達成できたのか",
+        "link": "https://www.asahi.com/articles/ASV9Y3SL9V9YPTQP004M.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T05:00:00+00:00",
+        "summary": "【まとめてわかる】阪神はなぜ球団史上初の連覇を達成できたのか"
       },
       {
         "title": "阪神がセ・リーグ連覇 球団史上初",
@@ -891,39 +947,11 @@
         "summary": "阪神が球団史上初のセ・リーグ連覇 広島に敗れるも、2位巨人も敗戦"
       },
       {
-        "title": "バレー男子は銀 イランに敗れる",
-        "link": "https://news.yahoo.co.jp/pickup/6597444",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T04:31:35+00:00",
-        "summary": "バレー男子は銀 イランに敗れる"
-      },
-      {
         "title": "サッカー男子 韓国に敗れ銀メダル",
         "link": "https://news.yahoo.co.jp/pickup/6597443",
         "source": "Yahoo! Japan",
         "published": "2026-10-03T04:29:22+00:00",
         "summary": "サッカー男子 韓国に敗れ銀メダル"
-      },
-      {
-        "title": "石川雅規が三振締め 涙の引退登板",
-        "link": "https://news.yahoo.co.jp/pickup/6597439",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T04:05:33+00:00",
-        "summary": "石川雅規が三振締め 涙の引退登板"
-      },
-      {
-        "title": "4年後はスタッフとして？ 7連覇をすべて経験した上野由岐子の胸中",
-        "link": "https://www.asahi.com/articles/ASVB33PHBVB3UTQP023M.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T03:38:33+00:00",
-        "summary": "4年後はスタッフとして？ 7連覇をすべて経験した上野由岐子の胸中"
-      },
-      {
-        "title": "これが広島の意地 3年連続で「胴上げを見せられるのはいや」",
-        "link": "https://www.asahi.com/articles/ASVB33QRWVB3PTQP007M.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T03:35:28+00:00",
-        "summary": "これが広島の意地 3年連続で「胴上げを見せられるのはいや」"
       }
     ],
     "商業": [
@@ -986,11 +1014,11 @@
     ],
     "文化": [
       {
-        "title": "阪神ファン 夕方ため息→喜び爆発",
-        "link": "https://news.yahoo.co.jp/pickup/6597454",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T05:47:22+00:00",
-        "summary": "阪神ファン 夕方ため息→喜び爆発"
+        "title": "｢ニュースto｣5日にスタート 村上信五さんら会見で意気込み語る",
+        "link": "https://www.asahi.com/articles/ASVB32QPTVB3UCVL02JM.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T12:00:00+00:00",
+        "summary": "｢ニュースto｣5日にスタート 村上信五さんら会見で意気込み語る"
       },
       {
         "title": "4人死亡の火災 玄関付近が火元か",
@@ -1049,6 +1077,13 @@
         "source": "Yahoo! Japan",
         "published": "2026-10-03T06:33:41+00:00",
         "summary": "M-1エントリー過去最多1万2663組"
+      },
+      {
+        "title": "キンプリ・髙橋海人 ソロ活動開始",
+        "link": "https://news.yahoo.co.jp/pickup/6597433",
+        "source": "Yahoo! Japan",
+        "published": "2026-10-03T03:15:17+00:00",
+        "summary": "キンプリ・髙橋海人 ソロ活動開始"
       },
       {
         "title": "「充電旅」放送1回の制作に2カ月",
@@ -1609,6 +1644,27 @@
   "tech_blogs": {
     "Tech Blogs": [
       {
+        "title": "September sponsors-only newsletter",
+        "link": "https://simonwillison.net/2026/Oct/3/newsletter",
+        "source": "Simon Willison",
+        "published": "2026-10-03T14:00:31+00:00",
+        "summary": "I just sent the September edition of my sponsors-only monthly newsletter. If you are a sponsor (or s..."
+      },
+      {
+        "title": "WorkOS",
+        "link": "https://workos.com/guide/the-developers-guide-to-sso",
+        "source": "Daring Fireball",
+        "published": "2026-10-03T13:23:10+00:00",
+        "summary": "My thanks to WorkOS for sponsoring this last week, once again, at DF. SSO is table stakes for enterp..."
+      },
+      {
+        "title": "Apple Confirms iPhone 18 Pro Max AT&T Cellular Issues, Affected Devices Require Hardware Replacement",
+        "link": "https://9to5mac.com/2026/10/02/apple-confirms-iphone-18-pro-max-att-cellular-issues-affected-devices-require-hardware-replacement",
+        "source": "Daring Fireball",
+        "published": "2026-10-03T10:21:14+00:00",
+        "summary": "Chance Miller, 9to5Mac: In a statement to 9to5Mac, Apple said: We have identified an issue affecting..."
+      },
+      {
         "title": "Pluralistic: Economic probabilities for our grandchildren (03 Oct 2026)",
         "link": "https://pluralistic.net/2026/10/03/full-employment",
         "source": "Cory Doctorow",
@@ -1616,11 +1672,11 @@
         "summary": "Today's links Economic probabilities for our grandchildren: If only data centers would stop hogging ..."
       },
       {
-        "title": "★ Apple Is Going to Further Tighten the Screws on Full Disk Access on MacOS, in Response to Agentic AI Apps Running Amok",
-        "link": "https://daringfireball.net/2026/10/apple_full_disk_access",
-        "source": "Daring Fireball",
-        "published": "2026-10-02T12:40:15+00:00",
-        "summary": "Hopefully Apple has in mind a solution to this situation that will still enable knowledgeable power ..."
+        "title": "Rex's Dino Store",
+        "link": "https://simonwillison.net/2026/Oct/2/rex-s-dino-store",
+        "source": "Simon Willison",
+        "published": "2026-10-02T14:57:38+00:00",
+        "summary": "Museum: Rex's Dino Store Located just before the turnstiles in the Grand Army Plaza subway station a..."
       },
       {
         "title": "Premium: How Has AI Changed The Economy?",
