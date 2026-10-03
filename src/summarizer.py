@@ -709,6 +709,16 @@ def summarize_by_category(
     else:
         chain = get_summarizer_chain()
         chain_index = 0
+
+    names = [type(c).__name__ for c in chain]
+    if isinstance(chain[0], FallbackSummarizer):
+        logger.warning("No API key found - using RSS descriptions as fallback")
+    else:
+        logger.info(
+            "Using %s%s",
+            names[0],
+            f" (fallback chain: {' > '.join(names[1:])})" if len(names) > 1 else "",
+        )
     
     result = {}
     total_summarized = 0

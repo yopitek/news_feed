@@ -118,35 +118,14 @@ def main():
 
         # Step 7: Generate summaries (200 chars)
         logger.info("Generating summaries (200 chars/words)...")
-        
-        # Priority: NVIDIA > ZEABUR > GOOGLE (Gemini) > SILICONFLOW > DEEPSEEK > Fallback
-        nvidia_key = os.environ.get('NVIDIA_API_KEY')
-        zeabur_key = os.environ.get('ZEABUR_API_KEY')
-        google_key = os.environ.get('GOOGLE_API_KEY')
-        siliconflow_key = os.environ.get('SILICONFLOW_API_KEY')
-        deepseek_key = os.environ.get('DEEPSEEK_API_KEY')
-        
-        if nvidia_key:
-            logger.info("Using NVIDIA NIM API")
-            api_key = nvidia_key
-        elif zeabur_key:
-            logger.info("Using Zeabur AI Hub (GPT-4o-mini)")
-            api_key = zeabur_key
-        elif google_key:
-            logger.info("Using Google Gemini API (free tier)")
-            api_key = google_key
-        elif siliconflow_key:
-            logger.info("Using SiliconFlow API (free DeepSeek model)")
-            api_key = siliconflow_key
-        elif deepseek_key:
-            logger.info("Using DeepSeek API")
-            api_key = deepseek_key
-        else:
-            logger.warning("No API key found - using RSS descriptions as fallback")
-            api_key = None
-        
+
+        # Provider selection lives in src/summarizer, which now returns the whole
+        # keyed-up chain so a provider that fails with a permanent error falls
+        # through to the next one. Selecting a single key here used to pin us to
+        # one provider for the whole run: NVIDIA_API_KEY answering 403 left every
+        # summary as the bare RSS description even though ZEABUR_API_KEY was set.
         summarized = summarize_by_category(
-            selected, api_key, skip_ai_tabs=['tech_blogs', 'ptt_hot', 'dcard_hot']
+            selected, skip_ai_tabs=['tech_blogs', 'ptt_hot', 'dcard_hot']
         )
         summary_count = sum(
             len(arts)
