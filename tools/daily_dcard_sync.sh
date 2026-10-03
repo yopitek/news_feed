@@ -22,6 +22,9 @@ mkdir -p "$LOG_DIR"
 
 # cron gives a minimal environment; make `bsk` and a usable python discoverable.
 export PATH="$HOME/.local/bin:$HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
+# The collector is stdlib-only. Clearing PYTHONPATH keeps it hermetic and stops
+# any inherited sitecustomize/.pth shim from interfering with the run.
+export PYTHONPATH=""
 
 if [ -x "$REPO_ROOT/.venv/bin/python3" ]; then
     PYTHON="$REPO_ROOT/.venv/bin/python3"
