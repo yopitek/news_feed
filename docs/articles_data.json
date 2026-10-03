@@ -67,13 +67,6 @@
         "summary": "（中央社台北3日電）今彩539第115240期開獎，中獎號碼05、28、33、38、29；派彩結果，頭獎槓龜。"
       },
       {
-        "title": "越南第3季經濟成長飆9.95% 4年最快增速",
-        "link": "https://www.cna.com.tw/news/aopl/202610030194.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T05:30:28+00:00",
-        "summary": "（中央社河內3日綜合外電報導）越南政府統計資料顯示，今年第3季經濟成長率勁揚9.95%，高於前一季的8.81%，創下4年來最快成長速度。"
-      },
-      {
         "title": "國際能源總署：成員國迄今釋出3.25億桶戰略儲油",
         "link": "https://www.cna.com.tw/news/afe/202610030191.aspx",
         "source": "中央社",
@@ -109,6 +102,13 @@
         "summary": "（中央社記者陳韻聿倫敦3日專電）台灣推展與歐洲的科技戰略合作，2日又攻下一重鎮，與英國簽署「科學創新及技術協議」（SITA）。在倫敦見證協議簽署的國科會副主委陳炳宇告訴中央社，協議有助雙邊相關領域的戰..."
       },
       {
+        "title": "曼谷洪災造成航班大亂、行李滯留 泰航執行長遭停職",
+        "link": "https://www.cna.com.tw/news/aopl/202610030111.aspx",
+        "source": "中央社",
+        "published": "2026-10-02T23:40:23+00:00",
+        "summary": "（中央社記者李宗憲曼谷3日專電）泰國航空公司（Thai Airways）近日因機場行李大量滯留引發爭議，泰航董事會2日決議，執行長柴伊・安西里即日起停止履行執行長職務，接受洪災期間危機管理及營運失誤調..."
+      },
+      {
         "title": "台英簽署科學創新及技術協議 將推矽光子、半導體人才等3合作",
         "link": "https://www.cna.com.tw/news/afe/202610030090.aspx",
         "source": "中央社",
@@ -117,6 +117,41 @@
       }
     ],
     "全球國際新聞": [
+      {
+        "title": "奈及利亞中部發生重大車禍 造成20人喪命",
+        "link": "https://www.cna.com.tw/news/aopl/202610030203.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T06:39:50+00:00",
+        "summary": "（中央社拉哥斯3日綜合外電報導）奈及利亞相關當局透過聲明表示，國內中部高原州（Plateau）一條公路發生多台車輛相撞事故，導致20人死亡。"
+      },
+      {
+        "title": "大馬台商歡慶115年雙十國慶 盼讓世界看到台灣價值",
+        "link": "https://www.cna.com.tw/news/aipl/202610030198.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T05:55:39+00:00",
+        "summary": "（中央社記者黃自強吉隆坡3日專電）馬來西亞台灣商會聯合總會今晚在檳城舉行中華民國115年國慶晚宴，來自大馬各地台商齊聚，提前慶祝雙十國慶。主辦單位期盼國慶活動凝聚海外台商情誼，不僅延續在大馬扎根打拚的..."
+      },
+      {
+        "title": "俄羅斯揚言對基輔發動新一輪攻勢 促外國人撤離",
+        "link": "https://www.cna.com.tw/news/aopl/202610030197.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T05:48:36+00:00",
+        "summary": "（中央社莫斯科3日綜合外電報導）俄羅斯外交部今天發布聲明，再度呼籲外交官員和外國人離開烏克蘭首都基輔（Kyiv），並警告說基輔即將面臨新一輪「大規模」攻擊。"
+      },
+      {
+        "title": "中國民眾長假擠爆海外景點 「有沒有出國」傻傻分不清",
+        "link": "https://www.cna.com.tw/news/acn/202610030195.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T05:36:32+00:00",
+        "summary": "（中央社台北3日電）不少中國民眾利用今年中秋與「十一」國慶長假出國玩，一些國家知名景點隨處可見中國遊客，有網友笑稱「向前、向後、向左、向右全是同胞」，一時間分不清自己究竟身處中國還是國外。"
+      },
+      {
+        "title": "越南第3季經濟成長飆9.95% 4年最快增速",
+        "link": "https://www.cna.com.tw/news/aopl/202610030194.aspx",
+        "source": "中央社",
+        "published": "2026-10-03T05:30:28+00:00",
+        "summary": "（中央社河內3日綜合外電報導）越南政府統計資料顯示，今年第3季經濟成長率勁揚9.95%，高於前一季的8.81%，創下4年來最快成長速度。"
+      },
       {
         "title": "北京在寮國設立首個境外空軍設施 分析：擴大中國海外軍事布局",
         "link": "https://www.cna.com.tw/news/acn/202610030193.aspx",
@@ -137,41 +172,6 @@
         "source": "中央社",
         "published": "2026-10-03T04:39:08+00:00",
         "summary": "（中央社記者呂佳蓉北京3日電）中國外交部今天晚間表示，中方歡迎俄羅斯總統普丁出席今年11月將在深圳舉行的APEC領導人非正式會議。"
-      },
-      {
-        "title": "颱風彩雲恐接近小笠原群島 日本氣象廳示警有大浪",
-        "link": "https://www.cna.com.tw/news/aopl/202610030182.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T04:38:02+00:00",
-        "summary": "（中央社東京3日綜合外電報導）日本氣象廳今天指出，颱風「彩雲」一邊增強且一邊北上，有可能在5日至6日前後以非常強的威力接近小笠原群島，呼籲民眾警惕強風和大浪。"
-      },
-      {
-        "title": "埃及生育率4年降18% 專家：生活成本上升改變家庭選擇",
-        "link": "https://www.cna.com.tw/news/aopl/202610030180.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T04:28:57+00:00",
-        "summary": "（中央社記者施婉清開羅3日專電）埃及長期面臨的人口快速成長問題出現明顯轉折。最新統計顯示，埃及生育率自2021年的2.85人降至2025年的2.33人，降幅達18.2%。專家分析，近年生活成本飆升，逐..."
-      },
-      {
-        "title": "西班牙北部酒吧坍塌11人受傷送醫 警方展開調查",
-        "link": "https://www.cna.com.tw/news/aopl/202610030175.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T03:55:46+00:00",
-        "summary": "（中央社馬德里3日綜合外電報導）西班牙當局指出，國內北部拉里奧哈（La Rioja）地區一間酒吧今天清晨突然發生坍塌事故，有11名傷者送醫治療；根據倖存者描述，酒吧地板先塌陷，隨後天花板也坍了。"
-      },
-      {
-        "title": "傳台積電評估與Terafab合作晶圓廠 馬斯克證實討論中",
-        "link": "https://www.cna.com.tw/news/aopl/202610030173.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T03:30:42+00:00",
-        "summary": "（中央社奧斯汀3日綜合外電報導）消息人士透露，晶圓代工龍頭台積電正評估與馬斯克旗下Terafab半導體和晶片製造園區合作的可能性，協助其營運位在德州的晶圓廠。馬斯克今天親自回應，證實雙方正商討此事。"
-      },
-      {
-        "title": "日本富山市涉人口普查灌水遭搜索 恐多領6000萬日圓交付稅",
-        "link": "https://www.cna.com.tw/news/aopl/202610030170.aspx",
-        "source": "中央社",
-        "published": "2026-10-03T03:09:35+00:00",
-        "summary": "（中央社富山市3日綜合外電報導）日本富山市政府職員涉嫌在國勢調查（即人口普查）中灌水人口數一事遭日本總務省告發，富山縣警方今天以涉嫌違反「統計法」為由，搜索富山市政府辦公室。"
       }
     ],
     "社會": [
@@ -396,13 +396,6 @@
   "en_news": {
     "Startup": [
       {
-        "title": "I Quit OpenAI Because Its Culture Is Broken",
-        "link": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881",
-        "source": "Hacker News",
-        "published": "2026-10-03T05:46:34+00:00",
-        "summary": "Comments"
-      },
-      {
         "title": "Great Question (YC W21) Is Hiring Product Engineers in Canada (Remote)",
         "link": "https://www.ycombinator.com/companies/great-question/jobs/agEqBYD-product-engineer-ai-full-stack",
         "source": "Hacker News",
@@ -450,9 +443,37 @@
         "source": "Hacker News",
         "published": "2026-10-02T20:53:57+00:00",
         "summary": "Comments"
+      },
+      {
+        "title": "Extra Big Ass Intelligence",
+        "link": "https://www.extrabigassintelligence.com/",
+        "source": "Hacker News",
+        "published": "2026-10-02T19:19:10+00:00",
+        "summary": "Comments"
       }
     ],
     "Tech News": [
+      {
+        "title": "Jack Dorsey’s Bitchat disappears from app stores in India after government order",
+        "link": "https://techcrunch.com/2026/10/03/jack-dorseys-bitchat-disappears-from-app-stores-in-india-after-government-order",
+        "source": "TechCrunch",
+        "published": "2026-10-03T07:02:01+00:00",
+        "summary": "Bitchat has become largely unavailable in India as a result of the restrictions."
+      },
+      {
+        "title": "Splice CEO Kakul Srivastava thinks AI emails are killing conversations",
+        "link": "https://www.theverge.com/entertainment/1004162/splice-ceo-kakul-srivastava-ai-interview",
+        "source": "The Verge",
+        "published": "2026-10-03T07:00:00+00:00",
+        "summary": "Kakul Srivastava is the CEO of Splice, the sample platform countless producers rely on for one-shots..."
+      },
+      {
+        "title": "Vessev built an electric ferry that almost flies",
+        "link": "https://techcrunch.com/2026/10/03/vessev-built-an-electric-ferry-that-almost-flies",
+        "source": "TechCrunch",
+        "published": "2026-10-03T06:42:00+00:00",
+        "summary": "Vessev hopes its electric hydrofoil ferry will change the way people and cities think about boats."
+      },
       {
         "title": "An OpenAI safety employee has quit and is sounding the alarm",
         "link": "https://www.theverge.com/ai-artificial-intelligence/1004408/openai-safety-quits-sounding-the-alarm",
@@ -487,27 +508,6 @@
         "source": "TechCrunch",
         "published": "2026-10-02T16:45:39+00:00",
         "summary": "Meta wants Muse in your TV and your toaster, so it's giving the code away for free."
-      },
-      {
-        "title": "Sanders introduces bill to ban the federal government from using Flock",
-        "link": "https://techcrunch.com/2026/10/02/sanders-introduces-bill-to-ban-the-federal-government-from-using-flock",
-        "source": "TechCrunch",
-        "published": "2026-10-02T16:21:57+00:00",
-        "summary": "The proposed legislation would extend to all automotica license plate readers."
-      },
-      {
-        "title": "Sean Parker is rebuilding Stability AI around music",
-        "link": "https://techcrunch.com/2026/10/02/sean-parker-is-rebuilding-stability-ai-around-music",
-        "source": "TechCrunch",
-        "published": "2026-10-02T13:09:14+00:00",
-        "summary": "Sean Parker, who once taught the music industry what asking for forgiveness looks like, is now back ..."
-      },
-      {
-        "title": "Meta open sources code to let you make Muse AI gadgets",
-        "link": "https://www.theverge.com/tech/1004330/meta-muse-ai-gadgets-home-link",
-        "source": "The Verge",
-        "published": "2026-10-02T13:08:37+00:00",
-        "summary": "Meta now lets you make your own Muse gadgets that feature the company's new AI agent with code that ..."
       }
     ],
     "BBC Top Stories": [
@@ -696,11 +696,18 @@
   "ja_news": {
     "頭條": [
       {
-        "title": "M-1エントリー過去最多1万2663組",
-        "link": "https://news.yahoo.co.jp/pickup/6597457",
+        "title": "阪神が巨人とのV争いを制し、球団初のセ・リーグ連覇 ファンも歓喜",
+        "link": "http://www.asahi.com/articles/ASVB34CJ4VB3OXIE006M.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T06:55:29+00:00",
+        "summary": "阪神が巨人とのV争いを制し、球団初のセ・リーグ連覇 ファンも歓喜"
+      },
+      {
+        "title": "韓国サッカー男子V 国旗揚がらず",
+        "link": "https://news.yahoo.co.jp/pickup/6597458",
         "source": "Yahoo! Japan",
-        "published": "2026-10-03T06:33:41+00:00",
-        "summary": "M-1エントリー過去最多1万2663組"
+        "published": "2026-10-03T06:51:27+00:00",
+        "summary": "韓国サッカー男子V 国旗揚がらず"
       },
       {
         "title": "阪神V2 監督が涙「苦しかった」",
@@ -731,11 +738,11 @@
         "summary": "誇れる188勝194敗 ヤクルト・石川、25年のプロ生活に終止符"
       },
       {
-        "title": "阪神が巨人とのV争いを制し、球団初のセ・リーグ連覇 ファンも歓喜",
-        "link": "http://www.asahi.com/articles/ASVB34CJ4VB3OXIE006M.html",
-        "source": "朝日新聞",
-        "published": "2026-10-03T06:01:39+00:00",
-        "summary": "阪神が巨人とのV争いを制し、球団初のセ・リーグ連覇 ファンも歓喜"
+        "title": "米国産ジャガイモ解禁 前倒し浮上",
+        "link": "https://news.yahoo.co.jp/pickup/6597453",
+        "source": "Yahoo! Japan",
+        "published": "2026-10-03T05:57:57+00:00",
+        "summary": "米国産ジャガイモ解禁 前倒し浮上"
       },
       {
         "title": "米政府のAI 都合の悪い質問を拒否",
@@ -743,13 +750,6 @@
         "source": "Yahoo! Japan",
         "published": "2026-10-03T05:35:42+00:00",
         "summary": "米政府のAI 都合の悪い質問を拒否"
-      },
-      {
-        "title": "台風27号 小笠原諸島で高波警戒",
-        "link": "https://news.yahoo.co.jp/pickup/6597449",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T05:23:55+00:00",
-        "summary": "台風27号 小笠原諸島で高波警戒"
       }
     ],
     "國際": [
@@ -912,27 +912,27 @@
         "summary": "石川雅規が三振締め 涙の引退登板"
       },
       {
-        "title": "元清水商監督 大瀧雅良さん死去",
-        "link": "https://news.yahoo.co.jp/pickup/6597436",
-        "source": "Yahoo! Japan",
-        "published": "2026-10-03T03:47:12+00:00",
-        "summary": "元清水商監督 大瀧雅良さん死去"
-      },
-      {
         "title": "4年後はスタッフとして？ 7連覇をすべて経験した上野由岐子の胸中",
         "link": "https://www.asahi.com/articles/ASVB33PHBVB3UTQP023M.html",
         "source": "朝日新聞",
         "published": "2026-10-03T03:38:33+00:00",
         "summary": "4年後はスタッフとして？ 7連覇をすべて経験した上野由岐子の胸中"
+      },
+      {
+        "title": "これが広島の意地 3年連続で「胴上げを見せられるのはいや」",
+        "link": "https://www.asahi.com/articles/ASVB33QRWVB3PTQP007M.html",
+        "source": "朝日新聞",
+        "published": "2026-10-03T03:35:28+00:00",
+        "summary": "これが広島の意地 3年連続で「胴上げを見せられるのはいや」"
       }
     ],
     "商業": [
       {
-        "title": "米国産ジャガイモ解禁 前倒し浮上",
-        "link": "https://news.yahoo.co.jp/pickup/6597453",
+        "title": "MacのOSを修正へ AIリスク対策",
+        "link": "https://news.yahoo.co.jp/pickup/6597441",
         "source": "Yahoo! Japan",
-        "published": "2026-10-03T05:57:57+00:00",
-        "summary": "米国産ジャガイモ解禁 前倒し浮上"
+        "published": "2026-10-03T04:52:45+00:00",
+        "summary": "MacのOSを修正へ AIリスク対策"
       },
       {
         "title": "マンジャロ使用巡り 肥満学会声明",
@@ -1044,6 +1044,13 @@
     ],
     "娛樂": [
       {
+        "title": "M-1エントリー過去最多1万2663組",
+        "link": "https://news.yahoo.co.jp/pickup/6597457",
+        "source": "Yahoo! Japan",
+        "published": "2026-10-03T06:33:41+00:00",
+        "summary": "M-1エントリー過去最多1万2663組"
+      },
+      {
         "title": "「充電旅」放送1回の制作に2カ月",
         "link": "https://news.yahoo.co.jp/pickup/6597426",
         "source": "Yahoo! Japan",
@@ -1084,6 +1091,284 @@
         "source": "Yahoo! Japan",
         "published": "2026-10-02T02:39:42+00:00",
         "summary": "宮根誠司「ミヤネ屋」最終回で涙"
+      }
+    ]
+  },
+  "ptt_hot": {
+    "八卦板": [
+      {
+        "title": "[新聞]沈伯洋曾支持吸毒？藍營揭2014「撲馬文章",
+        "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038038.A.D25.html",
+        "source": "PTT 八卦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[新聞]沈伯洋曾支持吸毒？藍營揭2014「撲馬文章"
+      },
+      {
+        "title": "[問卦] 手機螢幕到底能不能用酒精消毒啊",
+        "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038737.A.4A1.html",
+        "source": "PTT 八卦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[問卦] 手機螢幕到底能不能用酒精消毒啊"
+      },
+      {
+        "title": "[問卦] 嚇死人 第一集就是上吊",
+        "link": "https://www.ptt.cc/bbs/Gossiping/M.1791037879.A.88C.html",
+        "source": "PTT 八卦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[問卦] 嚇死人 第一集就是上吊"
+      },
+      {
+        "title": "[問卦] 狗熊哆嗦毛是在紅什麼？",
+        "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038843.A.75B.html",
+        "source": "PTT 八卦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[問卦] 狗熊哆嗦毛是在紅什麼？"
+      },
+      {
+        "title": "[問卦] 下禮拜股市貪狗會買什麼犒賞自己?",
+        "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038377.A.9BE.html",
+        "source": "PTT 八卦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[問卦] 下禮拜股市貪狗會買什麼犒賞自己?"
+      },
+      {
+        "title": "[問卦] 陰陽路那一集小時候看覺得可怕",
+        "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038199.A.184.html",
+        "source": "PTT 八卦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[問卦] 陰陽路那一集小時候看覺得可怕"
+      },
+      {
+        "title": "[問卦] 小寧子太有料了吧，開箱中國數位史",
+        "link": "https://www.ptt.cc/bbs/Gossiping/M.1791037864.A.750.html",
+        "source": "PTT 八卦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[問卦] 小寧子太有料了吧，開箱中國數位史"
+      },
+      {
+        "title": "[問卦] 為什麼快樂這麼短，痛苦這麼長？",
+        "link": "https://www.ptt.cc/bbs/Gossiping/M.1791038149.A.549.html",
+        "source": "PTT 八卦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[問卦] 為什麼快樂這麼短，痛苦這麼長？"
+      }
+    ],
+    "股票板": [
+      {
+        "title": "[請益] 台股看這個樣子有機會五萬點",
+        "link": "https://www.ptt.cc/bbs/Stock/M.1791019476.A.81C.html",
+        "source": "PTT 股票板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[請益] 台股看這個樣子有機會五萬點"
+      },
+      {
+        "title": "[新聞] 華為最新麒麟 9050 Pro 晶片照曝光！兩層",
+        "link": "https://www.ptt.cc/bbs/Stock/M.1791027249.A.019.html",
+        "source": "PTT 股票板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[新聞] 華為最新麒麟 9050 Pro 晶片照曝光！兩層"
+      },
+      {
+        "title": "Re: [新聞] 台積電傳與馬斯克Terafab探索合作 考慮美",
+        "link": "https://www.ptt.cc/bbs/Stock/M.1791016608.A.717.html",
+        "source": "PTT 股票板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "Re: [新聞] 台積電傳與馬斯克Terafab探索合作 考慮美"
+      },
+      {
+        "title": "[新聞] 三星HBM4報價逾前代3倍 搶攻AI記憶體定價",
+        "link": "https://www.ptt.cc/bbs/Stock/M.1791011815.A.363.html",
+        "source": "PTT 股票板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[新聞] 三星HBM4報價逾前代3倍 搶攻AI記憶體定價"
+      },
+      {
+        "title": "[新聞] 韓國雞肉價格半年跌近4成！炸雞卻沒變便",
+        "link": "https://www.ptt.cc/bbs/Stock/M.1791035117.A.9F4.html",
+        "source": "PTT 股票板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[新聞] 韓國雞肉價格半年跌近4成！炸雞卻沒變便"
+      },
+      {
+        "title": "Re: [標的] 2630亞航 （中期投資多）",
+        "link": "https://www.ptt.cc/bbs/Stock/M.1791022555.A.DF0.html",
+        "source": "PTT 股票板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "Re: [標的] 2630亞航 （中期投資多）"
+      }
+    ],
+    "科技業板": [
+      {
+        "title": "[情報] 華邦電Q2開獎",
+        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1790675422.A.10C.html",
+        "source": "PTT 科技業板",
+        "published": "2026-09-29T12:00:00+08:00",
+        "summary": "[情報] 華邦電Q2開獎"
+      },
+      {
+        "title": "[討論] 公司配的token不夠 怎麼辦",
+        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1791020211.A.79C.html",
+        "source": "PTT 科技業板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[討論] 公司配的token不夠 怎麼辦"
+      },
+      {
+        "title": "[新聞] 〈財報〉美光Q4優預期財測強勁 資料中心",
+        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1790812323.A.5A2.html",
+        "source": "PTT 科技業板",
+        "published": "2026-10-01T12:00:00+08:00",
+        "summary": "[新聞] 〈財報〉美光Q4優預期財測強勁 資料中心"
+      },
+      {
+        "title": "[情報] 皮卡開獎",
+        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1790736546.A.5CC.html",
+        "source": "PTT 科技業板",
+        "published": "2026-09-30T12:00:00+08:00",
+        "summary": "[情報] 皮卡開獎"
+      },
+      {
+        "title": "[心得] 超過40歲還在高壓, 餘生用來養病？",
+        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1790600675.A.463.html",
+        "source": "PTT 科技業板",
+        "published": "2026-09-28T12:00:00+08:00",
+        "summary": "[心得] 超過40歲還在高壓, 餘生用來養病？"
+      },
+      {
+        "title": "[討論] 海馬開獎(Dcard)",
+        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1790774684.A.273.html",
+        "source": "PTT 科技業板",
+        "published": "2026-09-30T12:00:00+08:00",
+        "summary": "[討論] 海馬開獎(Dcard)"
+      },
+      {
+        "title": "[新聞] 被錢砸醒！鴻海員工分紅獎金今入帳 績優",
+        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1790742824.A.08B.html",
+        "source": "PTT 科技業板",
+        "published": "2026-09-30T12:00:00+08:00",
+        "summary": "[新聞] 被錢砸醒！鴻海員工分紅獎金今入帳 績優"
+      },
+      {
+        "title": "[新聞] 台積電大加碼？川普爆「偉大的台灣晶片公",
+        "link": "https://www.ptt.cc/bbs/Tech_Job/M.1790915698.A.70C.html",
+        "source": "PTT 科技業板",
+        "published": "2026-10-02T12:00:00+08:00",
+        "summary": "[新聞] 台積電大加碼？川普爆「偉大的台灣晶片公"
+      }
+    ],
+    "軟體工作板": [
+      {
+        "title": "[請益] 一銀與遠傳 offer 選擇",
+        "link": "https://www.ptt.cc/bbs/Soft_Job/M.1789636489.A.BF4.html",
+        "source": "PTT 軟體工作板",
+        "published": "2026-09-17T12:00:00+08:00",
+        "summary": "[請益] 一銀與遠傳 offer 選擇"
+      },
+      {
+        "title": "Re: [討論] 程式設計將迎來終結?",
+        "link": "https://www.ptt.cc/bbs/Soft_Job/M.1789176238.A.A3E.html",
+        "source": "PTT 軟體工作板",
+        "published": "2026-09-12T12:00:00+08:00",
+        "summary": "Re: [討論] 程式設計將迎來終結?"
+      },
+      {
+        "title": "[討論] 關於一個claude ai 討論的line 群",
+        "link": "https://www.ptt.cc/bbs/Soft_Job/M.1790397299.A.743.html",
+        "source": "PTT 軟體工作板",
+        "published": "2026-09-26T12:00:00+08:00",
+        "summary": "[討論] 關於一個claude ai 討論的line 群"
+      },
+      {
+        "title": "[心得] TWPulse - 台灣電力/水情/AQI 即時監測儀",
+        "link": "https://www.ptt.cc/bbs/Soft_Job/M.1789033335.A.859.html",
+        "source": "PTT 軟體工作板",
+        "published": "2026-09-10T12:00:00+08:00",
+        "summary": "[心得] TWPulse - 台灣電力/水情/AQI 即時監測儀"
+      },
+      {
+        "title": "[請益] 博士畢業後發展請益 and 影像相關",
+        "link": "https://www.ptt.cc/bbs/Soft_Job/M.1789349287.A.685.html",
+        "source": "PTT 軟體工作板",
+        "published": "2026-09-14T12:00:00+08:00",
+        "summary": "[請益] 博士畢業後發展請益 and 影像相關"
+      },
+      {
+        "title": "[討論] Hermes Agent Desktop也更新太多次了吧?",
+        "link": "https://www.ptt.cc/bbs/Soft_Job/M.1789473136.A.90F.html",
+        "source": "PTT 軟體工作板",
+        "published": "2026-09-15T12:00:00+08:00",
+        "summary": "[討論] Hermes Agent Desktop也更新太多次了吧?"
+      },
+      {
+        "title": "[心得]個人開發：用 Django 與雲端沙盒拆解詐騙",
+        "link": "https://www.ptt.cc/bbs/Soft_Job/M.1789647875.A.659.html",
+        "source": "PTT 軟體工作板",
+        "published": "2026-09-17T12:00:00+08:00",
+        "summary": "[心得]個人開發：用 Django 與雲端沙盒拆解詐騙"
+      },
+      {
+        "title": "[討論] Rails world 2026 keynote - DHH",
+        "link": "https://www.ptt.cc/bbs/Soft_Job/M.1790237193.A.BB4.html",
+        "source": "PTT 軟體工作板",
+        "published": "2026-09-24T12:00:00+08:00",
+        "summary": "[討論] Rails world 2026 keynote - DHH"
+      }
+    ],
+    "電蝦板": [
+      {
+        "title": "[閒聊] 光華商場52年老牌電腦店無預警停業 (O)",
+        "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1790954269.A.672.html",
+        "source": "PTT 電蝦板",
+        "published": "2026-10-02T12:00:00+08:00",
+        "summary": "[閒聊] 光華商場52年老牌電腦店無預警停業 (O)"
+      },
+      {
+        "title": "閒聊 蝦皮買電腦",
+        "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1790938323.A.732.html",
+        "source": "PTT 電蝦板",
+        "published": "2026-10-02T12:00:00+08:00",
+        "summary": "閒聊 蝦皮買電腦"
+      },
+      {
+        "title": "Re: [心得] 美光d5 RMA請益",
+        "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1790943018.A.AEF.html",
+        "source": "PTT 電蝦板",
+        "published": "2026-10-02T12:00:00+08:00",
+        "summary": "Re: [心得] 美光d5 RMA請益"
+      },
+      {
+        "title": "Re: [情報] LEKUO PB65MX3 擴充卡",
+        "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1790979995.A.74C.html",
+        "source": "PTT 電蝦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "Re: [情報] LEKUO PB65MX3 擴充卡"
+      },
+      {
+        "title": "[菜單] 72K 遊戲機",
+        "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1790998791.A.B0B.html",
+        "source": "PTT 電蝦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[菜單] 72K 遊戲機"
+      },
+      {
+        "title": "[閒聊] 二手市場幾乎沒有4060ti 16g?",
+        "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791034621.A.9FB.html",
+        "source": "PTT 電蝦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "[閒聊] 二手市場幾乎沒有4060ti 16g?"
+      },
+      {
+        "title": "[情報] 振華電腦推出 LEADEX III Platinum 1300W",
+        "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1790936738.A.FE2.html",
+        "source": "PTT 電蝦板",
+        "published": "2026-10-02T12:00:00+08:00",
+        "summary": "[情報] 振華電腦推出 LEADEX III Platinum 1300W"
+      },
+      {
+        "title": "Re: 閒聊 蝦皮買電腦",
+        "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1790959675.A.0A5.html",
+        "source": "PTT 電蝦板",
+        "published": "2026-10-03T12:00:00+08:00",
+        "summary": "Re: 閒聊 蝦皮買電腦"
       }
     ]
   },
@@ -1132,18 +1417,18 @@
         "summary": "都沒錢付token了，還調薪 調你哥雞巴毛"
       },
       {
+        "title": "沒工作的躺平生活分享",
+        "link": "https://www.dcard.tw/f/tech_job/p/262243684",
+        "source": "Dcard 科技業板",
+        "published": "2026-10-03T05:08:48.546000+00:00",
+        "summary": "看到同校的在發文，我也分享一篇畢業一年的啃老心得，本人88年次的，高中畢業後啃老兩年被家人逼去讀大學，研究所畢業後啃老至今，目前的身分就是無業仔，履歷投出去之後全部石沉大海，偶爾收到幾封感謝您的應徵，"
+      },
+      {
         "title": "2027台積電預聘分享（FAC hook up）",
         "link": "https://www.dcard.tw/f/tech_job/p/262239730",
         "source": "Dcard 科技業板",
         "published": "2026-10-02T08:01:10.961000+00:00",
         "summary": "（內容有主觀及客觀想法故僅供參考），原本想說台積電應該很難上，所以抱持著面試刷個經驗至少不要留下負評，沒想到第一次面試就上了，因為這個職務真的沒什麼資訊，所以以下文章單純分享我的職務及面試準備過程！，"
-      },
-      {
-        "title": "什麼時候罷工投票才能發揮最大的力量？",
-        "link": "https://www.dcard.tw/f/tech_job/p/262238481",
-        "source": "Dcard 科技業板",
-        "published": "2026-10-02T03:23:52.945000+00:00",
-        "summary": "能多拿獎金、改善制度當然是最好的，但罷工票在什麼時候投下去，才能發揮最大的力量？因為公司說10月下旬董事會會針對分潤制度有個評估結果，既然已經開出來時間表，那我們就盯著，看公司怎麼兌現，但現在就把談判"
       }
     ],
     "AI 工作者板": [
@@ -1234,13 +1519,6 @@
         "summary": "新手電腦組裝沒什麼概念🫠，原電腦是文書機現在想升級成入門遊戲機，請教各位大神我該買哪些零件改裝🙏，預算大約3萬5上下，外觀不要求，不玩3A遊戲，一般單機遊戲偶爾玩射擊，原配備：CPU：intel（R）"
       },
       {
-        "title": "#請益 自組遊戲用電腦",
-        "link": "https://www.dcard.tw/f/3c/p/262238289",
-        "source": "Dcard 3C 板",
-        "published": "2026-10-02T02:33:16.009000+00:00",
-        "summary": "先說預算大約8萬，盡量不要超過，遊戲屬性雜食，大大小小、單機線上都有可能玩，目前是使用2k螢幕，應該短期內不會換，才買不到2年，效能、散熱、安靜希望兼顧，外型放最後，請大神們健檢"
-      },
-      {
         "title": "#討論 Line創第二個帳號",
         "link": "https://www.dcard.tw/f/3c/p/262244948",
         "source": "Dcard 3C 板",
@@ -1260,6 +1538,13 @@
         "source": "Dcard 3C 板",
         "published": "2026-10-02T23:59:20.941000+00:00",
         "summary": "昨天用公用電腦usb充電...電腦網頁上一堆廣告程式"
+      },
+      {
+        "title": "#請益 哀鳳原廠or副廠電池",
+        "link": "https://www.dcard.tw/f/3c/p/262241075",
+        "source": "Dcard 3C 板",
+        "published": "2026-10-02T13:22:36.262000+00:00",
+        "summary": "使用的機型是i14 pro，想詢問有人換過猿動力的副廠電池嗎，因為價格更親民保固時間也更長 所以實在很猶豫到底要原廠還是副廠就好"
       }
     ],
     "理財板": [
@@ -1269,13 +1554,6 @@
         "source": "Dcard 理財板",
         "published": "2026-10-02T05:54:16.521000+00:00",
         "summary": "5年多過去了，我傳產月收入不高，從本金90萬開始存股，目標月月領5000～10000～15000，到今天10/2 終於可達月月領2萬了，股息皆來自，高股息+市值型+金融股+台積電，我參考所有財經網紅跟"
-      },
-      {
-        "title": "媽媽還我快100萬的孝親費...可以如何規劃？",
-        "link": "https://www.dcard.tw/f/money/p/262238337",
-        "source": "Dcard 理財板",
-        "published": "2026-10-02T02:47:10.741000+00:00",
-        "summary": "出社會後每個月都主動給家裡一萬塊孝親費，前陣子博恩那個孝親費議題很紅，沒想到我媽也看到了，前幾天她居然一臉愧疚拿了一本存摺給我，：「這幾年的孝親費我都有幫你存起來」：「現在想想你其實也沒賺多少，還跟你"
       },
       {
         "title": "我爸給我200萬，叫我別再肖想5000萬房產",
@@ -1306,6 +1584,13 @@
         "summary": "哈囉大家，我是 Rudy！✌️，歡迎來到「被動收入 10 萬養成紀錄」的 【第 14 期】！，不知不覺，這個紀錄持續更新到了第 14 週。今天是週五，也是我們這週的收盤結算日！，在此 如果喜歡的的文章..."
       },
       {
+        "title": "看著別人賺好賺滿，怎麽調適心情",
+        "link": "https://www.dcard.tw/f/money/p/262240036",
+        "source": "Dcard 理財板",
+        "published": "2026-10-02T09:15:45.947000+00:00",
+        "summary": "是這樣啦，小弟自從個股、融資、融券教訓過，就幾乎沒什麼買個股了（除了金融股），後來都只有大跌的時候買買正二，然後等到拉回就獲利了結，沒標的的時候就買買ETF （沒賣），就像這幾天好多人的個股、漲停、噴"
+      },
+      {
         "title": "都快五萬點了誰帳上還是虧？",
         "link": "https://www.dcard.tw/f/money/p/262241522",
         "source": "Dcard 理財板",
@@ -1313,11 +1598,11 @@
         "summary": "非農數據公佈後，美股歡騰😁"
       },
       {
-        "title": "看著別人賺好賺滿，怎麽調適心情",
-        "link": "https://www.dcard.tw/f/money/p/262240036",
+        "title": "10月配息，0056很狂呀。",
+        "link": "https://www.dcard.tw/f/money/p/262238556",
         "source": "Dcard 理財板",
-        "published": "2026-10-02T09:15:45.947000+00:00",
-        "summary": "是這樣啦，小弟自從個股、融資、融券教訓過，就幾乎沒什麼買個股了（除了金融股），後來都只有大跌的時候買買正二，然後等到拉回就獲利了結，沒標的的時候就買買ETF （沒賣），就像這幾天好多人的個股、漲停、噴"
+        "published": "2026-10-02T03:41:52.874000+00:00",
+        "summary": "0056的年化配息率來到了12.12%（用我成本算是19.53%），00964更狂，年化配息率來到了16.2%（用我成本算是19.18%），國泰高股息基金應該這一兩天會公布，希望能再繼續往上調😆，貝萊"
       }
     ]
   },
@@ -1345,6 +1630,5 @@
         "summary": "This week, the Wall Street Journal ran an alarming illustration of AI’s potential share of GDP that ..."
       }
     ]
-  },
-  "ptt_hot": {}
+  }
 }

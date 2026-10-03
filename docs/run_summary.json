@@ -1,13 +1,13 @@
 {
   "run_date": "2026-10-03",
-  "start_time": "2026-10-03T22:40:08.013929+08:00",
-  "end_time": "2026-10-03T22:56:24.314820+08:00",
-  "duration_seconds": 976.3,
-  "feeds_fetched": 1146,
-  "articles_normalized": 586,
-  "articles_deduplicated": 494,
-  "articles_selected": 183,
-  "summaries_generated": 183,
+  "start_time": "2026-10-03T23:12:01.950905+08:00",
+  "end_time": "2026-10-03T23:27:45.622023+08:00",
+  "duration_seconds": 943.67,
+  "feeds_fetched": 1209,
+  "articles_normalized": 649,
+  "articles_deduplicated": 554,
+  "articles_selected": 222,
+  "summaries_generated": 222,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -266,8 +266,8 @@
     ]
   },
   "dcard_snapshot": {
-    "collected_at": "2026-10-03T22:29:45+08:00",
-    "age_hours": 0.2,
+    "collected_at": "2026-10-03T23:11:29+08:00",
+    "age_hours": 0.0,
     "boards": [
       {
         "slug": "tech_job",
@@ -285,7 +285,7 @@
         "slug": "3c",
         "name": "3C 板",
         "status": "ok",
-        "count": 20
+        "count": 18
       },
       {
         "slug": "money",
@@ -294,7 +294,46 @@
         "count": 20
       }
     ],
-    "total_posts": 85
+    "total_posts": 83
+  },
+  "ptt_snapshot": {
+    "collected_at": "2026-10-03T23:11:12+08:00",
+    "age_hours": 0.0,
+    "boards": [
+      {
+        "board": "Gossiping",
+        "name": "八卦板",
+        "status": "ok",
+        "count": 20
+      },
+      {
+        "board": "Stock",
+        "name": "股票板",
+        "status": "ok",
+        "count": 9
+      },
+      {
+        "board": "Tech_Job",
+        "name": "科技業板",
+        "status": "ok",
+        "count": 15
+      },
+      {
+        "board": "Soft_Job",
+        "name": "軟體工作板",
+        "status": "ok",
+        "count": 10
+      },
+      {
+        "board": "PC_Shopping",
+        "name": "電蝦板",
+        "status": "ok",
+        "count": 11
+      }
+    ],
+    "total_posts": 65,
+    "origin": "tools/collect_ptt.py (direct HTTP)",
+    "live_status": "policy_blocked"
   },
   "status": "success"
 }
