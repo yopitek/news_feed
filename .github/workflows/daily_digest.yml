@@ -28,7 +28,10 @@ jobs:
   generate-digest:
     name: Generate and Send Digest
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Fetching is ~45s, but summarization is one sequential API call per article.
+    # With a working provider at ~6s/call, 230 articles need ~25 min; the
+    # previous 30 min left no headroom for a slow day.
+    timeout-minutes: 60
     
     permissions:
       contents: write
@@ -93,7 +96,17 @@ jobs:
           # `minimaxai/minimax-m2.1` was set here for a long time but is NOT in that
           # list — no MiniMax model is — so every call returned 404 and all summaries
           # silently fell back to RSS descriptions.
-          NVIDIA_MODEL: z-ai/glm-5.3-flash
+          # Model id chosen by actually calling candidates on 2026-10-04, not by
+          # reading the catalog. Two traps:
+          #   1. /v1/models lists models that are NOT callable here — gemma-3-12b-it,
+          #      mistral-large-2-instruct, yi-large, nemotron-51b all return 404.
+          #   2. "flash" does not mean non-reasoning. z-ai/glm-5.3-flash (66s) and
+          #      deepseek-v4.1-flash (17s) return content:null with the answer in
+          #      reasoning_content — unusable for a 200-char summary.
+          # meta/llama-3.2-11b-vision-instruct answered in 6.4s with proper
+          # Traditional Chinese. Recheck latency before switching: 230 articles are
+          # summarized sequentially, so per-call latency is the run duration.
+          NVIDIA_MODEL: meta/llama-3.2-11b-vision-instruct
           ZEABUR_API_KEY: ${{ secrets.ZEABUR_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}

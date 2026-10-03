@@ -195,7 +195,46 @@ def test_get_summarizer_still_returns_the_top_priority(monkeypatch):
     assert isinstance(sm.get_summarizer(), sm.NVIDIASummarizer)
 
 
+def test_reasoning_model_empty_content_disables_provider(summarizer):
+    """
+    Reasoning models answer in `reasoning_content` and leave `content` null.
+    The old code did `content.strip()` -> AttributeError -> caught by the generic
+    handler -> None, so all 230 articles silently degraded to the RSS description
+    with no error pointing at the cause.
+    """
+    calls = []
+
+    def fake_post(*args, **kwargs):
+        calls.append(1)
+        return _Resp(200, json_body={
+            "choices": [{
+                "message": {
+                    "content": None,
+                    "reasoning_content": "Let me think about how to summarise...",
+                },
+                "finish_reason": "length",
+            }]
+        })
+
+    with patch.object(requests, "post", fake_post):
+        assert summarizer._call_api("sys", "user") is None
+        assert summarizer.disabled is True
+        assert summarizer._call_api("sys", "user") is None
+
+    assert len(calls) == 1
+
+
+def test_empty_content_names_reasoning_content_when_present(summarizer, caplog):
+    """The error must say what to look at, not just that content was empty."""
+    body = {"choices": [{"message": {"content": None, "reasoning_content": "thinking"}}]}
+    with patch.object(requests, "post", lambda *a, **k: _Resp(200, json_body=body)):
+        with caplog.at_level("ERROR"):
+            summarizer._call_api("sys", "user")
+    assert "reasoning_content" in caplog.text
+
+
 def test_dead_host_disables_after_a_short_run_of_failures(summarizer):
+
     """
     A hostname that does not resolve will not resolve later in the same run.
     Measured 2026-10-04: a dead Zeabur host produced one identical error line

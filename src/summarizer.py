@@ -32,12 +32,18 @@ NVIDIA_API_BASE = "https://integrate.api.nvidia.com/v1/chat/completions"
 # Previously this was "minimaxai/minimax-m2.1", which is not in that catalog —
 # no MiniMax model is. That sole wrong id meant every summary on the site was
 # just the RSS description.
-NVIDIA_MODEL = "z-ai/glm-5.3-flash"  # strong zh-TW/JA/EN, built for high request volume
-# Alternative models, all present in the catalog:
-# - "z-ai/glm-5.3"                 (same family, higher quality, slower)
-# - "deepseek-ai/deepseek-v4.1-flash"  (fast, strong zh/en)
-# - "moonshotai/kimi-k2.6"         (long-context source articles)
-# - "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
+NVIDIA_MODEL = "meta/llama-3.2-11b-vision-instruct"
+# Choosing a model here: DO NOT trust /v1/models alone. Verified by calling each
+# candidate on 2026-10-04:
+#   meta/llama-3.2-11b-vision-instruct   6.4s   OK, proper Traditional Chinese
+#   z-ai/glm-5.3-flash                  66s    content:null (reasoning model)
+#   deepseek-ai/deepseek-v4.1-flash     17.5s  content:null (reasoning model)
+#   z-ai/glm-5.3                        >90s   timed out
+#   google/gemma-4-31b-it               >60s   timed out
+#   404 despite being listed: gemma-3-12b-it, mistral-large-2-instruct,
+#                             mistral-7b-instruct-v0.3, 01-ai/yi-large,
+#                             nvidia/llama-3.1-nemotron-51b-instruct
+# Summaries run one call per article, so latency matters more than depth here.
 
 # Configuration - Zeabur AI Hub (recommended, fast and reliable)
 ZEABUR_API_BASE = "https://hnd1.aihub.zeabur.ai/v1/chat/completions"
@@ -116,7 +122,25 @@ class BaseSummarizer:
                 if response.status_code == 200:
                     data = response.json()
                     self._consecutive_failures = 0
-                    return data['choices'][0]['message']['content'].strip()
+                    content = data['choices'][0]['message']['content']
+                    if not content or not content.strip():
+                        # Seen with reasoning models (z-ai/glm-5.3-flash,
+                        # deepseek-v4.1-flash): they answer in reasoning_content
+                        # and leave content null, so every article silently
+                        # degrades to the RSS description with no error at all.
+                        # That is a model-choice problem, not a transient one.
+                        logger.error(
+                            "%s returned empty content%s; disabling it and using "
+                            "RSS fallback for remaining articles. If this is a "
+                            "reasoning model, pick a non-reasoning one.",
+                            self.model,
+                            " (answer is in reasoning_content)"
+                            if data['choices'][0]['message'].get('reasoning_content')
+                            else "",
+                        )
+                        self.disabled = True
+                        return None
+                    return content.strip()
                 
                 elif response.status_code == 429:
                     logger.warning(f"Rate limited, waiting {backoff}s")
