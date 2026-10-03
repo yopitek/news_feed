@@ -638,7 +638,7 @@ class FallbackSummarizer:
 def get_summarizer():
     """
     Get appropriate summarizer based on available API keys.
-    
+
     Priority:
     1. NVIDIA_API_KEY (NVIDIA NIM - fast, free, multilingual)
     2. ZEABUR_API_KEY (Zeabur AI Hub - GPT-4o-mini, fast)
@@ -647,24 +647,29 @@ def get_summarizer():
     5. DEEPSEEK_API_KEY
     6. Fallback (no API)
     """
-    nvidia_key = os.environ.get('NVIDIA_API_KEY')
-    zeabur_key = os.environ.get('ZEABUR_API_KEY')
-    google_key = os.environ.get('GOOGLE_API_KEY')
-    siliconflow_key = os.environ.get('SILICONFLOW_API_KEY')
-    deepseek_key = os.environ.get('DEEPSEEK_API_KEY')
-    
-    if nvidia_key:
-        return NVIDIASummarizer(nvidia_key)
-    elif zeabur_key:
-        return ZeaburSummarizer(zeabur_key)
-    elif google_key:
-        return GeminiSummarizer(google_key)
-    elif siliconflow_key:
-        return SiliconFlowSummarizer(siliconflow_key)
-    elif deepseek_key:
-        return DeepSeekSummarizer(deepseek_key)
-    else:
-        return FallbackSummarizer()
+    return get_summarizer_chain()[0]
+
+
+def get_summarizer_chain() -> list:
+    """
+    Every usable summarizer, in get_summarizer's priority order.
+
+    Returning a list rather than a single instance is what lets the caller fail
+    over mid-run. Measured 2026-10-04: NVIDIA_API_KEY was set but answered
+    `403 {"status":403,"title":"Forbidden","detail":"Authorization failed"}`, so
+    the chosen provider disabled itself after one article and all 230 summaries
+    fell back to RSS — even though ZEABUR_API_KEY was configured and would
+    probably have worked. Picking once up front means one expired key silently
+    turns the whole feature off for the rest of the run.
+    """
+    candidates = [
+        (NVIDIASummarizer, os.environ.get('NVIDIA_API_KEY')),
+        (ZeaburSummarizer, os.environ.get('ZEABUR_API_KEY')),
+        (GeminiSummarizer, os.environ.get('GOOGLE_API_KEY')),
+        (SiliconFlowSummarizer, os.environ.get('SILICONFLOW_API_KEY')),
+        (DeepSeekSummarizer, os.environ.get('DEEPSEEK_API_KEY')),
+    ]
+    return [cls(key) for cls, key in candidates if key] or [FallbackSummarizer()]
 
 
 def summarize_by_category(
@@ -674,7 +679,7 @@ def summarize_by_category(
 ) -> dict[str, dict[str, list[ArticleWithSummary]]]:
     """
     Summarize articles organized by tab and category.
-    
+
     Args:
         articles: Nested dict: tab -> category -> articles
         api_key: Optional explicit API key (overrides env vars)
@@ -699,8 +704,11 @@ def summarize_by_category(
             summarizer = SiliconFlowSummarizer(api_key)
         else:
             summarizer = DeepSeekSummarizer(api_key)
+        chain = [summarizer]
+        chain_index = 0
     else:
-        summarizer = get_summarizer()
+        chain = get_summarizer_chain()
+        chain_index = 0
     
     result = {}
     total_summarized = 0
@@ -716,7 +724,17 @@ def summarize_by_category(
                 if use_direct:
                     summary = article.description or article.title
                 else:
-                    summary = summarizer.summarize(article)
+                    # Fail over to the next configured provider when this one has
+                    # been disabled by a permanent error (bad key, unknown model).
+                    while getattr(chain[chain_index], 'disabled', False) and \
+                            chain_index + 1 < len(chain):
+                        logger.warning(
+                            "%s is disabled; falling through to %s",
+                            type(chain[chain_index]).__name__,
+                            type(chain[chain_index + 1]).__name__,
+                        )
+                        chain_index += 1
+                    summary = chain[chain_index].summarize(article)
                 
                 summarized.append(ArticleWithSummary(
                     title=article.title,
