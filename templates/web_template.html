@@ -223,6 +223,41 @@
             color: #999999;
         }
 
+        .news-item-meta .metrics {
+            background-color: #f2ece0;
+            border-radius: 999px;
+            color: #8b1e3f;
+            font-variant-numeric: tabular-nums;
+            padding: 1px 8px;
+        }
+
+        .snapshot-notice {
+            border-left: 4px solid #b58a00;
+            background-color: #faf6e9;
+            color: #5c4a12;
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin: 0 0 18px 0;
+            padding: 10px 12px;
+        }
+
+        .snapshot-notice--stale {
+            border-left-color: #8b1e3f;
+            background-color: #fbeef1;
+            color: #6d1631;
+        }
+
+        .snapshot-notice code {
+            background-color: rgba(26, 26, 26, 0.06);
+            border-radius: 3px;
+            font-size: 0.95em;
+            padding: 1px 4px;
+        }
+
+        .snapshot-hint {
+            color: #8a7a58;
+        }
+
         .news-item-summary {
             font-size: 0.9rem;
             color: #333333;
@@ -378,6 +413,8 @@
                 <button id="tab-en-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="en-news" data-tab="en-news">English News</button>
                 <button id="tab-ja-news" class="tab-btn" role="tab" aria-selected="false" aria-controls="ja-news" data-tab="ja-news">日本語ニュース</button>
                 <button id="tab-tech-blogs" class="tab-btn" role="tab" aria-selected="false" aria-controls="tech-blogs" data-tab="tech-blogs">Tech Blogs</button>
+                <button id="tab-ptt-hot" class="tab-btn" role="tab" aria-selected="false" aria-controls="ptt-hot" data-tab="ptt-hot">PTT 熱門</button>
+                <button id="tab-dcard-hot" class="tab-btn" role="tab" aria-selected="false" aria-controls="dcard-hot" data-tab="dcard-hot">Dcard 熱門</button>
             </nav>
 
             <section class="tab-content active" id="zh-news" role="tabpanel" aria-labelledby="tab-zh-news">
@@ -407,6 +444,25 @@
                 {{TECH_BLOGS_ITEMS}}
             </template>
             <section class="tab-content" id="tech-blogs" role="tabpanel" aria-labelledby="tab-tech-blogs">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <template id="ptt-hot-template">
+                <h2 class="section-header">PTT 熱門文章</h2>
+                {{PTT_HOT_SOURCES}}
+                {{PTT_HOT_ITEMS}}
+            </template>
+            <section class="tab-content" id="ptt-hot" role="tabpanel" aria-labelledby="tab-ptt-hot">
+                <!-- Content loaded lazily -->
+            </section>
+
+            <template id="dcard-hot-template">
+                <h2 class="section-header">Dcard 熱門文章</h2>
+                {{DCARD_SNAPSHOT_NOTICE}}
+                {{DCARD_HOT_SOURCES}}
+                {{DCARD_HOT_ITEMS}}
+            </template>
+            <section class="tab-content" id="dcard-hot" role="tabpanel" aria-labelledby="tab-dcard-hot">
                 <!-- Content loaded lazily -->
             </section>
 

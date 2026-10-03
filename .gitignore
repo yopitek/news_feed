@@ -40,3 +40,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Runtime logs from tools/daily_dcard_sync.sh
+logs/

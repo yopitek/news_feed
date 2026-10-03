@@ -23,6 +23,21 @@ def format_date_short(dt: datetime) -> str:
     return taipei_dt.strftime("%m/%d %H:%M")
 
 
+def format_date_day(dt: datetime) -> str:
+    """Date only — for sources that publish no time of day (e.g. PTT boards)."""
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=pytz.UTC)
+    return dt.astimezone(TAIPEI_TZ).strftime("%m/%d")
+
+
+def format_item_date(article: ArticleWithSummary) -> str:
+    """Pick the date format the article's source actually supports."""
+    precision = (article.metrics or {}).get('date_precision')
+    if precision == 'day':
+        return format_date_day(article.published)
+    return format_date_short(article.published)
+
+
 def escape_html(text: str) -> str:
     """Escape HTML special characters."""
     return (
@@ -39,12 +54,52 @@ def escape_attr(text: str) -> str:
     return escape_html(text).replace("'", '&#x27;')
 
 
+def format_metric_badge(article: ArticleWithSummary) -> str:
+    """
+    Build the engagement badge for community tabs (PTT / Dcard).
+
+    Returns an empty string for plain RSS articles, so the same item renderer
+    serves every tab.
+    """
+    metrics = article.metrics or {}
+    origin = metrics.get('origin')
+    parts: list[str] = []
+
+    if origin == 'dcard_snapshot':
+        if metrics.get('like') is not None:
+            parts.append(f"愛心 {metrics['like']}")
+        if metrics.get('comment') is not None:
+            parts.append(f"留言 {metrics['comment']}")
+        if metrics.get('author'):
+            parts.append(escape_html(str(metrics['author'])))
+    elif origin in ('ptt_list', 'ptt_atom'):
+        label = metrics.get('push_label')
+        if label:
+            parts.append(f"推 {escape_html(str(label))}")
+        elif metrics.get('push') is not None:
+            parts.append(f"推 {metrics['push']}")
+        if metrics.get('author'):
+            parts.append(escape_html(str(metrics['author'])))
+
+    if not parts:
+        return ''
+    return f'<span class="metrics">{" · ".join(parts)}</span>'
+
+
 def render_news_item(article: ArticleWithSummary) -> str:
     """Render a single news item HTML for web."""
-    publish_date = format_date_short(article.published)
+    publish_date = format_item_date(article)
     title = escape_html(article.title)
     source = escape_html(article.source_name)
-    summary = escape_html(article.summary)
+    badge = format_metric_badge(article)
+
+    # Sources without a body (PTT rows, image-only Dcard posts) fall back to the
+    # title as their "summary" — do not print the title twice.
+    summary_text = (article.summary or '').strip()
+    if summary_text and summary_text != (article.title or '').strip():
+        summary_html = f'<p class="news-item-summary">{escape_html(summary_text)}</p>'
+    else:
+        summary_html = ''
     
     link = escape_attr(article.link)
     return f'''<div class="news-item" data-link="{link}">
@@ -54,8 +109,9 @@ def render_news_item(article: ArticleWithSummary) -> str:
     <p class="news-item-meta">
         <span class="source">{source}</span>
         <span class="date">{publish_date}</span>
+        {badge}
     </p>
-    <p class="news-item-summary">{summary}</p>
+    {summary_html}
 </div>'''
 
 
@@ -100,8 +156,13 @@ def render_tab_content(categories_data: dict[str, list[ArticleWithSummary]], tab
     return '\n'.join(sections) if sections else '<p class="no-news">No news available.</p>'
 
 
-def render_source_panel(tech_sources: list[dict] | None, source_health: dict | None) -> str:
-    """Render Tech Blogs source list and fetch status."""
+def render_source_panel(
+    tech_sources: list[dict] | None,
+    source_health: dict | None,
+    title: str = 'Followed sources',
+    status_text: str | None = None,
+) -> str:
+    """Render a source list and, optionally, a fetch-status line."""
     tech_sources = tech_sources or []
     if not tech_sources:
         return ''
@@ -113,32 +174,74 @@ def render_source_panel(tech_sources: list[dict] | None, source_health: dict | N
         label = f'{name} · {category}' if category else name
         source_items.append(f'<li>{label}</li>')
 
-    health = source_health or {}
-    total = health.get('total_sources', len(tech_sources))
-    ok = health.get('ok_sources')
-    empty = health.get('empty_sources')
-    failed = health.get('failed_sources')
-    selected = health.get('selected_articles')
+    if status_text is None:
+        health = source_health or {}
+        total = health.get('total_sources', len(tech_sources))
+        ok = health.get('ok_sources')
+        empty = health.get('empty_sources')
+        failed = health.get('failed_sources')
+        selected = health.get('selected_articles')
 
-    status_bits = [f'{total} sources followed']
-    if ok is not None:
-        status_bits.append(f'{ok} returned articles')
-    if empty is not None:
-        status_bits.append(f'{empty} empty')
-    if failed is not None:
-        status_bits.append(f'{failed} failed')
-    if selected is not None:
-        status_bits.append(f'{selected} selected')
+        status_bits = [f'{total} sources followed']
+        if ok is not None:
+            status_bits.append(f'{ok} returned articles')
+        if empty is not None:
+            status_bits.append(f'{empty} empty')
+        if failed is not None:
+            status_bits.append(f'{failed} failed')
+        if selected is not None:
+            status_bits.append(f'{selected} selected')
+        status_text = ' · '.join(status_bits)
 
     source_items_html = '\n        '.join(source_items)
-    source_status = escape_html(' · '.join(status_bits))
+    source_status = escape_html(status_text)
     return f'''<div class="source-panel">
-    <h3 class="source-panel-title">Followed sources</h3>
+    <h3 class="source-panel-title">{escape_html(title)}</h3>
     <ul class="source-list">
         {source_items_html}
     </ul>
     <p class="source-status">{source_status}</p>
 </div>'''
+
+
+def render_snapshot_notice(snapshot_meta: dict | None, board_count: int = 0) -> str:
+    """
+    Render the "data captured on <time>" banner for locally-collected tabs.
+
+    The Dcard tab is fed from a snapshot committed to the repo, not from a live
+    fetch, so readers must be told how old the data is.
+    """
+    meta = snapshot_meta or {}
+    collected_at = meta.get('collected_at')
+    if not collected_at:
+        return (
+            '<p class="snapshot-notice snapshot-notice--stale">'
+            '尚未取得 Dcard 快照資料，本頁目前無內容。'
+            f'請於本機執行 <code>python3 tools/collect_dcard.py</code> 後重新產生。'
+            '</p>'
+        )
+
+    stamp = escape_html(str(collected_at).replace('T', ' ')[:16])
+    age = meta.get('age_hours')
+    total = meta.get('total_posts')
+    bits = [f'資料時間：{stamp}']
+    if isinstance(age, (int, float)):
+        bits.append(f'{age:g} 小時前收集')
+    if total:
+        bits.append(f'共 {total} 篇')
+    if board_count:
+        bits.append(f'{board_count} 個看板')
+
+    freshness = 'fresh'
+    if isinstance(age, (int, float)) and age > 48:
+        freshness = 'stale'
+
+    return (
+        f'<p class="snapshot-notice snapshot-notice--{freshness}">'
+        f'{" · ".join(bits)}　'
+        '<span class="snapshot-hint">本區資料由本機瀏覽器收集後隨網站更新，非即時抓取。</span>'
+        '</p>'
+    )
 
 
 def render_pipeline_status(run_stats: dict | None, source_health: dict | None) -> str:
@@ -164,7 +267,10 @@ def render_web(
     date_str: Optional[str] = None,
     tech_sources: list[dict] | None = None,
     source_health: dict | None = None,
-    run_stats: dict | None = None
+    run_stats: dict | None = None,
+    ptt_sources: list[dict] | None = None,
+    dcard_sources: list[dict] | None = None,
+    snapshot_meta: dict | None = None
 ) -> str:
     """
     Render web HTML with JavaScript tabs, grouped by category.
@@ -172,6 +278,12 @@ def render_web(
     Args:
         articles: Nested dict: tab -> category -> list of articles
         date_str: Optional date string
+        tech_sources: Tech Blogs source list for its source panel
+        source_health: Tech Blogs fetch health summary
+        run_stats: Footer pipeline stats
+        ptt_sources: PTT board list for the PTT source panel
+        dcard_sources: Dcard board list for the Dcard source panel
+        snapshot_meta: Collection time / counts of the Dcard snapshot
     
     Returns:
         Complete HTML string
@@ -191,7 +303,17 @@ def render_web(
     en_content = render_tab_content(articles.get('en_news', {}), 'en_news')
     ja_content = render_tab_content(articles.get('ja_news', {}), 'ja_news')
     tech_blogs_content = render_tab_content(articles.get('tech_blogs', {}), 'tech_blogs')
+    ptt_content = render_tab_content(articles.get('ptt_hot', {}), 'ptt_hot')
+    dcard_content = render_tab_content(articles.get('dcard_hot', {}), 'dcard_hot')
+
     tech_sources_content = render_source_panel(tech_sources, source_health)
+    ptt_sources_content = render_source_panel(
+        ptt_sources, None, title='PTT 看板', status_text='依推文數排序'
+    )
+    dcard_sources_content = render_source_panel(
+        dcard_sources, None, title='Dcard 看板', status_text='依愛心數排序'
+    )
+    dcard_notice = render_snapshot_notice(snapshot_meta, len(dcard_sources or []))
     pipeline_status = render_pipeline_status(run_stats, source_health)
     
     html = template.replace('{{DATE_DISPLAY}}', date_str)
@@ -200,6 +322,11 @@ def render_web(
     html = html.replace('{{JA_NEWS_ITEMS}}', ja_content)
     html = html.replace('{{TECH_BLOGS_ITEMS}}', tech_blogs_content)
     html = html.replace('{{TECH_BLOGS_SOURCES}}', tech_sources_content)
+    html = html.replace('{{PTT_HOT_ITEMS}}', ptt_content)
+    html = html.replace('{{PTT_HOT_SOURCES}}', ptt_sources_content)
+    html = html.replace('{{DCARD_HOT_ITEMS}}', dcard_content)
+    html = html.replace('{{DCARD_HOT_SOURCES}}', dcard_sources_content)
+    html = html.replace('{{DCARD_SNAPSHOT_NOTICE}}', dcard_notice)
     html = html.replace('{{PIPELINE_STATUS}}', escape_html(pipeline_status))
     
     return html

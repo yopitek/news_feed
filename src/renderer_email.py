@@ -38,8 +38,13 @@ def render_news_item_email(article: ArticleWithSummary) -> str:
     publish_date = format_date_short(article.published)
     title = escape_html(article.title)
     source = escape_html(article.source_name)
-    summary = escape_html(article.summary)
-    
+
+    # Keep this in sync with renderer_web.render_news_item: sources without a body
+    # fall back to the title, which must not be printed twice.
+    summary_text = (article.summary or '').strip()
+    if not summary_text or summary_text == (article.title or '').strip():
+        summary_text = ''
+
     return f'''<tr>
     <td style="padding: 12px 0; border-bottom: 1px dotted #d9d2c4;">
         <p style="font-family: Georgia, serif; font-size: 15px; font-weight: bold; margin: 0 0 4px 0; line-height: 1.4;">
@@ -48,9 +53,7 @@ def render_news_item_email(article: ArticleWithSummary) -> str:
         <p style="font-family: Arial, sans-serif; font-size: 11px; color: #666666; margin: 0 0 6px 0;">
             <strong>{source}</strong> · {publish_date}
         </p>
-        <p style="font-family: Arial, sans-serif; font-size: 13px; line-height: 1.5; color: #333333; margin: 0;">
-            {summary}
-        </p>
+        {f'<p style="font-family: Arial, sans-serif; font-size: 13px; line-height: 1.5; color: #333333; margin: 0;">{escape_html(summary_text)}</p>' if summary_text else ''}
     </td>
 </tr>'''
 

@@ -8,6 +8,26 @@ from typing import Union
 from .models import FeedsConfig, TabConfig, FeedSource
 
 
+def parse_source(source_data: dict) -> dict:
+    """
+    Normalize one source entry from feeds.yaml.
+
+    Keeps the fields the pipeline understands: the original RSS trio plus the
+    extended keys used by non-RSS collectors (PTT board listings and the local
+    Dcard snapshot). Unknown keys are dropped so a typo cannot silently change
+    behaviour.
+    """
+    source = {
+        'category': source_data.get('category', ''),
+        'url': source_data.get('url', ''),
+        'source_name': source_data.get('source_name'),
+    }
+    for key in ('type', 'group', 'board', 'board_name', 'fallback_url', 'pages'):
+        if source_data.get(key):
+            source[key] = source_data[key]
+    return source
+
+
 def load_tech_blogs_config(path: Union[str, Path] = "config/tech_blogs.yaml") -> dict:
     """
     Load tech blogs configuration and return as dict of TabConfig objects.
@@ -30,16 +50,7 @@ def load_tech_blogs_config(path: Union[str, Path] = "config/tech_blogs.yaml") ->
     
     tabs = {}
     for tab_id, tab_data in data.items():
-        sources = []
-        for source_data in tab_data.get('sources', []):
-            source = {
-                'category': source_data.get('category', ''),
-                'url': source_data.get('url', ''),
-                'source_name': source_data.get('source_name')
-            }
-            if source_data.get('group'):
-                source['group'] = source_data.get('group')
-            sources.append(source)
+        sources = [parse_source(source_data) for source_data in tab_data.get('sources', [])]
         
         tabs[tab_id] = TabConfig(
             name=tab_data.get('name', tab_id),
@@ -72,13 +83,7 @@ def load_feeds_config(path: Union[str, Path] = "config/feeds.yaml") -> FeedsConf
     # Parse tabs
     tabs = {}
     for tab_id, tab_data in data.get('tabs', {}).items():
-        sources = []
-        for source_data in tab_data.get('sources', []):
-            sources.append({
-                'category': source_data.get('category', ''),
-                'url': source_data.get('url', ''),
-                'source_name': source_data.get('source_name')
-            })
+        sources = [parse_source(source_data) for source_data in tab_data.get('sources', [])]
         
         tabs[tab_id] = TabConfig(
             name=tab_data.get('name', tab_id),

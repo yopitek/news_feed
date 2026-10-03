@@ -19,11 +19,17 @@ DEFAULT_RETRIES = 2
 DEFAULT_MAX_ITEMS = 20
 DEFAULT_USER_AGENT = "NewsDigest/1.0 (RSS Reader)"
 LAST_FETCH_STATS: list[dict] = []
+LAST_SNAPSHOT_META: dict = {}
 
 
 def get_last_fetch_stats() -> list[dict]:
     """Return per-source stats from the latest fetch_all_feeds run."""
     return list(LAST_FETCH_STATS)
+
+
+def get_last_snapshot_meta() -> dict:
+    """Metadata of the Dcard snapshot used by the latest run (may be empty)."""
+    return dict(LAST_SNAPSHOT_META)
 
 
 def summarize_source_health(stats: list[dict], selected: dict | None = None) -> dict:
@@ -42,6 +48,54 @@ def summarize_source_health(stats: list[dict], selected: dict | None = None) -> 
         'selected_articles': selected_articles,
         'sources': tech_stats,
     }
+
+
+def _fetch_non_rss(source: dict, timeout: int, retries: int, user_agent: str,
+                   max_items: int) -> tuple[list[dict], str]:
+    """
+    Dispatch a source to its collector.
+
+    Returns:
+        (entries, status). `status` is 'ok', 'empty', or a specific failure label
+        surfaced in the run summary.
+    """
+    source_type = source.get('type', 'rss')
+    url = source.get('url', '')
+    source_name = source.get('source_name') or _get_domain(url)
+
+    if source_type == 'ptt_list':
+        from .ptt_fetcher import fetch_ptt_board
+
+        board = source.get('board') or ''
+        if not board:
+            logger.error("ptt_list source %s has no `board`; skipping", source_name)
+            return [], 'config_error'
+        return fetch_ptt_board(
+            url=url,
+            board=board,
+            source_name=source_name,
+            fallback_url=source.get('fallback_url', ''),
+            timeout=timeout,
+            retries=retries,
+            user_agent=user_agent,
+            max_items=max_items,
+            pages=int(source.get('pages', 1) or 1),
+        )
+
+    if source_type == 'dcard_snapshot':
+        from .snapshot_loader import load_dcard_board
+
+        board = source.get('board') or ''
+        board_name = source.get('board_name') or source.get('category') or board
+        return load_dcard_board(
+            board_slug=board,
+            board_name=board_name,
+            source_name=source_name,
+        )
+
+    # Unknown type: fail loudly in the health table rather than silently fetching RSS.
+    logger.error("Unknown source type '%s' for %s", source_type, source_name)
+    return [], 'config_error'
 
 
 def fetch_feed(
@@ -164,26 +218,48 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
     
     results = {}
     LAST_FETCH_STATS.clear()
+    LAST_SNAPSHOT_META.clear()
     
     for tab_id, tab_config in config.tabs.items():
         tab_entries = []
         
         for source in tab_config.sources:
             url = source.get('url', '')
-            if not url:
+            source_type = source.get('type', 'rss')
+            if not url and source_type != 'dcard_snapshot':
                 continue
             
-            # Fetch this feed
-            entries = fetch_feed(
-                url=url,
-                timeout=timeout,
-                retries=retries,
-                max_items=max_items,
-                user_agent=user_agent
-            )
-            
+            # Fetch this source (RSS by default, dedicated collector otherwise)
+            if source_type == 'rss':
+                entries = fetch_feed(
+                    url=url,
+                    timeout=timeout,
+                    retries=retries,
+                    max_items=max_items,
+                    user_agent=user_agent
+                )
+                status = 'ok' if entries else 'empty'
+            else:
+                entries, status = _fetch_non_rss(
+                    source, timeout=timeout, retries=retries,
+                    user_agent=user_agent, max_items=max_items
+                )
+                if source_type == 'dcard_snapshot':
+                    from .snapshot_loader import load_snapshot, snapshot_age_hours
+                    snapshot = load_snapshot()
+                    if snapshot and not LAST_SNAPSHOT_META:
+                        LAST_SNAPSHOT_META.update({
+                            'collected_at': snapshot.get('collected_at'),
+                            'age_hours': snapshot_age_hours(snapshot),
+                            'boards': snapshot.get('boards', []),
+                            'total_posts': len(snapshot.get('posts', [])),
+                        })
+                elif source_type == 'ptt_list' and entries:
+                    # PTT paginates politely: pause between boards.
+                    from .ptt_fetcher import INTER_BOARD_DELAY
+                    time.sleep(INTER_BOARD_DELAY)
+
             fetched_count = len(entries)
-            status = 'ok' if fetched_count else 'empty'
             LAST_FETCH_STATS.append({
                 'tab': tab_id,
                 'language': tab_config.language,
@@ -191,6 +267,7 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
                 'source_name': source.get('source_name', '') or _get_domain(url),
                 'group': source.get('group', ''),
                 'url': url,
+                'type': source_type,
                 'status': status,
                 'fetched_count': fetched_count,
             })
@@ -200,7 +277,12 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
                 entry['_language'] = tab_config.language
                 entry['_category'] = source.get('category', '')
                 entry['_source_name'] = source.get('source_name', '')
-                entry['_source_type'] = 'tech_blog' if tab_id == 'tech_blogs' else 'news'
+                if tab_id == 'tech_blogs':
+                    entry['_source_type'] = 'tech_blog'
+                elif source_type == 'rss':
+                    entry['_source_type'] = 'news'
+                else:
+                    entry['_source_type'] = source_type
             
             tab_entries.extend(entries)
         

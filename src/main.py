@@ -16,7 +16,12 @@ PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from src.config_loader import load_feeds_config, load_classification_rules
-from src.feed_fetcher import fetch_all_feeds, get_last_fetch_stats, summarize_source_health
+from src.feed_fetcher import (
+    fetch_all_feeds,
+    get_last_fetch_stats,
+    get_last_snapshot_meta,
+    summarize_source_health,
+)
 from src.normalizer import normalize_all
 from src.deduper import deduplicate
 from src.classifier import classify_articles
@@ -139,7 +144,9 @@ def main():
             logger.warning("No API key found - using RSS descriptions as fallback")
             api_key = None
         
-        summarized = summarize_by_category(selected, api_key, skip_ai_tabs=['tech_blogs'])
+        summarized = summarize_by_category(
+            selected, api_key, skip_ai_tabs=['tech_blogs', 'ptt_hot', 'dcard_hot']
+        )
         summary_count = sum(
             len(arts)
             for cats in summarized.values()
@@ -156,6 +163,16 @@ def main():
         if feeds_config.tabs.get('tech_blogs'):
             tech_sources = feeds_config.tabs['tech_blogs'].sources
 
+        ptt_sources = []
+        if feeds_config.tabs.get('ptt_hot'):
+            ptt_sources = feeds_config.tabs['ptt_hot'].sources
+
+        dcard_sources = []
+        if feeds_config.tabs.get('dcard_hot'):
+            dcard_sources = feeds_config.tabs['dcard_hot'].sources
+
+        snapshot_meta = get_last_snapshot_meta()
+
         render_stats = {
             'generated_at': start_time.strftime('%Y-%m-%d %H:%M %Z'),
             'feeds_count': len(all_sources),
@@ -168,6 +185,9 @@ def main():
             tech_sources=tech_sources,
             source_health=source_health,
             run_stats=render_stats,
+            ptt_sources=ptt_sources,
+            dcard_sources=dcard_sources,
+            snapshot_meta=snapshot_meta,
         )
         email_html = render_email(summarized, date_str)
         
@@ -227,9 +247,12 @@ def main():
                 'zh_news': list(TAB_CATEGORIES['zh_news']),
                 'en_news': list(TAB_CATEGORIES['en_news']),
                 'ja_news': list(TAB_CATEGORIES['ja_news']),
-                'tech_blogs': list(TAB_CATEGORIES['tech_blogs'])
+                'tech_blogs': list(TAB_CATEGORIES['tech_blogs']),
+                'ptt_hot': list(TAB_CATEGORIES['ptt_hot']),
+                'dcard_hot': list(TAB_CATEGORIES['dcard_hot'])
             },
             'source_health': source_health,
+            'dcard_snapshot': snapshot_meta,
             'status': 'success'
         }
         

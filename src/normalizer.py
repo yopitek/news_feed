@@ -176,6 +176,8 @@ def normalize_entry(
     # Get source name
     final_source_name = source_name or get_source_name(entry)
     
+    metrics = entry.get('_metrics') or None
+    
     return NormalizedArticle(
         title=title,
         link=link,
@@ -186,7 +188,8 @@ def normalize_entry(
         rss_category=rss_category,
         guid=guid,
         description=description,
-        final_category=None  # Set later by classifier
+        final_category=None,  # Set later by classifier
+        metrics=metrics
     )
 
 
@@ -223,6 +226,14 @@ def normalize_all(
     cutoff_utc = cutoff_time.astimezone(timezone.utc)
     
     logger.info(f"Date filter: Only articles after {cutoff_time.strftime('%Y-%m-%d %H:%M')} (Taipei)")
+
+    # Per-tab overrides. `null` in settings means "no time filter": community tabs
+    # (PTT / Dcard) are ranked by engagement on the board's own current front page,
+    # so a 24h window would silently drop the highest-push posts.
+    tab_windows = config.settings.get('tab_time_window_hours', {}) or {}
+    if not isinstance(tab_windows, dict):
+        logger.warning("settings.tab_time_window_hours is not a mapping; ignoring it")
+        tab_windows = {}
     
     articles = []
     filtered_count = 0
@@ -232,6 +243,14 @@ def normalize_all(
         if not tab_config:
             logger.warning(f"No config found for tab: {tab_id}")
             continue
+
+        if tab_id in tab_windows:
+            override = tab_windows[tab_id]
+            tab_cutoff = None if override is None else (
+                (today_8am - timedelta(hours=float(override))).astimezone(timezone.utc)
+            )
+        else:
+            tab_cutoff = cutoff_utc
         
         for entry in entries:
             # Get metadata from entry (added during fetch)
@@ -249,7 +268,7 @@ def normalize_all(
             
             if article:
                 # Filter by date - only include articles within the time window
-                if article.published >= cutoff_utc:
+                if tab_cutoff is None or article.published >= tab_cutoff:
                     articles.append(article)
                 else:
                     filtered_count += 1

@@ -25,11 +25,14 @@ class NormalizedArticle:
     published: datetime
     source_name: str
     language: str  # 'zh', 'en', 'ja'
-    tab: str  # 'zh_news', 'zh_industry', 'en_news', 'ja_news'
+    tab: str  # 'zh_news', 'zh_industry', 'en_news', 'ja_news', 'ptt_hot', 'dcard_hot'
     rss_category: str
     guid: str  # GUID or URL hash
     description: Optional[str] = None
     final_category: Optional[str] = None  # Assigned category (Chinese only)
+    # Engagement metadata for community tabs (PTT push count, Dcard likes, ...).
+    # None for plain RSS sources.
+    metrics: Optional[dict] = None
 
 
 @dataclass
@@ -42,6 +45,7 @@ class ArticleWithSummary:
     summary: str  # Generated or RSS description
     tab: str
     final_category: Optional[str] = None
+    metrics: Optional[dict] = None
 
 
 @dataclass
@@ -50,6 +54,12 @@ class FeedSource:
     category: str
     url: str
     source_name: Optional[str] = None
+    # 'rss' (default) | 'ptt_list' | 'dcard_snapshot'
+    type: str = "rss"
+    group: Optional[str] = None
+    board: Optional[str] = None
+    board_name: Optional[str] = None
+    fallback_url: Optional[str] = None
 
 
 @dataclass

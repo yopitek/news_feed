@@ -4,6 +4,8 @@ Groups articles by category and selects top N per category.
 
 Updated for:
 - English: Startup (8) + Tech News (8) + BBC subcategories (6 each)
+- Community tabs: PTT boards (`ptt_hot`) and Dcard boards (`dcard_hot`),
+  ranked by engagement rather than by date.
 """
 import logging
 from collections import defaultdict
@@ -24,6 +26,10 @@ TAB_CATEGORIES = {
     ],
     'ja_news': ['頭條', '國際', '政治', '運動', '商業', '文化', '娛樂'],
     'tech_blogs': ['Tech Blogs'],  # NEW - 5th tab
+    # PTT boards (each board is one section)
+    'ptt_hot': ['八卦板', '股票板', '科技業板', '軟體工作板', '電蝦板'],
+    # Dcard boards (each board is one section)
+    'dcard_hot': ['科技業板', 'AI 工作者板', '3C 板', '理財板'],
 }
 
 # Items per category (different for BBC)
@@ -42,9 +48,19 @@ ITEMS_PER_CATEGORY = {
     },
     'ja_news': 8,
     'tech_blogs': 10,
+    'ptt_hot': 8,
+    'dcard_hot': 8,
 }
 
 TECH_BLOGS_PER_SOURCE_CAP = 2
+
+# Tabs whose ordering is by engagement, not recency.
+# key  -> metric name inside article.metrics
+# desc -> sort descending (higher = hotter)
+TAB_SORT_METRIC = {
+    'ptt_hot': 'push',
+    'dcard_hot': 'like',
+}
 
 
 def get_items_per_category(tab: str, category: str) -> int:
@@ -53,6 +69,18 @@ def get_items_per_category(tab: str, category: str) -> int:
     if isinstance(config, dict):
         return config.get(category, 8)
     return config
+
+
+def engagement_value(article: NormalizedArticle, metric: str) -> float:
+    """Read an engagement metric, treating missing/unknown as -1 (sorts last)."""
+    metrics = article.metrics or {}
+    value = metrics.get(metric)
+    if value is None:
+        return -1.0
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return -1.0
 
 
 def map_to_display_category(article: NormalizedArticle) -> str:
@@ -85,6 +113,13 @@ def map_to_display_category(article: NormalizedArticle) -> str:
     
     elif tab == 'tech_blogs':
         return 'Tech Blogs'
+
+    elif tab in ('ptt_hot', 'dcard_hot'):
+        # One section per board; the board name comes straight from feeds.yaml so
+        # the classifier must not re-bucket these.
+        if rss_cat in TAB_CATEGORIES[tab]:
+            return rss_cat
+        return rss_cat or TAB_CATEGORIES[tab][0]
     
     return rss_cat
 
@@ -122,16 +157,24 @@ def select_by_category(
             if display_cat in categories_order:
                 category_groups[display_cat].append(article)
         
-        # Select top N from each category, sorted by date
+        # Select top N from each category, sorted by date (or by engagement for
+        # the community tabs, where "hot" is the whole point).
+        sort_metric = TAB_SORT_METRIC.get(tab_id)
         tab_result = {}
         for category in categories_order:
             cat_articles = category_groups.get(category, [])
-            # Sort by published date (newest first)
-            sorted_articles = sorted(
-                cat_articles,
-                key=lambda a: a.published,
-                reverse=True
-            )
+            if sort_metric:
+                sorted_articles = sorted(
+                    cat_articles,
+                    key=lambda a: (engagement_value(a, sort_metric), a.published),
+                    reverse=True
+                )
+            else:
+                sorted_articles = sorted(
+                    cat_articles,
+                    key=lambda a: a.published,
+                    reverse=True
+                )
             # Get items count for this category
             n = get_items_per_category(tab_id, category)
             if tab_id == 'tech_blogs':

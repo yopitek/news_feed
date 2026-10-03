@@ -227,6 +227,108 @@ tabs:
         url: https://news.yahoo.co.jp/rss/topics/entertainment.xml
         source_name: Yahoo! Japan
 
+  # ============================================
+  # PTT 熱門 — 5 boards
+  # --------------------------------------------
+  # Primary source is the board index page, which carries the 推文數 (push count)
+  # needed to rank by popularity. `fallback_url` is PTT's official Atom feed, used
+  # only when the index page cannot be parsed — it has no push count.
+  # Only `index.html` (page 1) is fetched. Measured 2026-10-03: PTT pages >= 2 are
+  # a 熱門文章 archive, not chronological continuation — Stock page 2 spans
+  # Aug–Sep, Tech_Job Jan–Apr, PC_Shopping 2025-10. Pulling them in would inject
+  # months-old posts into a push-ranked tab. (`src/ptt_fetcher` still supports
+  # `pages:` for a source that wants it; default is 1.)
+  # Verified HTTP 200 from CI on 2026-10-03. ptt.cc/robots.txt returns 404
+  # (no robots policy published) and PTT publishes no AI-crawler directives.
+  # ============================================
+  ptt_hot:
+    name: PTT 熱門
+    language: zh
+    items_per_category: 8
+    categories:
+      - 八卦板
+      - 股票板
+      - 科技業板
+      - 軟體工作板
+      - 電蝦板
+    sources:
+      - category: 八卦板
+        type: ptt_list
+        board: Gossiping
+        url: https://www.ptt.cc/bbs/Gossiping/index.html
+        fallback_url: https://www.ptt.cc/atom/Gossiping.xml
+        source_name: PTT 八卦板
+      - category: 股票板
+        type: ptt_list
+        board: Stock
+        url: https://www.ptt.cc/bbs/Stock/index.html
+        fallback_url: https://www.ptt.cc/atom/Stock.xml
+        source_name: PTT 股票板
+      - category: 科技業板
+        type: ptt_list
+        board: Tech_Job
+        url: https://www.ptt.cc/bbs/Tech_Job/index.html
+        fallback_url: https://www.ptt.cc/atom/Tech_Job.xml
+        source_name: PTT 科技業板
+      - category: 軟體工作板
+        type: ptt_list
+        board: Soft_Job
+        url: https://www.ptt.cc/bbs/Soft_Job/index.html
+        fallback_url: https://www.ptt.cc/atom/Soft_Job.xml
+        source_name: PTT 軟體工作板
+      - category: 電蝦板
+        type: ptt_list
+        board: PC_Shopping
+        url: https://www.ptt.cc/bbs/PC_Shopping/index.html
+        fallback_url: https://www.ptt.cc/atom/PC_Shopping.xml
+        source_name: PTT 電蝦板
+
+  # ============================================
+  # Dcard 熱門 — 4 boards, snapshot-fed
+  # --------------------------------------------
+  # Dcard is Cloudflare-protected: server-side requests all return 403 with a
+  # Turnstile challenge, so CI cannot fetch it. These sources read
+  # `data/dcard_latest.json`, which is produced on the operator's machine by
+  # `python3 tools/collect_dcard.py` (bsk + Brave) and committed to the repo.
+  # `url` is kept for documentation/health reporting only; the loader reads the
+  # snapshot, and the page shows the snapshot timestamp.
+  # Slugs verified against https://www.dcard.tw/forum/popular on 2026-10-03.
+  # ============================================
+  dcard_hot:
+    name: Dcard 熱門
+    language: zh
+    items_per_category: 8
+    categories:
+      - 科技業板
+      - AI 工作者板
+      - 3C 板
+      - 理財板
+    sources:
+      - category: 科技業板
+        type: dcard_snapshot
+        board: tech_job
+        board_name: 科技業板
+        url: https://www.dcard.tw/f/tech_job
+        source_name: Dcard 科技業板
+      - category: AI 工作者板
+        type: dcard_snapshot
+        board: ai_builder
+        board_name: AI 工作者板
+        url: https://www.dcard.tw/f/ai_builder
+        source_name: Dcard AI 工作者板
+      - category: 3C 板
+        type: dcard_snapshot
+        board: 3c
+        board_name: 3C 板
+        url: https://www.dcard.tw/f/3c
+        source_name: Dcard 3C 板
+      - category: 理財板
+        type: dcard_snapshot
+        board: money
+        board_name: 理財板
+        url: https://www.dcard.tw/f/money
+        source_name: Dcard 理財板
+
 # Global settings
 settings:
   max_items_per_feed: 30
@@ -236,3 +338,9 @@ settings:
   summary_length_zh: 200
   summary_length_en: 200
   summary_length_ja: 200
+  # Per-tab override of the 24h recency window. `null` disables time filtering:
+  # the community tabs are ranked by engagement over a board's current front
+  # page, so applying a 24h cutoff would silently drop the highest-push posts.
+  tab_time_window_hours:
+    ptt_hot: null
+    dcard_hot: null

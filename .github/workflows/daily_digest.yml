@@ -56,6 +56,24 @@ jobs:
       # ============================================
       # Generate Digest
       # ============================================
+      - name: Report Dcard snapshot freshness
+        continue-on-error: true
+        run: |
+          python -c "
+          import json, pathlib
+          from datetime import datetime, timezone
+          p = pathlib.Path('data/dcard_latest.json')
+          if not p.exists():
+              print('::warning::data/dcard_latest.json is missing; the Dcard tab will be empty.')
+          else:
+              snap = json.loads(p.read_text(encoding='utf-8'))
+              collected = datetime.fromisoformat(snap['collected_at'])
+              age = (datetime.now(collected.tzinfo) - collected).total_seconds() / 3600
+              print(f'Dcard snapshot collected {snap[\"collected_at\"]} ({age:.1f}h ago), {len(snap[\"posts\"])} posts')
+              if age > 72:
+                  print(f'::warning::Dcard snapshot is {age:.1f}h old. Run tools/collect_dcard.py to refresh it.')
+          "
+
       - name: Run digest pipeline
         id: generate
         env:

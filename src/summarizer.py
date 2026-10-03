@@ -688,7 +688,8 @@ def summarize_by_category(
                     source_name=article.source_name,
                     summary=summary,
                     tab=article.tab,
-                    final_category=category
+                    final_category=category,
+                    metrics=article.metrics
                 ))
                 total_summarized += 1
             
