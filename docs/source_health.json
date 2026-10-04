@@ -1,9 +1,9 @@
 {
   "total_sources": 18,
   "ok_sources": 14,
-  "empty_sources": 4,
-  "failed_sources": 4,
-  "selected_articles": 6,
+  "empty_sources": 1,
+  "failed_sources": 3,
+  "selected_articles": 4,
   "sources": [
     {
       "tab": "tech_blogs",
@@ -24,7 +24,7 @@
       "group": "AI / ML",
       "url": "https://garymarcus.substack.com/feed",
       "type": "rss",
-      "status": "empty",
+      "status": "failed",
       "fetched_count": 0
     },
     {
@@ -46,7 +46,7 @@
       "group": "AI / ML",
       "url": "https://minimaxir.com/rss.xml",
       "type": "rss",
-      "status": "empty",
+      "status": "failed",
       "fetched_count": 0
     },
     {
@@ -68,7 +68,7 @@
       "group": "AI / ML",
       "url": "https://gwern.substack.com/feed",
       "type": "rss",
-      "status": "empty",
+      "status": "failed",
       "fetched_count": 0
     },
     {
