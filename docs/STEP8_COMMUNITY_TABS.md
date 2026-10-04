@@ -345,3 +345,65 @@ was raised 30 → 60 min to keep headroom. Parallelising the calls is the next l
   minimal environment) → both collectors succeed, snapshots commit and push. First
   attempt hit `non-fast-forward` because the 08:00 digest also commits to `main`; the
   script now rebases before pushing.
+
+## 9. Reading the rendered page (and a metrics bug found by doing so)
+
+Laying the six tabs out side by side made the Tech Blogs status line legible for the
+first time:
+
+```
+18 sources followed · 14 returned articles · 4 empty · 4 failed · 6 selected
+```
+
+`14 + 4 + 4 = 22`, against 18 sources followed. The buckets were not exclusive.
+
+**Cause.** `fetch_feed` returns `[]` both when a feed is healthy but had nothing new
+and when the fetch itself broke (DNS, timeout, HTTP error, unparseable body). The
+caller therefore collapsed both into `status = 'empty'`, and
+`summarize_source_health` computed `failed_sources` as *every row whose status is not
+`ok`* — counting the empty rows a second time. The footer compounded it by printing
+`failed_sources` under the wording "failed or returned no usable feed", so a single
+number appeared to describe two different problems.
+
+**Fix.** `fetch_feed` takes an optional `outcome` dict and reports
+`{'status': 'ok'|'empty'|'failed', 'error': str|None}`; `failed_sources` now counts
+only `status == 'failed'`. The signature stays backward compatible — callers that
+pass no `outcome` behave exactly as before. The footer reports the two modes
+separately, and pluralises correctly.
+
+Verified end to end against the live config (18 sources): `16 ok, 1 empty, 1 failed`
+— sums to 18, and the footer now reads "1 Tech Blogs source could not be fetched;
+1 Tech Blogs source had no new articles."
+
+### Measuring the layout without trusting the markup order
+
+The page lazy-loads: only the active tab is inlined, every other tab's markup sits in
+a sibling `<template id="X-template">` that JS clones into the panel on first
+activation. Reading the file linearly makes tab *N* appear to hold category *N+1*'s
+content, which looks exactly like an off-by-one bug. Slice by template id instead.
+
+Two traps when screenshotting the tabs:
+
+* **The hash is only read on a fresh load.** `DOMContentLoaded` reads
+  `location.hash` once and there is no `hashchange` handler, so navigating to
+  `#ptt-hot` within an already-loaded document re-paints nothing. Every shot comes
+  out identical. One session per tab is the minimum.
+* **Filenames lie.** A loop that reuses a session produces a set of files whose
+  names do not match their contents. Confirm via `bsk get-html` that
+  `<section class="tab-content active" id="X">` really holds the expected sources
+  before believing a screenshot.
+
+### Two things that look like bugs and are not
+
+* **English summaries are ~7× longer than Chinese ones** (median 963 vs 138
+  characters). The prompts ask for 「約 200 個繁體中文字」and "approximately 200
+  **words**" — different units, and 963 characters is about 190 words. Correct.
+* **Summaries visibly ending in `...`** under Tech Blogs. That is CSS
+  `line-clamp` doing its job on the rendered page, not truncation in the data: no
+  English summary in the served HTML contains an ellipsis at all. Only the four
+  Tech Blogs entries do, because those come from `skip_ai_tabs` and keep their
+  original feed description, which upstream already truncated.
+
+* `pytest tests/` → **99 passed** (17 new cases covering bucket exclusivity, the
+  empty/failed distinction through `outcome`, and the footer wording).
+

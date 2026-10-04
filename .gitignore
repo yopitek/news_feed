@@ -43,3 +43,6 @@ Thumbs.db
 
 # Runtime logs from tools/daily_social_sync.sh
 logs/
+
+# Local layout screenshots (verification artifacts, not site content)
+shots/

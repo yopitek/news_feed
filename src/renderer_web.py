@@ -267,8 +267,21 @@ def render_pipeline_status(run_stats: dict | None, source_health: dict | None) -
         bits.append(f'{feed_count} RSS/Atom sources checked.')
     if selected is not None:
         bits.append(f'{selected} articles selected.')
+
+    # Report the two failure modes separately. They used to be merged into
+    # "failed or returned no usable feed", which conflated a broken fetch with
+    # a healthy feed that simply had nothing new today.
+    degraded = []
     if source_health.get('failed_sources'):
-        bits.append(f"{source_health['failed_sources']} Tech Blogs sources failed or returned no usable feed.")
+        n = source_health['failed_sources']
+        degraded.append(
+            f"{n} Tech Blogs source{'s' if n != 1 else ''} could not be fetched")
+    if source_health.get('empty_sources'):
+        n = source_health['empty_sources']
+        degraded.append(
+            f"{n} Tech Blogs source{'s' if n != 1 else ''} had no new articles")
+    if degraded:
+        bits.append('; '.join(degraded) + '.')
     return ' '.join(bits)
 
 

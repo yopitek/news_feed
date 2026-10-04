@@ -44,12 +44,25 @@ def get_last_ptt_snapshot_meta() -> dict:
 
 
 def summarize_source_health(stats: list[dict], selected: dict | None = None) -> dict:
-    """Build a compact source health summary for output and rendering."""
+    """Build a compact source health summary for output and rendering.
+
+    The three buckets are mutually exclusive and must sum to total_sources:
+
+    - ``ok``     — the feed was fetched and parsed
+    - ``empty``  — fetched fine, the feed itself had no entries
+    - ``failed`` — the fetch itself broke (DNS, timeout, HTTP error, unparseable)
+
+    ``fetch_feed`` used to return ``[]`` for both "empty" and "failed", which
+    collapsed the last two into one bucket and made ``failed_sources`` a
+    double count of ``empty_sources`` (18 followed / 14 ok / 4 empty / 4 failed
+    added up to 22).  ``fetch_feed`` now reports the distinction via its
+    ``outcome`` argument and this function trusts ``status`` only.
+    """
     selected = selected or {}
     tech_stats = [row for row in stats if row.get('tab') == 'tech_blogs']
     ok_sources = sum(1 for row in tech_stats if row.get('status') == 'ok')
     empty_sources = sum(1 for row in tech_stats if row.get('status') == 'empty')
-    failed_sources = sum(1 for row in tech_stats if row.get('status') != 'ok')
+    failed_sources = sum(1 for row in tech_stats if row.get('status') == 'failed')
     selected_articles = sum(len(items) for items in selected.get('tech_blogs', {}).values()) if selected else None
     return {
         'total_sources': len(tech_stats),
@@ -138,41 +151,52 @@ def fetch_feed(
     timeout: int = DEFAULT_TIMEOUT,
     retries: int = DEFAULT_RETRIES,
     max_items: int = DEFAULT_MAX_ITEMS,
-    user_agent: str = DEFAULT_USER_AGENT
+    user_agent: str = DEFAULT_USER_AGENT,
+    outcome: dict | None = None,
 ) -> list[dict]:
     """
     Fetch a single RSS/Atom feed with retry logic.
-    
+
     Args:
         url: Feed URL to fetch
         timeout: HTTP timeout in seconds
         retries: Number of retry attempts
         max_items: Maximum items to return
         user_agent: User-Agent header
-    
+        outcome: Optional dict mutated in place so the caller can tell an empty
+            feed apart from a broken one. Gets ``{'status': 'ok'|'empty'|'failed',
+            'error': str|None}``. Pass it whenever the distinction matters — the
+            return value alone is ``[]`` for both empty and failed.
+
     Returns:
         List of raw feed entries (as dicts)
     """
+    def _record(status: str, error: str | None = None) -> None:
+        if outcome is not None:
+            outcome['status'] = status
+            outcome['error'] = error
+
     backoff = [1, 2, 4]  # Exponential backoff
-    
+
     for attempt in range(retries + 1):
         try:
             # Fetch with custom headers
             headers = {'User-Agent': user_agent}
             response = requests.get(url, headers=headers, timeout=timeout)
             response.raise_for_status()
-            
+
             # Parse feed
             feed = feedparser.parse(response.content)
-            
+
             if feed.bozo and not feed.entries:
                 # Feed parsing error with no entries
                 logger.warning(f"Feed parsing error for {url}: {feed.bozo_exception}")
                 if attempt < retries:
                     time.sleep(backoff[min(attempt, len(backoff) - 1)])
                     continue
+                _record('failed', f'unparseable feed: {feed.bozo_exception}')
                 return []
-            
+
             # Extract entries (up to max_items)
             entries = []
             for entry in feed.entries[:max_items]:
@@ -185,27 +209,30 @@ def fetch_feed(
                     'guid': entry.get('id', entry.get('guid', '')),
                     'source_feed_url': url
                 })
-            
+
             logger.info(f"Fetched {len(entries)} items from {_get_domain(url)}")
+            _record('ok' if entries else 'empty')
             return entries
-            
+
         except requests.exceptions.Timeout:
             logger.warning(f"Timeout fetching {url} (attempt {attempt + 1}/{retries + 1})")
             if attempt < retries:
                 time.sleep(backoff[min(attempt, len(backoff) - 1)])
             continue
-            
+
         except requests.exceptions.RequestException as e:
             logger.warning(f"Request error for {url}: {e} (attempt {attempt + 1}/{retries + 1})")
             if attempt < retries:
                 time.sleep(backoff[min(attempt, len(backoff) - 1)])
             continue
-            
+
         except Exception as e:
             logger.error(f"Unexpected error fetching {url}: {e}")
+            _record('failed', f'unexpected error: {e}')
             return []
-    
+
     logger.error(f"Failed to fetch {url} after {retries + 1} attempts")
+    _record('failed', f'gave up after {retries + 1} attempts')
     return []
 
 
@@ -273,14 +300,20 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
             
             # Fetch this source (RSS by default, dedicated collector otherwise)
             if source_type == 'rss':
+                # `outcome` is what lets us tell "the feed is fine but had no
+                # entries" apart from "the fetch broke" — the return value is []
+                # in both cases, and conflating them double-counts the health
+                # summary (see summarize_source_health).
+                outcome: dict = {}
                 entries = fetch_feed(
                     url=url,
                     timeout=timeout,
                     retries=retries,
                     max_items=max_items,
-                    user_agent=user_agent
+                    user_agent=user_agent,
+                    outcome=outcome
                 )
-                status = 'ok' if entries else 'empty'
+                status = outcome.get('status') or ('ok' if entries else 'empty')
             else:
                 entries, status = _fetch_non_rss(
                     source, timeout=timeout, retries=retries,
