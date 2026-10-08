@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-10-07",
-  "start_time": "2026-10-07T11:26:15.717440+08:00",
-  "end_time": "2026-10-07T11:41:47.000361+08:00",
-  "duration_seconds": 931.28,
-  "feeds_fetched": 1208,
-  "articles_normalized": 605,
-  "articles_deduplicated": 499,
-  "articles_selected": 213,
-  "summaries_generated": 213,
+  "run_date": "2026-10-08",
+  "start_time": "2026-10-08T11:41:04.677554+08:00",
+  "end_time": "2026-10-08T11:58:17.751002+08:00",
+  "duration_seconds": 1033.07,
+  "feeds_fetched": 1200,
+  "articles_normalized": 588,
+  "articles_deduplicated": 489,
+  "articles_selected": 210,
+  "summaries_generated": 210,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -63,7 +63,7 @@
     "ok_sources": 14,
     "empty_sources": 1,
     "failed_sources": 3,
-    "selected_articles": 5,
+    "selected_articles": 7,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -266,20 +266,20 @@
     ]
   },
   "dcard_snapshot": {
-    "collected_at": "2026-10-07T07:30:39+08:00",
-    "age_hours": 3.9,
+    "collected_at": "2026-10-08T07:30:26+08:00",
+    "age_hours": 4.2,
     "boards": [
       {
         "slug": "tech_job",
         "name": "科技業板",
         "status": "ok",
-        "count": 21
+        "count": 20
       },
       {
         "slug": "ai_builder",
         "name": "AI 工作者板",
         "status": "ok",
-        "count": 2
+        "count": 24
       },
       {
         "slug": "3c",
@@ -291,32 +291,32 @@
         "slug": "money",
         "name": "理財板",
         "status": "ok",
-        "count": 23
+        "count": 21
       }
     ],
-    "total_posts": 66
+    "total_posts": 85
   },
   "ptt_snapshot": {
-    "collected_at": "2026-10-07T07:30:22+08:00",
-    "age_hours": 3.9,
+    "collected_at": "2026-10-08T07:30:06+08:00",
+    "age_hours": 4.2,
     "boards": [
       {
         "board": "Gossiping",
         "name": "八卦板",
         "status": "ok",
-        "count": 10
+        "count": 9
       },
       {
         "board": "Stock",
         "name": "股票板",
         "status": "ok",
-        "count": 11
+        "count": 17
       },
       {
         "board": "Tech_Job",
         "name": "科技業板",
         "status": "ok",
-        "count": 4
+        "count": 6
       },
       {
         "board": "Soft_Job",
@@ -328,10 +328,10 @@
         "board": "PC_Shopping",
         "name": "電蝦板",
         "status": "ok",
-        "count": 18
+        "count": 8
       }
     ],
-    "total_posts": 57,
+    "total_posts": 54,
     "origin": "tools/collect_ptt.py (direct HTTP)",
     "live_status": "policy_blocked"
   },
