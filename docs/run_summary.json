@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-10-11",
-  "start_time": "2026-10-11T11:02:20.498168+08:00",
-  "end_time": "2026-10-11T11:19:43.001012+08:00",
-  "duration_seconds": 1042.5,
-  "feeds_fetched": 1202,
-  "articles_normalized": 452,
-  "articles_deduplicated": 382,
-  "articles_selected": 192,
-  "summaries_generated": 192,
+  "run_date": "2026-10-12",
+  "start_time": "2026-10-12T11:25:26.362065+08:00",
+  "end_time": "2026-10-12T11:52:48.804197+08:00",
+  "duration_seconds": 1642.44,
+  "feeds_fetched": 1175,
+  "articles_normalized": 499,
+  "articles_deduplicated": 404,
+  "articles_selected": 202,
+  "summaries_generated": 202,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -61,9 +61,9 @@
   "source_health": {
     "total_sources": 18,
     "ok_sources": 14,
-    "empty_sources": 1,
-    "failed_sources": 3,
-    "selected_articles": 4,
+    "empty_sources": 0,
+    "failed_sources": 4,
+    "selected_articles": 2,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -205,7 +205,7 @@
         "group": "Startups / Product",
         "url": "https://aaronsw.com/2002/feeds/pgessays.rss",
         "type": "rss",
-        "status": "empty",
+        "status": "failed",
         "fetched_count": 0
       },
       {
@@ -266,14 +266,14 @@
     ]
   },
   "dcard_snapshot": {
-    "collected_at": "2026-10-11T07:30:19+08:00",
-    "age_hours": 3.5,
+    "collected_at": "2026-10-12T07:30:25+08:00",
+    "age_hours": 3.9,
     "boards": [
       {
         "slug": "tech_job",
         "name": "科技業板",
         "status": "ok",
-        "count": 20
+        "count": 22
       },
       {
         "slug": "ai_builder",
@@ -291,26 +291,26 @@
         "slug": "money",
         "name": "理財板",
         "status": "ok",
-        "count": 21
+        "count": 20
       }
     ],
-    "total_posts": 85
+    "total_posts": 86
   },
   "ptt_snapshot": {
-    "collected_at": "2026-10-11T07:30:01+08:00",
-    "age_hours": 3.5,
+    "collected_at": "2026-10-12T07:30:05+08:00",
+    "age_hours": 3.9,
     "boards": [
       {
         "board": "Gossiping",
         "name": "八卦板",
         "status": "ok",
-        "count": 9
+        "count": 11
       },
       {
         "board": "Stock",
         "name": "股票板",
         "status": "ok",
-        "count": 4
+        "count": 8
       },
       {
         "board": "Tech_Job",
@@ -322,16 +322,16 @@
         "board": "Soft_Job",
         "name": "軟體工作板",
         "status": "ok",
-        "count": 14
+        "count": 15
       },
       {
         "board": "PC_Shopping",
         "name": "電蝦板",
         "status": "ok",
-        "count": 6
+        "count": 10
       }
     ],
-    "total_posts": 48,
+    "total_posts": 59,
     "origin": "tools/collect_ptt.py (direct HTTP)",
     "live_status": "policy_blocked"
   },
