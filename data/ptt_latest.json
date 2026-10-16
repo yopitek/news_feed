@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "collected_at": "2026-10-16T07:34:01+08:00",
+  "collected_at": "2026-10-17T07:30:00+08:00",
   "collector": "tools/collect_ptt.py (direct HTTP)",
   "requested_boards": [
     "Gossiping",
@@ -14,241 +14,449 @@
       "board": "Gossiping",
       "name": "八卦板",
       "status": "ok",
-      "count": 14
+      "count": 19
     },
     {
       "board": "Stock",
       "name": "股票板",
       "status": "ok",
-      "count": 2
+      "count": 13
     },
     {
       "board": "Tech_Job",
       "name": "科技業板",
       "status": "ok",
-      "count": 3
+      "count": 7
     },
     {
       "board": "Soft_Job",
       "name": "軟體工作板",
       "status": "ok",
-      "count": 16
+      "count": 15
     },
     {
       "board": "PC_Shopping",
       "name": "電蝦板",
       "status": "ok",
-      "count": 13
+      "count": 5
     }
   ],
   "posts": [
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "[新聞] 巴西國會通過下修每週工時至40小時 有望",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792104134.A.86B.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "wu73",
-      "push": 5,
-      "push_label": "5",
+      "title": "Re: [新聞]大陸交換生Po捏頭「小小賴清德拿下」遭驅",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792189898.A.11A.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "violetking",
+      "push": 2,
+      "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "Re: [問卦] 麻將湊到清一色機率很高嗎？",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792104409.A.969.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "NEWOLD",
-      "push": 0,
-      "push_label": "0",
+      "title": "[問卦] 一蘭拉麵跟麵匡匡像嗎",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792190225.A.5CC.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "Superxixai",
+      "push": 2,
+      "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "[問卦] 妙通寺騙我去出家讓我被喇嘛雙修？",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792104416.A.DBB.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "starlights",
-      "push": 0,
-      "push_label": "0",
+      "title": "Re: [新聞]大陸交換生Po捏頭「小小賴清德拿下」遭驅",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792190481.A.10F.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "greenblue",
+      "push": 2,
+      "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "[新聞] 台東消防員涉性騷至少5人 檢方二度聲押",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792104720.A.3FD.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "jal0309",
-      "push": 3,
-      "push_label": "3",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "Gossiping",
-      "board_name": "八卦板",
-      "title": "[新聞] 高雄里長候選人曾涉「虐童致死」 出獄即",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792105036.A.DA3.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "Workforme",
+      "title": "[問卦] 如果台灣留學生拿捏習近平照片會怎樣?",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792190673.A.F31.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "words2012",
       "push": 7,
       "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "Re: [新聞] 沈伯洋父遭中共控賺紅錢 梁文傑酸:以",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792105074.A.CF0.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "hshshshs",
-      "push": 3,
-      "push_label": "3",
+      "title": "Re: [新聞]大陸交換生Po捏頭「小小賴清德拿下」遭驅",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792191024.A.915.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "rainylife",
+      "push": 2,
+      "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "Re: [新聞] 巴西國會通過下修每週工時至40小時 有望",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792105658.A.913.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "hshshshs",
+      "title": "Re: [問卦] 撇除立場 你各位支持老人免健保費嗎",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792191138.A.7B9.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "freeclouds",
       "push": 0,
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "Re: [新聞] 外交部資安系統竟藏陸製程式 侑科技等4廠",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792105732.A.68B.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "isaacc",
+      "title": "Re: [新聞]大陸交換生Po捏頭「小小賴清德拿下」遭驅",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792191144.A.015.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "BleedWang",
       "push": 0,
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "[新聞] 中國學生台大拍捏頭照喊「小小賴清德拿",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792105794.A.175.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "asppsa",
-      "push": 4,
-      "push_label": "4",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "Gossiping",
-      "board_name": "八卦板",
-      "title": "Re: [問卦] 台灣為何有約四成的人能包容智障？",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792105807.A.B33.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "SaChiA5566",
-      "push": 7,
-      "push_label": "7",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "Gossiping",
-      "board_name": "八卦板",
-      "title": "[問卦] 賺敵人的錢和幫敵人賺錢那個慘？",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792105948.A.A98.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "zzzzzzzzzzzy",
-      "push": 3,
-      "push_label": "3",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "Gossiping",
-      "board_name": "八卦板",
-      "title": "[問卦] 有沒有共生房的卦？",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792106243.A.50F.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "ffdqfe",
+      "title": "Re: [問卦] 撇除立場 你各位支持老人免健保費嗎",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792191193.A.B3F.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "saniblue",
       "push": 1,
       "push_label": "1",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "[問卦] 有40年老公寓無貸款+1000萬還不能躺平嗎",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792106537.A.405.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "fawangching",
-      "push": 10,
-      "push_label": "10",
+      "title": "Re: [新聞]大陸交換生Po捏頭「小小賴清德拿下」遭驅",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792191295.A.16C.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "wiwi0526",
+      "push": 7,
+      "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Gossiping",
       "board_name": "八卦板",
-      "title": "Re: [新聞] 網瘋傳高雄爆發馬鈴薯中毒假訊息 調查局",
-      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792107173.A.62B.html",
-      "published": "2026-10-16T12:00:00+08:00",
-      "author": "laptic",
+      "title": "Re: [問卦] 撇除立場 你各位支持老人免健保費嗎",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792191543.A.1BE.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "CPer",
+      "push": 5,
+      "push_label": "5",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "[問卦] 看李明哲大哥被共匪關5年,難道你們不氣!",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792191713.A.34A.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "words2012",
       "push": 0,
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "[新聞] 選戰未到、查賄先行！士檢邀中央司法高層",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792192127.A.831.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "Workforme",
+      "push": 1,
+      "push_label": "1",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "[問卦]在它國對該國元首發表不利言論會發生啥事?",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792192449.A.D89.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "keane9112",
+      "push": 3,
+      "push_label": "3",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "Re: [問卦] 原來十次車禍9次快根本是虎爛 剛看cheap",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792192496.A.BEB.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "myIDis7",
+      "push": 1,
+      "push_label": "1",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "[問卦] 美國有像台灣什麼都免費嗎?滿扯的",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792192551.A.4F0.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "words2012",
+      "push": 1,
+      "push_label": "1",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "Re: [問卦] 撇除立場 你各位支持老人免健保費嗎",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792192952.A.C93.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "hshshshs",
+      "push": 0,
+      "push_label": "0",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "Re: [新聞] 3800億救少子化預算哪裡來？國發會：202",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792193038.A.56D.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "Sinreigensou",
+      "push": 0,
+      "push_label": "0",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "Re: [問卦] 撇除立場 你各位支持老人免健保費嗎",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792193071.A.0BD.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "doubi",
+      "push": 1,
+      "push_label": "1",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Gossiping",
+      "board_name": "八卦板",
+      "title": "[問卦] 男生乳頭P到女生身上，還算露點嗎",
+      "link": "https://www.ptt.cc/bbs/Gossiping/M.1792193221.A.215.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "Superxixai",
+      "push": 0,
+      "push_label": "0",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Stock",
       "board_name": "股票板",
-      "title": "[請益] 公布物價漲為何美債也大漲",
-      "link": "https://www.ptt.cc/bbs/Stock/M.1792081973.A.C8D.html",
+      "title": "[情報] 1016 主動ETF買賣超",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792145478.A.7B4.html",
       "published": "2026-10-16T12:00:00+08:00",
-      "author": "Stealer",
-      "push": 23,
-      "push_label": "23",
+      "author": "gogoqaz",
+      "push": 9,
+      "push_label": "9",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Stock",
       "board_name": "股票板",
-      "title": "[新聞]千億美元訂單難解融資壓力！CoreWeave債券殖利率飆破15％ 輝",
-      "link": "https://www.ptt.cc/bbs/Stock/M.1792082650.A.4D5.html",
+      "title": "[情報] 3211 順達 115Q3自結 2.33 累計 5.73",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792146377.A.3D8.html",
       "published": "2026-10-16T12:00:00+08:00",
-      "author": "manlike",
-      "push": 22,
-      "push_label": "22",
+      "author": "q1a1",
+      "push": 14,
+      "push_label": "14",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[情報] 1016 上市櫃外資投信買超金額排行",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792147923.A.FD8.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "steveisaman",
+      "push": 1,
+      "push_label": "1",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[情報] 1016 上市櫃股票週轉率排行",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792148298.A.72C.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "steveisaman",
+      "push": 1,
+      "push_label": "1",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[新聞] 經濟部擬赴德州設立AI產業園區 童子賢：可",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792150286.A.7F4.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "xephon",
+      "push": 64,
+      "push_label": "64",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[情報] 1815 富喬 9月自結:0.56 年增:273.33%",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792156033.A.BA5.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "q1a1",
+      "push": 36,
+      "push_label": "36",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[情報] 115年10月16日信用交易統計",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792156550.A.4DF.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "steward135",
+      "push": 49,
+      "push_label": "49",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[新聞] 全台果粉搶機！iPhone Duo頂規近12萬也",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792158667.A.8D1.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "GivemeApen",
+      "push": 60,
+      "push_label": "60",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[新聞] DeepSeek又崩 年內第18次出包 網嘲：改名",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792164185.A.53F.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "Su22",
+      "push": 4,
+      "push_label": "4",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[新聞] 麻吉大哥又歸零！5.6萬滾千萬美元只撐4個",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792164771.A.EDC.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "a111111",
+      "push": 51,
+      "push_label": "51",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[情報] 主動ETF/外資共同買賣超排行 (10/16)",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792165039.A.12C.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "terransis",
+      "push": 4,
+      "push_label": "4",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[新聞] 快訊／科技股賣壓擴大費半下探　台指期",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792171579.A.639.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "GivemeApen",
+      "push": 37,
+      "push_label": "37",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Stock",
+      "board_name": "股票板",
+      "title": "[新聞] 「外國人還我錢」韓股7天市值蒸發逾28兆",
+      "link": "https://www.ptt.cc/bbs/Stock/M.1792175056.A.FE3.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "icedog122",
+      "push": 35,
+      "push_label": "35",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Tech_Job",
@@ -261,7 +469,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Tech_Job",
@@ -274,7 +482,7 @@
       "push_label": "5",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Tech_Job",
@@ -283,11 +491,63 @@
       "link": "https://www.ptt.cc/bbs/Tech_Job/M.1792031149.A.5EB.html",
       "published": "2026-10-15T12:00:00+08:00",
       "author": "suyui1001",
-      "push": 13,
-      "push_label": "13",
+      "push": 16,
+      "push_label": "16",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Tech_Job",
+      "board_name": "科技業板",
+      "title": "[討論] 美光10/31發紅包歐？",
+      "link": "https://www.ptt.cc/bbs/Tech_Job/M.1792112119.A.DB5.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "peterasd",
+      "push": 14,
+      "push_label": "14",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Tech_Job",
+      "board_name": "科技業板",
+      "title": "［問券］填問卷抽switch2＿誠摯邀請主管填寫",
+      "link": "https://www.ptt.cc/bbs/Tech_Job/M.1792123731.A.FB4.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "will1031lu",
+      "push": 0,
+      "push_label": "0",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Tech_Job",
+      "board_name": "科技業板",
+      "title": "[徵才]  2026 UMC 聯電日本廠大招募",
+      "link": "https://www.ptt.cc/bbs/Tech_Job/M.1792142751.A.354.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "iql2010314",
+      "push": 5,
+      "push_label": "5",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "Tech_Job",
+      "board_name": "科技業板",
+      "title": "[請益] 在日外商offer薪資談判請益",
+      "link": "https://www.ptt.cc/bbs/Tech_Job/M.1792161016.A.57B.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "LaAc",
+      "push": 7,
+      "push_label": "7",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -300,7 +560,7 @@
       "push_label": "13",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -313,7 +573,7 @@
       "push_label": "45",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -326,7 +586,7 @@
       "push_label": "10",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -339,7 +599,7 @@
       "push_label": "8",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -352,7 +612,7 @@
       "push_label": "47",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -365,7 +625,7 @@
       "push_label": "7",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -378,7 +638,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -391,7 +651,7 @@
       "push_label": "2",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -404,7 +664,7 @@
       "push_label": "23",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -417,7 +677,7 @@
       "push_label": "1",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -430,7 +690,7 @@
       "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -443,7 +703,7 @@
       "push_label": "11",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -456,7 +716,7 @@
       "push_label": "11",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -469,7 +729,7 @@
       "push_label": "9",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "Soft_Job",
@@ -478,193 +738,76 @@
       "link": "https://www.ptt.cc/bbs/Soft_Job/M.1791697656.A.0E1.html",
       "published": "2026-10-11T12:00:00+08:00",
       "author": "askaleroux",
-      "push": 34,
-      "push_label": "34",
+      "push": 37,
+      "push_label": "37",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "Soft_Job",
-      "board_name": "軟體工作板",
-      "title": "[分享] 自製雙北國中小學區地圖",
-      "link": "https://www.ptt.cc/bbs/Soft_Job/M.1792073354.A.A16.html",
-      "published": "2026-10-15T12:00:00+08:00",
-      "author": "kokacal",
-      "push": 0,
-      "push_label": "0",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "PC_Shopping",
       "board_name": "電蝦板",
-      "title": "[菜單] 100k遊戲機",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791965973.A.8C3.html",
-      "published": "2026-10-14T12:00:00+08:00",
-      "author": "madisonb",
-      "push": 1,
-      "push_label": "1",
+      "title": "[情報] Spark 基礎測試",
+      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792143896.A.E89.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "andonie",
+      "push": 12,
+      "push_label": "12",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "PC_Shopping",
       "board_name": "電蝦板",
-      "title": "[菜單] 110k遊戲機",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791968861.A.7D2.html",
-      "published": "2026-10-14T12:00:00+08:00",
-      "author": "pokerface917",
-      "push": 3,
-      "push_label": "3",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[情報] 技嘉宣布可支援新1700 CPU的主機板系列",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791972098.A.72A.html",
-      "published": "2026-10-14T12:00:00+08:00",
-      "author": "Rollnmeow",
-      "push": 20,
-      "push_label": "20",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[情報] Intel、華擎、技嘉、微星全部縮小！官方",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791972264.A.8BF.html",
-      "published": "2026-10-14T12:00:00+08:00",
-      "author": "b223456x",
-      "push": 7,
-      "push_label": "7",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[閒聊] 櫻花樹造景套裝機",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791975770.A.86A.html",
-      "published": "2026-10-14T12:00:00+08:00",
-      "author": "Rollnmeow",
-      "push": 24,
-      "push_label": "24",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[開箱] 入門CP取向電供，FSP全漢 VIC BD+ 650W",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791980040.A.41B.html",
-      "published": "2026-10-14T12:00:00+08:00",
-      "author": "hix020421680",
+      "title": "[開箱] Q萌形象雕妹 技嘉B850 AORUS ELITE-P ICE",
+      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792146057.A.BFE.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "Ohmy",
       "push": 6,
       "push_label": "6",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
     },
     {
       "board": "PC_Shopping",
       "board_name": "電蝦板",
-      "title": "[開箱] JONSBO D34機殼",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1791983786.A.885.html",
-      "published": "2026-10-14T12:00:00+08:00",
-      "author": "wolflsi",
-      "push": 4,
-      "push_label": "4",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[菜單] 120K AI影音生成協作機",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792024477.A.7FB.html",
-      "published": "2026-10-15T12:00:00+08:00",
-      "author": "chwithhc",
-      "push": 3,
-      "push_label": "3",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[菜單] 110k 遊戲 多媒體影音機",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792041128.A.E3B.html",
-      "published": "2026-10-15T12:00:00+08:00",
-      "author": "icemoney",
-      "push": 0,
-      "push_label": "0",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[菜單] 55k遊戲機",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792041488.A.224.html",
-      "published": "2026-10-15T12:00:00+08:00",
-      "author": "DoneBaby",
-      "push": 1,
-      "push_label": "1",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[菜單] 78k遊戲機",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792050968.A.F51.html",
-      "published": "2026-10-15T12:00:00+08:00",
-      "author": "forvoVo",
-      "push": 0,
-      "push_label": "0",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "[菜單] 84K遊戲機",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792057831.A.9BA.html",
-      "published": "2026-10-15T12:00:00+08:00",
-      "author": "pgwevolution",
-      "push": 3,
-      "push_label": "3",
-      "date_precision": "day",
-      "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
-    },
-    {
-      "board": "PC_Shopping",
-      "board_name": "電蝦板",
-      "title": "Re: [閒聊] 傳聞RTX 5090停產 5080 24gb替代",
-      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792083772.A.A69.html",
+      "title": "[開箱] 4.5吋螢幕AIO，DEEPCOOL LT360 vision",
+      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792146477.A.FEE.html",
       "published": "2026-10-16T12:00:00+08:00",
-      "author": "kimisawa",
-      "push": 21,
-      "push_label": "21",
+      "author": "hix020421680",
+      "push": 0,
+      "push_label": "0",
       "date_precision": "day",
       "summary": "",
-      "collected_at": "2026-10-16T07:34:01+08:00"
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "PC_Shopping",
+      "board_name": "電蝦板",
+      "title": "[菜單] 65K上下設備升級遊戲機",
+      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792157724.A.3C4.html",
+      "published": "2026-10-16T12:00:00+08:00",
+      "author": "qwe1487738",
+      "push": 0,
+      "push_label": "0",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
+    },
+    {
+      "board": "PC_Shopping",
+      "board_name": "電蝦板",
+      "title": "Re: [心得] (完美落幕)視博通 滿分售後服務",
+      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1792170863.A.3C4.html",
+      "published": "2026-10-17T12:00:00+08:00",
+      "author": "irvingyeh85",
+      "push": 3,
+      "push_label": "3",
+      "date_precision": "day",
+      "summary": "",
+      "collected_at": "2026-10-17T07:30:00+08:00"
     }
   ]
 }
