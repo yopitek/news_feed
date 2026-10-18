@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-10-17",
-  "start_time": "2026-10-17T10:14:39.116675+08:00",
-  "end_time": "2026-10-17T10:34:11.860458+08:00",
-  "duration_seconds": 1172.74,
-  "feeds_fetched": 1232,
-  "articles_normalized": 604,
-  "articles_deduplicated": 495,
-  "articles_selected": 213,
-  "summaries_generated": 213,
+  "run_date": "2026-10-18",
+  "start_time": "2026-10-18T10:14:46.129778+08:00",
+  "end_time": "2026-10-18T10:33:10.027772+08:00",
+  "duration_seconds": 1103.9,
+  "feeds_fetched": 1235,
+  "articles_normalized": 457,
+  "articles_deduplicated": 387,
+  "articles_selected": 199,
+  "summaries_generated": 199,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -63,7 +63,7 @@
     "ok_sources": 14,
     "empty_sources": 0,
     "failed_sources": 4,
-    "selected_articles": 4,
+    "selected_articles": 5,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -267,7 +267,7 @@
   },
   "dcard_snapshot": {
     "collected_at": "2026-10-17T07:30:25+08:00",
-    "age_hours": 2.8,
+    "age_hours": 26.7,
     "boards": [
       {
         "slug": "tech_job",
@@ -297,41 +297,41 @@
     "total_posts": 85
   },
   "ptt_snapshot": {
-    "collected_at": "2026-10-17T07:30:00+08:00",
+    "collected_at": "2026-10-18T07:30:05+08:00",
     "age_hours": 2.8,
     "boards": [
       {
         "board": "Gossiping",
         "name": "八卦板",
         "status": "ok",
-        "count": 19
+        "count": 16
       },
       {
         "board": "Stock",
         "name": "股票板",
         "status": "ok",
-        "count": 13
+        "count": 10
       },
       {
         "board": "Tech_Job",
         "name": "科技業板",
         "status": "ok",
-        "count": 7
+        "count": 15
       },
       {
         "board": "Soft_Job",
         "name": "軟體工作板",
         "status": "ok",
-        "count": 15
+        "count": 16
       },
       {
         "board": "PC_Shopping",
         "name": "電蝦板",
         "status": "ok",
-        "count": 5
+        "count": 10
       }
     ],
-    "total_posts": 59,
+    "total_posts": 67,
     "origin": "tools/collect_ptt.py (direct HTTP)",
     "live_status": "policy_blocked"
   },
