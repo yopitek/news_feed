@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-10-24",
-  "start_time": "2026-10-24T10:36:52.835725+08:00",
-  "end_time": "2026-10-24T10:58:32.725863+08:00",
-  "duration_seconds": 1299.89,
-  "feeds_fetched": 1211,
-  "articles_normalized": 542,
-  "articles_deduplicated": 451,
-  "articles_selected": 204,
-  "summaries_generated": 204,
+  "run_date": "2026-10-25",
+  "start_time": "2026-10-25T10:25:13.059751+08:00",
+  "end_time": "2026-10-25T10:42:09.273957+08:00",
+  "duration_seconds": 1016.21,
+  "feeds_fetched": 1209,
+  "articles_normalized": 445,
+  "articles_deduplicated": 368,
+  "articles_selected": 183,
+  "summaries_generated": 183,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -63,7 +63,7 @@
     "ok_sources": 14,
     "empty_sources": 0,
     "failed_sources": 4,
-    "selected_articles": 6,
+    "selected_articles": 3,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -266,8 +266,8 @@
     ]
   },
   "dcard_snapshot": {
-    "collected_at": "2026-10-24T07:30:20+08:00",
-    "age_hours": 3.1,
+    "collected_at": "2026-10-25T07:30:59+08:00",
+    "age_hours": 2.9,
     "boards": [
       {
         "slug": "tech_job",
@@ -285,20 +285,20 @@
         "slug": "3c",
         "name": "3C 板",
         "status": "ok",
-        "count": 20
+        "count": 17
       },
       {
         "slug": "money",
         "name": "理財板",
         "status": "ok",
-        "count": 22
+        "count": 21
       }
     ],
-    "total_posts": 86
+    "total_posts": 82
   },
   "ptt_snapshot": {
     "collected_at": "2026-10-24T07:30:02+08:00",
-    "age_hours": 3.1,
+    "age_hours": 26.9,
     "boards": [
       {
         "board": "Gossiping",
