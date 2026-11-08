@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-11-07",
-  "start_time": "2026-11-07T11:50:07.071467+08:00",
-  "end_time": "2026-11-07T12:05:33.061481+08:00",
-  "duration_seconds": 925.99,
-  "feeds_fetched": 1219,
-  "articles_normalized": 614,
-  "articles_deduplicated": 507,
-  "articles_selected": 214,
-  "summaries_generated": 214,
+  "run_date": "2026-11-08",
+  "start_time": "2026-11-08T11:30:48.377969+08:00",
+  "end_time": "2026-11-08T11:43:54.553455+08:00",
+  "duration_seconds": 786.18,
+  "feeds_fetched": 1206,
+  "articles_normalized": 444,
+  "articles_deduplicated": 376,
+  "articles_selected": 191,
+  "summaries_generated": 191,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -63,7 +63,7 @@
     "ok_sources": 14,
     "empty_sources": 0,
     "failed_sources": 4,
-    "selected_articles": 4,
+    "selected_articles": 3,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -267,7 +267,7 @@
   },
   "dcard_snapshot": {
     "collected_at": "2026-10-30T07:30:20+08:00",
-    "age_hours": 196.3,
+    "age_hours": 220.0,
     "boards": [
       {
         "slug": "tech_job",
@@ -297,26 +297,26 @@
     "total_posts": 85
   },
   "ptt_snapshot": {
-    "collected_at": "2026-11-07T07:30:05+08:00",
-    "age_hours": 4.3,
+    "collected_at": "2026-11-08T07:30:02+08:00",
+    "age_hours": 4.0,
     "boards": [
       {
         "board": "Gossiping",
         "name": "八卦板",
         "status": "ok",
-        "count": 19
+        "count": 5
       },
       {
         "board": "Stock",
         "name": "股票板",
         "status": "ok",
-        "count": 5
+        "count": 4
       },
       {
         "board": "Tech_Job",
         "name": "科技業板",
         "status": "ok",
-        "count": 4
+        "count": 12
       },
       {
         "board": "Soft_Job",
@@ -328,10 +328,10 @@
         "board": "PC_Shopping",
         "name": "電蝦板",
         "status": "ok",
-        "count": 14
+        "count": 8
       }
     ],
-    "total_posts": 54,
+    "total_posts": 41,
     "origin": "tools/collect_ptt.py (direct HTTP)",
     "live_status": "policy_blocked"
   },
