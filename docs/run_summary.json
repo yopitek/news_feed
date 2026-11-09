@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-11-08",
-  "start_time": "2026-11-08T11:30:48.377969+08:00",
-  "end_time": "2026-11-08T11:43:54.553455+08:00",
-  "duration_seconds": 786.18,
-  "feeds_fetched": 1206,
-  "articles_normalized": 444,
-  "articles_deduplicated": 376,
-  "articles_selected": 191,
-  "summaries_generated": 191,
+  "run_date": "2026-11-09",
+  "start_time": "2026-11-09T11:46:21.292314+08:00",
+  "end_time": "2026-11-09T12:01:07.878354+08:00",
+  "duration_seconds": 886.59,
+  "feeds_fetched": 1194,
+  "articles_normalized": 496,
+  "articles_deduplicated": 411,
+  "articles_selected": 210,
+  "summaries_generated": 210,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -267,7 +267,7 @@
   },
   "dcard_snapshot": {
     "collected_at": "2026-10-30T07:30:20+08:00",
-    "age_hours": 220.0,
+    "age_hours": 244.3,
     "boards": [
       {
         "slug": "tech_job",
@@ -296,44 +296,6 @@
     ],
     "total_posts": 85
   },
-  "ptt_snapshot": {
-    "collected_at": "2026-11-08T07:30:02+08:00",
-    "age_hours": 4.0,
-    "boards": [
-      {
-        "board": "Gossiping",
-        "name": "八卦板",
-        "status": "ok",
-        "count": 5
-      },
-      {
-        "board": "Stock",
-        "name": "股票板",
-        "status": "ok",
-        "count": 4
-      },
-      {
-        "board": "Tech_Job",
-        "name": "科技業板",
-        "status": "ok",
-        "count": 12
-      },
-      {
-        "board": "Soft_Job",
-        "name": "軟體工作板",
-        "status": "ok",
-        "count": 12
-      },
-      {
-        "board": "PC_Shopping",
-        "name": "電蝦板",
-        "status": "ok",
-        "count": 8
-      }
-    ],
-    "total_posts": 41,
-    "origin": "tools/collect_ptt.py (direct HTTP)",
-    "live_status": "policy_blocked"
-  },
+  "ptt_snapshot": {},
   "status": "success"
 }
