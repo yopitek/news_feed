@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-11-11",
-  "start_time": "2026-11-11T11:52:14.819939+08:00",
-  "end_time": "2026-11-11T12:08:01.237740+08:00",
-  "duration_seconds": 946.42,
-  "feeds_fetched": 1240,
-  "articles_normalized": 661,
-  "articles_deduplicated": 564,
-  "articles_selected": 225,
-  "summaries_generated": 225,
+  "run_date": "2026-11-12",
+  "start_time": "2026-11-12T12:59:24.097453+08:00",
+  "end_time": "2026-11-12T13:15:40.806431+08:00",
+  "duration_seconds": 976.71,
+  "feeds_fetched": 1211,
+  "articles_normalized": 655,
+  "articles_deduplicated": 562,
+  "articles_selected": 224,
+  "summaries_generated": 224,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -63,7 +63,7 @@
     "ok_sources": 14,
     "empty_sources": 0,
     "failed_sources": 4,
-    "selected_articles": 8,
+    "selected_articles": 5,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -267,7 +267,7 @@
   },
   "dcard_snapshot": {
     "collected_at": "2026-10-30T07:30:20+08:00",
-    "age_hours": 292.4,
+    "age_hours": 317.5,
     "boards": [
       {
         "slug": "tech_job",
