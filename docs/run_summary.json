@@ -1,13 +1,13 @@
 {
-  "run_date": "2026-11-20",
-  "start_time": "2026-11-20T12:57:38.913524+08:00",
-  "end_time": "2026-11-20T13:13:26.943576+08:00",
-  "duration_seconds": 948.03,
-  "feeds_fetched": 1236,
-  "articles_normalized": 666,
-  "articles_deduplicated": 553,
-  "articles_selected": 218,
-  "summaries_generated": 218,
+  "run_date": "2026-11-21",
+  "start_time": "2026-11-21T12:53:14.408864+08:00",
+  "end_time": "2026-11-21T13:16:13.296367+08:00",
+  "duration_seconds": 1378.89,
+  "feeds_fetched": 1203,
+  "articles_normalized": 596,
+  "articles_deduplicated": 483,
+  "articles_selected": 210,
+  "summaries_generated": 210,
   "items_per_category": 8,
   "categories": {
     "zh_news": [
@@ -63,7 +63,7 @@
     "ok_sources": 14,
     "empty_sources": 0,
     "failed_sources": 4,
-    "selected_articles": 5,
+    "selected_articles": 6,
     "sources": [
       {
         "tab": "tech_blogs",
@@ -267,7 +267,7 @@
   },
   "dcard_snapshot": {
     "collected_at": "2026-10-30T07:30:20+08:00",
-    "age_hours": 509.5,
+    "age_hours": 533.5,
     "boards": [
       {
         "slug": "tech_job",
@@ -296,6 +296,44 @@
     ],
     "total_posts": 85
   },
-  "ptt_snapshot": {},
+  "ptt_snapshot": {
+    "collected_at": "2026-11-21T07:36:54+08:00",
+    "age_hours": 5.3,
+    "boards": [
+      {
+        "board": "Gossiping",
+        "name": "八卦板",
+        "status": "ok",
+        "count": 8
+      },
+      {
+        "board": "Stock",
+        "name": "股票板",
+        "status": "ok",
+        "count": 14
+      },
+      {
+        "board": "Tech_Job",
+        "name": "科技業板",
+        "status": "ok",
+        "count": 11
+      },
+      {
+        "board": "Soft_Job",
+        "name": "軟體工作板",
+        "status": "ok",
+        "count": 14
+      },
+      {
+        "board": "PC_Shopping",
+        "name": "電蝦板",
+        "status": "ok",
+        "count": 3
+      }
+    ],
+    "total_posts": 50,
+    "origin": "tools/collect_ptt.py (direct HTTP)",
+    "live_status": "empty"
+  },
   "status": "success"
 }
