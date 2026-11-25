@@ -1,9 +1,9 @@
 {
   "total_sources": 18,
-  "ok_sources": 14,
+  "ok_sources": 16,
   "empty_sources": 0,
-  "failed_sources": 4,
-  "selected_articles": 5,
+  "failed_sources": 2,
+  "selected_articles": 9,
   "sources": [
     {
       "tab": "tech_blogs",
@@ -24,8 +24,8 @@
       "group": "AI / ML",
       "url": "https://garymarcus.substack.com/feed",
       "type": "rss",
-      "status": "failed",
-      "fetched_count": 0
+      "status": "ok",
+      "fetched_count": 20
     },
     {
       "tab": "tech_blogs",
@@ -68,8 +68,8 @@
       "group": "AI / ML",
       "url": "https://gwern.substack.com/feed",
       "type": "rss",
-      "status": "failed",
-      "fetched_count": 0
+      "status": "ok",
+      "fetched_count": 14
     },
     {
       "tab": "tech_blogs",
