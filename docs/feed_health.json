@@ -1,9 +1,9 @@
 {
- "total_sources": 69,
- "ok_sources": 66,
+ "total_sources": 68,
+ "ok_sources": 68,
  "stale_sources": 0,
  "empty_sources": 0,
- "failed_sources": 3,
+ "failed_sources": 0,
  "stale_after_hours": 168,
  "by_tab": {
   "zh_news": {
@@ -36,7 +36,7 @@
    "stale": 0,
    "empty": 0,
    "failed": 0,
-   "fetched_items": 45
+   "fetched_items": 35
   },
   "dcard_hot": {
    "total": 4,
@@ -47,49 +47,15 @@
    "fetched_items": 85
   },
   "tech_blogs": {
-   "total": 18,
-   "ok": 15,
+   "total": 17,
+   "ok": 17,
    "stale": 0,
    "empty": 0,
-   "failed": 3,
-   "fetched_items": 275
+   "failed": 0,
+   "fetched_items": 325
   }
  },
- "problem_sources": [
-  {
-   "tab": "tech_blogs",
-   "category": "Tech Blogs",
-   "source_name": "Gary Marcus",
-   "url": "https://garymarcus.substack.com/feed",
-   "health": "failed",
-   "status": "failed",
-   "error": "HTTP 403 (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null
-  },
-  {
-   "tab": "tech_blogs",
-   "category": "Tech Blogs",
-   "source_name": "Gwern Branwen",
-   "url": "https://gwern.substack.com/feed",
-   "health": "failed",
-   "status": "failed",
-   "error": "HTTP 403 (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null
-  },
-  {
-   "tab": "tech_blogs",
-   "category": "Tech Blogs",
-   "source_name": "Paul Graham",
-   "url": "https://aaronsw.com/2002/feeds/pgessays.rss",
-   "health": "failed",
-   "status": "failed",
-   "error": "TLS error (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null
-  }
- ],
+ "problem_sources": [],
  "sources": [
   {
    "tab": "zh_news",
@@ -103,7 +69,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T04:35:40+00:00",
-   "newest_age_hours": 1.3,
+   "newest_age_hours": 1.7,
    "health": "ok"
   },
   {
@@ -117,8 +83,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T05:05:00+00:00",
-   "newest_age_hours": 0.8,
+   "newest_published": "2026-11-26T05:35:32+00:00",
+   "newest_age_hours": 0.7,
    "health": "ok"
   },
   {
@@ -132,8 +98,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T04:19:18+00:00",
-   "newest_age_hours": 1.6,
+   "newest_published": "2026-11-26T05:33:22+00:00",
+   "newest_age_hours": 0.7,
    "health": "ok"
   },
   {
@@ -147,8 +113,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T04:30:34+00:00",
-   "newest_age_hours": 1.4,
+   "newest_published": "2026-11-26T05:54:49+00:00",
+   "newest_age_hours": 0.4,
    "health": "ok"
   },
   {
@@ -163,7 +129,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T04:18:14+00:00",
-   "newest_age_hours": 1.6,
+   "newest_age_hours": 2.0,
    "health": "ok"
   },
   {
@@ -178,7 +144,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T05:28:19+00:00",
-   "newest_age_hours": 0.4,
+   "newest_age_hours": 0.8,
    "health": "ok"
   },
   {
@@ -193,7 +159,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T05:35:34+00:00",
-   "newest_age_hours": 0.3,
+   "newest_age_hours": 0.7,
    "health": "ok"
   },
   {
@@ -208,7 +174,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T04:33:38+00:00",
-   "newest_age_hours": 1.3,
+   "newest_age_hours": 1.7,
    "health": "ok"
   },
   {
@@ -223,7 +189,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-25T10:57:33+00:00",
-   "newest_age_hours": 18.9,
+   "newest_age_hours": 19.3,
    "health": "ok"
   },
   {
@@ -238,7 +204,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T03:41:42+00:00",
-   "newest_age_hours": 2.2,
+   "newest_age_hours": 2.6,
    "health": "ok"
   },
   {
@@ -253,7 +219,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T03:18:59+00:00",
-   "newest_age_hours": 2.6,
+   "newest_age_hours": 3.0,
    "health": "ok"
   },
   {
@@ -267,8 +233,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T05:46:00+00:00",
-   "newest_age_hours": 0.1,
+   "newest_published": "2026-11-26T06:05:00+00:00",
+   "newest_age_hours": 0.2,
    "health": "ok"
   },
   {
@@ -283,7 +249,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T04:11:16+00:00",
-   "newest_age_hours": 1.7,
+   "newest_age_hours": 2.1,
    "health": "ok"
   },
   {
@@ -297,8 +263,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T03:43:24+00:00",
-   "newest_age_hours": 2.2,
+   "newest_published": "2026-11-26T05:12:59+00:00",
+   "newest_age_hours": 1.1,
    "health": "ok"
   },
   {
@@ -313,7 +279,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-25T17:35:58+00:00",
-   "newest_age_hours": 12.3,
+   "newest_age_hours": 12.7,
    "health": "ok"
   },
   {
@@ -328,7 +294,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T04:45:00+00:00",
-   "newest_age_hours": 1.1,
+   "newest_age_hours": 1.5,
    "health": "ok"
   },
   {
@@ -343,7 +309,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-11-26T00:04:34+00:00",
-   "newest_age_hours": 5.8,
+   "newest_age_hours": 6.2,
    "health": "ok"
   },
   {
@@ -358,7 +324,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-25T22:44:32+00:00",
-   "newest_age_hours": 7.1,
+   "newest_age_hours": 7.5,
    "health": "ok"
   },
   {
@@ -372,8 +338,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T03:43:24+00:00",
-   "newest_age_hours": 2.2,
+   "newest_published": "2026-11-26T05:12:59+00:00",
+   "newest_age_hours": 1.1,
    "health": "ok"
   },
   {
@@ -387,8 +353,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T05:17:12+00:00",
-   "newest_age_hours": 0.6,
+   "newest_published": "2026-11-26T06:01:58+00:00",
+   "newest_age_hours": 0.2,
    "health": "ok"
   },
   {
@@ -403,7 +369,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-11-26T04:10:58+00:00",
-   "newest_age_hours": 1.7,
+   "newest_age_hours": 2.1,
    "health": "ok"
   },
   {
@@ -418,7 +384,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-11-26T04:10:58+00:00",
-   "newest_age_hours": 1.7,
+   "newest_age_hours": 2.1,
    "health": "ok"
   },
   {
@@ -432,8 +398,8 @@
    "status": "ok",
    "fetched_count": 23,
    "error": null,
-   "newest_published": "2026-11-25T16:46:17+00:00",
-   "newest_age_hours": 13.1,
+   "newest_published": "2026-11-26T06:01:21+00:00",
+   "newest_age_hours": 0.2,
    "health": "ok"
   },
   {
@@ -448,7 +414,7 @@
    "fetched_count": 21,
    "error": null,
    "newest_published": "2026-11-25T10:52:09+00:00",
-   "newest_age_hours": 19.0,
+   "newest_age_hours": 19.4,
    "health": "ok"
   },
   {
@@ -463,7 +429,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-11-25T23:01:45+00:00",
-   "newest_age_hours": 6.9,
+   "newest_age_hours": 7.2,
    "health": "ok"
   },
   {
@@ -477,8 +443,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T01:22:55+00:00",
-   "newest_age_hours": 4.5,
+   "newest_published": "2026-11-26T06:05:36+00:00",
+   "newest_age_hours": 0.2,
    "health": "ok"
   },
   {
@@ -492,8 +458,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T05:10:00+00:00",
-   "newest_age_hours": 0.7,
+   "newest_published": "2026-11-26T06:00:00+00:00",
+   "newest_age_hours": 0.3,
    "health": "ok"
   },
   {
@@ -508,7 +474,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T05:49:41+00:00",
-   "newest_age_hours": 0.1,
+   "newest_age_hours": 0.4,
    "health": "ok"
   },
   {
@@ -522,8 +488,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T05:10:00+00:00",
-   "newest_age_hours": 0.7,
+   "newest_published": "2026-11-26T06:00:00+00:00",
+   "newest_age_hours": 0.3,
    "health": "ok"
   },
   {
@@ -538,7 +504,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T03:49:34+00:00",
-   "newest_age_hours": 2.1,
+   "newest_age_hours": 2.4,
    "health": "ok"
   },
   {
@@ -553,7 +519,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-11-26T05:00:00+00:00",
-   "newest_age_hours": 0.9,
+   "newest_age_hours": 1.3,
    "health": "ok"
   },
   {
@@ -567,8 +533,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T03:16:33+00:00",
-   "newest_age_hours": 2.6,
+   "newest_published": "2026-11-26T05:50:53+00:00",
+   "newest_age_hours": 0.4,
    "health": "ok"
   },
   {
@@ -583,7 +549,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-26T04:40:52+00:00",
-   "newest_age_hours": 1.2,
+   "newest_age_hours": 1.6,
    "health": "ok"
   },
   {
@@ -598,7 +564,7 @@
    "fetched_count": 12,
    "error": null,
    "newest_published": "2026-11-26T02:52:12+00:00",
-   "newest_age_hours": 3.0,
+   "newest_age_hours": 3.4,
    "health": "ok"
   },
   {
@@ -613,7 +579,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T05:37:08+00:00",
-   "newest_age_hours": 0.3,
+   "newest_age_hours": 0.7,
    "health": "ok"
   },
   {
@@ -628,7 +594,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-11-26T03:29:45+00:00",
-   "newest_age_hours": 2.4,
+   "newest_age_hours": 2.8,
    "health": "ok"
   },
   {
@@ -643,7 +609,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T04:57:37+00:00",
-   "newest_age_hours": 0.9,
+   "newest_age_hours": 1.3,
    "health": "ok"
   },
   {
@@ -658,7 +624,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T02:46:05+00:00",
-   "newest_age_hours": 3.1,
+   "newest_age_hours": 3.5,
    "health": "ok"
   },
   {
@@ -673,7 +639,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T00:04:16+00:00",
-   "newest_age_hours": 5.8,
+   "newest_age_hours": 6.2,
    "health": "ok"
   },
   {
@@ -688,7 +654,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-11-26T02:30:00+00:00",
-   "newest_age_hours": 3.4,
+   "newest_age_hours": 3.8,
    "health": "ok"
   },
   {
@@ -703,7 +669,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T05:49:41+00:00",
-   "newest_age_hours": 0.1,
+   "newest_age_hours": 0.4,
    "health": "ok"
   },
   {
@@ -718,7 +684,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T03:23:54+00:00",
-   "newest_age_hours": 2.5,
+   "newest_age_hours": 2.9,
    "health": "ok"
   },
   {
@@ -730,10 +696,10 @@
    "url": "https://www.ptt.cc/bbs/Gossiping/index.html",
    "type": "ptt_list",
    "status": "ok",
-   "fetched_count": 20,
+   "fetched_count": 6,
    "error": null,
    "newest_published": "2026-11-26T12:00:00+00:00",
-   "newest_age_hours": -6.1,
+   "newest_age_hours": -5.7,
    "health": "ok"
   },
   {
@@ -745,10 +711,10 @@
    "url": "https://www.ptt.cc/bbs/Stock/index.html",
    "type": "ptt_list",
    "status": "ok",
-   "fetched_count": 8,
+   "fetched_count": 11,
    "error": null,
    "newest_published": "2026-11-26T12:00:00+00:00",
-   "newest_age_hours": -6.1,
+   "newest_age_hours": -5.7,
    "health": "ok"
   },
   {
@@ -760,10 +726,10 @@
    "url": "https://www.ptt.cc/bbs/Tech_Job/index.html",
    "type": "ptt_list",
    "status": "ok",
-   "fetched_count": 5,
+   "fetched_count": 6,
    "error": null,
-   "newest_published": "2026-11-25T12:00:00+00:00",
-   "newest_age_hours": 17.9,
+   "newest_published": "2026-11-26T12:00:00+00:00",
+   "newest_age_hours": -5.7,
    "health": "ok"
   },
   {
@@ -778,7 +744,7 @@
    "fetched_count": 4,
    "error": null,
    "newest_published": "2026-11-25T12:00:00+00:00",
-   "newest_age_hours": 17.9,
+   "newest_age_hours": 18.3,
    "health": "ok"
   },
   {
@@ -793,7 +759,7 @@
    "fetched_count": 8,
    "error": null,
    "newest_published": "2026-11-26T12:00:00+00:00",
-   "newest_age_hours": -6.1,
+   "newest_age_hours": -5.7,
    "health": "ok"
   },
   {
@@ -867,8 +833,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-25T23:26:32+00:00",
-   "newest_age_hours": 6.4,
+   "newest_published": "2026-11-26T06:08:25+00:00",
+   "newest_age_hours": 0.1,
    "health": "ok"
   },
   {
@@ -879,12 +845,12 @@
    "group": "AI / ML",
    "url": "https://garymarcus.substack.com/feed",
    "type": "rss",
-   "status": "failed",
-   "fetched_count": 0,
-   "error": "HTTP 403 (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null,
-   "health": "failed"
+   "status": "ok",
+   "fetched_count": 20,
+   "error": null,
+   "newest_published": "2026-11-24T16:06:27+00:00",
+   "newest_age_hours": 38.2,
+   "health": "ok"
   },
   {
    "tab": "tech_blogs",
@@ -898,7 +864,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-24T21:45:30+00:00",
-   "newest_age_hours": 32.1,
+   "newest_age_hours": 32.5,
    "health": "ok"
   },
   {
@@ -913,7 +879,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-10-25T21:00:00+00:00",
-   "newest_age_hours": 752.9,
+   "newest_age_hours": 753.3,
    "health": "ok"
   },
   {
@@ -928,23 +894,8 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-11-22T16:00:00+00:00",
-   "newest_age_hours": 85.9,
+   "newest_age_hours": 86.3,
    "health": "ok"
-  },
-  {
-   "tab": "tech_blogs",
-   "language": "en",
-   "category": "Tech Blogs",
-   "source_name": "Gwern Branwen",
-   "group": "AI / ML",
-   "url": "https://gwern.substack.com/feed",
-   "type": "rss",
-   "status": "failed",
-   "fetched_count": 0,
-   "error": "HTTP 403 (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null,
-   "health": "failed"
   },
   {
    "tab": "tech_blogs",
@@ -958,7 +909,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-10-29T00:00:00+00:00",
-   "newest_age_hours": 677.9,
+   "newest_age_hours": 678.3,
    "health": "ok"
   },
   {
@@ -973,7 +924,7 @@
    "fetched_count": 5,
    "error": null,
    "newest_published": "2026-11-21T22:26:00+00:00",
-   "newest_age_hours": 103.5,
+   "newest_age_hours": 103.8,
    "health": "ok"
   },
   {
@@ -988,7 +939,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-08-21T00:00:00+00:00",
-   "newest_age_hours": 2333.9,
+   "newest_age_hours": 2334.3,
    "health": "ok"
   },
   {
@@ -1003,7 +954,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-10-27T16:00:42+00:00",
-   "newest_age_hours": 709.9,
+   "newest_age_hours": 710.3,
    "health": "ok"
   },
   {
@@ -1018,7 +969,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-11-21T00:36:39+00:00",
-   "newest_age_hours": 125.3,
+   "newest_age_hours": 125.7,
    "health": "ok"
   },
   {
@@ -1033,7 +984,7 @@
    "fetched_count": 15,
    "error": null,
    "newest_published": "2026-11-23T07:58:47+00:00",
-   "newest_age_hours": 69.9,
+   "newest_age_hours": 70.3,
    "health": "ok"
   },
   {
@@ -1042,14 +993,14 @@
    "category": "Tech Blogs",
    "source_name": "Paul Graham",
    "group": "Startups / Product",
-   "url": "https://aaronsw.com/2002/feeds/pgessays.rss",
+   "url": "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_paulgraham.xml",
    "type": "rss",
-   "status": "failed",
-   "fetched_count": 0,
-   "error": "TLS error (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null,
-   "health": "failed"
+   "status": "ok",
+   "fetched_count": 30,
+   "error": null,
+   "newest_published": "2026-09-01T00:00:00+00:00",
+   "newest_age_hours": 2070.3,
+   "health": "ok"
   },
   {
    "tab": "tech_blogs",
@@ -1063,7 +1014,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-15T22:15:04+00:00",
-   "newest_age_hours": 247.6,
+   "newest_age_hours": 248.0,
    "health": "ok"
   },
   {
@@ -1078,7 +1029,7 @@
    "fetched_count": 15,
    "error": null,
    "newest_published": "2026-11-24T18:08:05+00:00",
-   "newest_age_hours": 35.8,
+   "newest_age_hours": 36.1,
    "health": "ok"
   },
   {
@@ -1093,7 +1044,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2024-09-09T05:00:00+00:00",
-   "newest_age_hours": 19392.9,
+   "newest_age_hours": 19393.3,
    "health": "ok"
   },
   {
@@ -1108,7 +1059,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-11-26T00:16:54+00:00",
-   "newest_age_hours": 5.6,
+   "newest_age_hours": 6.0,
    "health": "ok"
   },
   {
@@ -1123,9 +1074,9 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-11-25T13:42:12+00:00",
-   "newest_age_hours": 16.2,
+   "newest_age_hours": 16.6,
    "health": "ok"
   }
  ],
- "generated_at": "2026-11-26T13:53:26.706897+08:00"
+ "generated_at": "2026-11-26T14:16:32.986723+08:00"
 }

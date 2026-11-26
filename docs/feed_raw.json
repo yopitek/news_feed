@@ -1,14 +1,14 @@
 {
  "schema_version": 1,
- "generated_at": "2026-11-26T13:53:26.706897+08:00",
- "duration_seconds": 35.4,
+ "generated_at": "2026-11-26T14:16:32.986723+08:00",
+ "duration_seconds": 25.0,
  "window_hours": 24,
  "backfill_window_hours": 72,
  "totals": {
-  "fetched_entries": 1233,
-  "after_time_filter": 881,
-  "after_dedupe": 767,
-  "exported": 767
+  "fetched_entries": 1273,
+  "after_time_filter": 876,
+  "after_dedupe": 761,
+  "exported": 761
  },
  "tab_names": {
   "zh_news": "中文新聞",
@@ -22,7 +22,7 @@
   "zh_news": {
    "頭條新聞": 20,
    "產經": 17,
-   "股市": 37,
+   "股市": 35,
    "全球國際新聞": 39,
    "社會": 37,
    "生活": 31,
@@ -35,28 +35,28 @@
    "Tech News": 49,
    "BBC Top Stories": 27,
    "BBC World": 21,
-   "BBC Business": 12,
-   "BBC Education": 8,
-   "BBC Technology": 9,
+   "BBC Business": 13,
+   "BBC Education": 9,
+   "BBC Technology": 8,
    "BBC Health": 8,
    "BBC Science & Environment": 14
   },
   "ja_news": {
    "頭條": 66,
-   "國際": 33,
+   "國際": 32,
    "政治": 15,
    "運動": 13,
    "商業": 41,
-   "文化": 14,
+   "文化": 15,
    "娛樂": 8
   },
   "tech_blogs": {
-   "Tech Blogs": 35
+   "Tech Blogs": 40
   },
   "ptt_hot": {
-   "八卦板": 20,
-   "股票板": 8,
-   "科技業板": 5,
+   "八卦板": 6,
+   "股票板": 11,
+   "科技業板": 6,
    "軟體工作板": 3,
    "電蝦板": 8
   },
@@ -69,47 +69,13 @@
  },
  "empty_categories": [],
  "health_summary": {
-  "total_sources": 69,
-  "ok_sources": 66,
+  "total_sources": 68,
+  "ok_sources": 68,
   "stale_sources": 0,
   "empty_sources": 0,
-  "failed_sources": 3
+  "failed_sources": 0
  },
- "problem_sources": [
-  {
-   "tab": "tech_blogs",
-   "category": "Tech Blogs",
-   "source_name": "Gary Marcus",
-   "url": "https://garymarcus.substack.com/feed",
-   "health": "failed",
-   "status": "failed",
-   "error": "HTTP 403 (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null
-  },
-  {
-   "tab": "tech_blogs",
-   "category": "Tech Blogs",
-   "source_name": "Gwern Branwen",
-   "url": "https://gwern.substack.com/feed",
-   "health": "failed",
-   "status": "failed",
-   "error": "HTTP 403 (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null
-  },
-  {
-   "tab": "tech_blogs",
-   "category": "Tech Blogs",
-   "source_name": "Paul Graham",
-   "url": "https://aaronsw.com/2002/feeds/pgessays.rss",
-   "health": "failed",
-   "status": "failed",
-   "error": "TLS error (gave up after 3 attempts)",
-   "newest_published": null,
-   "newest_age_hours": null
-  }
- ],
+ "problem_sources": [],
  "tabs": {
   "zh_news": {
    "頭條新聞": [
@@ -356,6 +322,42 @@
    ],
    "產經": [
     {
+     "title": "12月電子期金融期齊漲",
+     "link": "https://www.cna.com.tw/news/afe/202611260137.aspx",
+     "published": "2026-11-26T05:53:47+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "產經",
+     "category": "產經",
+     "description": "（中央社台北26日電）台北股市今天上漲956.38點，收39151.81點。12月電子期收2443.25點，上漲122.85點，正價差23.43點；12月金融期收3262.40點，上漲74.40點，逆價差7.12點。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "和泰車物流轉型 斥資10億打造楊梅智慧物流新倉",
+     "link": "https://www.cna.com.tw/news/afe/202611260127.aspx",
+     "published": "2026-11-26T05:33:24+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "產經",
+     "category": "產經",
+     "description": "（中央社記者鍾榮峰台北26日電）和泰車持續推動物流轉型，今天宣布斥資近新台幣10億元，打造楊梅物流中心第三倉。和泰車指出，持續結合自動化、人工智慧（AI）及數位科技，強化零件供應與物流配送流程，以及經銷服務據點的零件供應能力。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "穎崴：AI需求續強明年業績訂單看增 產能擴充供不應求",
+     "link": "https://www.cna.com.tw/news/afe/202611260122.aspx",
+     "published": "2026-11-26T05:20:13+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "產經",
+     "category": "產經",
+     "description": "（中央社記者鍾榮峰台北26日電）半導體測試介面廠穎崴董事長王嘉煌表示，人工智慧AI產業需求趨勢「擋不住」，穎崴產能持續供不應求，預估2027年客戶需求可較今年增加，預期AI監管政策影響不大。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
      "title": "TEL擴大南台灣布局 高雄新辦公室明年啟用",
      "link": "https://www.cna.com.tw/news/afe/202611260104.aspx",
      "published": "2026-11-26T04:30:34+08:00",
@@ -436,42 +438,6 @@
      "rss_category": "產經",
      "category": "產經",
      "description": "（中央社記者張建中新竹26日電）工研院今天宣布，與英國離岸風電創新中心（OREC）續約5年，雙方合作將延續至2031年，搶攻亞太區浮動式風電與人工智慧（AI）營運維護商機。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "兆聯實業在手訂單衝380億元 創歷史新高",
-     "link": "https://www.cna.com.tw/news/afe/202611260050.aspx",
-     "published": "2026-11-26T02:53:38+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "產經",
-     "category": "產經",
-     "description": "（中央社記者張建中新竹26日電）高科技純水和廢水回收系統廠兆聯實業接單暢旺，今年下半年以來新接單金額高達新台幣175億元，目前在手訂單金額達到新台幣380億元，創下歷史新高。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "AI股跌勢擴大後收斂 華爾街重新檢視AI熱潮財務風險",
-     "link": "https://www.cna.com.tw/news/afe/202611260046.aspx",
-     "published": "2026-11-26T02:40:29+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "產經",
-     "category": "產經",
-     "description": "（中央社紐約25日綜合外電報導）華爾街股市人工智慧（AI）概念股今天早盤大幅下挫，但午後出現反彈，呈現今年秋季市場又一次多空交鋒。投資人一方面擔憂成本攀升與債務結構日益嚴峻，另一方面則因股價大跌而湧入強勁買盤。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "SpaceX獲准擴大部署 低軌衛星台廠供應鏈強勢表態",
-     "link": "https://www.cna.com.tw/news/afe/202611260041.aspx",
-     "published": "2026-11-26T02:03:18+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "產經",
-     "category": "產經",
-     "description": "（中央社記者鍾榮峰台北26日電）美批准SpaceX部署100萬顆衛星星系，打造太空資料中心，低軌衛星供應鏈台廠包括華通、同欣電、公準精密、晶技、穩懋等，早盤表現強勢，其中同欣電、啟碁早盤攻上漲停187.5元及193元，穩懋、華通鎖漲停444.5元、168元。",
      "backfill": false,
      "metrics": null
     },
@@ -562,6 +528,102 @@
    ],
    "股市": [
     {
+     "title": "台股開盤漲754點 台積電2150元平盤開出",
+     "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E9%96%8B%E7%9B%A4%E6%BC%B2754%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB2150%E5%85%83%E5%B9%B3%E7%9B%A4%E9%96%8B%E5%87%BA-060500034.html",
+     "published": "2026-11-26T06:05:00+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "【記者趙筱文／台北報導】台股今（26）日開高，加權指數以38,435.99點開出，上漲240.56點，隨後一度攀升至38,949.54點，漲幅擴大至754.11點，逼近3萬9千點。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "12月台股期指漲1332點",
+     "link": "https://www.cna.com.tw/news/afe/202611260138.aspx",
+     "published": "2026-11-26T05:54:49+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "產經",
+     "category": "股市",
+     "description": "（中央社台北26日電）台北股市今天終場漲956.38點，收39151.81點。12月台指期以39455點作收，上漲1332點，與現貨相較，正價差303.19點。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "12月台股期指漲1332點",
+     "link": "https://tw.news.yahoo.com/12%E6%9C%88%E5%8F%B0%E8%82%A1%E6%9C%9F%E6%8C%87%E6%BC%B21332%E9%BB%9E-055449413.html",
+     "published": "2026-11-26T05:54:49+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "（中央社台北26日電）台北股市今天終場漲956.38點，收39151.81點。12月台指期以39455點作收，上漲1332點，與現貨相較，正價差303.19點。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "【台股期指】12月台股期指漲1332點",
+     "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%9C%9F%E6%8C%87-12%E6%9C%88%E5%8F%B0%E8%82%A1%E6%9C%9F%E6%8C%87%E6%BC%B21332%E9%BB%9E-055446193.html",
+     "published": "2026-11-26T05:54:46+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "（中央社台北2026年11月26日電）台北股市今天終場漲956.38點，收39151.81點。12月台指期以39455點作收，上漲1332點，與現貨相較，正價差303.19點。台灣期貨交易所為近2個月",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "台股上漲956點收39151點 PCB散熱族群反彈",
+     "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E4%B8%8A%E6%BC%B2956%E9%BB%9E%E6%94%B639151%E9%BB%9E-pcb%E6%95%A3%E7%86%B1%E6%97%8F%E7%BE%A4%E5%8F%8D%E5%BD%88-055341285.html",
+     "published": "2026-11-26T05:53:41+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "（中央社記者吳家豪台北26日電）美國301條款調查結果緩解市場疑慮，台股今天由電子股印刷電路板（PCB）、載板、散熱及被動元件族群領軍反攻，盤中最高達39459.95點、大漲1264.52點；終場收在",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "台股上漲956點收39151點 PCB散熱族群反彈",
+     "link": "https://www.cna.com.tw/news/afe/202611260136.aspx",
+     "published": "2026-11-26T05:52:45+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "產經",
+     "category": "股市",
+     "description": "（中央社記者吳家豪台北26日電）美國301條款調查結果緩解市場疑慮，台股今天由電子股印刷電路板（PCB）、載板、散熱及被動元件族群領軍反攻，盤中最高達39459.95點、大漲1264.52點；終場收在39151.81點，上漲956.38點，漲幅2.5%，重回39000點之上，成交值新台幣8174.67億元。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "高檔震盪仍強漲近千點！台股收漲956點 台積電小跌5元、收2145元",
+     "link": "https://tw.stock.yahoo.com/news/%E9%AB%98%E6%AA%94%E9%9C%87%E7%9B%AA%E4%BB%8D%E5%BC%B7%E6%BC%B2%E8%BF%91%E5%8D%83%E9%BB%9E-%E5%8F%B0%E8%82%A1%E6%94%B6%E6%BC%B2956%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E5%B0%8F%E8%B7%8C5%E5%85%83-%E6%94%B62145%E5%85%83-055233125.html",
+     "published": "2026-11-26T05:52:33+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "即時中心／綜合報導美國通膨遲遲未能降溫，強化市場對聯準會可能於12月及明年1月升息的預期，加上AI概念股賣壓持續，美股週三（25日）多收黑；台指期夜盤一度大跌超過2千點，但上演史詩級V轉，終場翻紅上揚",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "台股收盤強彈956點！台積電反跌5元收2145元",
+     "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E6%94%B6%E7%9B%A4%E5%BC%B7%E5%BD%88956%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E5%8F%8D%E8%B7%8C5%E5%85%83%E6%94%B62145%E5%85%83-054712282.html",
+     "published": "2026-11-26T05:47:12+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "[NOWNEWS今日新聞]台股今（26）日強勢反彈，加權指數終場上漲956.38點，收在39,151.81點，漲幅2.50%，成交金額達8,174.67億元。大盤早盤以38,435.99點開出，盤中最",
+     "backfill": false,
+     "metrics": null
+    },
+    {
      "title": "台股收盤／台積電跌5元！台股大漲956點 PCB族群領軍反攻",
      "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E6%94%B6%E7%9B%A4-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%B7%8C5%E5%85%83-%E5%8F%B0%E8%82%A1%E5%A4%A7%E6%BC%B2956%E9%BB%9E-pcb%E6%97%8F%E7%BE%A4%E9%A0%98%E8%BB%8D%E5%8F%8D%E6%94%BB-054600223.html",
      "published": "2026-11-26T05:46:00+08:00",
@@ -574,6 +636,30 @@
      "metrics": null
     },
     {
+     "title": "台股漲956.38點",
+     "link": "https://www.cna.com.tw/news/afe/202611260133.aspx",
+     "published": "2026-11-26T05:45:39+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "產經",
+     "category": "股市",
+     "description": "（中央社台北26日電）台北股市今天開高走高，收盤漲956.38點，為39151.81點，漲幅2.50%，成交金額新台幣8174.67億元。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "台股漲956.38點",
+     "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E6%BC%B2956-38%E9%BB%9E-054539576.html",
+     "published": "2026-11-26T05:45:39+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "（中央社台北26日電）台北股市今天開高走高，收盤漲956.38點，為39151.81點，漲幅2.50%，成交金額新台幣8174.67億元。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
      "title": "張惠妹親自操刀新歌製作唱盡人生遺憾 建中、台積電演出行程曝光",
      "link": "https://tw.news.yahoo.com/%E5%BC%B5%E6%83%A0%E5%A6%B9%E8%A6%AA%E8%87%AA%E6%93%8D%E5%88%80%E6%96%B0%E6%AD%8C%E8%A3%BD%E4%BD%9C%E5%94%B1%E7%9B%A1%E4%BA%BA%E7%94%9F%E9%81%BA%E6%86%BE-%E5%BB%BA%E4%B8%AD-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%BC%94%E5%87%BA%E8%A1%8C%E7%A8%8B%E6%9B%9D%E5%85%89-054122704.html",
      "published": "2026-11-26T05:41:22+08:00",
@@ -582,6 +668,42 @@
      "rss_category": "股市",
      "category": "股市",
      "description": "〈不情之請〉是張惠妹繼〈連名帶姓〉、〈緩緩〉等作品後，再度與葛大為合作。歌詞以「侃侃而談，說遺憾」揭開序幕，透過平實卻直擊人心的文字，描寫生命中的相遇、失去與告別。歌曲並非一味沉溺於悲傷，而是希望陪伴",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "台股收盤大漲956點！台積電小跌 PCB記憶體5檔熱門漲停",
+     "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E6%94%B6%E7%9B%A4%E5%A4%A7%E6%BC%B2956%E9%BB%9E-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E5%B0%8F%E8%B7%8C-pcb%E8%A8%98%E6%86%B6%E9%AB%945%E6%AA%94%E7%86%B1%E9%96%80%E6%BC%B2%E5%81%9C-054108263.html",
+     "published": "2026-11-26T05:41:08+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "台股劇烈震盪，今（26日）開高走高，盤中一度大漲1294點觸及39459.95點，終場漲勢略為收斂，勁揚956.38點（或2.50%）收在39151.81點，成交量8175億元。權值股台積電下跌5元收",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "台股收漲956.38點 收39151.81點",
+     "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E6%94%B6%E6%BC%B2956-38%E9%BB%9E-%E6%94%B639151-81%E9%BB%9E-054000439.html",
+     "published": "2026-11-26T05:40:00+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "台股今日震盪走高，加權指數終場收在39151.81點，上漲956.38點，漲幅2.50%。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "301關稅台灣鬆口氣 台股上揚956點站上39K 台積電收黑",
+     "link": "https://tw.news.yahoo.com/301%E9%97%9C%E7%A8%85%E5%8F%B0%E7%81%A3%E9%AC%86%E5%8F%A3%E6%B0%A3-%E5%8F%B0%E8%82%A1%E4%B8%8A%E6%8F%9A956%E9%BB%9E%E7%AB%99%E4%B8%8A39k-%E5%8F%B0%E7%A9%8D%E9%9B%BB%E6%94%B6%E9%BB%91-053933362.html",
+     "published": "2026-11-26T05:39:33+08:00",
+     "source": "Yahoo股市",
+     "language": "zh",
+     "rss_category": "股市",
+     "category": "股市",
+     "description": "美國感恩節假期前夕前，宣布對貿易夥伴301產能過剩調查報告，台灣獲最優惠稅率「15%不疊加MFN」，關稅不利影響鈍化；加上美股感恩節假期受美股影響相對減弱，台股今（26）日開高走高，早盤就一度大漲12",
      "backfill": false,
      "metrics": null
     },
@@ -814,126 +936,6 @@
      "metrics": null
     },
     {
-     "title": "台股盤中強漲1200點 投顧：短線呈跌深反彈",
-     "link": "https://tw.news.yahoo.com/%E5%8F%B0%E8%82%A1%E7%9B%A4%E4%B8%AD%E5%BC%B7%E6%BC%B21200%E9%BB%9E-%E6%8A%95%E9%A1%A7-%E7%9F%AD%E7%B7%9A%E5%91%88%E8%B7%8C%E6%B7%B1%E5%8F%8D%E5%BD%88-034132356.html",
-     "published": "2026-11-26T03:41:32+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "美國301調查建議對台課徵15%不疊加關稅，助台股今天(26日)電、金、傳產齊揚，盤中一度大漲1200點，收復39000點大關。投顧指出，隨著市場不確定性降低、融資籌碼大幅沉澱，短線可望延續跌深反彈走",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "關稅利空落地，台股強彈逾800點、PCB與被動元件領軍",
-     "link": "https://tw.stock.yahoo.com/news/%E9%97%9C%E7%A8%85%E5%88%A9%E7%A9%BA%E8%90%BD%E5%9C%B0-%E5%8F%B0%E8%82%A1%E5%BC%B7%E5%BD%88%E9%80%BE800%E9%BB%9E-pcb%E8%88%87%E8%A2%AB%E5%8B%95%E5%85%83%E4%BB%B6%E9%A0%98%E8%BB%8D-034003702.html",
-     "published": "2026-11-26T03:40:03+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "【財訊快報／黃冠豪】美方公布14國「結構性產能過剩」301調查報告，對台灣的稅率是最低級別的15%，且不疊加；台指期夜盤一度下跌超過千點後V轉強彈，逆勢收漲274點。亞股26日全面走揚，日經指數上半場",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "美301調查豁免清單 台股14廠快筆記",
-     "link": "https://tw.news.yahoo.com/%E7%BE%8E301%E8%AA%BF%E6%9F%A5%E8%B1%81%E5%85%8D%E6%B8%85%E5%96%AE-%E5%8F%B0%E8%82%A114%E5%BB%A0%E5%BF%AB%E7%AD%86%E8%A8%98-033800872.html",
-     "published": "2026-11-26T03:38:00+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "美國貿易代表署公布301條款調查結果，對台灣提出最高15%關稅方案並規劃豁免半導體、電腦與伺服器等科技產品，涵蓋台積電、鴻海等供應鏈。美方亦保留替代方案最高25%關稅。相關電源與散熱設備豁免設有民用航",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "台股一度逼近年線「1530檔齊上攻」！SpaceX百萬顆衛星計畫過關、低軌衛星13檔入列38檔漲停股",
-     "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1-%E5%BA%A6%E9%80%BC%E8%BF%91%E5%B9%B4%E7%B7%9A-1530%E6%AA%94%E9%BD%8A%E4%B8%8A%E6%94%BB-spacex%E7%99%BE%E8%90%AC%E9%A1%86%E8%A1%9B%E6%98%9F%E8%A8%88%E7%95%AB%E9%81%8E%E9%97%9C-%E4%BD%8E%E8%BB%8C%E8%A1%9B%E6%98%9F13%E6%AA%94%E5%85%A5%E5%88%9738%E6%AA%94%E6%BC%B2%E5%81%9C%E8%82%A1-033000353.html",
-     "published": "2026-11-26T03:30:00+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "[FTNN新聞網]記者陳宣穎／綜合報導美國最新301調查結果出爐，台灣建議關稅維持15%，且不採疊加計算，適用最低稅率級別。台股今（26）日走勢回暖，加權指數開...",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "美關稅影響有限 分析師估這原因台股續震盪",
-     "link": "https://tw.news.yahoo.com/%E7%BE%8E%E9%97%9C%E7%A8%85%E5%BD%B1%E9%9F%BF%E6%9C%89%E9%99%90-%E5%88%86%E6%9E%90%E5%B8%AB%E4%BC%B0%E9%80%99%E5%8E%9F%E5%9B%A0%E5%8F%B0%E8%82%A1%E7%BA%8C%E9%9C%87%E7%9B%AA-032712175.html",
-     "published": "2026-11-26T03:27:12+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "[NOWNEWS今日新聞]美國貿易代表署（USTR）公布301調查「結構性產能過剩」結果，台灣建議課徵關稅15%不疊加，正式關稅將於明年1月確立。台股今（26）日早盤開高走高，一度上漲1201點，分析",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "【Hot台股】台積電苦撐2150元平盤！網喊「小兒放假 糖漿不拉GG嗎？」 分析師：選前溫和偏多",
-     "link": "https://tw.stock.yahoo.com/news/%E3%80%90hot%E5%8F%B0%E8%82%A1%E3%80%91%E5%8F%B0%E7%A9%8D%E9%9B%BB%E8%8B%A6%E6%92%902150%E5%85%83%E5%B9%B3%E7%9B%A4%EF%BC%81%E7%B6%B2%E5%96%8A%E3%80%8C%E5%B0%8F%E5%85%92%E6%94%BE%E5%81%87-%E7%B3%96%E6%BC%BF%E4%B8%8D%E6%8B%89gg%E5%97%8E%EF%BC%9F%E3%80%8D-%E5%88%86%E6%9E%90%E5%B8%AB%EF%BC%9A%E9%81%B8%E5%89%8D%E6%BA%AB%E5%92%8C%E5%81%8F%E5%A4%9A-032342206.html",
-     "published": "2026-11-26T03:23:42+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "「GG 怎麼綠了？」「台積跌倒，中小吃飽」「昨天糖漿神抄底GG」「台積電昨天扛過一千點了 今天休息也行」「台積電漲不動 漲南亞 台光電 國巨 盤怪怪的」「晚點變拉積盤」「外資別再倒台積電啦」「GG振作",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "專家看盤》感恩節效應發酵！台股量能恐降溫 買盤回溫族群來了",
-     "link": "https://tw.news.yahoo.com/%E5%B0%88%E5%AE%B6%E7%9C%8B%E7%9B%A4-%E6%84%9F%E6%81%A9%E7%AF%80%E6%95%88%E6%87%89%E7%99%BC%E9%85%B5-%E5%8F%B0%E8%82%A1%E9%87%8F%E8%83%BD%E6%81%90%E9%99%8D%E6%BA%AB-%E8%B2%B7%E7%9B%A4%E5%9B%9E%E6%BA%AB%E6%97%8F%E7%BE%A4%E4%BE%86%E4%BA%86-032329098.html",
-     "published": "2026-11-26T03:23:29+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "[Newtalk新聞] 「台股今天(26日)預計量縮橫向盤整！受到美國關稅與升息疑慮影響，美股AI科技股持續疲弱，所幸尾盤跌幅快速收斂，台指期夜盤反而上漲274點。」分析師林漢偉表示，適逢美國感恩節假",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "【台股盤中】美國301關稅利空淡化 台股盤中勁揚逾1200點",
-     "link": "https://tw.stock.yahoo.com/news/%E5%8F%B0%E8%82%A1%E7%9B%A4%E4%B8%AD-%E7%BE%8E%E5%9C%8B301%E9%97%9C%E7%A8%85%E5%88%A9%E7%A9%BA%E6%B7%A1%E5%8C%96-%E5%8F%B0%E8%82%A1%E7%9B%A4%E4%B8%AD%E5%8B%81%E6%8F%9A%E9%80%BE1200%E9%BB%9E-031720637.html",
-     "published": "2026-11-26T03:17:20+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "（中央社記者吳家豪台北2026年11月26日電）美國301調查台灣稅率維持15%不疊加，激勵台股今天帶量反彈，盤中最高衝上39396.66點、勁揚逾1200點，電子類股指數與非金電族群均上揚2%，代表",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "感恩節美股今晚休市 選前台股全靠政府護盤？分析師這麼看",
-     "link": "https://tw.stock.yahoo.com/news/%E6%84%9F%E6%81%A9%E7%AF%80%E7%BE%8E%E8%82%A1%E4%BB%8A%E6%99%9A%E4%BC%91%E5%B8%82-%E9%81%B8%E5%89%8D%E5%8F%B0%E8%82%A1%E5%85%A8%E9%9D%A0%E6%94%BF%E5%BA%9C%E8%AD%B7%E7%9B%A4%EF%BC%9F%E5%88%86%E6%9E%90%E5%B8%AB%E9%80%99%E9%BA%BC%E7%9C%8B-031721441.html",
-     "published": "2026-11-26T03:15:35+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "感恩節美股休市，今（26日）晚少了美股與外資干擾，台灣地方選舉（九合一選舉）前夕，全靠政府護盤？如何挑戰個股？台新投顧策略長黃文清今（26）日早上受訪表示，美股感恩節外資通常會休假，但不代表一定不操作",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "信評：若台股流動性惡化 恐影響證券商信用狀況",
-     "link": "https://tw.stock.yahoo.com/news/%E4%BF%A1%E8%A9%95-%E8%8B%A5%E5%8F%B0%E8%82%A1%E6%B5%81%E5%8B%95%E6%80%A7%E6%83%A1%E5%8C%96-%E6%81%90%E5%BD%B1%E9%9F%BF%E8%AD%89%E5%88%B8%E5%95%86%E4%BF%A1%E7%94%A8%E7%8B%80%E6%B3%81-031518406.html",
-     "published": "2026-11-26T03:15:18+08:00",
-     "source": "Yahoo股市",
-     "language": "zh",
-     "rss_category": "股市",
-     "category": "股市",
-     "description": "（中央社記者呂晏慈台北2026年11月26日電）台股近期震盪劇烈，惠譽信評指出，近期的股市波動不太可能對銀行或大型壽險公司的穩定性造成衝擊，但若市場流動性及擔保品價值持續惡化，則可能對證券商的信用狀況",
-     "backfill": false,
-     "metrics": null
-    },
-    {
      "title": "美國301關稅利空淡化 台股盤中勁揚逾1200點",
      "link": "https://www.cna.com.tw/news/afe/202611260058.aspx",
      "published": "2026-11-26T03:14:55+08:00",
@@ -944,69 +946,69 @@
      "description": "（中央社記者吳家豪台北26日電）美國301調查台灣稅率維持15%不疊加，激勵台股今天帶量反彈，盤中最高衝上39396.66點、勁揚逾1200點，電子類股指數與非金電族群均上揚2%，代表中小型股的櫃買指數漲逾4%，顯示內資與低接買盤積極進場。",
      "backfill": false,
      "metrics": null
-    },
-    {
-     "title": "信評：若台股流動性惡化 恐影響證券商信用狀況",
-     "link": "https://www.cna.com.tw/news/afe/202611260057.aspx",
-     "published": "2026-11-26T03:13:53+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "產經",
-     "category": "股市",
-     "description": "（中央社記者呂晏慈台北26日電）台股近期震盪劇烈，惠譽信評指出，近期的股市波動不太可能對銀行或大型壽險公司的穩定性造成衝擊，但若市場流動性及擔保品價值持續惡化，則可能對證券商的信用狀況產生負面影響。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "中信投顧：301關稅影響不大 明年台股倒吃甘蔗",
-     "link": "https://www.cna.com.tw/news/afe/202611260043.aspx",
-     "published": "2026-11-26T02:32:22+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "產經",
-     "category": "股市",
-     "description": "（中央社記者曾仁凱台北26日電）美國政府公布301條款調查結果，台灣建議稅率為15%不疊加，中信證券投顧總經理陳柏州認為，這個稅率符合預期，且與主要競爭國日本、韓國一樣，大家起跑點相同，預料影響不會太大。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "電金傳齊揚 台股早盤上漲逾900點重返39000點",
-     "link": "https://www.cna.com.tw/news/afe/202611260033.aspx",
-     "published": "2026-11-26T01:20:00+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "產經",
-     "category": "股市",
-     "description": "（中央社記者吳家豪台北26日電）美股強勢V型反轉，且美國301調查台灣建議稅率屬最低稅率級別，激勵台股今天開高反彈，早盤最高達39176點，上漲逾900點，電子、金融及傳產類股同步走揚。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "新台幣開盤升0.6分 為33.12元",
-     "link": "https://www.cna.com.tw/news/afe/202611260030.aspx",
-     "published": "2026-11-26T01:04:53+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "產經",
-     "category": "股市",
-     "description": "（中央社台北26日電）台北外匯市場新台幣兌美元匯率今天以33.12元開盤，升0.6分。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "台股開盤漲240.56點",
-     "link": "https://www.cna.com.tw/news/afe/202611260029.aspx",
-     "published": "2026-11-26T01:03:51+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "產經",
-     "category": "股市",
-     "description": "（中央社台北26日電）台北股市今天開盤漲240.56點，加權股價指數為38435.99點，成交金額新台幣162.08億元。1151126",
-     "backfill": false,
-     "metrics": null
     }
    ],
    "全球國際新聞": [
+    {
+     "title": "美擬加徵新關稅 日稱「令人遺憾」否認產能過剩",
+     "link": "https://www.cna.com.tw/news/aopl/202611260130.aspx",
+     "published": "2026-11-26T05:35:32+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "國際",
+     "category": "全球國際新聞",
+     "description": "（中央社東京26日綜合外電報導）日本今天表示，美國擬對日本出口商品加徵新關稅「令人遺憾」，並否認日本製造業存在結構性產能過剩的問題。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "新加坡對美301關稅20%表達失望 強調將續接洽美方",
+     "link": "https://www.cna.com.tw/news/aopl/202611260128.aspx",
+     "published": "2026-11-26T05:33:26+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "國際",
+     "category": "全球國際新聞",
+     "description": "（中央社記者吳昇鴻新加坡26日專電）美國公布結構性產能過剩301調查報告，建議對新加坡出口到美國商品徵收最高20%關稅。新加坡政府今天回應，不同意調查結果，並對美方針對新加坡提出的擬議措施深感失望，將繼續以建設性方式與美國貿易代表署接洽。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "歐盟中國制裁企業「一換一」 艾司摩爾供應商有望解除管制",
+     "link": "https://www.cna.com.tw/news/acn/202611260126.aspx",
+     "published": "2026-11-26T05:33:22+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "兩岸",
+     "category": "全球國際新聞",
+     "description": "（中央社記者張淑伶北京26日電）歐盟今天公告將中企玉沙集團移出涉俄出口管制制裁清單。中國商務部表示，中方也正在評估移出被列入出口管制名單的歐盟企業。有報導指出，這項制裁交換對象包括荷蘭半導體設備大廠艾司摩爾（ASML）的德國供應商。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "調查：歐洲半數工企陷財務壓力 370萬職位恐不保",
+     "link": "https://www.cna.com.tw/news/aopl/202611260124.aspx",
+     "published": "2026-11-26T05:27:17+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "國際",
+     "category": "全球國際新聞",
+     "description": "（中央社倫敦25日綜合外電報導）管理顧問公司麥肯錫（McKinsey）的最新數據顯示，在高昂人力與能源成本及中國競爭對手雙重夾擊下，歐洲目前已有半數工業相關企業有嚴峻財務壓力，危及高達約370萬工作機會。",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "2艘中國海警船接近日漁船 日方指違反國際法",
+     "link": "https://www.cna.com.tw/news/aopl/202611260121.aspx",
+     "published": "2026-11-26T05:17:11+08:00",
+     "source": "中央社",
+     "language": "zh",
+     "rss_category": "國際",
+     "category": "全球國際新聞",
+     "description": "（中央社東京26日綜合外電報導）日本海上保安廳今天表示，兩艘中國海警船駛近一艘日本漁船，日方已一再要求這兩艘船駛離尖閣諸島（釣魚台列嶼）附近海域。",
+     "backfill": false,
+     "metrics": null
+    },
     {
      "title": "泰柬衝突波及零售 柬埔寨7-Eleven門市12/25全關",
      "link": "https://www.cna.com.tw/news/aopl/202611260116.aspx",
@@ -1032,7 +1034,7 @@
      "metrics": null
     },
     {
-     "title": "韓國央行升息至2年高點 AI出口帶動上修經濟預測",
+     "title": "韓國央行升息1碼至3.25%創兩年新高 上調今年GDP預估值至3.9%",
      "link": "https://www.cna.com.tw/news/aopl/202611260109.aspx",
      "published": "2026-11-26T04:37:44+08:00",
      "source": "中央社",
@@ -1260,54 +1262,6 @@
      "metrics": null
     },
     {
-     "title": "美提新關稅方案 歐洲議會貿委會主席批逼迫夥伴讓步",
-     "link": "https://www.cna.com.tw/news/aopl/202611260018.aspx",
-     "published": "2026-11-25T23:54:26+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "國際",
-     "category": "全球國際新聞",
-     "description": "（中央社記者吳柏緯布魯塞爾25日專電）美國今天公布對主要貿易夥伴加徵關稅的提案。歐洲議會國際貿易委員會主席朗吉批評美方的舉動是透過關稅逼迫貿易夥伴讓步，在美國勢必再次面臨法律挑戰。同時，歐盟也握有反制措施。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "歐盟猛砍中國油電混合車進口量 歐中貿易戰白熱化",
-     "link": "https://www.cna.com.tw/news/aopl/202611260017.aspx",
-     "published": "2026-11-25T23:39:24+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "國際",
-     "category": "全球國際新聞",
-     "description": "（中央社記者黃雅詩羅馬25日專電）歐盟12月1日起對中國油電混合車實施「進口配額」限制，200天內進口上限不到20萬輛，與今年原估進口80萬輛差距極大。義媒分析，歐盟不僅祭出關稅更直接設定上限，將使歐中貿易戰白熱化，中國是否將對歐盟產品採報復措施，成為產業界關注焦點。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "范斯：未見黃仁勳犯罪證據 輝達晶片對AI領先至關重要",
-     "link": "https://www.cna.com.tw/news/aopl/202611260016.aspx",
-     "published": "2026-11-25T23:26:21+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "國際",
-     "category": "全球國際新聞",
-     "description": "（中央社記者侯姿瑩華盛頓25日專電）輝達創辦人黃仁勳因婚外情風波辭去執行長，據傳協調促成黃仁勳回鍋的美國副總統范斯今天表示，黃仁勳不需要特赦，沒有看到證據顯示他犯罪；輝達產品對美國在AI競賽中維持領先中國至關重要，須確保相關晶片不會落入對手手裡。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "金正恩視察核設施 宣稱北韓擁核地位絕對不容侵犯",
-     "link": "https://www.cna.com.tw/news/aopl/202611260014.aspx",
-     "published": "2026-11-25T21:49:13+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "國際",
-     "category": "全球國際新聞",
-     "description": "（中央社首爾26日綜合外電報導）北韓中央通信社（KCNA）今天報導，北韓領導人金正恩視察核材料生產及武器研究設施，並稱北韓應著重在多個領域部署戰術核武。",
-     "backfill": false,
-     "metrics": null
-    },
-    {
      "title": "陳吉寧被查 外媒：中國「清華系」官員網絡接連失勢",
      "link": "https://www.cna.com.tw/news/acn/202611250329.aspx",
      "published": "2026-11-25T13:46:01+08:00",
@@ -1460,18 +1414,6 @@
      "rss_category": "兩岸",
      "category": "全球國際新聞",
      "description": "（中央社記者張淑伶北京25日電）中共中央政治局委員、上海市委書記陳吉寧昨晚突然傳出被查，引發強烈震撼。中國大陸國台辦發言人張晗今天表示，會繼續支持台北上海城市論壇（雙城論壇）等兩岸交流合作。",
-     "backfill": true,
-     "metrics": null
-    },
-    {
-     "title": "陳吉寧落馬 上海市長朱忠明視察基層反貪腐",
-     "link": "https://www.cna.com.tw/news/acn/202611250047.aspx",
-     "published": "2026-11-25T02:41:42+08:00",
-     "source": "中央社",
-     "language": "zh",
-     "rss_category": "兩岸",
-     "category": "全球國際新聞",
-     "description": "（中央社記者李雅雯上海25日電）中共中央政治局委員、上海市委書記陳吉寧被通報涉嫌嚴重違紀違法，正接受調查中；上海市委副書記、上海市長朱忠明在通報同天調研（指視察）基層反腐敗工作。",
      "backfill": true,
      "metrics": null
     }
@@ -1714,7 +1656,7 @@
      "rss_category": "社會",
      "category": "社會",
      "description": "（中央社記者黃旭昇、曹亞沿新北25日電）新北市傳有一所醫療照護機構住民死亡並留有遺書，更被控疑似凌虐病患等。新北檢警昨天兵分多路搜索，並帶回負責人等數人，稍早已全數移送新北地檢署複訊。",
-     "backfill": false,
+     "backfill": true,
      "metrics": null
     },
     {
@@ -2076,7 +2018,7 @@
      "rss_category": "生活",
      "category": "生活",
      "description": "（中央社台北25日電）今彩539第115285期開獎，中獎號碼34、29、06、12、32；派彩結果，頭獎2注中獎，每注獎金新台幣800萬元。",
-     "backfill": false,
+     "backfill": true,
      "metrics": null
     },
     {
@@ -2754,7 +2696,7 @@
      "rss_category": "房市",
      "category": "房市",
      "description": "台中房市歷經政策調控與市場盤整，建商推案策略逐漸回歸自住需求。深耕台中市場的新業建設，位於北屯14期重劃區的第二案「大塊藏硯」正式落成，與首案「大塊森濤」雙雙締造100％完銷佳績；第三案「新業V＆A」預計明年交屋，展現深耕14期的品牌實力。",
-     "backfill": false,
+     "backfill": true,
      "metrics": null
     },
     {
@@ -2941,6 +2883,18 @@
   },
   "en_news": {
    "Startup": [
+    {
+     "title": "Lions' Commentary on Unix: Why It Was Secretly Copied for 20 Years",
+     "link": "https://fosscomics.com/posts/17.%20Lions%27%20Commentary%20on%20Unix",
+     "published": "2026-11-26T05:12:59+08:00",
+     "source": "Hacker News",
+     "language": "en",
+     "rss_category": "Startup",
+     "category": "Startup",
+     "description": "Comments",
+     "backfill": false,
+     "metrics": null
+    },
     {
      "title": "Qualcomm's Oryon 3 Reaches the Top",
      "link": "https://chipsandcheese.com/p/qualcomms-oryon-3-reaches-the-top",
@@ -3137,18 +3091,6 @@
      "title": "A few questions for the guy who went snorkeling in a Home Depot retention pond",
      "link": "https://www.vox.com/down-to-earth/511999/home-depot-retention-pond-snorkel-joseph-ricketts",
      "published": "2026-11-25T15:14:32+08:00",
-     "source": "Hacker News",
-     "language": "en",
-     "rss_category": "Startup",
-     "category": "Startup",
-     "description": "Comments",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "I checked Clojure's core with Lean and found unreported bugs",
-     "link": "https://s.conao3.com/blog/2026/e4f733",
-     "published": "2026-11-25T14:56:52+08:00",
      "source": "Hacker News",
      "language": "en",
      "rss_category": "Startup",
@@ -3840,7 +3782,7 @@
      "rss_category": "Tech News",
      "category": "Tech News",
      "description": "Amazon and Meta are discussing a potential deal that would end a two-month-long blockade of Muse.",
-     "backfill": false,
+     "backfill": true,
      "metrics": null
     },
     {
@@ -3905,6 +3847,30 @@
     }
    ],
    "BBC Top Stories": [
+    {
+     "title": "Desperate appeals from women on death row in Iran after protests",
+     "link": "https://www.bbc.co.uk/news/articles/cm8x0ve4yd7wo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-11-26T06:01:58+08:00",
+     "source": "BBC News",
+     "language": "en",
+     "rss_category": "BBC Top Stories",
+     "category": "BBC Top Stories",
+     "description": "Female protesters and dissidents are being sentenced to death in numbers not seen for decades, a rights group says.",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "Government set to double spending on social media unit to £25m",
+     "link": "https://www.bbc.co.uk/news/articles/c62l5j02lj0go?at_medium=RSS&at_campaign=rss",
+     "published": "2026-11-26T05:58:36+08:00",
+     "source": "BBC News",
+     "language": "en",
+     "rss_category": "BBC Top Stories",
+     "category": "BBC Top Stories",
+     "description": "The budget of the New Media Unit, which uses ads and content creators to reach the public, has increased.",
+     "backfill": false,
+     "metrics": null
+    },
     {
      "title": "UK papers: Six-day streak 'smashes' global temperature record and 'Gord speed'",
      "link": "https://www.bbc.co.uk/news/articles/cmj4reknwv9eo?at_medium=RSS&at_campaign=rss",
@@ -4122,18 +4088,6 @@
      "metrics": null
     },
     {
-     "title": "Poundland collapses putting 11,000 jobs at risk",
-     "link": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-11-25T21:31:10+08:00",
-     "source": "BBC News",
-     "language": "en",
-     "rss_category": "BBC Top Stories",
-     "category": "BBC Top Stories",
-     "description": "The discount chain has fallen into administration after its owners failed to find a buyer.",
-     "backfill": false,
-     "metrics": null
-    },
-    {
      "title": "Hotels need 'minimum standards' to keep women safe",
      "link": "https://www.bbc.co.uk/news/articles/crgj3gnjeqe0o?at_medium=RSS&at_campaign=rss",
      "published": "2026-11-25T20:45:18+08:00",
@@ -4202,18 +4156,6 @@
      "rss_category": "BBC Top Stories",
      "category": "BBC Top Stories",
      "description": "The retail chain has collapsed just one year after being bought for £1 by an American firm.",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "Two men charged with trying to steal cufflinks and clock from royal home",
-     "link": "https://www.bbc.co.uk/news/articles/cx5y1987dyp6o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-11-25T15:05:50+08:00",
-     "source": "BBC News",
-     "language": "en",
-     "rss_category": "BBC Top Stories",
-     "category": "BBC Top Stories",
-     "description": "The court hears the items from the Sandringham estate are of an unknown value.",
      "backfill": false,
      "metrics": null
     },
@@ -4408,7 +4350,7 @@
      "rss_category": "BBC World",
      "category": "BBC World",
      "description": "Mohammed Abu al-Ouf, head of Hamas's internal security service in northern Gaza, was killed with his wife and two teenage daughters, doctors say.",
-     "backfill": false,
+     "backfill": true,
      "metrics": null
     },
     {
@@ -4494,6 +4436,18 @@
      "rss_category": "BBC Business",
      "category": "BBC Business",
      "description": "US company Fender is in dispute with a German firm that makes generic versions of its key model.",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "Poundland collapses putting 11,000 jobs at risk",
+     "link": "https://www.bbc.co.uk/news/articles/cm3vgdn037z4o?at_medium=RSS&at_campaign=rss",
+     "published": "2026-11-25T21:31:10+08:00",
+     "source": "BBC Business",
+     "language": "en",
+     "rss_category": "BBC Business",
+     "category": "BBC Business",
+     "description": "The discount chain has fallen into administration after its owners failed to find a buyer.",
      "backfill": false,
      "metrics": null
     },
@@ -4631,6 +4585,18 @@
     }
    ],
    "BBC Education": [
+    {
+     "title": "Schools built using private money cost executive an extra £1bn",
+     "link": "https://www.bbc.co.uk/news/articles/cmqlq04l9r6eo?at_medium=RSS&at_campaign=rss",
+     "published": "2026-11-26T06:01:21+08:00",
+     "source": "BBC Education",
+     "language": "en",
+     "rss_category": "BBC Education",
+     "category": "BBC Education",
+     "description": "The schools in Belfast, Co Down, Co Antrim and Co Londonderry were all built in the early 2000s using the Private Finance Initiative model.",
+     "backfill": false,
+     "metrics": null
+    },
     {
      "title": "Badenoch challenges Burnham over university fees for EU students",
      "link": "https://www.bbc.co.uk/news/articles/cw4gn8lxj5r1o?at_medium=RSS&at_campaign=rss",
@@ -4824,18 +4790,6 @@
      "description": "Days after resigning while mired in scandal of extra-marital affairs, Nvidia's Jensen Huang is making a remarkable return.",
      "backfill": true,
      "metrics": null
-    },
-    {
-     "title": "GTA 6 hacker released on licence with warning 'don't let this happen again'",
-     "link": "https://www.bbc.co.uk/news/articles/cqpv9kr7pxmro?at_medium=RSS&at_campaign=rss",
-     "published": "2026-11-23T14:08:50+08:00",
-     "source": "BBC Technology",
-     "language": "en",
-     "rss_category": "BBC Technology",
-     "category": "BBC Technology",
-     "description": "21-year-old Arion Kurtaj pleaded guilty to the Rockstar Games hack and others he carried out when he was a teenager.",
-     "backfill": true,
-     "metrics": null
     }
    ],
    "BBC Health": [
@@ -4937,6 +4891,18 @@
     }
    ],
    "BBC Science & Environment": [
+    {
+     "title": "Whitehouse calls on PM to help save lake fish",
+     "link": "https://www.bbc.co.uk/news/articles/c6808pxrzy5po?at_medium=RSS&at_campaign=rss",
+     "published": "2026-11-26T06:05:36+08:00",
+     "source": "BBC Science",
+     "language": "en",
+     "rss_category": "BBC Science & Environment",
+     "category": "BBC Science & Environment",
+     "description": "The comedian warns extinction beckons for Arctic charr in Windermere after thousands of years.",
+     "backfill": false,
+     "metrics": null
+    },
     {
      "title": "What UK season changes mean for you",
      "link": "https://www.bbc.co.uk/weather/videos/c804wd3wwqpyo?at_medium=RSS&at_campaign=rss",
@@ -5082,18 +5048,6 @@
      "metrics": null
     },
     {
-     "title": "Goats drafted in to tame Greenwich Park slope",
-     "link": "https://www.bbc.co.uk/news/articles/cq4gn2vde8m8o?at_medium=RSS&at_campaign=rss",
-     "published": "2026-11-24T06:16:51+08:00",
-     "source": "BBC Science",
-     "language": "en",
-     "rss_category": "BBC Science & Environment",
-     "category": "BBC Science & Environment",
-     "description": "Bagot goats are used to keep vegetation in check and help preserve the view from the Royal Observatory.",
-     "backfill": true,
-     "metrics": null
-    },
-    {
      "title": "What failure of COP31 reveals about a divided world",
      "link": "https://www.bbc.co.uk/news/articles/cky970n83rvjo?at_medium=RSS&at_campaign=rss",
      "published": "2026-11-23T17:24:25+08:00",
@@ -5109,6 +5063,18 @@
   },
   "ja_news": {
    "頭條": [
+    {
+     "title": "国連特別報告者「死刑は拷問」 残虐性を立証、存置国に廃止を求める",
+     "link": "http://www.asahi.com/articles/ASVCR26LWVCRIIPE008M.html",
+     "published": "2026-11-26T06:00:00+08:00",
+     "source": "朝日新聞",
+     "language": "ja",
+     "rss_category": "頭條",
+     "category": "頭條",
+     "description": "",
+     "backfill": false,
+     "metrics": null
+    },
     {
      "title": "拘束記者の妻「娘にパパ返して」",
      "link": "https://news.yahoo.co.jp/pickup/6604065",
@@ -5134,34 +5100,10 @@
      "metrics": null
     },
     {
-     "title": "楽天・辰己 独自スタイルで表彰式",
-     "link": "https://news.yahoo.co.jp/pickup/6604059",
-     "published": "2026-11-26T05:21:10+08:00",
-     "source": "Yahoo! Japan",
-     "language": "ja",
-     "rss_category": "頭條",
-     "category": "頭條",
-     "description": "",
-     "backfill": false,
-     "metrics": null
-    },
-    {
      "title": "千葉・銚子で住宅火災、住人の女性2人と連絡とれず",
      "link": "http://www.asahi.com/articles/ASVCV1FS3VCVUDCB00LM.html",
      "published": "2026-11-26T05:10:00+08:00",
      "source": "朝日新聞",
-     "language": "ja",
-     "rss_category": "頭條",
-     "category": "頭條",
-     "description": "",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "福岡刺殺事件 口論などなく襲撃か",
-     "link": "https://news.yahoo.co.jp/pickup/6604058",
-     "published": "2026-11-26T05:03:43+08:00",
-     "source": "Yahoo! Japan",
      "language": "ja",
      "rss_category": "頭條",
      "category": "頭條",
@@ -5210,6 +5152,18 @@
      "link": "http://www.asahi.com/articles/ASVCV159VVCVUHBI02LM.html",
      "published": "2026-11-26T04:21:00+08:00",
      "source": "朝日新聞",
+     "language": "ja",
+     "rss_category": "頭條",
+     "category": "頭條",
+     "description": "",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "大野雄大 工藤監督に助言をもらう",
+     "link": "https://news.yahoo.co.jp/pickup/6604053",
+     "published": "2026-11-26T04:12:05+08:00",
+     "source": "Yahoo! Japan",
      "language": "ja",
      "rss_category": "頭條",
      "category": "頭條",
@@ -5282,6 +5236,18 @@
      "link": "http://www.asahi.com/articles/ASVCT3DHZVCTULFA01BM.html",
      "published": "2026-11-26T03:29:45+08:00",
      "source": "朝日新聞",
+     "language": "ja",
+     "rss_category": "頭條",
+     "category": "頭條",
+     "description": "",
+     "backfill": false,
+     "metrics": null
+    },
+    {
+     "title": "香港高層住宅火災1年 遺族の思い",
+     "link": "https://news.yahoo.co.jp/pickup/6604041",
+     "published": "2026-11-26T03:15:50+08:00",
+     "source": "Yahoo! Japan",
      "language": "ja",
      "rss_category": "頭條",
      "category": "頭條",
@@ -5614,8 +5580,8 @@
      "metrics": null
     },
     {
-     "title": "容姿をけなされて育った母 愛情ゆらした親族の一言、2歳娘への虐待",
-     "link": "http://www.asahi.com/articles/ASVCS41BHVCSOXIE00QM.html",
+     "title": "ソフトバンク前田悠伍 公私にストイックな生活でつかんだ新人王",
+     "link": "http://www.asahi.com/articles/ASVCT4C8KVCTPTQP005M.html",
      "published": "2026-11-25T21:00:00+08:00",
      "source": "朝日新聞",
      "language": "ja",
@@ -5626,8 +5592,8 @@
      "metrics": null
     },
     {
-     "title": "ソフトバンク前田悠伍 公私にストイックな生活でつかんだ新人王",
-     "link": "http://www.asahi.com/articles/ASVCT4C8KVCTPTQP005M.html",
+     "title": "容姿をけなされて育った母 愛情ゆらした親族の一言、2歳娘への虐待",
+     "link": "https://www.asahi.com/articles/ASVCS41BHVCSOXIE00QM.html",
      "published": "2026-11-25T21:00:00+08:00",
      "source": "朝日新聞",
      "language": "ja",
@@ -5682,7 +5648,7 @@
      "rss_category": "頭條",
      "category": "頭條",
      "description": "",
-     "backfill": false,
+     "backfill": true,
      "metrics": null
     },
     {
@@ -5878,18 +5844,6 @@
      "metrics": null
     },
     {
-     "title": "「逃げた男が店内に」白昼のイオン、客ら避難し騒然 福岡・男性刺殺",
-     "link": "https://www.asahi.com/articles/ASVCT33HRVCTTIPE019M.html",
-     "published": "2026-11-25T09:50:00+08:00",
-     "source": "朝日新聞",
-     "language": "ja",
-     "rss_category": "頭條",
-     "category": "頭條",
-     "description": "",
-     "backfill": true,
-     "metrics": null
-    },
-    {
      "title": "ラヴ上等ポスター文言 法務省指定",
      "link": "https://news.yahoo.co.jp/pickup/6603918",
      "published": "2026-11-25T05:18:03+08:00",
@@ -5903,6 +5857,18 @@
     }
    ],
    "國際": [
+    {
+     "title": "ネパール災害3カ月 移転拒む住民",
+     "link": "https://news.yahoo.co.jp/pickup/6604063",
+     "published": "2026-11-26T05:50:53+08:00",
+     "source": "Yahoo! Japan",
+     "language": "ja",
+     "rss_category": "國際",
+     "category": "國際",
+     "description": "",
+     "backfill": false,
+     "metrics": null
+    },
     {
      "title": "「大切なパパを返して」ロシアに拘束の北海道新聞記者、妻が手記",
      "link": "https://www.asahi.com/articles/ASVCV0F70VCVIIPE00JM.html",
@@ -5931,18 +5897,6 @@
      "title": "露のCS戦場使用巡り EUなど声明",
      "link": "https://news.yahoo.co.jp/pickup/6604039",
      "published": "2026-11-26T03:16:33+08:00",
-     "source": "Yahoo! Japan",
-     "language": "ja",
-     "rss_category": "國際",
-     "category": "國際",
-     "description": "",
-     "backfill": false,
-     "metrics": null
-    },
-    {
-     "title": "香港高層住宅火災1年 遺族の思い",
-     "link": "https://news.yahoo.co.jp/pickup/6604041",
-     "published": "2026-11-26T03:15:50+08:00",
      "source": "Yahoo! Japan",
      "language": "ja",
      "rss_category": "國際",
@@ -6148,18 +6102,6 @@
      "link": "https://www.asahi.com/articles/ASVCS42YXVCSTOLB00BM.html",
      "published": "2026-11-25T06:00:00+08:00",
      "source": "朝日新聞",
-     "language": "ja",
-     "rss_category": "國際",
-     "category": "國際",
-     "description": "",
-     "backfill": true,
-     "metrics": null
-    },
-    {
-     "title": "中国の富裕層マネーが香港に 背景",
-     "link": "https://news.yahoo.co.jp/pickup/6603920",
-     "published": "2026-11-25T05:27:54+08:00",
-     "source": "Yahoo! Japan",
      "language": "ja",
      "rss_category": "國際",
      "category": "國際",
@@ -6484,9 +6426,9 @@
    ],
    "運動": [
     {
-     "title": "大野雄大 工藤監督に助言をもらう",
-     "link": "https://news.yahoo.co.jp/pickup/6604053",
-     "published": "2026-11-26T04:12:05+08:00",
+     "title": "楽天・辰己 独自スタイルで表彰式",
+     "link": "https://news.yahoo.co.jp/pickup/6604059",
+     "published": "2026-11-26T05:21:10+08:00",
      "source": "Yahoo! Japan",
      "language": "ja",
      "rss_category": "運動",
@@ -7136,6 +7078,18 @@
    ],
    "文化": [
     {
+     "title": "福岡刺殺事件 口論などなく襲撃か",
+     "link": "https://news.yahoo.co.jp/pickup/6604058",
+     "published": "2026-11-26T05:03:43+08:00",
+     "source": "Yahoo! Japan",
+     "language": "ja",
+     "rss_category": "文化",
+     "category": "文化",
+     "description": "",
+     "backfill": false,
+     "metrics": null
+    },
+    {
      "title": "神戸6歳死亡に「涙流した」と被告",
      "link": "https://news.yahoo.co.jp/pickup/6604048",
      "published": "2026-11-26T03:45:30+08:00",
@@ -7406,6 +7360,18 @@
   "tech_blogs": {
    "Tech Blogs": [
     {
+     "title": "sqlite3_rsync: Database Remote-Copy Tool For SQLite",
+     "link": "https://simonwillison.net/2026/Nov/26/sqlite3-rsync",
+     "published": "2026-11-26T06:08:25+08:00",
+     "source": "Simon Willison",
+     "language": "en",
+     "rss_category": "Tech Blogs",
+     "category": "Tech Blogs",
+     "description": "sqlite3_rsync: Database Remote-Copy Tool For SQLite This additional SQLite tool has been around for a while now - it was added as \"experimental\" in SQLite 3.47.0 in October 2024 and enhanced in SQLite 3.50.0 in May 2025. It was only today that I understood one of its most attractive characteristics. Normally, if you want to grab a snapshot copy of a SQLite database, you need to use either the backup API or VACUUM INTO. In both cases you need enough disk space to create a duplicate copy of your...",
+     "backfill": false,
+     "metrics": null
+    },
+    {
      "title": "Electrek Speculates on Trump’s Claim He ‘Protected’ Elon Musk After a ‘Very Tough Incident’ During His First Term",
      "link": "https://electrek.co/2026/11/24/trump-protected-elon-musk-first-term-tough-incident",
      "published": "2026-11-26T00:16:54+08:00",
@@ -7658,6 +7624,18 @@
      "metrics": null
     },
     {
+     "title": "BREAKING: Employees at OpenAI and Anthropic are panicking",
+     "link": "https://garymarcus.substack.com/p/breaking-employees-at-openai-and",
+     "published": "2026-11-24T16:06:27+08:00",
+     "source": "Gary Marcus",
+     "language": "en",
+     "rss_category": "Tech Blogs",
+     "category": "Tech Blogs",
+     "description": "And it’s not about stock prices",
+     "backfill": true,
+     "metrics": null
+    },
+    {
      "title": "Jason Zengerle Profiles Treasury Secretary Scott Bessent for The New Yorker",
      "link": "https://www.newyorker.com/magazine/2026/11/30/scott-bessent-profile",
      "published": "2026-11-24T15:43:21+08:00",
@@ -7666,6 +7644,18 @@
      "rss_category": "Tech Blogs",
      "category": "Tech Blogs",
      "description": "Bessent comes across as a far more interesting man than I gave him credit for: But, in the past two years, Bessent has become one of the most consequential figures in the Trump Administration. A former White House official called him “the smartest person in the Administration, by far.” Jason Miller, a longtime Trump adviser, said, of the Treasury Secretary, “There’s no other person whose name comes up more often for V.P. in ’28.” Steve Bannon, Trump’s former chief strategist, went further: “If...",
+     "backfill": true,
+     "metrics": null
+    },
+    {
+     "title": "Breaking: When it comes to generative AI, the bump from rehiring Jensen doesn’t appear to be holding",
+     "link": "https://garymarcus.substack.com/p/breaking-when-it-comes-to-generative",
+     "published": "2026-11-24T15:06:30+08:00",
+     "source": "Gary Marcus",
+     "language": "en",
+     "rss_category": "Tech Blogs",
+     "category": "Tech Blogs",
+     "description": "And Anthropic has dropped below its IPO price",
      "backfill": true,
      "metrics": null
     },
@@ -7766,6 +7756,18 @@
      "metrics": null
     },
     {
+     "title": "Could Jensengate take down the President?",
+     "link": "https://garymarcus.substack.com/p/could-jensengate-take-down-the-president",
+     "published": "2026-11-23T18:46:14+08:00",
+     "source": "Gary Marcus",
+     "language": "en",
+     "rss_category": "Tech Blogs",
+     "category": "Tech Blogs",
+     "description": "Some cynical speculations have already been confirmed, and you can bet your last dollar the incoming Congress is going to take an interest",
+     "backfill": true,
+     "metrics": null
+    },
+    {
      "title": "Donald Trump on Jensen Huang’s Reinstatement at Nvidia",
      "link": "https://truthsocial.com/@realDonaldTrump/posts/117666713950631493",
      "published": "2026-11-23T17:22:03+08:00",
@@ -7774,6 +7776,18 @@
      "rss_category": "Tech Blogs",
      "category": "Tech Blogs",
      "description": "The President of the United States, on his blog, at 11:30am today: He posted this after spending 50 minutes on a phone interview with CNBC in which he took credit for “the deal” to reinstate Huang. I must say, it does capture the moment. ★",
+     "backfill": true,
+     "metrics": null
+    },
+    {
+     "title": "Breaking: Jensen is back. And the market is way up. But things will never be the same.",
+     "link": "https://garymarcus.substack.com/p/breaking-jensen-is-back-and-the-market",
+     "published": "2026-11-23T16:38:04+08:00",
+     "source": "Gary Marcus",
+     "language": "en",
+     "rss_category": "Tech Blogs",
+     "category": "Tech Blogs",
+     "description": "In lieu of writing about the stunning news, here’s a 5 minute guest appearance that I just did on CNN International.",
      "backfill": true,
      "metrics": null
     },
@@ -7830,8 +7844,8 @@
   "ptt_hot": {
    "八卦板": [
     {
-     "title": "[問卦]藍色天空:網站遭受異常IP請求紀錄733萬次",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671590.A.0C5.html",
+     "title": "[新聞]沈玉琳突曝看法:統獨就是假議題 蔡英文.賴",
+     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795673689.A.CB1.html",
      "published": "2026-11-26T12:00:00+08:00",
      "source": "PTT 八卦板",
      "language": "zh",
@@ -7840,36 +7854,17 @@
      "description": "",
      "backfill": false,
      "metrics": {
-      "push": 19,
-      "push_label": "19",
-      "author": "yyyyyuuuuu",
+      "push": 9,
+      "push_label": "9",
+      "author": "postar",
       "board": "Gossiping",
       "origin": "ptt_list",
       "date_precision": "day"
      }
     },
     {
-     "title": "[問卦] 有沒有 洋成0 的八卦？",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671068.A.11D.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 8,
-      "push_label": "8",
-      "author": "Juniorlin02",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "Re: [新聞] 高雄改辦「隆洋之夜」賴瑞隆：放棄選前之夜是最痛苦決定",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671077.A.579.html",
+     "title": "[問卦] 死前的最大遺憾是沒跟黑人群交",
+     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795673461.A.C98.html",
      "published": "2026-11-26T12:00:00+08:00",
      "source": "PTT 八卦板",
      "language": "zh",
@@ -7880,91 +7875,15 @@
      "metrics": {
       "push": 7,
       "push_label": "7",
-      "author": "s840331",
+      "author": "jumpjumpp",
       "board": "Gossiping",
       "origin": "ptt_list",
       "date_precision": "day"
      }
     },
     {
-     "title": "[新聞] 伴侶體味也迷人？ 情感連結增性親密感",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671394.A.8CF.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 7,
-      "push_label": "7",
-      "author": "nobel777",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[問卦] 久留美魔咒已破！月底4萬 年底5萬？",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671169.A.9FD.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 6,
-      "push_label": "6",
-      "author": "medama",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[問卦] 要怎麼蓋給0號候選人??",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671566.A.CE6.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 6,
-      "push_label": "6",
-      "author": "ncc5566",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[新聞] 18家銀行用戶遭盜轉1742萬原因曝光！竟",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795672142.A.757.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 6,
-      "push_label": "6",
-      "author": "KobeCurry",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "Re: [問卦] 為何Safari 可以開藍色天空？",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671059.A.404.html",
+     "title": "[問卦] 還在用安卓機的是什麼人？",
+     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795673451.A.278.html",
      "published": "2026-11-26T12:00:00+08:00",
      "source": "PTT 八卦板",
      "language": "zh",
@@ -7975,15 +7894,15 @@
      "metrics": {
       "push": 5,
       "push_label": "5",
-      "author": "sanchiya",
+      "author": "DarkKnight",
       "board": "Gossiping",
       "origin": "ptt_list",
       "date_precision": "day"
      }
     },
     {
-     "title": "[問卦] 神秘來賓請好了派對卻不辦了",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671544.A.9C9.html",
+     "title": "[問卦] 怎樣的訪問 會聊到黑人群交...？",
+     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795673579.A.4D1.html",
      "published": "2026-11-26T12:00:00+08:00",
      "source": "PTT 八卦板",
      "language": "zh",
@@ -7994,110 +7913,34 @@
      "metrics": {
       "push": 5,
       "push_label": "5",
-      "author": "Ommmmmm5566",
+      "author": "x747",
       "board": "Gossiping",
       "origin": "ptt_list",
       "date_precision": "day"
      }
     },
     {
-     "title": "[問卦] 週六晚上要吃啥比較適合？",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795672007.A.FC0.html",
+     "title": "[問卦] 這波修正 正二融資槓桿猛哥有撐住嗎？",
+     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795673534.A.3A8.html",
      "published": "2026-11-26T12:00:00+08:00",
      "source": "PTT 八卦板",
      "language": "zh",
      "rss_category": "八卦板",
-     "category": "頭條新聞",
+     "category": "股市",
      "description": "",
      "backfill": false,
      "metrics": {
-      "push": 5,
-      "push_label": "5",
-      "author": "chu",
+      "push": 2,
+      "push_label": "2",
+      "author": "fawangching",
       "board": "Gossiping",
       "origin": "ptt_list",
       "date_precision": "day"
      }
     },
     {
-     "title": "[新聞] 亞運金牌免役就退隊？韓國男籃資格賽前夕",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671170.A.A02.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "全球國際新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 4,
-      "push_label": "4",
-      "author": "ChanHoPark",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[問卦]泡泡瑪特能來台灣，為什麼瑞幸咖啡不行？",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671466.A.510.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 3,
-      "push_label": "3",
-      "author": "locdan",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[問卦] 在日本遇到人肉佔位要怎辦？附圖",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671672.A.2DD.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "全球國際新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 1,
-      "push_label": "1",
-      "author": "linx210145",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[問卦] 只用Grok做這樣的影片及格嗎？女馬份",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795672162.A.D03.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 1,
-      "push_label": "1",
-      "author": "h6351803",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "Re: [新聞] 萬華美女里長遭性騷 林姓前輩遭爆出！",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671290.A.107.html",
+     "title": "[問卦] 這樣劇烈整理買0050比正2強太多了",
+     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795673733.A.BD1.html",
      "published": "2026-11-26T12:00:00+08:00",
      "source": "PTT 八卦板",
      "language": "zh",
@@ -8108,102 +7951,7 @@
      "metrics": {
       "push": 0,
       "push_label": "0",
-      "author": "Marceline",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "Re: [問卦] 久留美魔咒已破！月底4萬 年底5萬？",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671501.A.410.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 0,
-      "push_label": "0",
-      "author": "dream0821",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "Re: [問卦] 所以狄卡儂今天有啥好買的",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671520.A.526.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 0,
-      "push_label": "0",
-      "author": "VVizZ",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "Re: [新聞] 亞運金牌免役就退隊？韓國男籃資格賽前夕",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671736.A.C18.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "全球國際新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 0,
-      "push_label": "0",
-      "author": "VVizZ",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[問卦] 說好的不要人身攻擊呢？",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795671989.A.EBE.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 0,
-      "push_label": "0",
-      "author": "aswin12000",
-      "board": "Gossiping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[問卦] 什麼叫開副本？",
-     "link": "https://www.ptt.cc/bbs/Gossiping/M.1795672173.A.D2D.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 八卦板",
-     "language": "zh",
-     "rss_category": "八卦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 0,
-      "push_label": "0",
-      "author": "huan0",
+      "author": "NUMB43",
       "board": "Gossiping",
       "origin": "ptt_list",
       "date_precision": "day"
@@ -8211,6 +7959,25 @@
     }
    ],
    "股票板": [
+    {
+     "title": "[閒聊] 2026/11/26 盤後閒聊",
+     "link": "https://www.ptt.cc/bbs/Stock/M.1795672815.A.A45.html",
+     "published": "2026-11-26T12:00:00+08:00",
+     "source": "PTT 股票板",
+     "language": "zh",
+     "rss_category": "股票板",
+     "category": "頭條新聞",
+     "description": "",
+     "backfill": false,
+     "metrics": {
+      "push": 100,
+      "push_label": "爆",
+      "author": "laptic",
+      "board": "Stock",
+      "origin": "ptt_list",
+      "date_precision": "day"
+     }
+    },
     {
      "title": "[新聞] 播報事故！女主播見「三星一路下跌」崩潰",
      "link": "https://www.ptt.cc/bbs/Stock/M.1795669413.A.1A2.html",
@@ -8222,8 +7989,8 @@
      "description": "",
      "backfill": false,
      "metrics": {
-      "push": 60,
-      "push_label": "60",
+      "push": 71,
+      "push_label": "71",
       "author": "ChanHoPark",
       "board": "Stock",
       "origin": "ptt_list",
@@ -8241,8 +8008,8 @@
      "description": "",
      "backfill": false,
      "metrics": {
-      "push": 53,
-      "push_label": "53",
+      "push": 68,
+      "push_label": "68",
       "author": "lazyjohn",
       "board": "Stock",
       "origin": "ptt_list",
@@ -8260,9 +8027,28 @@
      "description": "",
      "backfill": false,
      "metrics": {
-      "push": 35,
-      "push_label": "35",
+      "push": 38,
+      "push_label": "38",
       "author": "manlike",
+      "board": "Stock",
+      "origin": "ptt_list",
+      "date_precision": "day"
+     }
+    },
+    {
+     "title": "[新聞] 台股注意股標準擬放寬！金管會研議調整",
+     "link": "https://www.ptt.cc/bbs/Stock/M.1795672303.A.D10.html",
+     "published": "2026-11-26T12:00:00+08:00",
+     "source": "PTT 股票板",
+     "language": "zh",
+     "rss_category": "股票板",
+     "category": "股市",
+     "description": "",
+     "backfill": false,
+     "metrics": {
+      "push": 15,
+      "push_label": "15",
+      "author": "bamama56",
       "board": "Stock",
       "origin": "ptt_list",
       "date_precision": "day"
@@ -8279,8 +8065,8 @@
      "description": "",
      "backfill": false,
      "metrics": {
-      "push": 8,
-      "push_label": "8",
+      "push": 12,
+      "push_label": "12",
       "author": "coolgigi",
       "board": "Stock",
       "origin": "ptt_list",
@@ -8298,9 +8084,28 @@
      "description": "",
      "backfill": false,
      "metrics": {
+      "push": 6,
+      "push_label": "6",
+      "author": "Dukkha",
+      "board": "Stock",
+      "origin": "ptt_list",
+      "date_precision": "day"
+     }
+    },
+    {
+     "title": "Re: [新聞] 美10月核心PCE超預期年升3.3% Fed下月升",
+     "link": "https://www.ptt.cc/bbs/Stock/M.1795668711.A.68C.html",
+     "published": "2026-11-26T12:00:00+08:00",
+     "source": "PTT 股票板",
+     "language": "zh",
+     "rss_category": "股票板",
+     "category": "頭條新聞",
+     "description": "",
+     "backfill": false,
+     "metrics": {
       "push": 4,
       "push_label": "4",
-      "author": "Dukkha",
+      "author": "IBIZA",
       "board": "Stock",
       "origin": "ptt_list",
       "date_precision": "day"
@@ -8326,8 +8131,8 @@
      }
     },
     {
-     "title": "Re: [新聞] 美10月核心PCE超預期年升3.3% Fed下月升",
-     "link": "https://www.ptt.cc/bbs/Stock/M.1795668711.A.68C.html",
+     "title": "[創作] 浪費Money (小安-浪費愛情)",
+     "link": "https://www.ptt.cc/bbs/Stock/M.1795673403.A.BA1.html",
      "published": "2026-11-26T12:00:00+08:00",
      "source": "PTT 股票板",
      "language": "zh",
@@ -8336,28 +8141,28 @@
      "description": "",
      "backfill": false,
      "metrics": {
-      "push": 3,
-      "push_label": "3",
-      "author": "IBIZA",
+      "push": 0,
+      "push_label": "0",
+      "author": "will1118",
       "board": "Stock",
       "origin": "ptt_list",
       "date_precision": "day"
      }
     },
     {
-     "title": "[新聞] 台股注意股標準擬放寬！金管會研議調整",
-     "link": "https://www.ptt.cc/bbs/Stock/M.1795672303.A.D10.html",
+     "title": "[新聞] 路易莎明年恐漲價「估3至5%」！旗下這些",
+     "link": "https://www.ptt.cc/bbs/Stock/M.1795673612.A.615.html",
      "published": "2026-11-26T12:00:00+08:00",
      "source": "PTT 股票板",
      "language": "zh",
      "rss_category": "股票板",
-     "category": "股市",
+     "category": "頭條新聞",
      "description": "",
      "backfill": false,
      "metrics": {
       "push": 0,
       "push_label": "0",
-      "author": "bamama56",
+      "author": "kof70380",
       "board": "Stock",
       "origin": "ptt_list",
       "date_precision": "day"
@@ -8459,6 +8264,25 @@
       "origin": "ptt_list",
       "date_precision": "day"
      }
+    },
+    {
+     "title": "[新聞] 1.6兆投資喊停、3千員工資遣？ 謝金河：",
+     "link": "https://www.ptt.cc/bbs/Tech_Job/M.1795673113.A.F3A.html",
+     "published": "2026-11-26T12:00:00+08:00",
+     "source": "PTT 科技業板",
+     "language": "zh",
+     "rss_category": "科技業板",
+     "category": "產經",
+     "description": "",
+     "backfill": false,
+     "metrics": {
+      "push": 0,
+      "push_label": "0",
+      "author": "dakkk",
+      "board": "Tech_Job",
+      "origin": "ptt_list",
+      "date_precision": "day"
+     }
     }
    ],
    "軟體工作板": [
@@ -8532,8 +8356,8 @@
      "description": "",
      "backfill": false,
      "metrics": {
-      "push": 31,
-      "push_label": "31",
+      "push": 32,
+      "push_label": "32",
       "author": "RGZ91B",
       "board": "PC_Shopping",
       "origin": "ptt_list",
@@ -8579,6 +8403,25 @@
      }
     },
     {
+     "title": "[心得] 芝奇DDR5 四修心得 + 華碩主板除錯反推",
+     "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1795666085.A.BF8.html",
+     "published": "2026-11-26T12:00:00+08:00",
+     "source": "PTT 電蝦板",
+     "language": "zh",
+     "rss_category": "電蝦板",
+     "category": "頭條新聞",
+     "description": "",
+     "backfill": false,
+     "metrics": {
+      "push": 13,
+      "push_label": "13",
+      "author": "howard1414",
+      "board": "PC_Shopping",
+      "origin": "ptt_list",
+      "date_precision": "day"
+     }
+    },
+    {
      "title": "Re: [閒聊] 京東 電腦椅 直郵免運",
      "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1795616888.A.6F1.html",
      "published": "2026-11-25T12:00:00+08:00",
@@ -8592,25 +8435,6 @@
       "push": 13,
       "push_label": "13",
       "author": "naidier",
-      "board": "PC_Shopping",
-      "origin": "ptt_list",
-      "date_precision": "day"
-     }
-    },
-    {
-     "title": "[心得] 芝奇DDR5 四修心得 + 華碩主板除錯反推",
-     "link": "https://www.ptt.cc/bbs/PC_Shopping/M.1795666085.A.BF8.html",
-     "published": "2026-11-26T12:00:00+08:00",
-     "source": "PTT 電蝦板",
-     "language": "zh",
-     "rss_category": "電蝦板",
-     "category": "頭條新聞",
-     "description": "",
-     "backfill": false,
-     "metrics": {
-      "push": 12,
-      "push_label": "12",
-      "author": "howard1414",
       "board": "PC_Shopping",
       "origin": "ptt_list",
       "date_precision": "day"
