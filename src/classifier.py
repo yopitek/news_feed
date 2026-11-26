@@ -30,6 +30,9 @@ class Classifier:
         self.keyword_rules = rules.get('keyword_rules', {})
         self.source_defaults = rules.get('source_defaults', {})
         self.default_category = rules.get('default_category', '頭條新聞')
+        # Title keywords that win over the RSS mapping (see classify()).
+        self.priority_title_rules = rules.get('priority_title_rules', {}) or {}
+        self.priority_skip_rss = set(rules.get('priority_title_skip_rss_categories', []) or [])
     
     def classify(self, article: NormalizedArticle) -> str:
         """
@@ -51,6 +54,16 @@ class Classifier:
         if article.language != 'zh':
             return article.rss_category or ''
         
+        # STEP 0: Priority title keywords.
+        # Every CNA feed category is in rss_to_target_mapping, so STEP 1 always
+        # returned first and the 股市 / 房市 keyword rules below were dead code:
+        # both sections were empty on every run. A short, specific title keyword
+        # list is checked first so a stock or housing story filed under 產經 or
+        # 生活 lands in its own section.
+        priority_match = self._classify_by_priority_title(article)
+        if priority_match:
+            return priority_match
+
         # STEP 1: RSS Category Mapping
         if article.rss_category in self.rss_mapping:
             mapped = self.rss_mapping[article.rss_category]
@@ -74,6 +87,23 @@ class Classifier:
         # STEP 4: Fallback
         return self.default_category
     
+    def _classify_by_priority_title(self, article: NormalizedArticle) -> Optional[str]:
+        """Match the priority keyword lists against the title only."""
+        if not self.priority_title_rules:
+            return None
+        if article.rss_category in self.priority_skip_rss:
+            return None
+        title = (article.title or '').lower()
+        if not title:
+            return None
+        for category, keywords in self.priority_title_rules.items():
+            if category not in VALID_CATEGORIES:
+                continue
+            for keyword in keywords or []:
+                if str(keyword).lower() in title:
+                    return category
+        return None
+
     def _classify_by_keywords(self, title: str, description: str) -> Optional[str]:
         """Match keywords in title/description."""
         text = f"{title} {description}".lower()

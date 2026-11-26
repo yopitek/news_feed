@@ -30,6 +30,64 @@ rss_to_target_mapping:
   全球國際新聞: 全球國際新聞
 
 # ============================================
+# Priority title keywords (checked BEFORE the RSS mapping above)
+# ============================================
+# Matched against the article TITLE only, so keep these specific. Broad words
+# such as 土地 / 投資 / 法人 / 上市 belong in keyword_rules below, not here:
+# they would pull unrelated stories out of their own section.
+priority_title_rules:
+  股市:
+    - 台股
+    - 美股
+    - 港股
+    - 陸股
+    - 日股
+    - 股市
+    - 股價
+    - 大盤
+    - 加權指數
+    - 道瓊
+    - 那斯達克
+    - 納斯達克
+    - 費半
+    - 標普
+    - 漲停
+    - 跌停
+    - 三大法人
+    - 外資買超
+    - 外資賣超
+    - 櫃買
+    - 收盤
+    - 開盤
+    - ETF
+    - 除息
+    - 殖利率
+  房市:
+    - 房市
+    - 房價
+    - 房貸
+    - 買房
+    - 購屋
+    - 預售屋
+    - 中古屋
+    - 建案
+    - 建商
+    - 都更
+    - 危老
+    - 社會住宅
+    - 房仲
+    - 不動產
+    - 囤房稅
+    - 實價登錄
+    - 新青安
+    - 租金補貼
+
+# Articles from these RSS categories are never moved by the list above.
+priority_title_skip_rss_categories:
+  - 娛樂
+  - 運動
+
+# ============================================
 # Keyword-Based Classification Rules
 # Priority: lower number = higher priority (checked first)
 # ============================================

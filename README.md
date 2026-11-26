@@ -269,3 +269,20 @@ MIT License
 ---
 
 Built with ❤️ for daily news consumption
+
+
+## Fetch-only export (no LLM)
+
+```bash
+python -m src.export_raw              # output/feed_raw.json + output/feed_health.json
+python -m src.export_raw --out docs   # what .github/workflows/fetch_raw.yml publishes
+python -m src.export_raw --check      # exit 1 if any source is failed/stale or a category is empty
+```
+
+- `feed_raw.json`: every deduplicated article of every tab, grouped by the digest's
+  display categories (title, link, published, source, RSS description). No API key needed.
+  Published at `https://yopitek.github.io/news_feed/feed_raw.json` by the 06:23 Asia/Taipei workflow.
+- `feed_health.json`: one row per configured source with `health` = ok / stale / empty / failed,
+  the error, and the age of its newest item. `stale` = still answers, newest item older than 7 days.
+- `settings.backfill_window_hours` (config/feeds.yaml, default 72): a category with fewer fresh
+  articles than its quota is topped up with older ones; fresh articles always come first.

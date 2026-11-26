@@ -1,0 +1,71 @@
+name: Fetch Raw Feeds (no LLM)
+
+# Fetch-only export for downstream readers (docs/feed_raw.json, docs/feed_health.json).
+# No API keys, no email, about one minute. Runs before the 07:00 Asia/Taipei reader.
+#
+# The minute is deliberately not :00. GitHub delays scheduled runs under load and
+# the top of the hour is the worst slot: the daily digest is scheduled for
+# 00:00 UTC and its commits land between 04:25 and 07:57 UTC.
+on:
+  schedule:
+    - cron: '23 22 * * *'   # 06:23 Asia/Taipei
+  workflow_dispatch:
+
+concurrency:
+  group: fetch-raw
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Fetch every source
+        env:
+          TZ: Asia/Taipei
+        run: python -m src.export_raw --out docs
+
+      - name: Report problem sources
+        if: always()
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          p = pathlib.Path('docs/feed_raw.json')
+          if not p.exists():
+              print('::error::docs/feed_raw.json was not written')
+              raise SystemExit(0)
+          raw = json.loads(p.read_text(encoding='utf-8'))
+          for s in raw.get('problem_sources', []):
+              print(f"::warning::{s['health']}: {s['tab']} / {s['category']} / {s['source_name']} - {s.get('error') or s.get('status')} - {s['url']}")
+          for c in raw.get('empty_categories', []):
+              print(f"::warning::empty category: {c['tab']} / {c['category']}")
+          print(raw.get('health_summary'))
+          PY
+
+      - name: Commit
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add docs/feed_raw.json docs/feed_health.json
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore: refresh raw feeds $(date +'%Y-%m-%d %H:%M')"
+          # The daily digest and the social snapshot sync push to the same branch.
+          git pull --rebase --autostash
+          git push

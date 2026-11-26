@@ -212,20 +212,35 @@ def normalize_all(
     import pytz
     from datetime import timedelta
     
-    # Calculate cutoff time (e.g., yesterday 08:00 Taipei time)
+    # The window ends at "now" (Taipei). It used to end at "08:00 today", which
+    # only made sense when the job really ran at 08:00: run at 07:00 and the end
+    # point jumped back a full day, so the digest was built from yesterday
+    # morning's articles.
     taipei_tz = pytz.timezone('Asia/Taipei')
     now_taipei = datetime.now(taipei_tz)
-    
-    # Set cutoff to 24 hours ago from 08:00 today
-    today_8am = now_taipei.replace(hour=8, minute=0, second=0, microsecond=0)
-    if now_taipei.hour < 8:
-        # If it's before 8 AM, use yesterday's 8 AM as the end point
-        today_8am = today_8am - timedelta(days=1)
-    
-    cutoff_time = today_8am - timedelta(hours=hours_window)
+    window_end = now_taipei
+
+    cutoff_time = window_end - timedelta(hours=hours_window)
     cutoff_utc = cutoff_time.astimezone(timezone.utc)
-    
-    logger.info(f"Date filter: Only articles after {cutoff_time.strftime('%Y-%m-%d %H:%M')} (Taipei)")
+
+    # Backfill: slow feeds (BBC Education, CNA 娛樂, ...) publish fewer than
+    # `items_per_category` articles a day, which left their sections half empty.
+    # Articles between the primary cutoff and the backfill cutoff are kept but
+    # flagged, and the selector only uses them to top a category up.
+    backfill_hours = config.settings.get('backfill_window_hours', 72)
+    try:
+        backfill_hours = float(backfill_hours) if backfill_hours is not None else 0.0
+    except (TypeError, ValueError):
+        logger.warning("settings.backfill_window_hours is not a number; backfill disabled")
+        backfill_hours = 0.0
+    backfill_cutoff_utc = None
+    if backfill_hours > hours_window:
+        backfill_cutoff_utc = (window_end - timedelta(hours=backfill_hours)).astimezone(timezone.utc)
+
+    logger.info(
+        f"Date filter: articles after {cutoff_time.strftime('%Y-%m-%d %H:%M')} (Taipei); "
+        f"backfill window {backfill_hours:.0f}h"
+    )
 
     # Per-tab overrides. `null` in settings means "no time filter": community tabs
     # (PTT / Dcard) are ranked by engagement on the board's own current front page,
@@ -237,6 +252,7 @@ def normalize_all(
     
     articles = []
     filtered_count = 0
+    backfill_count = 0
     
     for tab_id, entries in raw_feeds.items():
         tab_config = config.tabs.get(tab_id)
@@ -247,10 +263,13 @@ def normalize_all(
         if tab_id in tab_windows:
             override = tab_windows[tab_id]
             tab_cutoff = None if override is None else (
-                (today_8am - timedelta(hours=float(override))).astimezone(timezone.utc)
+                (window_end - timedelta(hours=float(override))).astimezone(timezone.utc)
             )
+            # An explicit per-tab window is taken literally: no backfill.
+            tab_backfill_cutoff = None
         else:
             tab_cutoff = cutoff_utc
+            tab_backfill_cutoff = backfill_cutoff_utc
         
         for entry in entries:
             # Get metadata from entry (added during fetch)
@@ -270,9 +289,16 @@ def normalize_all(
                 # Filter by date - only include articles within the time window
                 if tab_cutoff is None or article.published >= tab_cutoff:
                     articles.append(article)
+                elif tab_backfill_cutoff is not None and article.published >= tab_backfill_cutoff:
+                    article.backfill = True
+                    articles.append(article)
+                    backfill_count += 1
                 else:
                     filtered_count += 1
     
-    logger.info(f"Normalized {len(articles)} articles (filtered out {filtered_count} old articles)")
+    logger.info(
+        f"Normalized {len(articles)} articles "
+        f"({backfill_count} kept for backfill, filtered out {filtered_count} old articles)"
+    )
     return articles
 
