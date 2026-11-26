@@ -67,6 +67,11 @@ tabs:
       - category: 股市
         url: https://tw.stock.yahoo.com/rss?category=tw-market
         source_name: Yahoo股市
+      # 房市 only had keyword-matched CNA stories (1 article on 2026-11-26).
+      # 經濟日報 房市 channel (money.udn.com category 5593).
+      - category: 房市
+        url: https://money.udn.com/rssfeed/news/1001/5593?ch=money
+        source_name: 經濟日報
 
   # ============================================
   # English News - Startup + Tech News + BBC (with subcategories)
@@ -92,32 +97,24 @@ tabs:
       - category: Startup
         url: http://news.ycombinator.com/rss
         source_name: Hacker News
+      # 2026-11-26: Sam Altman Blog (newest item ~229 days old) and Andrew Chen
+      # (newest item Feb 2024) removed as stale. TechCrunch moved the startups
+      # feed from /startups/feed/ (404) to /category/startups/feed/.
       - category: Startup
-        url: http://blog.samaltman.com/posts.atom
-        source_name: Sam Altman Blog
-      - category: Startup
-        url: http://andrewchen.co/feed/
-        source_name: Andrew Chen
-      - category: Startup
-        url: https://techcrunch.com/startups/feed/
+        url: https://techcrunch.com/category/startups/feed/
         source_name: TechCrunch Startups
 
       # ========== Tech News ==========
+      # 2026-11-26: Fast Company Design (403; its current feed is malformed XML)
+      # and Forbes Entrepreneurs (404) removed. SlashGear's feeds.slashgear.com
+      # host no longer resolves; the site serves its feed at /feed/.
       - category: Tech News
-        url: http://www.fastcodesign.com/rss.xml
-        source_name: Fast Company Design
-      - category: Tech News
-        url: http://www.forbes.com/entrepreneurs/index.xml
-        source_name: Forbes Entrepreneurs
-      - category: Tech News
-        url: http://feeds.slashgear.com/slashgear
+        url: https://www.slashgear.com/feed/
         source_name: SlashGear
       - category: Tech News
         url: http://www.theverge.com/rss/full.xml
         source_name: The Verge
-      - category: Tech News
-        url: https://feeds2.feedburner.com/PennOlson
-        source_name: Penn Olson
+      # 2026-11-26: Penn Olson removed (stale, newest item ~12 days old on a daily digest).
       - category: Tech News
         url: https://techcrunch.com/feed/
         source_name: TechCrunch

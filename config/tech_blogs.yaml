@@ -10,7 +10,7 @@ tech_blogs:
     - { category: "Tech Blogs", url: "https://simonwillison.net/atom/everything/", source_name: "Simon Willison", group: "AI / ML" }
     - { category: "Tech Blogs", url: "https://garymarcus.substack.com/feed", source_name: "Gary Marcus", group: "AI / ML" }
     - { category: "Tech Blogs", url: "https://www.dwarkeshpatel.com/feed", source_name: "Dwarkesh Patel", group: "AI / ML" }
-    - { category: "Tech Blogs", url: "https://minimaxir.com/rss.xml", source_name: "Max Woolf", group: "AI / ML" }
+    - { category: "Tech Blogs", url: "https://minimaxir.com/index.xml", source_name: "Max Woolf", group: "AI / ML" }
     - { category: "Tech Blogs", url: "https://geohot.github.io/blog/feed.xml", source_name: "George Hotz", group: "AI / ML" }
     - { category: "Tech Blogs", url: "https://gwern.substack.com/feed", source_name: "Gwern Branwen", group: "AI / ML" }
 
