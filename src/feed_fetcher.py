@@ -18,6 +18,7 @@ DEFAULT_TIMEOUT = 10
 DEFAULT_RETRIES = 2
 DEFAULT_MAX_ITEMS = 20
 DEFAULT_USER_AGENT = "NewsDigest/1.0 (RSS Reader)"
+FALLBACK_USER_AGENT = "Mozilla/5.0 (compatible; NewsDigest/1.0; +https://github.com/yopitek/news_feed)"
 LAST_FETCH_STATS: list[dict] = []
 LAST_SNAPSHOT_META: dict = {}
 LAST_PTT_SNAPSHOT_META: dict = {}
@@ -71,6 +72,8 @@ def summarize_source_health(stats: list[dict], selected: dict | None = None) -> 
         'failed_sources': failed_sources,
         'selected_articles': selected_articles,
         'sources': tech_stats,
+        # Every tab, not just tech_blogs. New key: older readers ignore it.
+        'all': summarize_all_sources(stats),
     }
 
 
@@ -177,12 +180,23 @@ def fetch_feed(
             outcome['error'] = error
 
     backoff = [1, 2, 4]  # Exponential backoff
+    last_error: str | None = None
 
     for attempt in range(retries + 1):
         try:
             # Fetch with custom headers
-            headers = {'User-Agent': user_agent}
+            headers = {
+                'User-Agent': user_agent,
+                'Accept': 'application/rss+xml, application/atom+xml, application/xml;q=0.9, */*;q=0.8',
+            }
             response = requests.get(url, headers=headers, timeout=timeout)
+            if getattr(response, 'status_code', None) in (403, 406) and user_agent != FALLBACK_USER_AGENT:
+                # Several publishers answer 403/406 to an unknown agent string but
+                # serve the same public feed to a browser-style one. One retry,
+                # same URL, nothing else changed.
+                logger.info(f"{_get_domain(url)} answered {response.status_code}; retrying with fallback User-Agent")
+                headers['User-Agent'] = FALLBACK_USER_AGENT
+                response = requests.get(url, headers=headers, timeout=timeout)
             response.raise_for_status()
 
             # Parse feed
@@ -216,12 +230,14 @@ def fetch_feed(
 
         except requests.exceptions.Timeout:
             logger.warning(f"Timeout fetching {url} (attempt {attempt + 1}/{retries + 1})")
+            last_error = f'timeout after {timeout}s'
             if attempt < retries:
                 time.sleep(backoff[min(attempt, len(backoff) - 1)])
             continue
 
         except requests.exceptions.RequestException as e:
             logger.warning(f"Request error for {url}: {e} (attempt {attempt + 1}/{retries + 1})")
+            last_error = _short_error(e)
             if attempt < retries:
                 time.sleep(backoff[min(attempt, len(backoff) - 1)])
             continue
@@ -232,8 +248,22 @@ def fetch_feed(
             return []
 
     logger.error(f"Failed to fetch {url} after {retries + 1} attempts")
-    _record('failed', f'gave up after {retries + 1} attempts')
+    _record('failed', f'{last_error or "request failed"} (gave up after {retries + 1} attempts)')
     return []
+
+
+def _short_error(exc: Exception) -> str:
+    """One-line reason for the health table: 'HTTP 404', 'DNS failure', ..."""
+    response = getattr(exc, 'response', None)
+    if response is not None and getattr(response, 'status_code', None):
+        return f'HTTP {response.status_code}'
+    name = type(exc).__name__
+    text = str(exc)
+    if 'NameResolution' in text or 'getaddrinfo' in text or 'Name or service not known' in text:
+        return 'DNS failure'
+    if 'SSL' in name or 'CERTIFICATE' in text.upper():
+        return 'TLS error'
+    return name
 
 
 def _extract_link(entry: dict) -> str:
@@ -252,6 +282,114 @@ def _extract_link(entry: dict) -> str:
     
     # Fallback to id
     return entry.get('id', '')
+
+
+def _newest_entry(entries: list[dict]) -> tuple[str | None, float | None]:
+    """
+    Newest publish time among fetched entries, as (ISO string, age in hours).
+
+    Returns (None, None) when no entry carries a parseable date. Used to flag
+    feeds that still answer 200 but stopped publishing: they look healthy in a
+    fetched/failed count and silently contribute nothing to the digest.
+    """
+    import calendar
+    from datetime import datetime, timezone
+
+    newest = None
+    for entry in entries:
+        parsed = entry.get('published_parsed')
+        if not parsed:
+            continue
+        try:
+            ts = calendar.timegm(parsed)
+        except Exception:
+            continue
+        if newest is None or ts > newest:
+            newest = ts
+    if newest is None:
+        return None, None
+    dt = datetime.fromtimestamp(newest, tz=timezone.utc)
+    age = (datetime.now(timezone.utc) - dt).total_seconds() / 3600
+    return dt.isoformat(), round(age, 1)
+
+
+# A news feed whose newest item is older than this is reported as stale.
+STALE_AFTER_HOURS = 24 * 7
+# Tabs where "no post for a week" is normal (personal blogs) or where the data
+# is an engagement-ranked snapshot rather than a dated feed.
+STALE_EXEMPT_TABS = {'tech_blogs', 'ptt_hot', 'dcard_hot'}
+
+
+def summarize_all_sources(stats: list[dict], stale_after_hours: float = STALE_AFTER_HOURS) -> dict:
+    """
+    Health of every configured source, across all tabs.
+
+    ``summarize_source_health`` only ever covered the tech_blogs tab, so a dead
+    news feed (wrong URL, 403, site gone) was invisible: the run still finished
+    "successfully" with that section thin or missing. This reports all of them
+    and lists the ones that need attention.
+
+    Buckets are mutually exclusive and sum to ``total_sources``:
+    ok / stale / empty / failed. Any status starting with ``ok`` (``ok``,
+    ``ok_snapshot``, ``ok_atom_fallback``) counts as ok.
+    """
+    rows = []
+    by_tab: dict[str, dict] = {}
+    for row in stats:
+        raw_status = str(row.get('status') or '')
+        age = row.get('newest_age_hours')
+        if raw_status.startswith('ok'):
+            if (
+                row.get('tab') not in STALE_EXEMPT_TABS
+                and age is not None
+                and age > stale_after_hours
+            ):
+                health = 'stale'
+            else:
+                health = 'ok'
+        elif raw_status == 'empty':
+            health = 'empty'
+        else:
+            health = 'failed'
+        out = dict(row)
+        out['health'] = health
+        rows.append(out)
+        tab = by_tab.setdefault(
+            row.get('tab', ''),
+            {'total': 0, 'ok': 0, 'stale': 0, 'empty': 0, 'failed': 0, 'fetched_items': 0},
+        )
+        tab['total'] += 1
+        tab[health] += 1
+        tab['fetched_items'] += int(row.get('fetched_count') or 0)
+
+    def _count(name: str) -> int:
+        return sum(1 for r in rows if r['health'] == name)
+
+    problems = [
+        {
+            'tab': r.get('tab'),
+            'category': r.get('category'),
+            'source_name': r.get('source_name'),
+            'url': r.get('url'),
+            'health': r['health'],
+            'status': r.get('status'),
+            'error': r.get('error'),
+            'newest_published': r.get('newest_published'),
+            'newest_age_hours': r.get('newest_age_hours'),
+        }
+        for r in rows if r['health'] != 'ok'
+    ]
+    return {
+        'total_sources': len(rows),
+        'ok_sources': _count('ok'),
+        'stale_sources': _count('stale'),
+        'empty_sources': _count('empty'),
+        'failed_sources': _count('failed'),
+        'stale_after_hours': stale_after_hours,
+        'by_tab': by_tab,
+        'problem_sources': problems,
+        'sources': rows,
+    }
 
 
 def _get_domain(url: str) -> str:
@@ -314,7 +452,9 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
                     outcome=outcome
                 )
                 status = outcome.get('status') or ('ok' if entries else 'empty')
+                error = outcome.get('error')
             else:
+                error = None
                 entries, status = _fetch_non_rss(
                     source, timeout=timeout, retries=retries,
                     user_agent=user_agent, max_items=max_items
@@ -336,6 +476,7 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
                     time.sleep(INTER_BOARD_DELAY)
 
             fetched_count = len(entries)
+            newest_iso, newest_age_hours = _newest_entry(entries)
             LAST_FETCH_STATS.append({
                 'tab': tab_id,
                 'language': tab_config.language,
@@ -346,6 +487,9 @@ def fetch_all_feeds(config: FeedsConfig) -> dict[str, list[dict]]:
                 'type': source_type,
                 'status': status,
                 'fetched_count': fetched_count,
+                'error': error,
+                'newest_published': newest_iso,
+                'newest_age_hours': newest_age_hours,
             })
 
             for entry in entries:

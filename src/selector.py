@@ -83,6 +83,60 @@ def engagement_value(article: NormalizedArticle, metric: str) -> float:
         return -1.0
 
 
+def _round_robin_by_source(articles: list[NormalizedArticle], n: int) -> list[NormalizedArticle]:
+    """
+    Take up to ``n`` articles, one source at a time, newest first.
+
+    ``articles`` must already be sorted newest-first. A plain ``[:n]`` let the
+    busiest feed fill the whole section: Hacker News publishes 30 fresh items a
+    day, so "Startup" was 8/8 Hacker News and the other three Startup sources
+    never appeared even when they had new posts.
+    """
+    if n <= 0:
+        return []
+    queues: dict[str, list[NormalizedArticle]] = {}
+    for article in articles:
+        queues.setdefault(article.source_name or '', []).append(article)
+    if len(queues) <= 1:
+        return articles[:n]
+
+    picked: list[NormalizedArticle] = []
+    while len(picked) < n and any(queues.values()):
+        # Each round visits sources in order of their newest remaining article.
+        heads = sorted(
+            (q[0] for q in queues.values() if q),
+            key=lambda a: a.published,
+            reverse=True,
+        )
+        for head in heads:
+            if len(picked) >= n:
+                break
+            picked.append(queues[head.source_name or ''].pop(0))
+    picked.sort(key=lambda a: a.published, reverse=True)
+    return picked
+
+
+def pick_balanced_with_backfill(
+    sorted_articles: list[NormalizedArticle], n: int
+) -> list[NormalizedArticle]:
+    """
+    Select ``n`` articles for a news category.
+
+    1. Fresh articles (inside the primary time window), balanced across sources.
+    2. If that is fewer than ``n``, top up with ``backfill`` articles (older, but
+       inside ``settings.backfill_window_hours``), also balanced across sources.
+
+    Fresh articles always come first, so backfill can never push out today's news.
+    """
+    fresh = [a for a in sorted_articles if not getattr(a, 'backfill', False)]
+    older = [a for a in sorted_articles if getattr(a, 'backfill', False)]
+
+    selected = _round_robin_by_source(fresh, n)
+    if len(selected) < n and older:
+        selected = selected + _round_robin_by_source(older, n - len(selected))
+    return selected
+
+
 def map_to_display_category(article: NormalizedArticle) -> str:
     """Map article to its display category based on tab and RSS category."""
     tab = article.tab
@@ -177,6 +231,7 @@ def select_by_category(
                 )
             # Get items count for this category
             n = get_items_per_category(tab_id, category)
+            
             if tab_id == 'tech_blogs':
                 selected = []
                 per_source_counts = defaultdict(int)
@@ -187,8 +242,11 @@ def select_by_category(
                     per_source_counts[article.source_name] += 1
                     if len(selected) >= n:
                         break
-            else:
+            elif sort_metric:
+                # Community tabs: pure engagement ranking, no time window.
                 selected = sorted_articles[:n]
+            else:
+                selected = pick_balanced_with_backfill(sorted_articles, n)
             
             if selected:
                 tab_result[category] = selected

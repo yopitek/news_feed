@@ -61,6 +61,12 @@ tabs:
       - category: 娛樂
         url: https://feeds.feedburner.com/rsscna/stars
         source_name: 中央社
+      # 股市 had no feed of its own, so the section was empty on every run.
+      # Yahoo股市 documents this RSS endpoint on its rss-help page; its terms
+      # allow personal / non-commercial use with the source credited.
+      - category: 股市
+        url: https://tw.stock.yahoo.com/rss?category=tw-market
+        source_name: Yahoo股市
 
   # ============================================
   # English News - Startup + Tech News + BBC (with subcategories)
@@ -342,6 +348,9 @@ tabs:
 
 # Global settings
 settings:
+  # Categories with fewer than items_per_category fresh articles are topped up
+  # with articles up to this many hours old. Set to 24 (or lower) to disable.
+  backfill_window_hours: 72
   max_items_per_feed: 30
   fetch_timeout: 15
   fetch_retries: 2

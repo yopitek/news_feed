@@ -33,6 +33,9 @@ class NormalizedArticle:
     # Engagement metadata for community tabs (PTT push count, Dcard likes, ...).
     # None for plain RSS sources.
     metrics: Optional[dict] = None
+    # True when the article is older than the tab's primary time window and was
+    # kept only so a thin category can be topped up (see selector backfill).
+    backfill: bool = False
 
 
 @dataclass
