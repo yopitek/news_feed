@@ -121,7 +121,7 @@ jobs:
       # Send Email
       # ============================================
       - name: Send email digest
-        if: ${{ steps.generate.outputs.digest_generated == 'true' && !inputs.skip_email }}
+        if: ${{ false }}
         continue-on-error: true
         env:
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
@@ -181,7 +181,7 @@ jobs:
       # Error Notification (Optional)
       # ============================================
       - name: Notify on failure
-        if: failure()
+        if: ${{ false }}
         env:
           SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
