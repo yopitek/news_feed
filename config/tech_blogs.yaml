@@ -12,7 +12,6 @@ tech_blogs:
     - { category: "Tech Blogs", url: "https://www.dwarkeshpatel.com/feed", source_name: "Dwarkesh Patel", group: "AI / ML" }
     - { category: "Tech Blogs", url: "https://minimaxir.com/index.xml", source_name: "Max Woolf", group: "AI / ML" }
     - { category: "Tech Blogs", url: "https://geohot.github.io/blog/feed.xml", source_name: "George Hotz", group: "AI / ML" }
-    - { category: "Tech Blogs", url: "https://gwern.substack.com/feed", source_name: "Gwern Branwen", group: "AI / ML" }
 
     # Software Engineering
     - { category: "Tech Blogs", url: "https://matklad.github.io/feed.xml", source_name: "matklad", group: "Software Engineering" }
@@ -25,7 +24,7 @@ tech_blogs:
     - { category: "Tech Blogs", url: "https://www.troyhunt.com/rss/", source_name: "Troy Hunt", group: "Security" }
 
     # Startups / Product
-    - { category: "Tech Blogs", url: "https://aaronsw.com/2002/feeds/pgessays.rss", source_name: "Paul Graham", group: "Startups / Product" }
+    - { category: "Tech Blogs", url: "https://raw.githubusercontent.com/Olshansk/rss-feeds/main/feeds/feed_paulgraham.xml", source_name: "Paul Graham", group: "Startups / Product" }
     - { category: "Tech Blogs", url: "https://steveblank.com/feed/", source_name: "Steve Blank", group: "Startups / Product" }
     - { category: "Tech Blogs", url: "https://www.wheresyoured.at/rss", source_name: "Ed Zitron", group: "Startups / Product" }
     - { category: "Tech Blogs", url: "https://keygen.sh/blog/feed.xml", source_name: "Keygen", group: "Startups / Product" }
