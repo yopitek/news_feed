@@ -1,9 +1,9 @@
 {
  "total_sources": 68,
- "ok_sources": 68,
+ "ok_sources": 67,
  "stale_sources": 0,
  "empty_sources": 0,
- "failed_sources": 0,
+ "failed_sources": 1,
  "stale_after_hours": 168,
  "by_tab": {
   "zh_news": {
@@ -28,7 +28,7 @@
    "stale": 0,
    "empty": 0,
    "failed": 0,
-   "fetched_items": 234
+   "fetched_items": 237
   },
   "ptt_hot": {
    "total": 5,
@@ -36,7 +36,7 @@
    "stale": 0,
    "empty": 0,
    "failed": 0,
-   "fetched_items": 35
+   "fetched_items": 56
   },
   "dcard_hot": {
    "total": 4,
@@ -48,14 +48,26 @@
   },
   "tech_blogs": {
    "total": 17,
-   "ok": 17,
+   "ok": 16,
    "stale": 0,
    "empty": 0,
-   "failed": 0,
-   "fetched_items": 325
+   "failed": 1,
+   "fetched_items": 305
   }
  },
- "problem_sources": [],
+ "problem_sources": [
+  {
+   "tab": "tech_blogs",
+   "category": "Tech Blogs",
+   "source_name": "Gary Marcus",
+   "url": "https://garymarcus.substack.com/feed",
+   "health": "failed",
+   "status": "failed",
+   "error": "HTTP 403 (gave up after 3 attempts)",
+   "newest_published": null,
+   "newest_age_hours": null
+  }
+ ],
  "sources": [
   {
    "tab": "zh_news",
@@ -68,8 +80,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T04:35:40+00:00",
-   "newest_age_hours": 1.7,
+   "newest_published": "2026-11-27T02:45:16+00:00",
+   "newest_age_hours": 1.6,
    "health": "ok"
   },
   {
@@ -83,8 +95,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T05:35:32+00:00",
-   "newest_age_hours": 0.7,
+   "newest_published": "2026-11-27T03:24:46+00:00",
+   "newest_age_hours": 0.9,
    "health": "ok"
   },
   {
@@ -98,8 +110,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T05:33:22+00:00",
-   "newest_age_hours": 0.7,
+   "newest_published": "2026-11-27T03:29:49+00:00",
+   "newest_age_hours": 0.8,
    "health": "ok"
   },
   {
@@ -113,8 +125,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T05:54:49+00:00",
-   "newest_age_hours": 0.4,
+   "newest_published": "2026-11-27T03:39:55+00:00",
+   "newest_age_hours": 0.7,
    "health": "ok"
   },
   {
@@ -128,8 +140,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T04:18:14+00:00",
-   "newest_age_hours": 2.0,
+   "newest_published": "2026-11-27T02:55:21+00:00",
+   "newest_age_hours": 1.4,
    "health": "ok"
   },
   {
@@ -143,8 +155,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T05:28:19+00:00",
-   "newest_age_hours": 0.8,
+   "newest_published": "2026-11-27T02:10:57+00:00",
+   "newest_age_hours": 2.1,
    "health": "ok"
   },
   {
@@ -158,8 +170,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T05:35:34+00:00",
-   "newest_age_hours": 0.7,
+   "newest_published": "2026-11-27T02:15:59+00:00",
+   "newest_age_hours": 2.1,
    "health": "ok"
   },
   {
@@ -173,8 +185,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T04:33:38+00:00",
-   "newest_age_hours": 1.7,
+   "newest_published": "2026-11-27T03:54:10+00:00",
+   "newest_age_hours": 0.4,
    "health": "ok"
   },
   {
@@ -188,8 +200,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-25T10:57:33+00:00",
-   "newest_age_hours": 19.3,
+   "newest_published": "2026-11-26T13:02:35+00:00",
+   "newest_age_hours": 15.3,
    "health": "ok"
   },
   {
@@ -203,8 +215,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T03:41:42+00:00",
-   "newest_age_hours": 2.6,
+   "newest_published": "2026-11-26T14:37:25+00:00",
+   "newest_age_hours": 13.7,
    "health": "ok"
   },
   {
@@ -218,8 +230,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T03:18:59+00:00",
-   "newest_age_hours": 3.0,
+   "newest_published": "2026-11-26T12:39:15+00:00",
+   "newest_age_hours": 15.7,
    "health": "ok"
   },
   {
@@ -233,7 +245,7 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T06:05:00+00:00",
+   "newest_published": "2026-11-27T04:09:17+00:00",
    "newest_age_hours": 0.2,
    "health": "ok"
   },
@@ -248,8 +260,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T04:11:16+00:00",
-   "newest_age_hours": 2.1,
+   "newest_published": "2026-11-27T03:41:05+00:00",
+   "newest_age_hours": 0.6,
    "health": "ok"
   },
   {
@@ -263,7 +275,7 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T05:12:59+00:00",
+   "newest_published": "2026-11-27T03:11:41+00:00",
    "newest_age_hours": 1.1,
    "health": "ok"
   },
@@ -279,7 +291,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-25T17:35:58+00:00",
-   "newest_age_hours": 12.7,
+   "newest_age_hours": 34.7,
    "health": "ok"
   },
   {
@@ -293,8 +305,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T04:45:00+00:00",
-   "newest_age_hours": 1.5,
+   "newest_published": "2026-11-27T01:15:00+00:00",
+   "newest_age_hours": 3.1,
    "health": "ok"
   },
   {
@@ -308,8 +320,8 @@
    "status": "ok",
    "fetched_count": 10,
    "error": null,
-   "newest_published": "2026-11-26T00:04:34+00:00",
-   "newest_age_hours": 6.2,
+   "newest_published": "2026-11-26T21:00:00+00:00",
+   "newest_age_hours": 7.3,
    "health": "ok"
   },
   {
@@ -323,8 +335,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-25T22:44:32+00:00",
-   "newest_age_hours": 7.5,
+   "newest_published": "2026-11-26T20:03:54+00:00",
+   "newest_age_hours": 8.3,
    "health": "ok"
   },
   {
@@ -338,7 +350,7 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T05:12:59+00:00",
+   "newest_published": "2026-11-27T03:11:41+00:00",
    "newest_age_hours": 1.1,
    "health": "ok"
   },
@@ -353,8 +365,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T06:01:58+00:00",
-   "newest_age_hours": 0.2,
+   "newest_published": "2026-11-27T01:23:47+00:00",
+   "newest_age_hours": 2.9,
    "health": "ok"
   },
   {
@@ -368,8 +380,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T04:10:58+00:00",
-   "newest_age_hours": 2.1,
+   "newest_published": "2026-11-27T03:28:15+00:00",
+   "newest_age_hours": 0.9,
    "health": "ok"
   },
   {
@@ -383,8 +395,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T04:10:58+00:00",
-   "newest_age_hours": 2.1,
+   "newest_published": "2026-11-27T00:54:45+00:00",
+   "newest_age_hours": 3.4,
    "health": "ok"
   },
   {
@@ -398,8 +410,8 @@
    "status": "ok",
    "fetched_count": 23,
    "error": null,
-   "newest_published": "2026-11-26T06:01:21+00:00",
-   "newest_age_hours": 0.2,
+   "newest_published": "2026-11-27T00:54:45+00:00",
+   "newest_age_hours": 3.4,
    "health": "ok"
   },
   {
@@ -413,8 +425,8 @@
    "status": "ok",
    "fetched_count": 21,
    "error": null,
-   "newest_published": "2026-11-25T10:52:09+00:00",
-   "newest_age_hours": 19.4,
+   "newest_published": "2026-11-27T00:02:19+00:00",
+   "newest_age_hours": 4.3,
    "health": "ok"
   },
   {
@@ -428,8 +440,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-25T23:01:45+00:00",
-   "newest_age_hours": 7.2,
+   "newest_published": "2026-11-27T00:52:34+00:00",
+   "newest_age_hours": 3.5,
    "health": "ok"
   },
   {
@@ -443,8 +455,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T06:05:36+00:00",
-   "newest_age_hours": 0.2,
+   "newest_published": "2026-11-27T00:52:11+00:00",
+   "newest_age_hours": 3.5,
    "health": "ok"
   },
   {
@@ -458,8 +470,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T06:00:00+00:00",
-   "newest_age_hours": 0.3,
+   "newest_published": "2026-11-27T04:09:34+00:00",
+   "newest_age_hours": 0.2,
    "health": "ok"
   },
   {
@@ -473,8 +485,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T05:49:41+00:00",
-   "newest_age_hours": 0.4,
+   "newest_published": "2026-11-27T03:51:33+00:00",
+   "newest_age_hours": 0.5,
    "health": "ok"
   },
   {
@@ -488,7 +500,7 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T06:00:00+00:00",
+   "newest_published": "2026-11-27T04:00:00+00:00",
    "newest_age_hours": 0.3,
    "health": "ok"
   },
@@ -503,8 +515,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T03:49:34+00:00",
-   "newest_age_hours": 2.4,
+   "newest_published": "2026-11-27T03:51:33+00:00",
+   "newest_age_hours": 0.5,
    "health": "ok"
   },
   {
@@ -518,8 +530,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T05:00:00+00:00",
-   "newest_age_hours": 1.3,
+   "newest_published": "2026-11-27T03:30:00+00:00",
+   "newest_age_hours": 0.8,
    "health": "ok"
   },
   {
@@ -533,8 +545,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T05:50:53+00:00",
-   "newest_age_hours": 0.4,
+   "newest_published": "2026-11-26T23:17:23+00:00",
+   "newest_age_hours": 5.0,
    "health": "ok"
   },
   {
@@ -548,8 +560,8 @@
    "status": "ok",
    "fetched_count": 20,
    "error": null,
-   "newest_published": "2026-11-26T04:40:52+00:00",
-   "newest_age_hours": 1.6,
+   "newest_published": "2026-11-27T04:09:34+00:00",
+   "newest_age_hours": 0.2,
    "health": "ok"
   },
   {
@@ -563,8 +575,8 @@
    "status": "ok",
    "fetched_count": 12,
    "error": null,
-   "newest_published": "2026-11-26T02:52:12+00:00",
-   "newest_age_hours": 3.4,
+   "newest_published": "2026-11-26T21:30:00+00:00",
+   "newest_age_hours": 6.8,
    "health": "ok"
   },
   {
@@ -578,8 +590,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T05:37:08+00:00",
-   "newest_age_hours": 0.7,
+   "newest_published": "2026-11-27T03:28:17+00:00",
+   "newest_age_hours": 0.9,
    "health": "ok"
   },
   {
@@ -593,8 +605,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T03:29:45+00:00",
-   "newest_age_hours": 2.8,
+   "newest_published": "2026-11-27T04:00:00+00:00",
+   "newest_age_hours": 0.3,
    "health": "ok"
   },
   {
@@ -608,8 +620,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T04:57:37+00:00",
-   "newest_age_hours": 1.3,
+   "newest_published": "2026-11-27T03:20:40+00:00",
+   "newest_age_hours": 1.0,
    "health": "ok"
   },
   {
@@ -623,8 +635,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T02:46:05+00:00",
-   "newest_age_hours": 3.5,
+   "newest_published": "2026-11-26T23:57:20+00:00",
+   "newest_age_hours": 4.4,
    "health": "ok"
   },
   {
@@ -638,8 +650,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T00:04:16+00:00",
-   "newest_age_hours": 6.2,
+   "newest_published": "2026-11-27T01:17:35+00:00",
+   "newest_age_hours": 3.0,
    "health": "ok"
   },
   {
@@ -651,10 +663,10 @@
    "url": "https://www.asahi.com/rss/asahi/culture.rdf",
    "type": "rss",
    "status": "ok",
-   "fetched_count": 10,
+   "fetched_count": 13,
    "error": null,
-   "newest_published": "2026-11-26T02:30:00+00:00",
-   "newest_age_hours": 3.8,
+   "newest_published": "2026-11-26T09:52:25+00:00",
+   "newest_age_hours": 18.5,
    "health": "ok"
   },
   {
@@ -668,8 +680,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T05:49:41+00:00",
-   "newest_age_hours": 0.4,
+   "newest_published": "2026-11-27T03:24:35+00:00",
+   "newest_age_hours": 0.9,
    "health": "ok"
   },
   {
@@ -683,8 +695,8 @@
    "status": "ok",
    "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T03:23:54+00:00",
-   "newest_age_hours": 2.9,
+   "newest_published": "2026-11-27T00:34:19+00:00",
+   "newest_age_hours": 3.8,
    "health": "ok"
   },
   {
@@ -696,10 +708,10 @@
    "url": "https://www.ptt.cc/bbs/Gossiping/index.html",
    "type": "ptt_list",
    "status": "ok",
-   "fetched_count": 6,
+   "fetched_count": 19,
    "error": null,
-   "newest_published": "2026-11-26T12:00:00+00:00",
-   "newest_age_hours": -5.7,
+   "newest_published": "2026-11-27T12:00:00+00:00",
+   "newest_age_hours": -7.7,
    "health": "ok"
   },
   {
@@ -711,10 +723,10 @@
    "url": "https://www.ptt.cc/bbs/Stock/index.html",
    "type": "ptt_list",
    "status": "ok",
-   "fetched_count": 11,
+   "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T12:00:00+00:00",
-   "newest_age_hours": -5.7,
+   "newest_published": "2026-11-27T12:00:00+00:00",
+   "newest_age_hours": -7.7,
    "health": "ok"
   },
   {
@@ -726,10 +738,10 @@
    "url": "https://www.ptt.cc/bbs/Tech_Job/index.html",
    "type": "ptt_list",
    "status": "ok",
-   "fetched_count": 6,
+   "fetched_count": 8,
    "error": null,
-   "newest_published": "2026-11-26T12:00:00+00:00",
-   "newest_age_hours": -5.7,
+   "newest_published": "2026-11-27T12:00:00+00:00",
+   "newest_age_hours": -7.7,
    "health": "ok"
   },
   {
@@ -744,7 +756,7 @@
    "fetched_count": 4,
    "error": null,
    "newest_published": "2026-11-25T12:00:00+00:00",
-   "newest_age_hours": 18.3,
+   "newest_age_hours": 40.3,
    "health": "ok"
   },
   {
@@ -756,10 +768,10 @@
    "url": "https://www.ptt.cc/bbs/PC_Shopping/index.html",
    "type": "ptt_list",
    "status": "ok",
-   "fetched_count": 8,
+   "fetched_count": 17,
    "error": null,
-   "newest_published": "2026-11-26T12:00:00+00:00",
-   "newest_age_hours": -5.7,
+   "newest_published": "2026-11-27T12:00:00+00:00",
+   "newest_age_hours": -7.7,
    "health": "ok"
   },
   {
@@ -833,8 +845,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T06:08:25+00:00",
-   "newest_age_hours": 0.1,
+   "newest_published": "2026-11-26T15:09:31+00:00",
+   "newest_age_hours": 13.2,
    "health": "ok"
   },
   {
@@ -845,12 +857,12 @@
    "group": "AI / ML",
    "url": "https://garymarcus.substack.com/feed",
    "type": "rss",
-   "status": "ok",
-   "fetched_count": 20,
-   "error": null,
-   "newest_published": "2026-11-24T16:06:27+00:00",
-   "newest_age_hours": 38.2,
-   "health": "ok"
+   "status": "failed",
+   "fetched_count": 0,
+   "error": "HTTP 403 (gave up after 3 attempts)",
+   "newest_published": null,
+   "newest_age_hours": null,
+   "health": "failed"
   },
   {
    "tab": "tech_blogs",
@@ -864,7 +876,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-24T21:45:30+00:00",
-   "newest_age_hours": 32.5,
+   "newest_age_hours": 54.6,
    "health": "ok"
   },
   {
@@ -879,7 +891,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-10-25T21:00:00+00:00",
-   "newest_age_hours": 753.3,
+   "newest_age_hours": 775.3,
    "health": "ok"
   },
   {
@@ -894,7 +906,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-11-22T16:00:00+00:00",
-   "newest_age_hours": 86.3,
+   "newest_age_hours": 108.3,
    "health": "ok"
   },
   {
@@ -909,7 +921,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-10-29T00:00:00+00:00",
-   "newest_age_hours": 678.3,
+   "newest_age_hours": 700.3,
    "health": "ok"
   },
   {
@@ -924,7 +936,7 @@
    "fetched_count": 5,
    "error": null,
    "newest_published": "2026-11-21T22:26:00+00:00",
-   "newest_age_hours": 103.8,
+   "newest_age_hours": 125.9,
    "health": "ok"
   },
   {
@@ -939,7 +951,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-08-21T00:00:00+00:00",
-   "newest_age_hours": 2334.3,
+   "newest_age_hours": 2356.3,
    "health": "ok"
   },
   {
@@ -954,7 +966,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-10-27T16:00:42+00:00",
-   "newest_age_hours": 710.3,
+   "newest_age_hours": 732.3,
    "health": "ok"
   },
   {
@@ -969,7 +981,7 @@
    "fetched_count": 10,
    "error": null,
    "newest_published": "2026-11-21T00:36:39+00:00",
-   "newest_age_hours": 125.7,
+   "newest_age_hours": 147.7,
    "health": "ok"
   },
   {
@@ -984,7 +996,7 @@
    "fetched_count": 15,
    "error": null,
    "newest_published": "2026-11-23T07:58:47+00:00",
-   "newest_age_hours": 70.3,
+   "newest_age_hours": 92.4,
    "health": "ok"
   },
   {
@@ -999,7 +1011,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2026-09-01T00:00:00+00:00",
-   "newest_age_hours": 2070.3,
+   "newest_age_hours": 2092.3,
    "health": "ok"
   },
   {
@@ -1014,7 +1026,7 @@
    "fetched_count": 20,
    "error": null,
    "newest_published": "2026-11-15T22:15:04+00:00",
-   "newest_age_hours": 248.0,
+   "newest_age_hours": 270.1,
    "health": "ok"
   },
   {
@@ -1029,7 +1041,7 @@
    "fetched_count": 15,
    "error": null,
    "newest_published": "2026-11-24T18:08:05+00:00",
-   "newest_age_hours": 36.1,
+   "newest_age_hours": 58.2,
    "health": "ok"
   },
   {
@@ -1044,7 +1056,7 @@
    "fetched_count": 30,
    "error": null,
    "newest_published": "2024-09-09T05:00:00+00:00",
-   "newest_age_hours": 19393.3,
+   "newest_age_hours": 19415.3,
    "health": "ok"
   },
   {
@@ -1058,8 +1070,8 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-26T00:16:54+00:00",
-   "newest_age_hours": 6.0,
+   "newest_published": "2026-11-26T15:11:46+00:00",
+   "newest_age_hours": 13.1,
    "health": "ok"
   },
   {
@@ -1073,10 +1085,10 @@
    "status": "ok",
    "fetched_count": 30,
    "error": null,
-   "newest_published": "2026-11-25T13:42:12+00:00",
-   "newest_age_hours": 16.6,
+   "newest_published": "2026-11-26T12:31:19+00:00",
+   "newest_age_hours": 15.8,
    "health": "ok"
   }
  ],
- "generated_at": "2026-11-26T14:16:32.986723+08:00"
+ "generated_at": "2026-11-27T12:20:00.622027+08:00"
 }
