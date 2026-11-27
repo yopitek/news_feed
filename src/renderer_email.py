@@ -9,6 +9,7 @@ from typing import Optional
 import pytz
 
 from .models import ArticleWithSummary
+from .renderer_web import safe_href
 from .selector import TAB_CATEGORIES
 
 TEMPLATE_PATH = Path(__file__).parent.parent / "templates" / "email_template.html"
@@ -48,7 +49,7 @@ def render_news_item_email(article: ArticleWithSummary) -> str:
     return f'''<tr>
     <td style="padding: 12px 0; border-bottom: 1px dotted #d9d2c4;">
         <p style="font-family: Georgia, serif; font-size: 15px; font-weight: bold; margin: 0 0 4px 0; line-height: 1.4;">
-            <a href="{article.link}" target="_blank" style="color: #1a1a1a; text-decoration: none;">{title}</a>
+            <a href="{safe_href(article.link)}" target="_blank" style="color: #1a1a1a; text-decoration: none;">{title}</a>
         </p>
         <p style="font-family: Arial, sans-serif; font-size: 11px; color: #666666; margin: 0 0 6px 0;">
             <strong>{source}</strong> · {publish_date}

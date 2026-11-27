@@ -2,9 +2,12 @@
 Render the weekly AI digest email from WeeklyItem list.
 Groups items by type icon and fills in the weekly_email.html template.
 """
+import html
 import logging
 from dataclasses import dataclass
 from pathlib import Path
+
+from .renderer_web import safe_href
 
 logger = logging.getLogger(__name__)
 
@@ -30,13 +33,15 @@ class WeeklyItem:
 
 
 def _render_item_html(item: WeeklyItem) -> str:
-    bullets_html = "\n".join(f"<li>{b}</li>" for b in item.core_method)
+    # Tweets, search results and LLM output are all untrusted: escape every
+    # field and only allow http/https links.
+    bullets_html = "\n".join(f"<li>{html.escape(b, quote=True)}</li>" for b in item.core_method)
     return (
         f'<div class="item-block">'
-        f'<a href="{item.url}" class="item-title">{item.type_icon} {item.title_zh}</a>'
-        f'<p class="item-handle">@{item.handle}</p>'
+        f'<a href="{safe_href(item.url)}" class="item-title">{html.escape(item.type_icon, quote=True)} {html.escape(item.title_zh, quote=True)}</a>'
+        f'<p class="item-handle">@{html.escape(item.handle, quote=True)}</p>'
         f'<ul class="item-bullets">{bullets_html}</ul>'
-        f'<p class="item-why">{item.why_useful}</p>'
+        f'<p class="item-why">{html.escape(item.why_useful, quote=True)}</p>'
         f"</div>"
     )
 

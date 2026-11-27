@@ -189,7 +189,9 @@ def run_weekly_pipeline():
         subject = f"AI乾貨週報 · Week {week_num} · {date_str}"
         send_digest_email(html, subject)
     except Exception as e:
-        logger.warning(f"Email failed: {e}")
+        # A failed email must never fail the weekly run, but the cause must
+        # stay in the log (exc_info) instead of being silently swallowed.
+        logger.warning(f"Email failed: {e}", exc_info=True)
     
     return html
 
