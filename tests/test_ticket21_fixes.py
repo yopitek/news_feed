@@ -214,6 +214,40 @@ class TestEmailRenderer:
 
 # ---------------------------------------------------------------- N4 web renderer scheme
 
+class TestNonStringFields:
+    """M1 (post-review): html.escape only accepts str; null fields from the LLM
+    must render like before the escaping fix (as text), never crash the run."""
+
+    def _render(self, **overrides):
+        item = WeeklyItem(handle="h", title_zh="t", url="https://example.com/a",
+                          core_method=["ok"], why_useful="why", type_icon="💡", priority=1)
+        for key, value in overrides.items():
+            setattr(item, key, value)
+        return _render_item_html(item)
+
+    def test_none_why_useful_does_not_crash(self):
+        assert isinstance(self._render(why_useful=None), str)
+
+    def test_none_title_does_not_crash(self):
+        assert isinstance(self._render(title_zh=None), str)
+
+    def test_none_handle_does_not_crash(self):
+        assert isinstance(self._render(handle=None), str)
+
+    def test_none_type_icon_does_not_crash(self):
+        assert isinstance(self._render(type_icon=None), str)
+
+    def test_none_url_does_not_crash(self):
+        out = self._render(url=None)
+        assert isinstance(out, str)
+        assert 'href="#"' in out  # safe_href already neutralises None
+
+    def test_non_string_bullet_items_do_not_crash(self):
+        out = self._render(core_method=[1, None])
+        assert isinstance(out, str)
+        assert "<li>1</li>" in out and "<li>None</li>" in out
+
+
 class TestWebRenderer:
     def test_javascript_links_are_neutralised(self):
         out = render_news_item(news_article("javascript:alert(1)"))

@@ -35,13 +35,15 @@ class WeeklyItem:
 def _render_item_html(item: WeeklyItem) -> str:
     # Tweets, search results and LLM output are all untrusted: escape every
     # field and only allow http/https links.
-    bullets_html = "\n".join(f"<li>{html.escape(b, quote=True)}</li>" for b in item.core_method)
+    # str() first: LLM-returned fields can be null/non-string and html.escape
+    # only accepts str (they render as text, like before the escaping fix).
+    bullets_html = "\n".join(f"<li>{html.escape(str(b), quote=True)}</li>" for b in item.core_method)
     return (
         f'<div class="item-block">'
-        f'<a href="{safe_href(item.url)}" class="item-title">{html.escape(item.type_icon, quote=True)} {html.escape(item.title_zh, quote=True)}</a>'
-        f'<p class="item-handle">@{html.escape(item.handle, quote=True)}</p>'
+        f'<a href="{safe_href(item.url)}" class="item-title">{html.escape(str(item.type_icon), quote=True)} {html.escape(str(item.title_zh), quote=True)}</a>'
+        f'<p class="item-handle">@{html.escape(str(item.handle), quote=True)}</p>'
         f'<ul class="item-bullets">{bullets_html}</ul>'
-        f'<p class="item-why">{html.escape(item.why_useful, quote=True)}</p>'
+        f'<p class="item-why">{html.escape(str(item.why_useful), quote=True)}</p>'
         f"</div>"
     )
 
