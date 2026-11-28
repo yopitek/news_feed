@@ -8,7 +8,7 @@ def test_tech_blog_sources_have_valid_urls_and_groups():
     data = yaml.safe_load(open("config/tech_blogs.yaml", encoding="utf-8"))
     sources = data["tech_blogs"]["sources"]
 
-    assert len(sources) == 17
+    assert len(sources) == 16
     for source in sources:
         parsed = urlparse(source["url"])
         assert parsed.scheme in {"http", "https"}

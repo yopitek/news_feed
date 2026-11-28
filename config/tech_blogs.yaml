@@ -8,7 +8,7 @@ tech_blogs:
   sources:
     # AI / ML
     - { category: "Tech Blogs", url: "https://simonwillison.net/atom/everything/", source_name: "Simon Willison", group: "AI / ML" }
-    - { category: "Tech Blogs", url: "https://garymarcus.substack.com/feed", source_name: "Gary Marcus", group: "AI / ML" }
+    # 2026-11-28 移除 Gary Marcus（原網址：https://garymarcus.substack.com/feed）：在 GitHub Actions 上持續回傳 HTTP 403（疑似 runner 網段被 Substack 阻擋）
     - { category: "Tech Blogs", url: "https://www.dwarkeshpatel.com/feed", source_name: "Dwarkesh Patel", group: "AI / ML" }
     - { category: "Tech Blogs", url: "https://minimaxir.com/index.xml", source_name: "Max Woolf", group: "AI / ML" }
     - { category: "Tech Blogs", url: "https://geohot.github.io/blog/feed.xml", source_name: "George Hotz", group: "AI / ML" }
