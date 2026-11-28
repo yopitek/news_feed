@@ -34,9 +34,12 @@ jobs:
           # NVIDIA's catalog (see the note in daily_digest.yml): every call 404'd.
           NVIDIA_MODEL: meta/llama-3.2-11b-vision-instruct
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          # Accept either naming: daily_digest.yml and commit fffa2f8 show the
+          # repo secrets are SMTP_SERVER/SMTP_USERNAME; fall back if only the
+          # SMTP_HOST/SMTP_USER spellings exist.
+          SMTP_HOST: ${{ secrets.SMTP_HOST || secrets.SMTP_SERVER }}
           SMTP_PORT: ${{ secrets.SMTP_PORT }}
-          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_USER: ${{ secrets.SMTP_USER || secrets.SMTP_USERNAME }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run: |

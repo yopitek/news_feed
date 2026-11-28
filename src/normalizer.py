@@ -4,11 +4,11 @@ Normalize raw RSS/Atom entries to a common schema.
 import re
 import hashlib
 import logging
+from calendar import timegm
 from datetime import datetime, timezone
 from html import unescape
 from typing import Optional
 from urllib.parse import urlparse, urlunparse, parse_qs, urlencode
-from time import mktime
 
 from dateutil import parser as dateutil_parser
 
@@ -69,7 +69,9 @@ def parse_datetime(entry: dict) -> datetime:
     struct_time = entry.get('published_parsed')
     if struct_time:
         try:
-            return datetime.fromtimestamp(mktime(struct_time), tz=timezone.utc)
+            # feedparser's *_parsed is always UTC; timegm keeps it UTC
+            # (mktime would reinterpret it in the *local* timezone).
+            return datetime.fromtimestamp(timegm(struct_time), tz=timezone.utc)
         except Exception:
             pass
     

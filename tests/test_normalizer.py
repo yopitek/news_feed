@@ -107,6 +107,25 @@ class TestParseDatetime:
         result = parse_datetime(entry)
         assert result.tzinfo is not None
 
+    def test_published_parsed_is_utc_in_any_local_timezone(self, monkeypatch):
+        """feedparser's published_parsed is UTC; it must not be re-read as local time.
+
+        OpenBot ticket 21 N3: time.mktime() under TZ=Asia/Taipei shifted every
+        RSS timestamp back by 8 hours.
+        """
+        import os
+        import time as time_module
+
+        utc_struct = time_module.struct_time((2026, 11, 27, 0, 0, 0, 4, 331, 0))
+        monkeypatch.setenv('TZ', 'Asia/Taipei')
+        time_module.tzset()
+        try:
+            result = parse_datetime({'published_parsed': utc_struct})
+            assert result == datetime(2026, 11, 27, 0, 0, 0, tzinfo=timezone.utc)
+        finally:
+            monkeypatch.delenv('TZ')
+            time_module.tzset()
+
 
 if __name__ == '__main__':
     pytest.main([__file__, '-v'])

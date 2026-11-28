@@ -5,6 +5,7 @@ Groups news by category within each tab.
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
+from urllib.parse import urlparse
 
 import pytz
 
@@ -54,6 +55,21 @@ def escape_attr(text: str) -> str:
     return escape_html(text).replace("'", '&#x27;')
 
 
+def safe_href(url: str) -> str:
+    """Attribute-escape a URL, allowing only http/https schemes.
+
+    Feed-provided links are untrusted: a javascript: (or any other scheme)
+    link must not become a clickable link on the public page.
+    """
+    try:
+        scheme = urlparse(url or '').scheme.lower()
+    except ValueError:
+        return '#'
+    if scheme not in ('http', 'https'):
+        return '#'
+    return escape_attr(url)
+
+
 def format_metric_badge(article: ArticleWithSummary) -> str:
     """
     Build the engagement badge for community tabs (PTT / Dcard).
@@ -101,7 +117,7 @@ def render_news_item(article: ArticleWithSummary) -> str:
     else:
         summary_html = ''
     
-    link = escape_attr(article.link)
+    link = safe_href(article.link)
     return f'''<div class="news-item" data-link="{link}">
     <h4 class="news-item-title">
         <a href="{link}" target="_blank" rel="noopener noreferrer">{title}</a>

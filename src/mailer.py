@@ -24,7 +24,8 @@ def get_smtp_config_from_env() -> SMTPConfig:
     """Load SMTP configuration from environment variables."""
     # Support both naming conventions
     host = os.environ.get('SMTP_HOST') or os.environ.get('SMTP_SERVER', '')
-    port = int(os.environ.get('SMTP_PORT', 465))
+    # GitHub Actions injects '' (not missing) for an unset secret; int('') would crash.
+    port = int(os.environ.get('SMTP_PORT') or 465)
     user = os.environ.get('SMTP_USER') or os.environ.get('SMTP_USERNAME', '')
     password = os.environ.get('SMTP_PASSWORD', '')
     
@@ -101,11 +102,14 @@ def send_email(
         return False
 
 
-def send_digest_email() -> bool:
+def send_digest_email(html_content: Optional[str] = None, subject: Optional[str] = None) -> bool:
     """
-    Send the daily digest email using environment configuration.
-    
-    Reads the rendered email HTML from output directory.
+    Send a digest email using environment configuration.
+
+    With no arguments, sends the daily digest: the HTML is read from the output
+    directory and the subject is the date-based default. The weekly pipeline
+    passes its own rendered HTML and subject so it does not depend on (and must
+    not resend) the daily file.
     """
     # Load configuration from environment
     smtp_config = get_smtp_config_from_env()
@@ -116,18 +120,20 @@ def send_digest_email() -> bool:
         logger.error("EMAIL_RECIPIENT not set")
         return False
     
-    # Load email HTML
-    email_html_path = OUTPUT_DIR / 'email_digest.html'
-    if not email_html_path.exists():
-        logger.error(f"Email HTML not found: {email_html_path}")
-        return False
+    if html_content is None:
+        # Load email HTML
+        email_html_path = OUTPUT_DIR / 'email_digest.html'
+        if not email_html_path.exists():
+            logger.error(f"Email HTML not found: {email_html_path}")
+            return False
+        
+        html_content = email_html_path.read_text(encoding='utf-8')
     
-    html_content = email_html_path.read_text(encoding='utf-8')
-    
-    # Generate subject with date
-    now = datetime.now(TAIPEI_TZ)
-    date_str = now.strftime("%Y-%m-%d")
-    subject = f"{subject_prefix} {date_str}"
+    if subject is None:
+        # Generate subject with date
+        now = datetime.now(TAIPEI_TZ)
+        date_str = now.strftime("%Y-%m-%d")
+        subject = f"{subject_prefix} {date_str}"
     
     return send_email(
         html_content=html_content,
